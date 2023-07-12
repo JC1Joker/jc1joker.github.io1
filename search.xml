@@ -695,6 +695,50 @@
       </tags>
   </entry>
   <entry>
+    <title>关于最近一些事的思考</title>
+    <url>/2023/06/09/%E5%85%B3%E4%BA%8E%E6%9C%80%E8%BF%91%E4%B8%80%E4%BA%9B%E4%BA%8B%E7%9A%84%E6%80%9D%E8%80%83/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  可能是因为学了计算机的缘故，我对任何事情都开始变得更加注重细节和准确性。无论是什么事情，我都希望能够弄清楚每一个细节。就像要求甲方必须清楚描述要做什么、有哪些具体需求，以及不可做什么等等。只有在明确了相关事情之后，我才能够着手进行第一步。我也非常感激自己拥有这种能力，因为有时候如果不去认真对待事情，最终吃亏的往往会是自己。</p>
+]]></content>
+      <tags>
+        <tag>随想</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>docker基础命令</title>
+    <url>/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/Docker.png"></p>
+<blockquote>
+<p>docker的基础命令</p>
+</blockquote>
+<span id="more"></span>
+
+<p>docker pull 安装镜像</p>
+<p>docker run 运行镜像</p>
+<p>docker container run</p>
+<p>说明：</p>
+<p>创建好image后，新建容器时使用；</p>
+<p>每次运行，都会创建一个新的容器；</p>
+<p>新建的容器可以通过 docker container ls -a 或者 docker ps -a 查看（加 -a 表示查看所有创建好的容器）；</p>
+<p>每次创建会返回一个【长的容器ID】；</p>
+<p>通常情况下，运行一次即可；</p>
+<p>docker containers list -a 查看当前运行的所有镜像</p>
+<p>docker exec -it 【docker的名称】 bash  进入docker运行的bash环境中</p>
+<p>docker container start 【containerID】运行已经创建的容器</p>
+<p>docker ps -a 查看所有容器</p>
+<p>docker stop 【containerID】</p>
+<p>docker rm 【containerID】（先停止容器后才能删除）</p>
+<p>docker export 制作基础镜像，使用 <strong>docker export</strong> 命令根据容器 <strong>ID</strong> 将镜像导出成一个文件</p>
+<p>docker import - new_hangger_server &lt; hangger_server.tar 将这个镜像文件导入进来。</p>
+<p>docker load 载入镜像</p>
+]]></content>
+      <categories>
+        <category>docker</category>
+      </categories>
+      <tags>
+        <tag>docker</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>nvidia-smi基础信息</title>
     <url>/2023/06/08/nvidia-smi%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/08/nvidia-smi%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF/nvidia.png"></p>
@@ -710,12 +754,12 @@
       </tags>
   </entry>
   <entry>
-    <title>关于最近一些事的思考</title>
-    <url>/2023/06/09/%E5%85%B3%E4%BA%8E%E6%9C%80%E8%BF%91%E4%B8%80%E4%BA%9B%E4%BA%8B%E7%9A%84%E6%80%9D%E8%80%83/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  可能是因为学了计算机的缘故，我对任何事情都开始变得更加注重细节和准确性。无论是什么事情，我都希望能够弄清楚每一个细节。就像要求甲方必须清楚描述要做什么、有哪些具体需求，以及不可做什么等等。只有在明确了相关事情之后，我才能够着手进行第一步。我也非常感激自己拥有这种能力，因为有时候如果不去认真对待事情，最终吃亏的往往会是自己。</p>
+    <title>我的第一篇博客</title>
+    <url>/2023/06/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>你好，我是一名大三计算机科学与技术在校生，在此博客进行相关技术知识的分享</p>
 ]]></content>
       <tags>
-        <tag>随想</tag>
+        <tag>第一篇博客</tag>
       </tags>
   </entry>
   <entry>
@@ -741,15 +785,6 @@
       </categories>
       <tags>
         <tag>随想</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我的第一篇博客</title>
-    <url>/2023/06/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>你好，我是一名大三计算机科学与技术在校生，在此博客进行相关技术知识的分享</p>
-]]></content>
-      <tags>
-        <tag>第一篇博客</tag>
       </tags>
   </entry>
   <entry>
