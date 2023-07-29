@@ -444,7 +444,7 @@
 </script>
 <!-- require APlayer -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
 
 <!--require MetingJS -->
 <script src=""https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js""></script>
@@ -624,19 +624,6 @@ if (window.darkmode && !window.darkmode.isActivated()) {
 <!-- 兼容低版本浏览器 (包括 IE)，可移除 -->
 <script src="https://v1.hitokoto.cn/?c=b&c=i&c=k&encode=js&select=%23hitokoto" defer></script>
 <!--End-->
-<script>
-  fetch('https://v1.hitokoto.cn/?encode=js&select=%23hitokoto ')
-    .then(function (res){
-      return res.json();
-    })
-    .then(function (data) {
-      var hitokoto = document.getElementById('hitokoto');
-      hitokoto.innerText = data.hitokoto + '—【' + data.from + '】';
-    })
-    .catch(function (err) {
-      console.error(err);
-    })
-</script>
     
 
 
