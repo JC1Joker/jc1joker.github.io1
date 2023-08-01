@@ -1,380 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Pandas笔记</title>
-    <url>/2023/06/07/Pandas%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>中国大学MOOC,python数据分析相关课程笔记–pandas部分</p>
-</blockquote>
-<span id="more"></span>
-<h2 id="pandas库"><a href="#pandas库" class="headerlink" title="pandas库"></a>pandas库</h2><p>pd.Series()# pd.series是pandas中用于表示一维数据的数据结构</p>
-<p>d.cumsum()计算前n项累加和</p>
-<p>[^1]: axis &#x3D; 0 代表对横轴操作，也就是第0轴；axis &#x3D; 1 代表对纵轴操作，也就是第1轴；</p>
-<h2 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h2><p>两个数据类型：Series，DataFrame</p>
-<p>基于商促数据类型的各类操作</p>
-<p>基本操作、运算操作、特征类操作、关联类操作</p>
-<table>
-<thead>
-<tr>
-<th align="center">Numpy</th>
-<th align="center">Pandas</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">基础数据类型</td>
-<td align="center">扩展数据类型</td>
-</tr>
-<tr>
-<td align="center">关注数据的结构表达(数据之间的维度表达)</td>
-<td align="center">关注数据的应用表达</td>
-</tr>
-<tr>
-<td align="center">基于<strong>维度</strong>的运算</td>
-<td align="center">基于<strong>索引</strong>的运算</td>
-</tr>
-</tbody></table>
-<h2 id="series类型"><a href="#series类型" class="headerlink" title="series类型"></a>series类型</h2><p>由一组数据及与之相关的数据索引组成</p>
-<p>index_0  data_a</p>
-<p>index_1 data_b</p>
-<ul>
-<li>python 列表，index与列表元素个数一致</li>
-<li>标量值，index表达Series类型的尺寸</li>
-<li>python字典，键值对中的“键”是索引，index从字典中进行选择操作</li>
-<li>ndarray，索引和数据都可以通过ndarray类型创建</li>
-<li>其他函数，range()函数等</li>
-</ul>
-<h3 id="从ndarray类型创建"><a href="#从ndarray类型创建" class="headerlink" title="从ndarray类型创建"></a>从ndarray类型创建</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">n = pd.Serise(np.arange(<span class="number">5</span>))</span><br><span class="line"></span><br><span class="line">输出：</span><br><span class="line"><span class="number">0</span>  <span class="number">0</span></span><br><span class="line"><span class="number">1</span>  <span class="number">1</span> </span><br><span class="line"><span class="number">2</span>  <span class="number">2</span> </span><br><span class="line"><span class="number">3</span>  <span class="number">3</span> </span><br><span class="line"><span class="number">4</span>  <span class="number">4</span> </span><br></pre></td></tr></table></figure>
-
-<h2 id="Series类型对齐操作"><a href="#Series类型对齐操作" class="headerlink" title="Series类型对齐操作"></a>Series类型对齐操作</h2><p>Series+Series</p>
-<p>Series类型在运算中会自动对齐不同索引的数据</p>
-<h2 id="name属性-name"><a href="#name属性-name" class="headerlink" title="name属性(.name)"></a>name属性(.name)</h2><p>Series对象和索引都可以有一个名字，存储在属性.name中</p>
-<p>Series是一维带“标签”数组</p>
-<p>Series基本操作类似ndarray和字典，根据索引对齐</p>
-<p>DataFrame类型</p>
-<p>二维ndarray对象</p>
-<p>由一维ndarray、列表、字典、元组或series构成的字典</p>
-<h2 id="如何改变Series和DataFrame对象"><a href="#如何改变Series和DataFrame对象" class="headerlink" title="如何改变Series和DataFrame对象"></a>如何改变Series和DataFrame对象</h2><p>增加或重排：重新索引</p>
-<h3 id="重新索引"><a href="#重新索引" class="headerlink" title="重新索引"></a>重新索引</h3><p>.reindex()</p>
-<p>.reindex(希望排列之后的index关系)能够改变或者重排Series和DataFrame索引</p>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>index,columns</td>
-<td>新的行列自定义索引</td>
-</tr>
-<tr>
-<td>fill_value</td>
-<td>重新索引中，用于填充缺失位置的值</td>
-</tr>
-<tr>
-<td>method</td>
-<td>填充方法，ffill当前值向前填充，bfill向后填充</td>
-</tr>
-<tr>
-<td>limit</td>
-<td>最大填充量</td>
-</tr>
-<tr>
-<td>copy</td>
-<td>默认True，生成新的对象，False时，新旧相等不复刻</td>
-</tr>
-</tbody></table>
-<h2 id="索引类型"><a href="#索引类型" class="headerlink" title="索引类型"></a>索引类型</h2><p>Series和DataFrame的索引时index类型</p>
-<p>index对象是不可修改类型</p>
-<p>常用方法</p>
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>.append(idx)</td>
-<td>连接另一个index对象，产生新的index对象</td>
-</tr>
-<tr>
-<td>.diff(idx)</td>
-<td>计算差集，产生新的index对象</td>
-</tr>
-<tr>
-<td>.intersection(idx)</td>
-<td>计算交集</td>
-</tr>
-<tr>
-<td>.union(idx)</td>
-<td>计算并集</td>
-</tr>
-<tr>
-<td>.delete(loc)</td>
-<td>删除loc位置处的元素</td>
-</tr>
-<tr>
-<td>.insert(loc.e)</td>
-<td>在loc位置增加一个元素</td>
-</tr>
-</tbody></table>
-<h2 id="删除指定索引对象"><a href="#删除指定索引对象" class="headerlink" title="删除指定索引对象"></a>删除指定索引对象</h2><p>.drop()能够删除Series和DataFrame指定行或列索引</p>
-<h2 id="pandas数据运算"><a href="#pandas数据运算" class="headerlink" title="pandas数据运算"></a>pandas数据运算</h2><p>算数运算法则</p>
-<p>算术运算根据行列索引，补齐后运算，运算默认产生浮点数</p>
-<p>补齐时缺项填充NaN（空值）</p>
-<p>二维和一维、一维和零维间的广播运算</p>
-<p>采用+-*&#x2F;符号进行的二元运算产生新的对象</p>
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>.add(d,**argws)</td>
-<td>类型间加法运算，可选参数</td>
-</tr>
-<tr>
-<td>.sub(d,**argws)</td>
-<td>类型间减法运算，可选参数</td>
-</tr>
-<tr>
-<td>.mul(d,**argws)</td>
-<td>类型间乘法运算，可选参数</td>
-</tr>
-<tr>
-<td>.div(d,**argws)</td>
-<td>类型见除法运算，可选参数</td>
-</tr>
-</tbody></table>
-<h2 id="比较运算法则"><a href="#比较运算法则" class="headerlink" title="比较运算法则"></a>比较运算法则</h2><p>比较运算只能比较相同索引的元素，不进行补齐。</p>
-<p>二维和一维、一维和零维间的广播运算</p>
-<p>采用&gt;&lt;&gt;&#x3D;&lt;&#x3D; &#x3D;&#x3D; !&#x3D;等符号进行的二元运算产生布尔对象</p>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>Series &#x3D; 索引+一维数据</p>
-<p>DataFrame &#x3D; 行列索引 + 二维数据</p>
-<p>理解数据类型与索引的关系，操作索引即操作数据</p>
-<p>像对待单一数据一样对待Series和DataFrame对象</p>
-<h2 id="数据排序"><a href="#数据排序" class="headerlink" title="数据排序"></a>数据排序</h2><p>.sort_index()方法在指定轴上根据索引进行排序，默认升序</p>
-<p>.sort_index(axis&#x3D;0,ascending&#x3D;True)</p>
-<p>ascending&#x3D;False降序</p>
-<p>.sort_values()方法在指定轴上根据数值进行排序，默认升序</p>
-<p>Serious.sort_values(axis&#x3D;0,ascending&#x3D;True)</p>
-<p>DataFrame.sort_values(<strong>by</strong>,axis&#x3D;0,ascending&#x3D;True)</p>
-<p>by:axis轴上的某个索引或索引列表</p>
-<p>NaN统一放到排序末尾</p>
-<h2 id="基本的统计分析函数"><a href="#基本的统计分析函数" class="headerlink" title="基本的统计分析函数"></a>基本的统计分析函数</h2><p>适用Series和DataFrame类型</p>
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>.sum()</td>
-<td>计算数据的总和</td>
-</tr>
-<tr>
-<td>.count()</td>
-<td>非NaN值的数量</td>
-</tr>
-<tr>
-<td>.mean() .median()</td>
-<td>计算数据的算术平均值、算数中位数</td>
-</tr>
-<tr>
-<td>.var() .std()</td>
-<td>计算数据的方差、标准差</td>
-</tr>
-<tr>
-<td>.min() .max()</td>
-<td>计算数据的最小值、最大值</td>
-</tr>
-</tbody></table>
-<p>统计汇总</p>
-<table>
-<thead>
-<tr>
-<th>.describe</th>
-<th>针对0轴(各列)的统计汇总[^1]</th>
-</tr>
-</thead>
-</table>
-<p>累计统计分析函数</p>
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>.cumsum()</td>
-<td>依次给出前1、2、……、n个数的和</td>
-</tr>
-<tr>
-<td>.cumprod()</td>
-<td>依次给出前1、2、……、n个数的积</td>
-</tr>
-<tr>
-<td>.cummax()</td>
-<td>依次给出前1、2、……、n个数的最大值</td>
-</tr>
-<tr>
-<td>.cummin()</td>
-<td>依次给出前1、2、……、n个数的最小值</td>
-</tr>
-</tbody></table>
-<p>滚动计算（窗口计算）</p>
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>说明（跨行运算）</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>.rolling(w).sum()</td>
-<td>依次计算相邻w个元素的和</td>
-</tr>
-<tr>
-<td>.rolling(w).mean()</td>
-<td>依次计算相邻w个元素的算数平均值</td>
-</tr>
-<tr>
-<td>.rolling(w).var()</td>
-<td>依次计算相邻w个元素的方差</td>
-</tr>
-<tr>
-<td>.rowing(w).std()</td>
-<td>依次计算相邻w个元素的标准差</td>
-</tr>
-<tr>
-<td>.rowing(w).main().max()</td>
-<td>以此计算相邻w个元素的最小值和最大值</td>
-</tr>
-</tbody></table>
-<h2 id="相关分析"><a href="#相关分析" class="headerlink" title="相关分析"></a>相关分析</h2><p>两个事物，表示x和y，如何判断它们之间的存在相关性</p>
-<p><strong>相关性</strong></p>
-<ul>
-<li>x增大，y增大，两个变量正相关</li>
-<li>x增大，y减小，两个变量负相关</li>
-<li>x增大，y无视，两个变量不相关</li>
-</ul>
-<p><strong>协方差</strong></p>
-<p>两个事物，表示x和y，如何判断它们之间的存在相关性</p>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>数据分析</tag>
-        <tag>Pandas</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>conda的使用技巧</title>
-    <url>/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/anaconda.png"></p>
-<blockquote>
-<p>anaconda的换源，创建环境</p>
-</blockquote>
-<span id="more"></span>
-
-<h1 id="Win常用conda命令"><a href="#Win常用conda命令" class="headerlink" title="Win常用conda命令"></a>Win常用conda命令</h1><h2 id="1-查看当前环境下安装的工具"><a href="#1-查看当前环境下安装的工具" class="headerlink" title="1.查看当前环境下安装的工具"></a>1.查看当前环境下安装的工具</h2><blockquote>
-<p>pip list</p>
-</blockquote>
-<p>或</p>
-<blockquote>
-<p>conda list</p>
-</blockquote>
-<h2 id="2-创建虚拟环境"><a href="#2-创建虚拟环境" class="headerlink" title="2.创建虚拟环境"></a>2.创建虚拟环境</h2><blockquote>
-<p>conda create –name[环境名称]</p>
-</blockquote>
-<p>例</p>
-<blockquote>
-<p>conda create –name hacker</p>
-</blockquote>
-<blockquote>
-<p><code>conda create -n 新的环境名 python=指定版本（2.7/3.6/3.7）</code> # 注意需要在base中运行，不能在虚拟环境中执行</p>
-</blockquote>
-<p>即可创建一个名为hacker的虚拟环境</p>
-<h2 id="3-修改环境名称"><a href="#3-修改环境名称" class="headerlink" title="3.修改环境名称"></a>3.修改环境名称</h2><blockquote>
-<p>conda create –name newName（新环境名） –clone oldName（旧环境名）</p>
-</blockquote>
-<h2 id="4-删除环境"><a href="#4-删除环境" class="headerlink" title="4.删除环境"></a>4.删除环境</h2><blockquote>
-<p>conda remove –name oldName（旧环境名） –all </p>
-</blockquote>
-<h2 id="5-查看虚拟环境"><a href="#5-查看虚拟环境" class="headerlink" title="5.查看虚拟环境"></a>5.查看虚拟环境</h2><blockquote>
-<p>conda env list</p>
-<p>conda info -e</p>
-</blockquote>
-<p>其中带有*** **的表示当前所用的环境</p>
-<h2 id="6-切换环境"><a href="#6-切换环境" class="headerlink" title="6.切换环境"></a>6.切换环境</h2><p>使用activate(激活)加上要切换的环境名称，即可切换</p>
-<blockquote>
-<p>conda activate[环境名称]</p>
-</blockquote>
-<p>例</p>
-<blockquote>
-<p>conda activate learn </p>
-</blockquote>
-<h2 id="7-退出虚拟环境"><a href="#7-退出虚拟环境" class="headerlink" title="7.退出虚拟环境"></a>7.退出虚拟环境</h2><blockquote>
-<p>conda deactivate</p>
-</blockquote>
-<h2 id="8-移除虚拟环境"><a href="#8-移除虚拟环境" class="headerlink" title="8.移除虚拟环境"></a>8.移除虚拟环境</h2><blockquote>
-<p>conda remove –name [环境] –all</p>
-</blockquote>
-<p>例</p>
-<blockquote>
-<p>conda remove –name learn –all</p>
-</blockquote>
-<h2 id="9-包的安装"><a href="#9-包的安装" class="headerlink" title="9.包的安装"></a>9.包的安装</h2><p>（无需进入环境）</p>
-<blockquote>
-<p>conda install [包名] -n [环境名]</p>
-</blockquote>
-<h2 id="10-包的更新"><a href="#10-包的更新" class="headerlink" title="10.包的更新"></a>10.包的更新</h2><blockquote>
-<p>conda update –all</p>
-</blockquote>
-<h2 id="11-包的删除"><a href="#11-包的删除" class="headerlink" title="11.包的删除"></a>11.包的删除</h2><blockquote>
-<p>conda remove [包名]</p>
-</blockquote>
-<h2 id="12-查看可以安装的python版本"><a href="#12-查看可以安装的python版本" class="headerlink" title="12.查看可以安装的python版本"></a>12.查看可以安装的python版本</h2><blockquote>
-<p> conda search –full-name python&#96;</p>
-</blockquote>
-<h2 id="13-镜像源"><a href="#13-镜像源" class="headerlink" title="13.镜像源"></a>13.镜像源</h2><h3 id="查看当前conda源"><a href="#查看当前conda源" class="headerlink" title="查看当前conda源"></a>查看当前conda源</h3><blockquote>
-<p>conda config –show</p>
-</blockquote>
-<h3 id="恢复默认源"><a href="#恢复默认源" class="headerlink" title="恢复默认源"></a>恢复默认源</h3><blockquote>
-<p>conda config –remove-key channels</p>
-</blockquote>
-<h3 id="中科大源"><a href="#中科大源" class="headerlink" title="中科大源"></a>中科大源</h3><p>conda config –add channels <a href="https://mirrors.ustc.edu.cn/anaconda/pkgs/main/">https://mirrors.ustc.edu.cn/anaconda/pkgs/main/</a><br>conda config –add channels <a href="https://mirrors.ustc.edu.cn/anaconda/pkgs/free/">https://mirrors.ustc.edu.cn/anaconda/pkgs/free/</a><br>conda config –add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/">https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/</a><br>conda config –add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/">https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/</a><br>conda config –add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/">https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/</a><br>conda config –add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/">https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/</a><br>conda config –set show_channel_urls yes</p>
-<h3 id="清华源"><a href="#清华源" class="headerlink" title="清华源"></a>清华源</h3><p>conda config –add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/</a><br>conda config –add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge</a><br>conda config –add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</a><br>conda config –add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/</a><br>conda config –add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</a><br>conda config –set show_channel_urls yes</p>
-<h3 id="腾讯云"><a href="#腾讯云" class="headerlink" title="腾讯云"></a>腾讯云</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda config --add channels https://mirrors.cloud.tencent.com/anaconda/pkgs/free/</span><br><span class="line">conda config --add channels https://mirrors.cloud.tencent.com/anaconda/pkgs/main/</span><br><span class="line">conda config --set show_channel_urls yes</span><br></pre></td></tr></table></figure>
-
-<h2 id="14清理conda缓存"><a href="#14清理conda缓存" class="headerlink" title="14清理conda缓存"></a>14清理conda缓存</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda clean -p     </span><br><span class="line">conda clean -t      </span><br><span class="line">conda clean -y -all </span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash">删除没有用的包 --packages</span></span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash">删除tar打包 --tarballs</span></span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash">删除所有的安装包及cache(索引缓存、锁定文件、未使用过的包和tar包)</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="15-pip国内源"><a href="#15-pip国内源" class="headerlink" title="15.pip国内源"></a>15.pip国内源</h2><p>阿里云 ：<a href="http://mirrors.aliyun.com/pypi/simple/">http://mirrors.aliyun.com/pypi/simple/</a><br>中国科技大学： <a href="https://pypi.mirrors.ustc.edu.cn/simple/">https://pypi.mirrors.ustc.edu.cn/simple/</a><br>豆瓣(douban) ：<a href="http://pypi.douban.com/simple/">http://pypi.douban.com/simple/</a><br>清华大学 ：<a href="https://pypi.tuna.tsinghua.edu.cn/simple/">https://pypi.tuna.tsinghua.edu.cn/simple/</a><br>中国科学技术大学： <a href="http://pypi.mirrors.ustc.edu.cn/simple/">http://pypi.mirrors.ustc.edu.cn/simple/</a></p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">使用豆瓣源安装</span></span><br><span class="line">pip install opencv-python -i http://pypi.douban.com/simple </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">报错说不信任该源，执行如下：</span></span><br><span class="line">pip install opencv-python -i http://pypi.douban.com/simple --trusted-host pypi.douban.com</span><br></pre></td></tr></table></figure>
-
-<h2 id="16-修改python版本"><a href="#16-修改python版本" class="headerlink" title="16.修改python版本"></a>16.修改python版本</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">1.新建一个anaconda虚拟环境，指定Python版本</span></span><br><span class="line">conda create -n envTest python=3.5</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">2.直接将现有的anaconda中python更改为3.5</span></span><br><span class="line">sudo conda install python=3.5</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">3.下载并安装对应Python版本的anaconda，anaconda4.2-&gt;python3.5</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">https://repo.continuum.io/archive/</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="17-打开交互界面"><a href="#17-打开交互界面" class="headerlink" title="17.打开交互界面"></a>17.打开交互界面</h2><blockquote>
-<p>anaconda-navigator</p>
-</blockquote>
-<h2 id="18-临时更换pip源"><a href="#18-临时更换pip源" class="headerlink" title="18.临时更换pip源"></a>18.临时更换pip源</h2><blockquote>
-<p>pip install 库 -i <a href="http://pypi.douban.com/simple">http://pypi.douban.com/simple</a> –trusted-host pypi.douban.com</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Shell</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Numpy笔记</title>
     <url>/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/NumPy_logo_2020.png"></p>
@@ -695,12 +321,442 @@
       </tags>
   </entry>
   <entry>
-    <title>关于最近一些事的思考</title>
-    <url>/2023/06/09/%E5%85%B3%E4%BA%8E%E6%9C%80%E8%BF%91%E4%B8%80%E4%BA%9B%E4%BA%8B%E7%9A%84%E6%80%9D%E8%80%83/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  可能是因为学了计算机的缘故，我对任何事情都开始变得更加注重细节和准确性。无论是什么事情，我都希望能够弄清楚每一个细节。就像要求甲方必须清楚描述要做什么、有哪些具体需求，以及不可做什么等等。只有在明确了相关事情之后，我才能够着手进行第一步。我也非常感激自己拥有这种能力，因为有时候如果不去认真对待事情，最终吃亏的往往会是自己。</p>
+    <title>Pandas笔记</title>
+    <url>/2023/06/07/Pandas%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>中国大学MOOC,python数据分析相关课程笔记–pandas部分</p>
+</blockquote>
+<span id="more"></span>
+<h2 id="pandas库"><a href="#pandas库" class="headerlink" title="pandas库"></a>pandas库</h2><p>pd.Series()# pd.series是pandas中用于表示一维数据的数据结构</p>
+<p>d.cumsum()计算前n项累加和</p>
+<p>[^1]: axis &#x3D; 0 代表对横轴操作，也就是第0轴；axis &#x3D; 1 代表对纵轴操作，也就是第1轴；</p>
+<h2 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h2><p>两个数据类型：Series，DataFrame</p>
+<p>基于商促数据类型的各类操作</p>
+<p>基本操作、运算操作、特征类操作、关联类操作</p>
+<table>
+<thead>
+<tr>
+<th align="center">Numpy</th>
+<th align="center">Pandas</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">基础数据类型</td>
+<td align="center">扩展数据类型</td>
+</tr>
+<tr>
+<td align="center">关注数据的结构表达(数据之间的维度表达)</td>
+<td align="center">关注数据的应用表达</td>
+</tr>
+<tr>
+<td align="center">基于<strong>维度</strong>的运算</td>
+<td align="center">基于<strong>索引</strong>的运算</td>
+</tr>
+</tbody></table>
+<h2 id="series类型"><a href="#series类型" class="headerlink" title="series类型"></a>series类型</h2><p>由一组数据及与之相关的数据索引组成</p>
+<p>index_0  data_a</p>
+<p>index_1 data_b</p>
+<ul>
+<li>python 列表，index与列表元素个数一致</li>
+<li>标量值，index表达Series类型的尺寸</li>
+<li>python字典，键值对中的“键”是索引，index从字典中进行选择操作</li>
+<li>ndarray，索引和数据都可以通过ndarray类型创建</li>
+<li>其他函数，range()函数等</li>
+</ul>
+<h3 id="从ndarray类型创建"><a href="#从ndarray类型创建" class="headerlink" title="从ndarray类型创建"></a>从ndarray类型创建</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">n = pd.Serise(np.arange(<span class="number">5</span>))</span><br><span class="line"></span><br><span class="line">输出：</span><br><span class="line"><span class="number">0</span>  <span class="number">0</span></span><br><span class="line"><span class="number">1</span>  <span class="number">1</span> </span><br><span class="line"><span class="number">2</span>  <span class="number">2</span> </span><br><span class="line"><span class="number">3</span>  <span class="number">3</span> </span><br><span class="line"><span class="number">4</span>  <span class="number">4</span> </span><br></pre></td></tr></table></figure>
+
+<h2 id="Series类型对齐操作"><a href="#Series类型对齐操作" class="headerlink" title="Series类型对齐操作"></a>Series类型对齐操作</h2><p>Series+Series</p>
+<p>Series类型在运算中会自动对齐不同索引的数据</p>
+<h2 id="name属性-name"><a href="#name属性-name" class="headerlink" title="name属性(.name)"></a>name属性(.name)</h2><p>Series对象和索引都可以有一个名字，存储在属性.name中</p>
+<p>Series是一维带“标签”数组</p>
+<p>Series基本操作类似ndarray和字典，根据索引对齐</p>
+<p>DataFrame类型</p>
+<p>二维ndarray对象</p>
+<p>由一维ndarray、列表、字典、元组或series构成的字典</p>
+<h2 id="如何改变Series和DataFrame对象"><a href="#如何改变Series和DataFrame对象" class="headerlink" title="如何改变Series和DataFrame对象"></a>如何改变Series和DataFrame对象</h2><p>增加或重排：重新索引</p>
+<h3 id="重新索引"><a href="#重新索引" class="headerlink" title="重新索引"></a>重新索引</h3><p>.reindex()</p>
+<p>.reindex(希望排列之后的index关系)能够改变或者重排Series和DataFrame索引</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>index,columns</td>
+<td>新的行列自定义索引</td>
+</tr>
+<tr>
+<td>fill_value</td>
+<td>重新索引中，用于填充缺失位置的值</td>
+</tr>
+<tr>
+<td>method</td>
+<td>填充方法，ffill当前值向前填充，bfill向后填充</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>最大填充量</td>
+</tr>
+<tr>
+<td>copy</td>
+<td>默认True，生成新的对象，False时，新旧相等不复刻</td>
+</tr>
+</tbody></table>
+<h2 id="索引类型"><a href="#索引类型" class="headerlink" title="索引类型"></a>索引类型</h2><p>Series和DataFrame的索引时index类型</p>
+<p>index对象是不可修改类型</p>
+<p>常用方法</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>.append(idx)</td>
+<td>连接另一个index对象，产生新的index对象</td>
+</tr>
+<tr>
+<td>.diff(idx)</td>
+<td>计算差集，产生新的index对象</td>
+</tr>
+<tr>
+<td>.intersection(idx)</td>
+<td>计算交集</td>
+</tr>
+<tr>
+<td>.union(idx)</td>
+<td>计算并集</td>
+</tr>
+<tr>
+<td>.delete(loc)</td>
+<td>删除loc位置处的元素</td>
+</tr>
+<tr>
+<td>.insert(loc.e)</td>
+<td>在loc位置增加一个元素</td>
+</tr>
+</tbody></table>
+<h2 id="删除指定索引对象"><a href="#删除指定索引对象" class="headerlink" title="删除指定索引对象"></a>删除指定索引对象</h2><p>.drop()能够删除Series和DataFrame指定行或列索引</p>
+<h2 id="pandas数据运算"><a href="#pandas数据运算" class="headerlink" title="pandas数据运算"></a>pandas数据运算</h2><p>算数运算法则</p>
+<p>算术运算根据行列索引，补齐后运算，运算默认产生浮点数</p>
+<p>补齐时缺项填充NaN（空值）</p>
+<p>二维和一维、一维和零维间的广播运算</p>
+<p>采用+-*&#x2F;符号进行的二元运算产生新的对象</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>.add(d,**argws)</td>
+<td>类型间加法运算，可选参数</td>
+</tr>
+<tr>
+<td>.sub(d,**argws)</td>
+<td>类型间减法运算，可选参数</td>
+</tr>
+<tr>
+<td>.mul(d,**argws)</td>
+<td>类型间乘法运算，可选参数</td>
+</tr>
+<tr>
+<td>.div(d,**argws)</td>
+<td>类型见除法运算，可选参数</td>
+</tr>
+</tbody></table>
+<h2 id="比较运算法则"><a href="#比较运算法则" class="headerlink" title="比较运算法则"></a>比较运算法则</h2><p>比较运算只能比较相同索引的元素，不进行补齐。</p>
+<p>二维和一维、一维和零维间的广播运算</p>
+<p>采用&gt;&lt;&gt;&#x3D;&lt;&#x3D; &#x3D;&#x3D; !&#x3D;等符号进行的二元运算产生布尔对象</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>Series &#x3D; 索引+一维数据</p>
+<p>DataFrame &#x3D; 行列索引 + 二维数据</p>
+<p>理解数据类型与索引的关系，操作索引即操作数据</p>
+<p>像对待单一数据一样对待Series和DataFrame对象</p>
+<h2 id="数据排序"><a href="#数据排序" class="headerlink" title="数据排序"></a>数据排序</h2><p>.sort_index()方法在指定轴上根据索引进行排序，默认升序</p>
+<p>.sort_index(axis&#x3D;0,ascending&#x3D;True)</p>
+<p>ascending&#x3D;False降序</p>
+<p>.sort_values()方法在指定轴上根据数值进行排序，默认升序</p>
+<p>Serious.sort_values(axis&#x3D;0,ascending&#x3D;True)</p>
+<p>DataFrame.sort_values(<strong>by</strong>,axis&#x3D;0,ascending&#x3D;True)</p>
+<p>by:axis轴上的某个索引或索引列表</p>
+<p>NaN统一放到排序末尾</p>
+<h2 id="基本的统计分析函数"><a href="#基本的统计分析函数" class="headerlink" title="基本的统计分析函数"></a>基本的统计分析函数</h2><p>适用Series和DataFrame类型</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>.sum()</td>
+<td>计算数据的总和</td>
+</tr>
+<tr>
+<td>.count()</td>
+<td>非NaN值的数量</td>
+</tr>
+<tr>
+<td>.mean() .median()</td>
+<td>计算数据的算术平均值、算数中位数</td>
+</tr>
+<tr>
+<td>.var() .std()</td>
+<td>计算数据的方差、标准差</td>
+</tr>
+<tr>
+<td>.min() .max()</td>
+<td>计算数据的最小值、最大值</td>
+</tr>
+</tbody></table>
+<p>统计汇总</p>
+<table>
+<thead>
+<tr>
+<th>.describe</th>
+<th>针对0轴(各列)的统计汇总[^1]</th>
+</tr>
+</thead>
+</table>
+<p>累计统计分析函数</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>.cumsum()</td>
+<td>依次给出前1、2、……、n个数的和</td>
+</tr>
+<tr>
+<td>.cumprod()</td>
+<td>依次给出前1、2、……、n个数的积</td>
+</tr>
+<tr>
+<td>.cummax()</td>
+<td>依次给出前1、2、……、n个数的最大值</td>
+</tr>
+<tr>
+<td>.cummin()</td>
+<td>依次给出前1、2、……、n个数的最小值</td>
+</tr>
+</tbody></table>
+<p>滚动计算（窗口计算）</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明（跨行运算）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>.rolling(w).sum()</td>
+<td>依次计算相邻w个元素的和</td>
+</tr>
+<tr>
+<td>.rolling(w).mean()</td>
+<td>依次计算相邻w个元素的算数平均值</td>
+</tr>
+<tr>
+<td>.rolling(w).var()</td>
+<td>依次计算相邻w个元素的方差</td>
+</tr>
+<tr>
+<td>.rowing(w).std()</td>
+<td>依次计算相邻w个元素的标准差</td>
+</tr>
+<tr>
+<td>.rowing(w).main().max()</td>
+<td>以此计算相邻w个元素的最小值和最大值</td>
+</tr>
+</tbody></table>
+<h2 id="相关分析"><a href="#相关分析" class="headerlink" title="相关分析"></a>相关分析</h2><p>两个事物，表示x和y，如何判断它们之间的存在相关性</p>
+<p><strong>相关性</strong></p>
+<ul>
+<li>x增大，y增大，两个变量正相关</li>
+<li>x增大，y减小，两个变量负相关</li>
+<li>x增大，y无视，两个变量不相关</li>
+</ul>
+<p><strong>协方差</strong></p>
+<p>两个事物，表示x和y，如何判断它们之间的存在相关性</p>
 ]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
       <tags>
-        <tag>随想</tag>
+        <tag>数据分析</tag>
+        <tag>Pandas</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux中开启ssh的配置😎🐱‍💻</title>
+    <url>/2023/08/01/Linux%E4%B8%AD%E5%BC%80%E5%90%AFssh%E7%9A%84%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>在Linux环境下使用ssh</p>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="1-本地网络配置-🌐"><a href="#1-本地网络配置-🌐" class="headerlink" title="1.本地网络配置 🌐"></a>1.本地网络配置 🌐</h2><h3 id="1-1-1-配置临时IP地址-📝"><a href="#1-1-1-配置临时IP地址-📝" class="headerlink" title="1.1.1 配置临时IP地址 📝"></a>1.1.1 配置临时IP地址 📝</h3><p>首先，使用以下命令配置临时IP地址：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ifconfig eth0 192.168.1.53/24</span><br></pre></td></tr></table></figure>
+
+<p>然后添加子网掩码：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">255.255.255.0</span><br></pre></td></tr></table></figure>
+
+<p>接下来，配置默认网关：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">route add default gw 192.168.1.1</span><br></pre></td></tr></table></figure>
+
+<p>确认网络连接是否正常：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ping 192.168.1.1</span><br></pre></td></tr></table></figure>
+
+<p>最后，编辑DNS配置文件：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vim /etc/resolv.conf</span><br></pre></td></tr></table></figure>
+
+<p>添加以下行来配置DNS：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">nameserver 8.8.8.8</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-1-2-配置永久IP地址-📝"><a href="#1-1-2-配置永久IP地址-📝" class="headerlink" title="1.1.2 配置永久IP地址 📝"></a>1.1.2 配置永久IP地址 📝</h3><p>若要配置永久IP地址，请打开以下文件：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/network/interfaces</span><br></pre></td></tr></table></figure>
+
+<p>然后，注释掉dhcp配置，并添加以下静态IP配置：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">arduinoCopy codeauto eth0</span><br><span class="line"><span class="comment">#iface eth0 inet dhcp # 注释掉</span></span><br><span class="line">iface eth0 inet static</span><br><span class="line">address 192.168.3.53</span><br><span class="line">netmask 255.255.255.0</span><br><span class="line">gateway 192.168.1.1</span><br></pre></td></tr></table></figure>
+
+<p>接着，再次编辑DNS配置文件：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/resolv.conf</span><br></pre></td></tr></table></figure>
+
+<p>添加以下行来配置DNS：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nameserver 8.8.8.8</span><br></pre></td></tr></table></figure>
+
+<p>完成后，重启网络服务：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/etc/init.d/networking restart</span><br></pre></td></tr></table></figure>
+
+<p>或者，使用以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl restart networking</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-配置sshd服务并使用Xshell连接-🔒🔌"><a href="#2-配置sshd服务并使用Xshell连接-🔒🔌" class="headerlink" title="2. 配置sshd服务并使用Xshell连接 🔒🔌"></a>2. 配置sshd服务并使用Xshell连接 🔒🔌</h2><p>为了配置sshd服务并使用Xshell连接，首先以管理员权限打开sshd配置文件：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo vim /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure>
+
+<p>如果你想显示行号，可以使用以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">:<span class="built_in">set</span> nu</span><br></pre></td></tr></table></figure>
+
+<p>然后，在32行和37行进行修改：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">codePermitRootLogin <span class="built_in">yes</span></span><br><span class="line">PubkeyAuthentication <span class="built_in">yes</span></span><br></pre></td></tr></table></figure>
+
+<p>接下来，重启sshd服务：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/etc/init.d/ssh restart</span><br></pre></td></tr></table></figure>
+
+<p>或者，使用以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl restart ssh</span><br></pre></td></tr></table></figure>
+
+<p>若要设置开机启动，可以运行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">update-rc.d ssh <span class="built_in">enable</span></span><br></pre></td></tr></table></figure>
+
+<p>现在，你的kali linux配置已经完成！享受使用Xshell连接的便捷和安全体验吧！😊🔒</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>conda的使用技巧</title>
+    <url>/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/anaconda.png"></p>
+<blockquote>
+<p>anaconda的换源，创建环境</p>
+</blockquote>
+<span id="more"></span>
+
+<h1 id="Win常用conda命令"><a href="#Win常用conda命令" class="headerlink" title="Win常用conda命令"></a>Win常用conda命令</h1><h2 id="1-查看当前环境下安装的工具"><a href="#1-查看当前环境下安装的工具" class="headerlink" title="1.查看当前环境下安装的工具"></a>1.查看当前环境下安装的工具</h2><blockquote>
+<p>pip list</p>
+</blockquote>
+<p>或</p>
+<blockquote>
+<p>conda list</p>
+</blockquote>
+<h2 id="2-创建虚拟环境"><a href="#2-创建虚拟环境" class="headerlink" title="2.创建虚拟环境"></a>2.创建虚拟环境</h2><blockquote>
+<p>conda create –name[环境名称]</p>
+</blockquote>
+<p>例</p>
+<blockquote>
+<p>conda create –name hacker</p>
+</blockquote>
+<blockquote>
+<p><code>conda create -n 新的环境名 python=指定版本（2.7/3.6/3.7）</code> # 注意需要在base中运行，不能在虚拟环境中执行</p>
+</blockquote>
+<p>即可创建一个名为hacker的虚拟环境</p>
+<h2 id="3-修改环境名称"><a href="#3-修改环境名称" class="headerlink" title="3.修改环境名称"></a>3.修改环境名称</h2><blockquote>
+<p>conda create –name newName（新环境名） –clone oldName（旧环境名）</p>
+</blockquote>
+<h2 id="4-删除环境"><a href="#4-删除环境" class="headerlink" title="4.删除环境"></a>4.删除环境</h2><blockquote>
+<p>conda remove –name oldName（旧环境名） –all </p>
+</blockquote>
+<h2 id="5-查看虚拟环境"><a href="#5-查看虚拟环境" class="headerlink" title="5.查看虚拟环境"></a>5.查看虚拟环境</h2><blockquote>
+<p>conda env list</p>
+<p>conda info -e</p>
+</blockquote>
+<p>其中带有*** **的表示当前所用的环境</p>
+<h2 id="6-切换环境"><a href="#6-切换环境" class="headerlink" title="6.切换环境"></a>6.切换环境</h2><p>使用activate(激活)加上要切换的环境名称，即可切换</p>
+<blockquote>
+<p>conda activate[环境名称]</p>
+</blockquote>
+<p>例</p>
+<blockquote>
+<p>conda activate learn </p>
+</blockquote>
+<h2 id="7-退出虚拟环境"><a href="#7-退出虚拟环境" class="headerlink" title="7.退出虚拟环境"></a>7.退出虚拟环境</h2><blockquote>
+<p>conda deactivate</p>
+</blockquote>
+<h2 id="8-移除虚拟环境"><a href="#8-移除虚拟环境" class="headerlink" title="8.移除虚拟环境"></a>8.移除虚拟环境</h2><blockquote>
+<p>conda remove –name [环境] –all</p>
+</blockquote>
+<p>例</p>
+<blockquote>
+<p>conda remove –name learn –all</p>
+</blockquote>
+<h2 id="9-包的安装"><a href="#9-包的安装" class="headerlink" title="9.包的安装"></a>9.包的安装</h2><p>（无需进入环境）</p>
+<blockquote>
+<p>conda install [包名] -n [环境名]</p>
+</blockquote>
+<h2 id="10-包的更新"><a href="#10-包的更新" class="headerlink" title="10.包的更新"></a>10.包的更新</h2><blockquote>
+<p>conda update –all</p>
+</blockquote>
+<h2 id="11-包的删除"><a href="#11-包的删除" class="headerlink" title="11.包的删除"></a>11.包的删除</h2><blockquote>
+<p>conda remove [包名]</p>
+</blockquote>
+<h2 id="12-查看可以安装的python版本"><a href="#12-查看可以安装的python版本" class="headerlink" title="12.查看可以安装的python版本"></a>12.查看可以安装的python版本</h2><blockquote>
+<p> conda search –full-name python&#96;</p>
+</blockquote>
+<h2 id="13-镜像源"><a href="#13-镜像源" class="headerlink" title="13.镜像源"></a>13.镜像源</h2><h3 id="查看当前conda源"><a href="#查看当前conda源" class="headerlink" title="查看当前conda源"></a>查看当前conda源</h3><blockquote>
+<p>conda config –show</p>
+</blockquote>
+<h3 id="恢复默认源"><a href="#恢复默认源" class="headerlink" title="恢复默认源"></a>恢复默认源</h3><blockquote>
+<p>conda config –remove-key channels</p>
+</blockquote>
+<h3 id="中科大源"><a href="#中科大源" class="headerlink" title="中科大源"></a>中科大源</h3><p>conda config –add channels <a href="https://mirrors.ustc.edu.cn/anaconda/pkgs/main/">https://mirrors.ustc.edu.cn/anaconda/pkgs/main/</a><br>conda config –add channels <a href="https://mirrors.ustc.edu.cn/anaconda/pkgs/free/">https://mirrors.ustc.edu.cn/anaconda/pkgs/free/</a><br>conda config –add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/">https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/</a><br>conda config –add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/">https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/</a><br>conda config –add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/">https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/</a><br>conda config –add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/">https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/</a><br>conda config –set show_channel_urls yes</p>
+<h3 id="清华源"><a href="#清华源" class="headerlink" title="清华源"></a>清华源</h3><p>conda config –add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/</a><br>conda config –add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge</a><br>conda config –add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</a><br>conda config –add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/</a><br>conda config –add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</a><br>conda config –set show_channel_urls yes</p>
+<h3 id="腾讯云"><a href="#腾讯云" class="headerlink" title="腾讯云"></a>腾讯云</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda config --add channels https://mirrors.cloud.tencent.com/anaconda/pkgs/free/</span><br><span class="line">conda config --add channels https://mirrors.cloud.tencent.com/anaconda/pkgs/main/</span><br><span class="line">conda config --set show_channel_urls yes</span><br></pre></td></tr></table></figure>
+
+<h2 id="14清理conda缓存"><a href="#14清理conda缓存" class="headerlink" title="14清理conda缓存"></a>14清理conda缓存</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda clean -p     </span><br><span class="line">conda clean -t      </span><br><span class="line">conda clean -y -all </span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash">删除没有用的包 --packages</span></span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash">删除tar打包 --tarballs</span></span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash">删除所有的安装包及cache(索引缓存、锁定文件、未使用过的包和tar包)</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="15-pip国内源"><a href="#15-pip国内源" class="headerlink" title="15.pip国内源"></a>15.pip国内源</h2><p>阿里云 ：<a href="http://mirrors.aliyun.com/pypi/simple/">http://mirrors.aliyun.com/pypi/simple/</a><br>中国科技大学： <a href="https://pypi.mirrors.ustc.edu.cn/simple/">https://pypi.mirrors.ustc.edu.cn/simple/</a><br>豆瓣(douban) ：<a href="http://pypi.douban.com/simple/">http://pypi.douban.com/simple/</a><br>清华大学 ：<a href="https://pypi.tuna.tsinghua.edu.cn/simple/">https://pypi.tuna.tsinghua.edu.cn/simple/</a><br>中国科学技术大学： <a href="http://pypi.mirrors.ustc.edu.cn/simple/">http://pypi.mirrors.ustc.edu.cn/simple/</a></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">使用豆瓣源安装</span></span><br><span class="line">pip install opencv-python -i http://pypi.douban.com/simple </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">报错说不信任该源，执行如下：</span></span><br><span class="line">pip install opencv-python -i http://pypi.douban.com/simple --trusted-host pypi.douban.com</span><br></pre></td></tr></table></figure>
+
+<h2 id="16-修改python版本"><a href="#16-修改python版本" class="headerlink" title="16.修改python版本"></a>16.修改python版本</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">1.新建一个anaconda虚拟环境，指定Python版本</span></span><br><span class="line">conda create -n envTest python=3.5</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">2.直接将现有的anaconda中python更改为3.5</span></span><br><span class="line">sudo conda install python=3.5</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">3.下载并安装对应Python版本的anaconda，anaconda4.2-&gt;python3.5</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">https://repo.continuum.io/archive/</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="17-打开交互界面"><a href="#17-打开交互界面" class="headerlink" title="17.打开交互界面"></a>17.打开交互界面</h2><blockquote>
+<p>anaconda-navigator</p>
+</blockquote>
+<h2 id="18-临时更换pip源"><a href="#18-临时更换pip源" class="headerlink" title="18.临时更换pip源"></a>18.临时更换pip源</h2><blockquote>
+<p>pip install 库 -i <a href="http://pypi.douban.com/simple">http://pypi.douban.com/simple</a> –trusted-host pypi.douban.com</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Shell</tag>
       </tags>
   </entry>
   <entry>
@@ -754,35 +810,10 @@
       </tags>
   </entry>
   <entry>
-    <title>我的第一篇博客</title>
-    <url>/2023/06/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>你好，我是一名大三计算机科学与技术在校生，在此博客进行相关技术知识的分享</p>
+    <title>关于最近一些事的思考</title>
+    <url>/2023/06/09/%E5%85%B3%E4%BA%8E%E6%9C%80%E8%BF%91%E4%B8%80%E4%BA%9B%E4%BA%8B%E7%9A%84%E6%80%9D%E8%80%83/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  可能是因为学了计算机的缘故，我对任何事情都开始变得更加注重细节和准确性。无论是什么事情，我都希望能够弄清楚每一个细节。就像要求甲方必须清楚描述要做什么、有哪些具体需求，以及不可做什么等等。只有在明确了相关事情之后，我才能够着手进行第一步。我也非常感激自己拥有这种能力，因为有时候如果不去认真对待事情，最终吃亏的往往会是自己。</p>
 ]]></content>
-      <tags>
-        <tag>第一篇博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>文案收集(更新中)</title>
-    <url>/2023/06/25/%E6%96%87%E6%A1%88%E6%94%B6%E9%9B%86/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>收集的一些优质文案</p>
-</blockquote>
-<span id="more"></span>
-
-<h3 id="城市类"><a href="#城市类" class="headerlink" title="城市类"></a>城市类</h3><ul>
-<li><p>亮起霓虹的城市夜灯，有了喧哗，变得更加妖媚</p>
-</li>
-<li><p>夏天的阳光就是最好的滤镜</p>
-</li>
-</ul>
-<h3 id="艺术类"><a href="#艺术类" class="headerlink" title="艺术类"></a>艺术类</h3><ul>
-<li>中国艺术最大的特色，从是个到绘画到戏剧，都讲究乐而不谣，哀而不怨，雍容有度，讲究典雅，自然，反对装腔作势和过火的恶趣，反对无目的地炫耀技巧。而这些也是世界一切高级艺术共同的准则。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>文案</category>
-      </categories>
       <tags>
         <tag>随想</tag>
       </tags>
@@ -859,6 +890,40 @@
       </tags>
   </entry>
   <entry>
+    <title>我的第一篇博客</title>
+    <url>/2023/06/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>你好，我是一名大三计算机科学与技术在校生，在此博客进行相关技术知识的分享</p>
+]]></content>
+      <tags>
+        <tag>第一篇博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>文案收集(更新中)</title>
+    <url>/2023/06/25/%E6%96%87%E6%A1%88%E6%94%B6%E9%9B%86/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>收集的一些优质文案</p>
+</blockquote>
+<span id="more"></span>
+
+<h3 id="城市类"><a href="#城市类" class="headerlink" title="城市类"></a>城市类</h3><ul>
+<li><p>亮起霓虹的城市夜灯，有了喧哗，变得更加妖媚</p>
+</li>
+<li><p>夏天的阳光就是最好的滤镜</p>
+</li>
+</ul>
+<h3 id="艺术类"><a href="#艺术类" class="headerlink" title="艺术类"></a>艺术类</h3><ul>
+<li>中国艺术最大的特色，从是个到绘画到戏剧，都讲究乐而不谣，哀而不怨，雍容有度，讲究典雅，自然，反对装腔作势和过火的恶趣，反对无目的地炫耀技巧。而这些也是世界一切高级艺术共同的准则。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>文案</category>
+      </categories>
+      <tags>
+        <tag>随想</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>饿补计算机科学基础（一）--计算机基础</title>
     <url>/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>计算机基础，常识</p>
@@ -917,136 +982,6 @@
 <p>声道数</p>
 <p>记录每秒存储声音容量公式为</p>
 <p>采样频率 X 量化位数（bit） ➗ 8 X 声道数 &#x3D; 每秒数据量</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>饿补计算机科学基础（二）--算法</title>
-    <url>/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89-%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>基于python编写的算法</p>
-<span id="more"></span>
-
-<h2 id="2-典型算法设计"><a href="#2-典型算法设计" class="headerlink" title="2.典型算法设计"></a>2.典型算法设计</h2><h3 id="1-递归"><a href="#1-递归" class="headerlink" title="(1).递归"></a>(1).递归</h3><p>递归方法（recursion algorithm）是指一种通过解决同类的规模较小的子问题而获得问题求解的方法</p>
-<ul>
-<li><p>问题的定义是递归定义的</p>
-</li>
-<li><p>问题的解法按递归算法实现的</p>
-</li>
-<li><p>数据的结构形式是按递归定义的（二叉树，广义表）</p>
-</li>
-</ul>
-<p>假如一个函数或者子程序是由自身所定义或调用的，成为递归</p>
-<ul>
-<li><p>递归函数的要素：</p>
-<ul>
-<li><p>一个可以反复执行的递归过程</p>
-</li>
-<li><p>跳出递归过程的出口（不再进行递归的条件）</p>
-</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 阶乘的递归函数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fact</span>(<span class="params">n</span>):</span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">1</span>:<span class="comment">#递归出口</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> n * fact(n-<span class="number">1</span>)<span class="comment">#递归调用</span></span><br><span class="line">    </span><br><span class="line"><span class="built_in">print</span>（fact(<span class="number">3</span>)）</span><br></pre></td></tr></table></figure>
-
-<h4 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h4><p>二分查找算法（Binary search）递归实现：二分查找要求线性表必须采用顺序存储结构，而且表中元素按关键字有序排列</p>
-<p>反复执行的递归过程：缩小范围继续查找</p>
-<p>跳出提柜的出口：找到了，或者范围长度变成0</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">binarysearch_rec</span>(<span class="params">A, key, low, high</span>):  <span class="comment"># 二分查找算法的递归实现</span></span><br><span class="line">    <span class="keyword">if</span> low &gt; high:</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line">    mid = (low + high) // <span class="number">2</span>  <span class="comment"># 计算中间位置的索引，使用 (low + high) // 2</span></span><br><span class="line">    <span class="keyword">if</span> key == A[mid]:</span><br><span class="line">        <span class="keyword">return</span> mid</span><br><span class="line">    <span class="keyword">elif</span> key &lt; A[mid]:</span><br><span class="line">        <span class="keyword">return</span> binarysearch_rec(A, key, low, mid - <span class="number">1</span>)  <span class="comment"># 左边递归查找</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> binarysearch_rec(A, key, mid + <span class="number">1</span>, high)  <span class="comment"># 右边递归查找</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(binarysearch_rec([<span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">7</span>], <span class="number">4</span>, <span class="number">0</span>, <span class="number">3</span>))  <span class="comment"># 调用函数</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">binary_search</span>(<span class="params">A,Key</span>):</span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    j=<span class="built_in">len</span>(A)-<span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> i &lt;=j:</span><br><span class="line">        mid = (i+j)//<span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> A[mid]==Key:</span><br><span class="line">            <span class="keyword">return</span> mid</span><br><span class="line">        <span class="keyword">elif</span> A[mid]&lt;Key:</span><br><span class="line">            i=mid+<span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            j=mid-<span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(binary_search([<span class="number">3</span>,<span class="number">7</span>,<span class="number">45</span>,<span class="number">89</span>,<span class="number">90</span>],<span class="number">45</span>))</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="2-迭代"><a href="#2-迭代" class="headerlink" title="(2).迭代"></a>(2).迭代</h3><p>重复反馈过程的活动，目的通常为了逼近随需目标或结果</p>
-<p>适合重复性操作</p>
-<ul>
-<li>迭代起点：直接或间接地不断由旧值递推出新值的变量</li>
-<li>迭代关系式：变量的前一个值推出其下一个值得公式或关系</li>
-<li>结束条件：什么情况下不在迭代</li>
-</ul>
-<p>例如：斐波那契数列</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">fib_rec</span>(<span class="params">n</span>):</span><br><span class="line">    a, b = <span class="number">1</span>, <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> n &gt; <span class="number">2</span>:</span><br><span class="line">        a, b = b, a + b</span><br><span class="line">        n = n - <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> a</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(fib_rec(<span class="number">2</span>))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="3-排序"><a href="#3-排序" class="headerlink" title="(3).排序"></a>(3).排序</h3><p>将一组“无序”的记录序列调整为“有序”的记录序列的操作</p>
-<ul>
-<li><p>内部排序：整个排序过程不需要访问外存便能完成</p>
-</li>
-<li><p>外部排序：参加排序的记录数量很大，整个序列排序过程不可能在内存中完成</p>
-</li>
-</ul>
-<h4 id="冒泡算法"><a href="#冒泡算法" class="headerlink" title="冒泡算法"></a>冒泡算法</h4><p>Bubble sort：简单排序，从序列一段开始比较相邻两个数字的大小，再根据结果交换两个数字的位置</p>
-<ul>
-<li>比较次数：</li>
-</ul>
-<p>​		第一轮比较n-1次，第二轮比较n-2次，第n-1轮比较1次，总得比较次数为（n-1） + ……+1≈n^2^&#x2F;2</p>
-<ul>
-<li>交换次数：</li>
-</ul>
-<p>​		和输入数据排列有关，最小交换0次，最多交换次数和比较次数一样，时间复杂度为O(n^2^)</p>
-<ul>
-<li>效率：</li>
-</ul>
-<p>​		当在一轮排序过程中，未发生两个数字交换的时候，就可以不再进行后续几轮的排序。因此，冒泡排序在数据基本有序的情况下效率可以很高</p>
-<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><p>循环结构:for i in range(N-1)</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">selection_sort</span>(<span class="params">A</span>): <span class="comment"># 选择排序</span></span><br><span class="line">    N = <span class="built_in">len</span>(A)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(N - <span class="number">1</span>): <span class="comment"># i控制排序的趟数</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(i + <span class="number">1</span>, N): <span class="comment"># j表示比较范围内元素下标</span></span><br><span class="line">            <span class="keyword">if</span> A[j] &lt; A[i]: <span class="comment"># 递增的条件</span></span><br><span class="line">                A[j], A[i] = A[i], A[j] <span class="comment"># 交换A[j],A[i]的值</span></span><br><span class="line">    <span class="keyword">return</span> A</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(selection_sort([<span class="number">12</span>, <span class="number">34</span>, <span class="number">28</span>, <span class="number">23</span>, <span class="number">6</span>]))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>思考：能否修改算法减少交换次数，实现每轮排序最多交换一次，如何实现？</p>
-<p>Selection Sort：简单排序，从待排序的数据中找到<strong>最小值</strong>（升序），或者最大值（降序），将其与序列<strong>最左边的数字进行交换</strong></p>
-<p>如果最小值本身在合适的位置上，本次就不在进行交换，开始第二轮交换</p>
-<ul>
-<li>比较次数：</li>
-</ul>
-<p>​		第一轮比较n-1次，第二轮比较n-2次，第n-1轮比较1次，总得比较次数为（n-1） + ……+1≈n^2^&#x2F;2</p>
-<ul>
-<li>交换次数：</li>
-</ul>
-<p>​		每轮中交换的次数最多是1次。输入数据排列是按照待排序顺序排序，则不需要进行任何交换，时间复杂度为O(n^2^)</p>
-<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><p>Insert Sort：简单排序，从序列左端开始，将待排序的数据逐个插入到已排好序的数据中，是的插入后仍然有序</p>
-<p>待插入的数据和左边第一个已排好的相比</p>
-<p>#循环结构<br>for i in range(N):<br>    while j &gt;0</p>
-<p>#列表操作</p>
-<p>A.insert(i,x)#表示在列表中第i个位置插入元素x<br>A.pop(i)#表示从列表中弹出小标为i的元素，并且把它的值返回</p>
- <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">insert_sort</span>(<span class="params">A</span>): <span class="comment"># 插入排序</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(A)): <span class="comment"># 负责设置排序的趟数</span></span><br><span class="line">        j = i - <span class="number">1</span></span><br><span class="line">        temp = i</span><br><span class="line">        <span class="keyword">while</span> j &gt;= <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">if</span> A[temp] &lt; A[j]: <span class="comment"># 递增排序条件</span></span><br><span class="line">                A.insert(j, A.pop(temp))</span><br><span class="line">                temp = j</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            j = j - <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> A</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(insert_sort([<span class="number">12</span>, <span class="number">56</span>, <span class="number">22</span>, <span class="number">33</span>, <span class="number">1</span>, <span class="number">28</span>, <span class="number">21</span>, <span class="number">55</span>, <span class="number">6</span>]))</span><br></pre></td></tr></table></figure>
-
-<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p>QuickSort：是对冒泡排序的一种改进</p>
-<p>首先随机选择一个基准值，然后将除了基准值以外的数分为“比基准值小的数”和“比基准值大的数”两个类别，再把基准值放到两个类别数中央。接着对两类别的数重复之前的操作</p>
-<p>随机选择左边的数为基准数，进行排序</p>
-<p>对序列中未比较其他数字都做重复的操作</p>
-<p>数据用列表表示，python中列表部分方法如下</p>
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>说明</th>
-<th>例子</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>append</td>
-<td>在列表末尾添加一项</td>
-<td>ls.append(x)</td>
-</tr>
-<tr>
-<td>remove</td>
-<td>把列表中出现的第一个元素x删除</td>
-<td>ls.remove(x)</td>
-</tr>
-<tr>
-<td>ls+lt</td>
-<td>链接两个列表</td>
-<td>ls+lt</td>
-</tr>
-</tbody></table>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">quicksort</span>(<span class="params">A</span>):</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(A) &gt;= <span class="number">2</span>:  <span class="comment"># 递归出口</span></span><br><span class="line">        mid = A[<span class="number">0</span>]  <span class="comment"># 选择基准值，也可以选择中间值</span></span><br><span class="line">        A.remove(mid)</span><br><span class="line">        left, right = [], []</span><br><span class="line">        <span class="keyword">for</span> num <span class="keyword">in</span> A:</span><br><span class="line">            <span class="keyword">if</span> num &gt;= mid:</span><br><span class="line">                right.append(num)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                left.append(num)</span><br><span class="line">        <span class="keyword">return</span> quicksort(left) + [mid] + quicksort(right)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> A</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(quicksort([<span class="number">12</span>, <span class="number">3</span>, <span class="number">56</span>, <span class="number">10</span>, <span class="number">6</span>]))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="查找和线性查找算法"><a href="#查找和线性查找算法" class="headerlink" title="查找和线性查找算法"></a>查找和线性查找算法</h3><p>查找：用关键字表示一个数据元素，查找时根据给定的某个值，在表中确定一个关键字的值等于给定值的记录或数据元素</p>
-<p>线性查找算法：又称顺序查找，是一种最简单的查找方法，它的基本思想是从第一个记录开始，逐个比较记录的关键字，直到给定的k值相等，则查找成功；若比较与文件中n个记录的关键字都不等，则查找失败。</p>
-<p>线性查找需要从一端开始不断地按照顺序检查数据，一一比较</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">linearsearch</span>(<span class="params">A, Key</span>):</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(A)):</span><br><span class="line">        <span class="keyword">if</span> A[i] == Key:</span><br><span class="line">            <span class="keyword">return</span> i</span><br><span class="line">        i = i + <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(linearsearch([<span class="number">12</span>, <span class="number">3</span>, <span class="number">45</span>, <span class="number">2</span>], <span class="number">45</span>))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
 ]]></content>
   </entry>
   <entry>
@@ -1183,6 +1118,136 @@
 <p>顶点（vertex）：表示某个事物或对象</p>
 <p>边（edge）：表示顶点或事物之间的逻辑关系</p>
 <p>边的权重（weight）：边上对应的值。可以对应距离、时间值、开销等。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>饿补计算机科学基础（二）--算法</title>
+    <url>/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89-%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>基于python编写的算法</p>
+<span id="more"></span>
+
+<h2 id="2-典型算法设计"><a href="#2-典型算法设计" class="headerlink" title="2.典型算法设计"></a>2.典型算法设计</h2><h3 id="1-递归"><a href="#1-递归" class="headerlink" title="(1).递归"></a>(1).递归</h3><p>递归方法（recursion algorithm）是指一种通过解决同类的规模较小的子问题而获得问题求解的方法</p>
+<ul>
+<li><p>问题的定义是递归定义的</p>
+</li>
+<li><p>问题的解法按递归算法实现的</p>
+</li>
+<li><p>数据的结构形式是按递归定义的（二叉树，广义表）</p>
+</li>
+</ul>
+<p>假如一个函数或者子程序是由自身所定义或调用的，成为递归</p>
+<ul>
+<li><p>递归函数的要素：</p>
+<ul>
+<li><p>一个可以反复执行的递归过程</p>
+</li>
+<li><p>跳出递归过程的出口（不再进行递归的条件）</p>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 阶乘的递归函数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fact</span>(<span class="params">n</span>):</span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">1</span>:<span class="comment">#递归出口</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> n * fact(n-<span class="number">1</span>)<span class="comment">#递归调用</span></span><br><span class="line">    </span><br><span class="line"><span class="built_in">print</span>（fact(<span class="number">3</span>)）</span><br></pre></td></tr></table></figure>
+
+<h4 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h4><p>二分查找算法（Binary search）递归实现：二分查找要求线性表必须采用顺序存储结构，而且表中元素按关键字有序排列</p>
+<p>反复执行的递归过程：缩小范围继续查找</p>
+<p>跳出提柜的出口：找到了，或者范围长度变成0</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">binarysearch_rec</span>(<span class="params">A, key, low, high</span>):  <span class="comment"># 二分查找算法的递归实现</span></span><br><span class="line">    <span class="keyword">if</span> low &gt; high:</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line">    mid = (low + high) // <span class="number">2</span>  <span class="comment"># 计算中间位置的索引，使用 (low + high) // 2</span></span><br><span class="line">    <span class="keyword">if</span> key == A[mid]:</span><br><span class="line">        <span class="keyword">return</span> mid</span><br><span class="line">    <span class="keyword">elif</span> key &lt; A[mid]:</span><br><span class="line">        <span class="keyword">return</span> binarysearch_rec(A, key, low, mid - <span class="number">1</span>)  <span class="comment"># 左边递归查找</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> binarysearch_rec(A, key, mid + <span class="number">1</span>, high)  <span class="comment"># 右边递归查找</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(binarysearch_rec([<span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">7</span>], <span class="number">4</span>, <span class="number">0</span>, <span class="number">3</span>))  <span class="comment"># 调用函数</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">binary_search</span>(<span class="params">A,Key</span>):</span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    j=<span class="built_in">len</span>(A)-<span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> i &lt;=j:</span><br><span class="line">        mid = (i+j)//<span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> A[mid]==Key:</span><br><span class="line">            <span class="keyword">return</span> mid</span><br><span class="line">        <span class="keyword">elif</span> A[mid]&lt;Key:</span><br><span class="line">            i=mid+<span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            j=mid-<span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(binary_search([<span class="number">3</span>,<span class="number">7</span>,<span class="number">45</span>,<span class="number">89</span>,<span class="number">90</span>],<span class="number">45</span>))</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-迭代"><a href="#2-迭代" class="headerlink" title="(2).迭代"></a>(2).迭代</h3><p>重复反馈过程的活动，目的通常为了逼近随需目标或结果</p>
+<p>适合重复性操作</p>
+<ul>
+<li>迭代起点：直接或间接地不断由旧值递推出新值的变量</li>
+<li>迭代关系式：变量的前一个值推出其下一个值得公式或关系</li>
+<li>结束条件：什么情况下不在迭代</li>
+</ul>
+<p>例如：斐波那契数列</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">fib_rec</span>(<span class="params">n</span>):</span><br><span class="line">    a, b = <span class="number">1</span>, <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> n &gt; <span class="number">2</span>:</span><br><span class="line">        a, b = b, a + b</span><br><span class="line">        n = n - <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> a</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(fib_rec(<span class="number">2</span>))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-排序"><a href="#3-排序" class="headerlink" title="(3).排序"></a>(3).排序</h3><p>将一组“无序”的记录序列调整为“有序”的记录序列的操作</p>
+<ul>
+<li><p>内部排序：整个排序过程不需要访问外存便能完成</p>
+</li>
+<li><p>外部排序：参加排序的记录数量很大，整个序列排序过程不可能在内存中完成</p>
+</li>
+</ul>
+<h4 id="冒泡算法"><a href="#冒泡算法" class="headerlink" title="冒泡算法"></a>冒泡算法</h4><p>Bubble sort：简单排序，从序列一段开始比较相邻两个数字的大小，再根据结果交换两个数字的位置</p>
+<ul>
+<li>比较次数：</li>
+</ul>
+<p>​		第一轮比较n-1次，第二轮比较n-2次，第n-1轮比较1次，总得比较次数为（n-1） + ……+1≈n^2^&#x2F;2</p>
+<ul>
+<li>交换次数：</li>
+</ul>
+<p>​		和输入数据排列有关，最小交换0次，最多交换次数和比较次数一样，时间复杂度为O(n^2^)</p>
+<ul>
+<li>效率：</li>
+</ul>
+<p>​		当在一轮排序过程中，未发生两个数字交换的时候，就可以不再进行后续几轮的排序。因此，冒泡排序在数据基本有序的情况下效率可以很高</p>
+<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><p>循环结构:for i in range(N-1)</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">selection_sort</span>(<span class="params">A</span>): <span class="comment"># 选择排序</span></span><br><span class="line">    N = <span class="built_in">len</span>(A)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(N - <span class="number">1</span>): <span class="comment"># i控制排序的趟数</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(i + <span class="number">1</span>, N): <span class="comment"># j表示比较范围内元素下标</span></span><br><span class="line">            <span class="keyword">if</span> A[j] &lt; A[i]: <span class="comment"># 递增的条件</span></span><br><span class="line">                A[j], A[i] = A[i], A[j] <span class="comment"># 交换A[j],A[i]的值</span></span><br><span class="line">    <span class="keyword">return</span> A</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(selection_sort([<span class="number">12</span>, <span class="number">34</span>, <span class="number">28</span>, <span class="number">23</span>, <span class="number">6</span>]))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>思考：能否修改算法减少交换次数，实现每轮排序最多交换一次，如何实现？</p>
+<p>Selection Sort：简单排序，从待排序的数据中找到<strong>最小值</strong>（升序），或者最大值（降序），将其与序列<strong>最左边的数字进行交换</strong></p>
+<p>如果最小值本身在合适的位置上，本次就不在进行交换，开始第二轮交换</p>
+<ul>
+<li>比较次数：</li>
+</ul>
+<p>​		第一轮比较n-1次，第二轮比较n-2次，第n-1轮比较1次，总得比较次数为（n-1） + ……+1≈n^2^&#x2F;2</p>
+<ul>
+<li>交换次数：</li>
+</ul>
+<p>​		每轮中交换的次数最多是1次。输入数据排列是按照待排序顺序排序，则不需要进行任何交换，时间复杂度为O(n^2^)</p>
+<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><p>Insert Sort：简单排序，从序列左端开始，将待排序的数据逐个插入到已排好序的数据中，是的插入后仍然有序</p>
+<p>待插入的数据和左边第一个已排好的相比</p>
+<p>#循环结构<br>for i in range(N):<br>    while j &gt;0</p>
+<p>#列表操作</p>
+<p>A.insert(i,x)#表示在列表中第i个位置插入元素x<br>A.pop(i)#表示从列表中弹出小标为i的元素，并且把它的值返回</p>
+ <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">insert_sort</span>(<span class="params">A</span>): <span class="comment"># 插入排序</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(A)): <span class="comment"># 负责设置排序的趟数</span></span><br><span class="line">        j = i - <span class="number">1</span></span><br><span class="line">        temp = i</span><br><span class="line">        <span class="keyword">while</span> j &gt;= <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">if</span> A[temp] &lt; A[j]: <span class="comment"># 递增排序条件</span></span><br><span class="line">                A.insert(j, A.pop(temp))</span><br><span class="line">                temp = j</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            j = j - <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> A</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(insert_sort([<span class="number">12</span>, <span class="number">56</span>, <span class="number">22</span>, <span class="number">33</span>, <span class="number">1</span>, <span class="number">28</span>, <span class="number">21</span>, <span class="number">55</span>, <span class="number">6</span>]))</span><br></pre></td></tr></table></figure>
+
+<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p>QuickSort：是对冒泡排序的一种改进</p>
+<p>首先随机选择一个基准值，然后将除了基准值以外的数分为“比基准值小的数”和“比基准值大的数”两个类别，再把基准值放到两个类别数中央。接着对两类别的数重复之前的操作</p>
+<p>随机选择左边的数为基准数，进行排序</p>
+<p>对序列中未比较其他数字都做重复的操作</p>
+<p>数据用列表表示，python中列表部分方法如下</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>append</td>
+<td>在列表末尾添加一项</td>
+<td>ls.append(x)</td>
+</tr>
+<tr>
+<td>remove</td>
+<td>把列表中出现的第一个元素x删除</td>
+<td>ls.remove(x)</td>
+</tr>
+<tr>
+<td>ls+lt</td>
+<td>链接两个列表</td>
+<td>ls+lt</td>
+</tr>
+</tbody></table>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">quicksort</span>(<span class="params">A</span>):</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(A) &gt;= <span class="number">2</span>:  <span class="comment"># 递归出口</span></span><br><span class="line">        mid = A[<span class="number">0</span>]  <span class="comment"># 选择基准值，也可以选择中间值</span></span><br><span class="line">        A.remove(mid)</span><br><span class="line">        left, right = [], []</span><br><span class="line">        <span class="keyword">for</span> num <span class="keyword">in</span> A:</span><br><span class="line">            <span class="keyword">if</span> num &gt;= mid:</span><br><span class="line">                right.append(num)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                left.append(num)</span><br><span class="line">        <span class="keyword">return</span> quicksort(left) + [mid] + quicksort(right)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> A</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(quicksort([<span class="number">12</span>, <span class="number">3</span>, <span class="number">56</span>, <span class="number">10</span>, <span class="number">6</span>]))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="查找和线性查找算法"><a href="#查找和线性查找算法" class="headerlink" title="查找和线性查找算法"></a>查找和线性查找算法</h3><p>查找：用关键字表示一个数据元素，查找时根据给定的某个值，在表中确定一个关键字的值等于给定值的记录或数据元素</p>
+<p>线性查找算法：又称顺序查找，是一种最简单的查找方法，它的基本思想是从第一个记录开始，逐个比较记录的关键字，直到给定的k值相等，则查找成功；若比较与文件中n个记录的关键字都不等，则查找失败。</p>
+<p>线性查找需要从一端开始不断地按照顺序检查数据，一一比较</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">linearsearch</span>(<span class="params">A, Key</span>):</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(A)):</span><br><span class="line">        <span class="keyword">if</span> A[i] == Key:</span><br><span class="line">            <span class="keyword">return</span> i</span><br><span class="line">        i = i + <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(linearsearch([<span class="number">12</span>, <span class="number">3</span>, <span class="number">45</span>, <span class="number">2</span>], <span class="number">45</span>))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
 ]]></content>
   </entry>
 </search>

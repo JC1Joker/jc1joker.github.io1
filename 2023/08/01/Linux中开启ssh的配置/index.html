@@ -19,30 +19,27 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"3kxr.me","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.17.0","exturl":false,"sidebar":{"position":"left","width":260,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="docker的基础命令">
+    <meta name="description" content="在Linux环境下使用ssh">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="docker基础命令">
-<meta property="og:url" content="http://3kxr.me/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/index.html">
+<meta property="og:title" content="Linux中开启ssh的配置😎🐱‍💻">
+<meta property="og:url" content="http://3kxr.me/2023/08/01/Linux%E4%B8%AD%E5%BC%80%E5%90%AFssh%E7%9A%84%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="3Kxr&#39;s Blog">
-<meta property="og:description" content="docker的基础命令">
+<meta property="og:description" content="在Linux环境下使用ssh">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://3kxr.me/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/Docker.png">
-<meta property="article:published_time" content="2023-07-12T10:43:53.000Z">
-<meta property="article:modified_time" content="2023-07-12T10:50:22.562Z">
+<meta property="article:published_time" content="2023-08-01T13:21:35.000Z">
+<meta property="article:modified_time" content="2023-08-01T13:23:23.829Z">
 <meta property="article:author" content="3Kxr">
-<meta property="article:tag" content="docker">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://3kxr.me/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/Docker.png">
 
 
-<link rel="canonical" href="http://3kxr.me/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/">
+<link rel="canonical" href="http://3kxr.me/2023/08/01/Linux%E4%B8%AD%E5%BC%80%E5%90%AFssh%E7%9A%84%E9%85%8D%E7%BD%AE/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://3kxr.me/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/","path":"2023/07/12/docker基础命令/","title":"docker基础命令"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://3kxr.me/2023/08/01/Linux%E4%B8%AD%E5%BC%80%E5%90%AFssh%E7%9A%84%E9%85%8D%E7%BD%AE/","path":"2023/08/01/Linux中开启ssh的配置/","title":"Linux中开启ssh的配置😎🐱‍💻"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>docker基础命令 | 3Kxr's Blog</title>
+<title>Linux中开启ssh的配置😎🐱‍💻 | 3Kxr's Blog</title>
   
 
 
@@ -141,7 +138,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -154,6 +151,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%9C%AC%E5%9C%B0%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE-%F0%9F%8C%90"><span class="nav-text">1.本地网络配置 🌐</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-1-%E9%85%8D%E7%BD%AE%E4%B8%B4%E6%97%B6IP%E5%9C%B0%E5%9D%80-%F0%9F%93%9D"><span class="nav-text">1.1.1 配置临时IP地址 📝</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-2-%E9%85%8D%E7%BD%AE%E6%B0%B8%E4%B9%85IP%E5%9C%B0%E5%9D%80-%F0%9F%93%9D"><span class="nav-text">1.1.2 配置永久IP地址 📝</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E9%85%8D%E7%BD%AEsshd%E6%9C%8D%E5%8A%A1%E5%B9%B6%E4%BD%BF%E7%94%A8Xshell%E8%BF%9E%E6%8E%A5-%F0%9F%94%92%F0%9F%94%8C"><span class="nav-text">2. 配置sshd服务并使用Xshell连接 🔒🔌</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -520,7 +518,7 @@ if(canvas.getContext){
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://3kxr.me/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/">
+    <link itemprop="mainEntityOfPage" href="http://3kxr.me/2023/08/01/Linux%E4%B8%AD%E5%BC%80%E5%90%AFssh%E7%9A%84%E9%85%8D%E7%BD%AE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -533,12 +531,12 @@ if(canvas.getContext){
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="docker基础命令 | 3Kxr's Blog">
+      <meta itemprop="name" content="Linux中开启ssh的配置😎🐱‍💻 | 3Kxr's Blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          docker基础命令
+          Linux中开启ssh的配置😎🐱‍💻
         </h1>
 
         <div class="post-meta-container">
@@ -550,16 +548,7 @@ if(canvas.getContext){
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2023-07-12 18:43:53 / 修改时间：18:50:22" itemprop="dateCreated datePublished" datetime="2023-07-12T18:43:53+08:00">2023-07-12</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/docker/" itemprop="url" rel="index"><span itemprop="name">docker</span></a>
-        </span>
+      <time title="创建时间：2023-08-01 21:21:35 / 修改时间：21:23:23" itemprop="dateCreated datePublished" datetime="2023-08-01T21:21:35+08:00">2023-08-01</time>
     </span>
 
   
@@ -576,7 +565,7 @@ if(canvas.getContext){
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>230</span>
+      <span>384</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -593,30 +582,66 @@ if(canvas.getContext){
     
     
     
-    <div class="post-body" itemprop="articleBody"><p><img src="/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/Docker.png"></p>
-<blockquote>
-<p>docker的基础命令</p>
+    <div class="post-body" itemprop="articleBody"><blockquote>
+<p>在Linux环境下使用ssh</p>
 </blockquote>
 <span id="more"></span>
 
-<p>docker pull 安装镜像</p>
-<p>docker run 运行镜像</p>
-<p>docker container run</p>
-<p>说明：</p>
-<p>创建好image后，新建容器时使用；</p>
-<p>每次运行，都会创建一个新的容器；</p>
-<p>新建的容器可以通过 docker container ls -a 或者 docker ps -a 查看（加 -a 表示查看所有创建好的容器）；</p>
-<p>每次创建会返回一个【长的容器ID】；</p>
-<p>通常情况下，运行一次即可；</p>
-<p>docker containers list -a 查看当前运行的所有镜像</p>
-<p>docker exec -it 【docker的名称】 bash  进入docker运行的bash环境中</p>
-<p>docker container start 【containerID】运行已经创建的容器</p>
-<p>docker ps -a 查看所有容器</p>
-<p>docker stop 【containerID】</p>
-<p>docker rm 【containerID】（先停止容器后才能删除）</p>
-<p>docker export 制作基础镜像，使用 <strong>docker export</strong> 命令根据容器 <strong>ID</strong> 将镜像导出成一个文件</p>
-<p>docker import - new_hangger_server &lt; hangger_server.tar 将这个镜像文件导入进来。</p>
-<p>docker load 载入镜像</p>
+<h2 id="1-本地网络配置-🌐"><a href="#1-本地网络配置-🌐" class="headerlink" title="1.本地网络配置 🌐"></a>1.本地网络配置 🌐</h2><h3 id="1-1-1-配置临时IP地址-📝"><a href="#1-1-1-配置临时IP地址-📝" class="headerlink" title="1.1.1 配置临时IP地址 📝"></a>1.1.1 配置临时IP地址 📝</h3><p>首先，使用以下命令配置临时IP地址：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ifconfig eth0 192.168.1.53/24</span><br></pre></td></tr></table></figure>
+
+<p>然后添加子网掩码：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">255.255.255.0</span><br></pre></td></tr></table></figure>
+
+<p>接下来，配置默认网关：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">route add default gw 192.168.1.1</span><br></pre></td></tr></table></figure>
+
+<p>确认网络连接是否正常：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ping 192.168.1.1</span><br></pre></td></tr></table></figure>
+
+<p>最后，编辑DNS配置文件：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/resolv.conf</span><br></pre></td></tr></table></figure>
+
+<p>添加以下行来配置DNS：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nameserver 8.8.8.8</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-1-2-配置永久IP地址-📝"><a href="#1-1-2-配置永久IP地址-📝" class="headerlink" title="1.1.2 配置永久IP地址 📝"></a>1.1.2 配置永久IP地址 📝</h3><p>若要配置永久IP地址，请打开以下文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/network/interfaces</span><br></pre></td></tr></table></figure>
+
+<p>然后，注释掉dhcp配置，并添加以下静态IP配置：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">arduinoCopy codeauto eth0</span><br><span class="line"><span class="comment">#iface eth0 inet dhcp # 注释掉</span></span><br><span class="line">iface eth0 inet static</span><br><span class="line">address 192.168.3.53</span><br><span class="line">netmask 255.255.255.0</span><br><span class="line">gateway 192.168.1.1</span><br></pre></td></tr></table></figure>
+
+<p>接着，再次编辑DNS配置文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/resolv.conf</span><br></pre></td></tr></table></figure>
+
+<p>添加以下行来配置DNS：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nameserver 8.8.8.8</span><br></pre></td></tr></table></figure>
+
+<p>完成后，重启网络服务：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/networking restart</span><br></pre></td></tr></table></figure>
+
+<p>或者，使用以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart networking</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-配置sshd服务并使用Xshell连接-🔒🔌"><a href="#2-配置sshd服务并使用Xshell连接-🔒🔌" class="headerlink" title="2. 配置sshd服务并使用Xshell连接 🔒🔌"></a>2. 配置sshd服务并使用Xshell连接 🔒🔌</h2><p>为了配置sshd服务并使用Xshell连接，首先以管理员权限打开sshd配置文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure>
+
+<p>如果你想显示行号，可以使用以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:<span class="built_in">set</span> nu</span><br></pre></td></tr></table></figure>
+
+<p>然后，在32行和37行进行修改：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">codePermitRootLogin <span class="built_in">yes</span></span><br><span class="line">PubkeyAuthentication <span class="built_in">yes</span></span><br></pre></td></tr></table></figure>
+
+<p>接下来，重启sshd服务：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/ssh restart</span><br></pre></td></tr></table></figure>
+
+<p>或者，使用以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart ssh</span><br></pre></td></tr></table></figure>
+
+<p>若要设置开机启动，可以运行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update-rc.d ssh <span class="built_in">enable</span></span><br></pre></td></tr></table></figure>
+
+<p>现在，你的kali linux配置已经完成！享受使用Xshell连接的便捷和安全体验吧！😊🔒</p>
 
     </div>
 
@@ -635,7 +660,7 @@ if(canvas.getContext){
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://3kxr.me/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/" title="docker基础命令">http://3kxr.me/2023/07/12/docker基础命令/</a>
+      <a href="http://3kxr.me/2023/08/01/Linux%E4%B8%AD%E5%BC%80%E5%90%AFssh%E7%9A%84%E9%85%8D%E7%BD%AE/" title="Linux中开启ssh的配置😎🐱‍💻">http://3kxr.me/2023/08/01/Linux中开启ssh的配置/</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -643,22 +668,16 @@ if(canvas.getContext){
 </ul>
 </div>
 
-          <div class="post-tags">
-              <a href="/tags/docker/" rel="tag"><i class="fa fa-tag"></i> docker</a>
-          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/" rel="prev" title="Numpy笔记">
-                  <i class="fa fa-chevron-left"></i> Numpy笔记
+                <a href="/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%89%EF%BC%89-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="prev" title="饿补计算机科学基础（三）--数据结构">
+                  <i class="fa fa-chevron-left"></i> 饿补计算机科学基础（三）--数据结构
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" rel="next" title="饿补计算机科学基础（一）--计算机基础">
-                  饿补计算机科学基础（一）--计算机基础 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
