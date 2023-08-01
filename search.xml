@@ -1,6 +1,326 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Numpy笔记</title>
+    <url>/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/NumPy_logo_2020.png"></p>
+<blockquote>
+<p>MOOC课程，数据分析相关课程，Numpy笔记</p>
+</blockquote>
+<span id="more"></span>
+<h2 id="统计函数"><a href="#统计函数" class="headerlink" title="统计函数"></a>统计函数</h2><table>
+<thead>
+<tr>
+<th align="center">函数</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">sum(a,axis-None)</td>
+<td align="center">根据给定轴axis计算数组a相关元素之和，axis整数或元组</td>
+</tr>
+<tr>
+<td align="center">mean(a,axis-None)</td>
+<td align="center">根据给定轴axis计算数组a相关元素的期望，axis整数或元组</td>
+</tr>
+<tr>
+<td align="center">average(a,axis&#x3D;None)</td>
+<td align="center">根据给定轴axis计算数组a相关元素的加权平均值</td>
+</tr>
+<tr>
+<td align="center">std(a,axis&#x3D;None)</td>
+<td align="center">根据给定轴axis计算数组a相关元素的标准差</td>
+</tr>
+<tr>
+<td align="center">var(a,axis&#x3D;None)</td>
+<td align="center">根据给定轴axis计算数组a县官元素的方差</td>
+</tr>
+</tbody></table>
+<h2 id="随机函数"><a href="#随机函数" class="headerlink" title="随机函数"></a>随机函数</h2><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>np.random.rand()</td>
+<td></td>
+</tr>
+<tr>
+<td>np.random.randn()</td>
+<td></td>
+</tr>
+<tr>
+<td>np.random.randint()</td>
+<td></td>
+</tr>
+<tr>
+<td>np.random.seed()</td>
+<td></td>
+</tr>
+<tr>
+<td>np.random.shuffle()</td>
+<td></td>
+</tr>
+<tr>
+<td>np.random.permutation()</td>
+<td></td>
+</tr>
+<tr>
+<td>np.random.choice()</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="random梯度函数"><a href="#random梯度函数" class="headerlink" title="random梯度函数"></a>random梯度函数</h2><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>np.gradient(f)</td>
+<td>计算数组f中元素的梯度，当f为多维时，返回每个维度梯度</td>
+</tr>
+</tbody></table>
+<p>梯度：连续值之间的变化率，即斜率</p>
+<p>XY坐标轴连续三个X坐标对应的Y轴值：a，b，c，其中，b的踢肚时：(c-a)&#x2F;2</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>数据存取与函数</p>
+<ul>
+<li>CSV文件</li>
+<li>np.loadtxt()</li>
+<li>np.savetxt()</li>
+</ul>
+<p>多维数组存取</p>
+<ul>
+<li>a.tofile()</li>
+<li>np.fromfile()</li>
+<li>np.save()</li>
+<li>np.savez()</li>
+<li>np.load()</li>
+</ul>
+<h2 id="图像的数组表示"><a href="#图像的数组表示" class="headerlink" title="图像的数组表示"></a>图像的数组表示</h2><p>图像是一个三维数组，维度分别是高度、宽度和像素RGB值</p>
+<p>示例代码：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">im=np.array(Image.<span class="built_in">open</span>(<span class="string">&quot;D:/&quot;</span>))</span><br><span class="line"><span class="built_in">print</span>(im.shape,im.dtype)</span><br><span class="line"><span class="comment">#输出(699,1012,3)uint8</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="图像的变换"><a href="#图像的变换" class="headerlink" title="图像的变换"></a>图像的变换</h2><p>读入图像后，获得像素RGB值，修改后保存为新的文件</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">im=np.array(Image.<span class="built_in">open</span>(<span class="string">&quot;D:/&quot;</span>))</span><br><span class="line"><span class="built_in">print</span>(im.shape,im.dtype)</span><br><span class="line"></span><br><span class="line">b=[<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>]-a <span class="comment">#这是一个三维数组RGB的补值</span></span><br><span class="line"></span><br><span class="line">im = Image.fromarray(b.astype(<span class="string">&#x27;uint8&#x27;</span>))</span><br><span class="line">im.save(<span class="string">&#x27;b.jpg&#x27;</span>)</span><br><span class="line"><span class="comment">#输出(699,1012,3)uint8</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="图像手绘风格"><a href="#图像手绘风格" class="headerlink" title="图像手绘风格"></a>图像手绘风格</h2><p><code>梯度的重构</code></p>
+<blockquote>
+<p>利用像素之间的梯度值和虚拟深度值对图像进行重构，根据灰度变化来模拟人类视觉的明暗程度</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a= np.asarray(Image.<span class="built_in">open</span>(<span class="string">&#x27;ins.jpg&#x27;</span>).convert(<span class="string">&#x27;L&#x27;</span>)).astype(<span class="string">&#x27;float&#x27;</span>)</span><br><span class="line"></span><br><span class="line">depth = <span class="number">10.</span>         <span class="comment">#(0-100)预设深度值为10</span></span><br><span class="line">grad = np.gradient(a)      <span class="comment">#取图像灰度的梯度值，提取x和y方向的梯度值</span></span><br><span class="line">grad_x , grad_y = grad      <span class="comment"># 分别取横纵图相梯度值</span></span><br><span class="line">grad_x = grad_x*depth/<span class="number">100.</span><span class="comment">#根据深度调整x和y方向的梯度值</span></span><br><span class="line">grad_y = grad_y*depth/<span class="number">100.</span></span><br><span class="line">A = np.sqrt(grad_x**<span class="number">2</span> + grad_y**<span class="number">2</span> + <span class="number">1.</span>)</span><br><span class="line"></span><br><span class="line">uni_x = grad_x/A</span><br><span class="line">uni_y = grad_y/A</span><br><span class="line">uni_z = <span class="number">1.</span>/A</span><br><span class="line"></span><br><span class="line">vec_e1 = np.pi/<span class="number">2.2</span>                  <span class="comment">#光源的俯视角度，弧度值</span></span><br><span class="line">vec_az = np.pi/<span class="number">4.</span>                   <span class="comment"># 光源的方位角度，弧度值</span></span><br><span class="line">dx = np.cos(vec_e1)*np.cos(vec_az) <span class="comment"># 光源对x轴的影响 np.cos(vec_e1)为单位光线在地平面上的投影长度</span></span><br><span class="line">dy = np.cos(vec_e1)*np.sin(vec_az) <span class="comment"># 光源对y轴的影响</span></span><br><span class="line">dz = np.sin(vec_e1)             <span class="comment">#光源对z轴的影响</span></span><br><span class="line"></span><br><span class="line">b = <span class="number">255</span>*(dx*uni_x + dy*uni_y + dz*uni_z)<span class="comment"># 光源归一化</span></span><br><span class="line">b = b.clip(<span class="number">0</span>,<span class="number">255</span>) <span class="comment">#clip 截断，限制数组的上下界,减少像素溢出</span></span><br><span class="line"></span><br><span class="line">im = Image.fromarray(b.astype(<span class="string">&#x27;uint8&#x27;</span>))  <span class="comment">#重构图像</span></span><br><span class="line">im.show()</span><br><span class="line"><span class="comment"># im.save(&#x27;11.jpg&#x27;)</span></span><br></pre></td></tr></table></figure>
+
+<p>光源效果：</p>
+<p>根据灰度变化来模拟人类视觉的远近程度</p>
+<h1 id="matplotlib-pyplot"><a href="#matplotlib-pyplot" class="headerlink" title="matplotlib.pyplot"></a>matplotlib.pyplot</h1><h2 id="pyplot绘图区域"><a href="#pyplot绘图区域" class="headerlink" title="pyplot绘图区域"></a>pyplot绘图区域</h2><p>plt.subplot(nrows.ncols,lot_number)</p>
+<h2 id="plot"><a href="#plot" class="headerlink" title="plot"></a>plot</h2><p>plt.plot(x,y,format_string,**kwargs)</p>
+<ul>
+<li><p>x:X轴数据，列表或数组，可选</p>
+</li>
+<li><p>y:Y轴数据，列表或数组</p>
+</li>
+<li><p>format_string：控制曲线的格式字符串，可选，由颜色字符、风格字符和标记字符组成</p>
+<ul>
+<li><p>颜色字符对应英文首字母</p>
+</li>
+<li><p>风格字符</p>
+</li>
+</ul>
+<p><code>-</code>实线</p>
+<p><code>--</code>破折线</p>
+<p><code>-.</code>点划线</p>
+<p><code>:</code>虚线</p>
+<ul>
+<li>格式字符串</li>
+</ul>
+<p><code>.</code>点标记</p>
+<p><code>,</code>像素标记</p>
+<p><code>o</code>实心圈标记</p>
+<p><code>v</code>倒三角标记</p>
+<p><code>^</code>上三角标记</p>
+<p><code>&gt;</code>右三角标记</p>
+<p><code>&lt;</code>左三角标记</p>
+<p><code>1</code>下花三角标记</p>
+<p><code>2</code>上花三角标记</p>
+<p><code>3</code>左花三角标记</p>
+<p><code>4</code>右花三角标记</p>
+<p><code>s</code>实心方形标记</p>
+<p><code>p</code>实心五角标记</p>
+<p><code>*</code>星形标记</p>
+<p><code>h</code>竖六边形标记</p>
+<p><code>H</code>横六边形标记</p>
+<p><code>+</code>十字标记</p>
+<p><code>x</code>x标记</p>
+<p><code>D</code>菱形标记</p>
+<p><code>d</code>瘦菱形标记</p>
+<p><code>|</code>垂直线标记</p>
+</li>
+<li><p>**kwargs：第二组或更多（x,y,format_string）</p>
+<ul>
+<li>color：控制颜色，color&#x3D;‘green’</li>
+<li>linestyle：线条风格，linestyle&#x3D;‘dashed’</li>
+<li>marker：标记风格，marker&#x3D;’o‘</li>
+<li>markerfacecolor：标记颜色，markerfacecolor&#x3D;’blue‘</li>
+<li>markersize：标记尺寸，markersize&#x3D;20</li>
+<li>……</li>
+</ul>
+</li>
+</ul>
+<p>当绘制多条曲线时，各条曲线的x不能省略</p>
+<h3 id="pyplot中文显示方法"><a href="#pyplot中文显示方法" class="headerlink" title="pyplot中文显示方法"></a>pyplot中文显示方法</h3><ul>
+<li>方法一：需要<strong>rcParams</strong>修改字体实现</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性(单引号需加上)</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>‘font.family’</td>
+<td>用于显示字体的名字</td>
+</tr>
+<tr>
+<td>’font.style‘</td>
+<td>字体风格，正常’normal‘或 斜体’italic‘</td>
+</tr>
+<tr>
+<td>’font.size‘</td>
+<td>字体大小，整数字号或者’large‘、’x-small‘</td>
+</tr>
+</tbody></table>
+<ul>
+<li>方法二：在有中文输出的地方，增加一个属性：fontproperties</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">plt.xlabel(<span class="string">&quot;横轴(值)&quot;</span>,fontproperties=<span class="string">&#x27;SimHei&#x27;</span>,fontsize=<span class="number">20</span>)</span><br><span class="line">plt.ylabel(<span class="string">&quot;grade&quot;</span>,,fontproperties=<span class="string">&#x27;SimHei&#x27;</span>,fontsize=<span class="number">20</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="pyplot的文本显示方法"><a href="#pyplot的文本显示方法" class="headerlink" title="pyplot的文本显示方法"></a>pyplot的文本显示方法</h2><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>plt.xlabel()</td>
+<td>对x轴添加文本标签</td>
+</tr>
+<tr>
+<td>plt.ylabel()</td>
+<td>对y轴添加文本标签</td>
+</tr>
+<tr>
+<td>plt.title()</td>
+<td>对图形整体增加文本标签</td>
+</tr>
+<tr>
+<td>plt.text()</td>
+<td>在任意位置增加文本</td>
+</tr>
+<tr>
+<td>plt.annotate()</td>
+<td>在图形中增加带箭头注释</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>LaTeX语法 </p>
+<p>$正弦波实例 y &#x3D; cos(2pix)$</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">plt.annotate()</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/Users\JC\AppData\Roaming\Typora\typora-user-images\image-20220504183915496.png" alt="image-20220504183915496"></p>
+<p>plt.subplot2grid(GridSpec,CurSpec,colspan&#x3D;1,rowspan&#x3D;1)</p>
+<p>理念：设定网格，选中网格，确定选中行列区域数量，编号从0开始</p>
+<h2 id="GridSpec类"><a href="#GridSpec类" class="headerlink" title="GridSpec类"></a>GridSpec类</h2><p>实行多种格子</p>
+<h2 id="pyplot基础图表函数"><a href="#pyplot基础图表函数" class="headerlink" title="pyplot基础图表函数"></a>pyplot基础图表函数</h2><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>plt.plot(x,y,fmt,…)</td>
+<td>绘制一个坐标图</td>
+</tr>
+<tr>
+<td>plt.boxplot(data,notch,position)</td>
+<td>绘制一个箱型图</td>
+</tr>
+<tr>
+<td>plt.bar(left,height,width,bottom)</td>
+<td>绘制一个条形图</td>
+</tr>
+<tr>
+<td>plt.barh(width,bottom,left,height)</td>
+<td>绘制一个横向条形图</td>
+</tr>
+<tr>
+<td>plt.polar(theta,r)</td>
+<td>绘制极坐标图</td>
+</tr>
+<tr>
+<td>plt.pie(data,explode)</td>
+<td>绘制饼图</td>
+</tr>
+<tr>
+<td>plt.psd(x.NFFT&#x3D;256,pad_to,Fs)</td>
+<td>绘制功率谱密度图</td>
+</tr>
+<tr>
+<td>plt.specgram(x.NFFT&#x3D;256,pad_to,Fs)</td>
+<td>绘制谱图</td>
+</tr>
+<tr>
+<td>plt.cohere(x,y,NFFT&#x3D;256,Fs)</td>
+<td>绘制x-y相关性函数</td>
+</tr>
+<tr>
+<td>plt.step(s,y,where)</td>
+<td>绘制步阶图</td>
+</tr>
+<tr>
+<td>plt.hist(x,bins,normed)</td>
+<td>绘制直方图</td>
+</tr>
+<tr>
+<td>plt.scatter(x,y)</td>
+<td>绘制散点图，其中x和y长度相同</td>
+</tr>
+<tr>
+<td>plt.contour(X,Y,Z,N)</td>
+<td>绘制等值图</td>
+</tr>
+<tr>
+<td>plt.vlines()</td>
+<td>绘制垂直图</td>
+</tr>
+<tr>
+<td>plt.stem(x,y,linefmt,markerfmt)</td>
+<td>绘制柴火图</td>
+</tr>
+<tr>
+<td>plt.plot_date()</td>
+<td>绘制数据日期</td>
+</tr>
+</tbody></table>
+<p>startangle&#x3D;90 起始角度</p>
+<p>bin:直方图的个数</p>
+<p>normed：纵坐标出现元素的个数</p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>数据分析</tag>
+        <tag>Numpy</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>conda的使用技巧</title>
     <url>/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/anaconda.png"></p>
@@ -375,326 +695,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Numpy笔记</title>
-    <url>/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/NumPy_logo_2020.png"></p>
-<blockquote>
-<p>MOOC课程，数据分析相关课程，Numpy笔记</p>
-</blockquote>
-<span id="more"></span>
-<h2 id="统计函数"><a href="#统计函数" class="headerlink" title="统计函数"></a>统计函数</h2><table>
-<thead>
-<tr>
-<th align="center">函数</th>
-<th align="center">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">sum(a,axis-None)</td>
-<td align="center">根据给定轴axis计算数组a相关元素之和，axis整数或元组</td>
-</tr>
-<tr>
-<td align="center">mean(a,axis-None)</td>
-<td align="center">根据给定轴axis计算数组a相关元素的期望，axis整数或元组</td>
-</tr>
-<tr>
-<td align="center">average(a,axis&#x3D;None)</td>
-<td align="center">根据给定轴axis计算数组a相关元素的加权平均值</td>
-</tr>
-<tr>
-<td align="center">std(a,axis&#x3D;None)</td>
-<td align="center">根据给定轴axis计算数组a相关元素的标准差</td>
-</tr>
-<tr>
-<td align="center">var(a,axis&#x3D;None)</td>
-<td align="center">根据给定轴axis计算数组a县官元素的方差</td>
-</tr>
-</tbody></table>
-<h2 id="随机函数"><a href="#随机函数" class="headerlink" title="随机函数"></a>随机函数</h2><table>
-<thead>
-<tr>
-<th>函数</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>np.random.rand()</td>
-<td></td>
-</tr>
-<tr>
-<td>np.random.randn()</td>
-<td></td>
-</tr>
-<tr>
-<td>np.random.randint()</td>
-<td></td>
-</tr>
-<tr>
-<td>np.random.seed()</td>
-<td></td>
-</tr>
-<tr>
-<td>np.random.shuffle()</td>
-<td></td>
-</tr>
-<tr>
-<td>np.random.permutation()</td>
-<td></td>
-</tr>
-<tr>
-<td>np.random.choice()</td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="random梯度函数"><a href="#random梯度函数" class="headerlink" title="random梯度函数"></a>random梯度函数</h2><table>
-<thead>
-<tr>
-<th>函数</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>np.gradient(f)</td>
-<td>计算数组f中元素的梯度，当f为多维时，返回每个维度梯度</td>
-</tr>
-</tbody></table>
-<p>梯度：连续值之间的变化率，即斜率</p>
-<p>XY坐标轴连续三个X坐标对应的Y轴值：a，b，c，其中，b的踢肚时：(c-a)&#x2F;2</p>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>数据存取与函数</p>
-<ul>
-<li>CSV文件</li>
-<li>np.loadtxt()</li>
-<li>np.savetxt()</li>
-</ul>
-<p>多维数组存取</p>
-<ul>
-<li>a.tofile()</li>
-<li>np.fromfile()</li>
-<li>np.save()</li>
-<li>np.savez()</li>
-<li>np.load()</li>
-</ul>
-<h2 id="图像的数组表示"><a href="#图像的数组表示" class="headerlink" title="图像的数组表示"></a>图像的数组表示</h2><p>图像是一个三维数组，维度分别是高度、宽度和像素RGB值</p>
-<p>示例代码：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">im=np.array(Image.<span class="built_in">open</span>(<span class="string">&quot;D:/&quot;</span>))</span><br><span class="line"><span class="built_in">print</span>(im.shape,im.dtype)</span><br><span class="line"><span class="comment">#输出(699,1012,3)uint8</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="图像的变换"><a href="#图像的变换" class="headerlink" title="图像的变换"></a>图像的变换</h2><p>读入图像后，获得像素RGB值，修改后保存为新的文件</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">im=np.array(Image.<span class="built_in">open</span>(<span class="string">&quot;D:/&quot;</span>))</span><br><span class="line"><span class="built_in">print</span>(im.shape,im.dtype)</span><br><span class="line"></span><br><span class="line">b=[<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>]-a <span class="comment">#这是一个三维数组RGB的补值</span></span><br><span class="line"></span><br><span class="line">im = Image.fromarray(b.astype(<span class="string">&#x27;uint8&#x27;</span>))</span><br><span class="line">im.save(<span class="string">&#x27;b.jpg&#x27;</span>)</span><br><span class="line"><span class="comment">#输出(699,1012,3)uint8</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="图像手绘风格"><a href="#图像手绘风格" class="headerlink" title="图像手绘风格"></a>图像手绘风格</h2><p><code>梯度的重构</code></p>
-<blockquote>
-<p>利用像素之间的梯度值和虚拟深度值对图像进行重构，根据灰度变化来模拟人类视觉的明暗程度</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a= np.asarray(Image.<span class="built_in">open</span>(<span class="string">&#x27;ins.jpg&#x27;</span>).convert(<span class="string">&#x27;L&#x27;</span>)).astype(<span class="string">&#x27;float&#x27;</span>)</span><br><span class="line"></span><br><span class="line">depth = <span class="number">10.</span>         <span class="comment">#(0-100)预设深度值为10</span></span><br><span class="line">grad = np.gradient(a)      <span class="comment">#取图像灰度的梯度值，提取x和y方向的梯度值</span></span><br><span class="line">grad_x , grad_y = grad      <span class="comment"># 分别取横纵图相梯度值</span></span><br><span class="line">grad_x = grad_x*depth/<span class="number">100.</span><span class="comment">#根据深度调整x和y方向的梯度值</span></span><br><span class="line">grad_y = grad_y*depth/<span class="number">100.</span></span><br><span class="line">A = np.sqrt(grad_x**<span class="number">2</span> + grad_y**<span class="number">2</span> + <span class="number">1.</span>)</span><br><span class="line"></span><br><span class="line">uni_x = grad_x/A</span><br><span class="line">uni_y = grad_y/A</span><br><span class="line">uni_z = <span class="number">1.</span>/A</span><br><span class="line"></span><br><span class="line">vec_e1 = np.pi/<span class="number">2.2</span>                  <span class="comment">#光源的俯视角度，弧度值</span></span><br><span class="line">vec_az = np.pi/<span class="number">4.</span>                   <span class="comment"># 光源的方位角度，弧度值</span></span><br><span class="line">dx = np.cos(vec_e1)*np.cos(vec_az) <span class="comment"># 光源对x轴的影响 np.cos(vec_e1)为单位光线在地平面上的投影长度</span></span><br><span class="line">dy = np.cos(vec_e1)*np.sin(vec_az) <span class="comment"># 光源对y轴的影响</span></span><br><span class="line">dz = np.sin(vec_e1)             <span class="comment">#光源对z轴的影响</span></span><br><span class="line"></span><br><span class="line">b = <span class="number">255</span>*(dx*uni_x + dy*uni_y + dz*uni_z)<span class="comment"># 光源归一化</span></span><br><span class="line">b = b.clip(<span class="number">0</span>,<span class="number">255</span>) <span class="comment">#clip 截断，限制数组的上下界,减少像素溢出</span></span><br><span class="line"></span><br><span class="line">im = Image.fromarray(b.astype(<span class="string">&#x27;uint8&#x27;</span>))  <span class="comment">#重构图像</span></span><br><span class="line">im.show()</span><br><span class="line"><span class="comment"># im.save(&#x27;11.jpg&#x27;)</span></span><br></pre></td></tr></table></figure>
-
-<p>光源效果：</p>
-<p>根据灰度变化来模拟人类视觉的远近程度</p>
-<h1 id="matplotlib-pyplot"><a href="#matplotlib-pyplot" class="headerlink" title="matplotlib.pyplot"></a>matplotlib.pyplot</h1><h2 id="pyplot绘图区域"><a href="#pyplot绘图区域" class="headerlink" title="pyplot绘图区域"></a>pyplot绘图区域</h2><p>plt.subplot(nrows.ncols,lot_number)</p>
-<h2 id="plot"><a href="#plot" class="headerlink" title="plot"></a>plot</h2><p>plt.plot(x,y,format_string,**kwargs)</p>
-<ul>
-<li><p>x:X轴数据，列表或数组，可选</p>
-</li>
-<li><p>y:Y轴数据，列表或数组</p>
-</li>
-<li><p>format_string：控制曲线的格式字符串，可选，由颜色字符、风格字符和标记字符组成</p>
-<ul>
-<li><p>颜色字符对应英文首字母</p>
-</li>
-<li><p>风格字符</p>
-</li>
-</ul>
-<p><code>-</code>实线</p>
-<p><code>--</code>破折线</p>
-<p><code>-.</code>点划线</p>
-<p><code>:</code>虚线</p>
-<ul>
-<li>格式字符串</li>
-</ul>
-<p><code>.</code>点标记</p>
-<p><code>,</code>像素标记</p>
-<p><code>o</code>实心圈标记</p>
-<p><code>v</code>倒三角标记</p>
-<p><code>^</code>上三角标记</p>
-<p><code>&gt;</code>右三角标记</p>
-<p><code>&lt;</code>左三角标记</p>
-<p><code>1</code>下花三角标记</p>
-<p><code>2</code>上花三角标记</p>
-<p><code>3</code>左花三角标记</p>
-<p><code>4</code>右花三角标记</p>
-<p><code>s</code>实心方形标记</p>
-<p><code>p</code>实心五角标记</p>
-<p><code>*</code>星形标记</p>
-<p><code>h</code>竖六边形标记</p>
-<p><code>H</code>横六边形标记</p>
-<p><code>+</code>十字标记</p>
-<p><code>x</code>x标记</p>
-<p><code>D</code>菱形标记</p>
-<p><code>d</code>瘦菱形标记</p>
-<p><code>|</code>垂直线标记</p>
-</li>
-<li><p>**kwargs：第二组或更多（x,y,format_string）</p>
-<ul>
-<li>color：控制颜色，color&#x3D;‘green’</li>
-<li>linestyle：线条风格，linestyle&#x3D;‘dashed’</li>
-<li>marker：标记风格，marker&#x3D;’o‘</li>
-<li>markerfacecolor：标记颜色，markerfacecolor&#x3D;’blue‘</li>
-<li>markersize：标记尺寸，markersize&#x3D;20</li>
-<li>……</li>
-</ul>
-</li>
-</ul>
-<p>当绘制多条曲线时，各条曲线的x不能省略</p>
-<h3 id="pyplot中文显示方法"><a href="#pyplot中文显示方法" class="headerlink" title="pyplot中文显示方法"></a>pyplot中文显示方法</h3><ul>
-<li>方法一：需要<strong>rcParams</strong>修改字体实现</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>属性(单引号需加上)</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>‘font.family’</td>
-<td>用于显示字体的名字</td>
-</tr>
-<tr>
-<td>’font.style‘</td>
-<td>字体风格，正常’normal‘或 斜体’italic‘</td>
-</tr>
-<tr>
-<td>’font.size‘</td>
-<td>字体大小，整数字号或者’large‘、’x-small‘</td>
-</tr>
-</tbody></table>
-<ul>
-<li>方法二：在有中文输出的地方，增加一个属性：fontproperties</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">plt.xlabel(<span class="string">&quot;横轴(值)&quot;</span>,fontproperties=<span class="string">&#x27;SimHei&#x27;</span>,fontsize=<span class="number">20</span>)</span><br><span class="line">plt.ylabel(<span class="string">&quot;grade&quot;</span>,,fontproperties=<span class="string">&#x27;SimHei&#x27;</span>,fontsize=<span class="number">20</span>)</span><br></pre></td></tr></table></figure>
-
-<h2 id="pyplot的文本显示方法"><a href="#pyplot的文本显示方法" class="headerlink" title="pyplot的文本显示方法"></a>pyplot的文本显示方法</h2><table>
-<thead>
-<tr>
-<th>函数</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>plt.xlabel()</td>
-<td>对x轴添加文本标签</td>
-</tr>
-<tr>
-<td>plt.ylabel()</td>
-<td>对y轴添加文本标签</td>
-</tr>
-<tr>
-<td>plt.title()</td>
-<td>对图形整体增加文本标签</td>
-</tr>
-<tr>
-<td>plt.text()</td>
-<td>在任意位置增加文本</td>
-</tr>
-<tr>
-<td>plt.annotate()</td>
-<td>在图形中增加带箭头注释</td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>LaTeX语法 </p>
-<p>$正弦波实例 y &#x3D; cos(2pix)$</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">plt.annotate()</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/Users\JC\AppData\Roaming\Typora\typora-user-images\image-20220504183915496.png" alt="image-20220504183915496"></p>
-<p>plt.subplot2grid(GridSpec,CurSpec,colspan&#x3D;1,rowspan&#x3D;1)</p>
-<p>理念：设定网格，选中网格，确定选中行列区域数量，编号从0开始</p>
-<h2 id="GridSpec类"><a href="#GridSpec类" class="headerlink" title="GridSpec类"></a>GridSpec类</h2><p>实行多种格子</p>
-<h2 id="pyplot基础图表函数"><a href="#pyplot基础图表函数" class="headerlink" title="pyplot基础图表函数"></a>pyplot基础图表函数</h2><table>
-<thead>
-<tr>
-<th>函数</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>plt.plot(x,y,fmt,…)</td>
-<td>绘制一个坐标图</td>
-</tr>
-<tr>
-<td>plt.boxplot(data,notch,position)</td>
-<td>绘制一个箱型图</td>
-</tr>
-<tr>
-<td>plt.bar(left,height,width,bottom)</td>
-<td>绘制一个条形图</td>
-</tr>
-<tr>
-<td>plt.barh(width,bottom,left,height)</td>
-<td>绘制一个横向条形图</td>
-</tr>
-<tr>
-<td>plt.polar(theta,r)</td>
-<td>绘制极坐标图</td>
-</tr>
-<tr>
-<td>plt.pie(data,explode)</td>
-<td>绘制饼图</td>
-</tr>
-<tr>
-<td>plt.psd(x.NFFT&#x3D;256,pad_to,Fs)</td>
-<td>绘制功率谱密度图</td>
-</tr>
-<tr>
-<td>plt.specgram(x.NFFT&#x3D;256,pad_to,Fs)</td>
-<td>绘制谱图</td>
-</tr>
-<tr>
-<td>plt.cohere(x,y,NFFT&#x3D;256,Fs)</td>
-<td>绘制x-y相关性函数</td>
-</tr>
-<tr>
-<td>plt.step(s,y,where)</td>
-<td>绘制步阶图</td>
-</tr>
-<tr>
-<td>plt.hist(x,bins,normed)</td>
-<td>绘制直方图</td>
-</tr>
-<tr>
-<td>plt.scatter(x,y)</td>
-<td>绘制散点图，其中x和y长度相同</td>
-</tr>
-<tr>
-<td>plt.contour(X,Y,Z,N)</td>
-<td>绘制等值图</td>
-</tr>
-<tr>
-<td>plt.vlines()</td>
-<td>绘制垂直图</td>
-</tr>
-<tr>
-<td>plt.stem(x,y,linefmt,markerfmt)</td>
-<td>绘制柴火图</td>
-</tr>
-<tr>
-<td>plt.plot_date()</td>
-<td>绘制数据日期</td>
-</tr>
-</tbody></table>
-<p>startangle&#x3D;90 起始角度</p>
-<p>bin:直方图的个数</p>
-<p>normed：纵坐标出现元素的个数</p>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>数据分析</tag>
-        <tag>Numpy</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>docker基础命令</title>
     <url>/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/Docker.png"></p>
@@ -730,6 +730,15 @@
       </tags>
   </entry>
   <entry>
+    <title>我的第一篇博客</title>
+    <url>/2023/06/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>你好，我是一名大三计算机科学与技术在校生，在此博客进行相关技术知识的分享</p>
+]]></content>
+      <tags>
+        <tag>第一篇博客</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>nvidia-smi基础信息</title>
     <url>/2023/06/08/nvidia-smi%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/08/nvidia-smi%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF/nvidia.png"></p>
@@ -751,15 +760,6 @@
 ]]></content>
       <tags>
         <tag>随想</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我的第一篇博客</title>
-    <url>/2023/06/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>你好，我是一名大三计算机科学与技术在校生，在此博客进行相关技术知识的分享</p>
-]]></content>
-      <tags>
-        <tag>第一篇博客</tag>
       </tags>
   </entry>
   <entry>
@@ -857,67 +857,6 @@
       <tags>
         <tag>计算机网络</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>饿补计算机科学基础（一）--计算机基础</title>
-    <url>/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>计算机基础，常识</p>
-<span id="more"></span>
-
-<h2 id="1-计算思维概念"><a href="#1-计算思维概念" class="headerlink" title="1.计算思维概念"></a>1.计算思维概念</h2><p>特点：抽象、自动化</p>
-<p>计算思维： </p>
-<ul>
-<li>递归</li>
-<li>抽象和分解</li>
-<li>启发式推理</li>
-<li>冗余、容错、纠错</li>
-</ul>
-<p>抽象：完全超越物理的时空观，并完全用符号来表示</p>
-<p>自动化：表示形式应该有效地被信息处理代理执行</p>
-<h2 id="1-1符号化信息表达"><a href="#1-1符号化信息表达" class="headerlink" title="1.1符号化信息表达"></a>1.1符号化信息表达</h2><p>数值型和非数值型对象</p>
-<p>数值和非数值–符号化–&gt; 符号化编码 –语义化–&gt; 数值和非数值</p>
-<h2 id="1-2数值数据表示"><a href="#1-2数值数据表示" class="headerlink" title="1.2数值数据表示"></a>1.2数值数据表示</h2><p>数值型数据的表示</p>
-<p>进制转换：位权转换</p>
-<p>原码：负数原码的符号位为1</p>
-<p>反码：负数的反码为将原码除符号位外按位取反</p>
-<p>补码：负数的补码为将反码加1</p>
-<h2 id="1-3字符型数据的表示"><a href="#1-3字符型数据的表示" class="headerlink" title="1.3字符型数据的表示"></a>1.3字符型数据的表示</h2><h4 id="英文字符的表示"><a href="#英文字符的表示" class="headerlink" title="英文字符的表示"></a>英文字符的表示</h4><p>ASCII码-美国信息交换标准代码</p>
-<p>可表示128个不同字符：10数字、26个英文字母小写、26个英文字母大写、其他特殊符号</p>
-<p>a：97、A：65</p>
-<p>内存中用一个字节来存放一个ASCII码，最高位为校验位</p>
-<h4 id="汉字字符的表示"><a href="#汉字字符的表示" class="headerlink" title="汉字字符的表示"></a>汉字字符的表示</h4><p>GB2312-80国标码：</p>
-<p>机内码：汉字被计算机系统内部处理和存储而使用的代码</p>
-<p>GB18030-2005《信息技术中文编码字符集》：</p>
-<p>采用多字节编码</p>
-<h4 id="国际字符的表示"><a href="#国际字符的表示" class="headerlink" title="国际字符的表示"></a>国际字符的表示</h4><p>Unicode字符集编码：解决需要满足多语言、跨平台</p>
-<h4 id="字符的输入、输出"><a href="#字符的输入、输出" class="headerlink" title="字符的输入、输出"></a>字符的输入、输出</h4><p>输入码：在键盘上利用数字、符号、字母输入相应的字符</p>
-<p>汉字输入码“在键盘上利用数字、符号、拼音字母输入汉字的代码</p>
-<p>形码类（五笔）、音码类（拼音输入法）</p>
-<p>字符的输出：字形码，记录字符形状</p>
-<p>点阵规模用0和1编码无亮点和有亮点形成字形信息，便于显示。</p>
-<p>点阵的方式：16 * 16 &#x2F; 32 * 32 &#x2F; 48 * 48</p>
-<h2 id="1-4多媒体信息的表示"><a href="#1-4多媒体信息的表示" class="headerlink" title="1.4多媒体信息的表示"></a>1.4多媒体信息的表示</h2><p>模拟量：在时间或者数值上都是连续的物理量</p>
-<p>数字量：在时间上或数量上都是离散的物理量（例如：计步器）</p>
-<p>图形：&#x3D;&#x3D;矢量&#x3D;&#x3D;图形文件形式存储，圆，直线、曲线等图形元素</p>
-<p>图像：&#x3D;&#x3D;模拟&#x3D;&#x3D;信号，通过数字照相机、摄像机捕捉的自然界真实场景画面产生的影像，数字化后以&#x3D;&#x3D;点阵&#x3D;&#x3D;（位图）的形式存储</p>
-<h4 id="图像数字化方法"><a href="#图像数字化方法" class="headerlink" title="图像数字化方法"></a>图像数字化方法</h4><ol>
-<li><p>将连续色调的模拟图像经过采样、量化后转成数字影像（编码）</p>
-</li>
-<li><p>采样：将二位空间上连续的图像转换为离散点的过程，将图像按照行列分割成m * n个网格，每个网格对应一个像素</p>
-<p>图像分辨率</p>
-</li>
-<li><p>量化：图像离散化后，用有限个数的整数值来表示图像色彩浓淡连续变化值的过程</p>
-</li>
-</ol>
-<p>量化级数：量化时所确定的离散取值个数</p>
-<p>量化位数：表示量化的色彩值（或亮度）所需要的二进制位数，一般可以用8位，16位，32位</p>
-<p>注意：2^24^ ≈ 16Mb</p>
-<h3 id="1-4-2声音的数字化"><a href="#1-4-2声音的数字化" class="headerlink" title="1.4.2声音的数字化"></a>1.4.2声音的数字化</h3><p>声音数字化过程：采样、量化、编码</p>
-<p>采样频率：每秒钟采样点的次数（Hz）</p>
-<p>声道数</p>
-<p>记录每秒存储声音容量公式为</p>
-<p>采样频率 X 量化位数（bit） ➗ 8 X 声道数 &#x3D; 每秒数据量</p>
-]]></content>
   </entry>
   <entry>
     <title>饿补计算机科学基础（三）--数据结构</title>
@@ -1053,6 +992,67 @@
 <p>顶点（vertex）：表示某个事物或对象</p>
 <p>边（edge）：表示顶点或事物之间的逻辑关系</p>
 <p>边的权重（weight）：边上对应的值。可以对应距离、时间值、开销等。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>饿补计算机科学基础（一）--计算机基础</title>
+    <url>/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>计算机基础，常识</p>
+<span id="more"></span>
+
+<h2 id="1-计算思维概念"><a href="#1-计算思维概念" class="headerlink" title="1.计算思维概念"></a>1.计算思维概念</h2><p>特点：抽象、自动化</p>
+<p>计算思维： </p>
+<ul>
+<li>递归</li>
+<li>抽象和分解</li>
+<li>启发式推理</li>
+<li>冗余、容错、纠错</li>
+</ul>
+<p>抽象：完全超越物理的时空观，并完全用符号来表示</p>
+<p>自动化：表示形式应该有效地被信息处理代理执行</p>
+<h2 id="1-1符号化信息表达"><a href="#1-1符号化信息表达" class="headerlink" title="1.1符号化信息表达"></a>1.1符号化信息表达</h2><p>数值型和非数值型对象</p>
+<p>数值和非数值–符号化–&gt; 符号化编码 –语义化–&gt; 数值和非数值</p>
+<h2 id="1-2数值数据表示"><a href="#1-2数值数据表示" class="headerlink" title="1.2数值数据表示"></a>1.2数值数据表示</h2><p>数值型数据的表示</p>
+<p>进制转换：位权转换</p>
+<p>原码：负数原码的符号位为1</p>
+<p>反码：负数的反码为将原码除符号位外按位取反</p>
+<p>补码：负数的补码为将反码加1</p>
+<h2 id="1-3字符型数据的表示"><a href="#1-3字符型数据的表示" class="headerlink" title="1.3字符型数据的表示"></a>1.3字符型数据的表示</h2><h4 id="英文字符的表示"><a href="#英文字符的表示" class="headerlink" title="英文字符的表示"></a>英文字符的表示</h4><p>ASCII码-美国信息交换标准代码</p>
+<p>可表示128个不同字符：10数字、26个英文字母小写、26个英文字母大写、其他特殊符号</p>
+<p>a：97、A：65</p>
+<p>内存中用一个字节来存放一个ASCII码，最高位为校验位</p>
+<h4 id="汉字字符的表示"><a href="#汉字字符的表示" class="headerlink" title="汉字字符的表示"></a>汉字字符的表示</h4><p>GB2312-80国标码：</p>
+<p>机内码：汉字被计算机系统内部处理和存储而使用的代码</p>
+<p>GB18030-2005《信息技术中文编码字符集》：</p>
+<p>采用多字节编码</p>
+<h4 id="国际字符的表示"><a href="#国际字符的表示" class="headerlink" title="国际字符的表示"></a>国际字符的表示</h4><p>Unicode字符集编码：解决需要满足多语言、跨平台</p>
+<h4 id="字符的输入、输出"><a href="#字符的输入、输出" class="headerlink" title="字符的输入、输出"></a>字符的输入、输出</h4><p>输入码：在键盘上利用数字、符号、字母输入相应的字符</p>
+<p>汉字输入码“在键盘上利用数字、符号、拼音字母输入汉字的代码</p>
+<p>形码类（五笔）、音码类（拼音输入法）</p>
+<p>字符的输出：字形码，记录字符形状</p>
+<p>点阵规模用0和1编码无亮点和有亮点形成字形信息，便于显示。</p>
+<p>点阵的方式：16 * 16 &#x2F; 32 * 32 &#x2F; 48 * 48</p>
+<h2 id="1-4多媒体信息的表示"><a href="#1-4多媒体信息的表示" class="headerlink" title="1.4多媒体信息的表示"></a>1.4多媒体信息的表示</h2><p>模拟量：在时间或者数值上都是连续的物理量</p>
+<p>数字量：在时间上或数量上都是离散的物理量（例如：计步器）</p>
+<p>图形：&#x3D;&#x3D;矢量&#x3D;&#x3D;图形文件形式存储，圆，直线、曲线等图形元素</p>
+<p>图像：&#x3D;&#x3D;模拟&#x3D;&#x3D;信号，通过数字照相机、摄像机捕捉的自然界真实场景画面产生的影像，数字化后以&#x3D;&#x3D;点阵&#x3D;&#x3D;（位图）的形式存储</p>
+<h4 id="图像数字化方法"><a href="#图像数字化方法" class="headerlink" title="图像数字化方法"></a>图像数字化方法</h4><ol>
+<li><p>将连续色调的模拟图像经过采样、量化后转成数字影像（编码）</p>
+</li>
+<li><p>采样：将二位空间上连续的图像转换为离散点的过程，将图像按照行列分割成m * n个网格，每个网格对应一个像素</p>
+<p>图像分辨率</p>
+</li>
+<li><p>量化：图像离散化后，用有限个数的整数值来表示图像色彩浓淡连续变化值的过程</p>
+</li>
+</ol>
+<p>量化级数：量化时所确定的离散取值个数</p>
+<p>量化位数：表示量化的色彩值（或亮度）所需要的二进制位数，一般可以用8位，16位，32位</p>
+<p>注意：2^24^ ≈ 16Mb</p>
+<h3 id="1-4-2声音的数字化"><a href="#1-4-2声音的数字化" class="headerlink" title="1.4.2声音的数字化"></a>1.4.2声音的数字化</h3><p>声音数字化过程：采样、量化、编码</p>
+<p>采样频率：每秒钟采样点的次数（Hz）</p>
+<p>声道数</p>
+<p>记录每秒存储声音容量公式为</p>
+<p>采样频率 X 量化位数（bit） ➗ 8 X 声道数 &#x3D; 每秒数据量</p>
 ]]></content>
   </entry>
   <entry>
