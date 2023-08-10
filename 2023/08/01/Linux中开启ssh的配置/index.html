@@ -587,61 +587,42 @@ if(canvas.getContext){
 <p>使用Xshell连接linux</p>
 </blockquote>
 <span id="more"></span>
-
 <h2 id="1-本地网络配置-🌐"><a href="#1-本地网络配置-🌐" class="headerlink" title="1.本地网络配置 🌐"></a>1.本地网络配置 🌐</h2><h3 id="1-1-1-配置临时IP地址-📝"><a href="#1-1-1-配置临时IP地址-📝" class="headerlink" title="1.1.1 配置临时IP地址 📝"></a>1.1.1 配置临时IP地址 📝</h3><p>首先，使用以下命令配置临时IP地址：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ifconfig eth0 192.168.1.53/24</span><br></pre></td></tr></table></figure>
-
 <p>然后添加子网掩码：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">255.255.255.0</span><br></pre></td></tr></table></figure>
-
 <p>接下来，配置默认网关：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">route add default gw 192.168.1.1</span><br></pre></td></tr></table></figure>
-
 <p>确认网络连接是否正常：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ping 192.168.1.1</span><br></pre></td></tr></table></figure>
-
 <p>最后，编辑DNS配置文件：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/resolv.conf</span><br></pre></td></tr></table></figure>
-
 <p>添加以下行来配置DNS：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nameserver 8.8.8.8</span><br></pre></td></tr></table></figure>
-
 <h3 id="1-1-2-配置永久IP地址-📝"><a href="#1-1-2-配置永久IP地址-📝" class="headerlink" title="1.1.2 配置永久IP地址 📝"></a>1.1.2 配置永久IP地址 📝</h3><p>若要配置永久IP地址，请打开以下文件：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/network/interfaces</span><br></pre></td></tr></table></figure>
-
 <p>然后，注释掉dhcp配置，并添加以下静态IP配置：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">arduinoCopy codeauto eth0</span><br><span class="line"><span class="comment">#iface eth0 inet dhcp # 注释掉</span></span><br><span class="line">iface eth0 inet static</span><br><span class="line">address 192.168.3.53</span><br><span class="line">netmask 255.255.255.0</span><br><span class="line">gateway 192.168.1.1</span><br></pre></td></tr></table></figure>
-
 <p>接着，再次编辑DNS配置文件：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/resolv.conf</span><br></pre></td></tr></table></figure>
-
 <p>添加以下行来配置DNS：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nameserver 8.8.8.8</span><br></pre></td></tr></table></figure>
-
 <p>完成后，重启网络服务：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/networking restart</span><br></pre></td></tr></table></figure>
-
 <p>或者，使用以下命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart networking</span><br></pre></td></tr></table></figure>
-
 <h2 id="2-配置sshd服务并使用Xshell连接-🔒🔌"><a href="#2-配置sshd服务并使用Xshell连接-🔒🔌" class="headerlink" title="2. 配置sshd服务并使用Xshell连接 🔒🔌"></a>2. 配置sshd服务并使用Xshell连接 🔒🔌</h2><p>为了配置sshd服务并使用Xshell连接，首先以管理员权限打开sshd配置文件：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure>
-
 <p>如果你想显示行号，可以使用以下命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:<span class="built_in">set</span> nu</span><br></pre></td></tr></table></figure>
-
 <p>然后，在32行和37行进行修改：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">codePermitRootLogin <span class="built_in">yes</span></span><br><span class="line">PubkeyAuthentication <span class="built_in">yes</span></span><br></pre></td></tr></table></figure>
-
 <p>接下来，重启sshd服务：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/ssh restart</span><br></pre></td></tr></table></figure>
-
 <p>或者，使用以下命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart ssh</span><br></pre></td></tr></table></figure>
-
 <p>若要设置开机启动，可以运行以下命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update-rc.d ssh <span class="built_in">enable</span></span><br></pre></td></tr></table></figure>
-
 <p>现在，你的linux配置已经完成！享受使用Xshell连接的便捷和安全体验吧！😊🔒</p>
 
     </div>
@@ -841,6 +822,12 @@ darkmode.showWidget();
   <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
 
 
 <script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>

@@ -602,47 +602,53 @@ if(canvas.getContext){
     
     
     
-    <div class="post-body" itemprop="articleBody"><p><img src="/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/NumPy_logo_2020.png"></p>
+    <div class="post-body" itemprop="articleBody"><p><img src="/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/NumPy_logo_2020.png" alt></p>
 <blockquote>
 <p>MOOC课程，数据分析相关课程，Numpy笔记</p>
 </blockquote>
 <span id="more"></span>
-<h2 id="统计函数"><a href="#统计函数" class="headerlink" title="统计函数"></a>统计函数</h2><table>
+<h2 id="统计函数"><a href="#统计函数" class="headerlink" title="统计函数"></a>统计函数</h2><div class="table-container">
+<table>
 <thead>
 <tr>
-<th align="center">函数</th>
-<th align="center">说明</th>
+<th style="text-align:center">函数</th>
+<th style="text-align:center">说明</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">sum(a,axis-None)</td>
-<td align="center">根据给定轴axis计算数组a相关元素之和，axis整数或元组</td>
+<tbody>
+<tr>
+<td style="text-align:center">sum(a,axis-None)</td>
+<td style="text-align:center">根据给定轴axis计算数组a相关元素之和，axis整数或元组</td>
 </tr>
 <tr>
-<td align="center">mean(a,axis-None)</td>
-<td align="center">根据给定轴axis计算数组a相关元素的期望，axis整数或元组</td>
+<td style="text-align:center">mean(a,axis-None)</td>
+<td style="text-align:center">根据给定轴axis计算数组a相关元素的期望，axis整数或元组</td>
 </tr>
 <tr>
-<td align="center">average(a,axis&#x3D;None)</td>
-<td align="center">根据给定轴axis计算数组a相关元素的加权平均值</td>
+<td style="text-align:center">average(a,axis=None)</td>
+<td style="text-align:center">根据给定轴axis计算数组a相关元素的加权平均值</td>
 </tr>
 <tr>
-<td align="center">std(a,axis&#x3D;None)</td>
-<td align="center">根据给定轴axis计算数组a相关元素的标准差</td>
+<td style="text-align:center">std(a,axis=None)</td>
+<td style="text-align:center">根据给定轴axis计算数组a相关元素的标准差</td>
 </tr>
 <tr>
-<td align="center">var(a,axis&#x3D;None)</td>
-<td align="center">根据给定轴axis计算数组a县官元素的方差</td>
+<td style="text-align:center">var(a,axis=None)</td>
+<td style="text-align:center">根据给定轴axis计算数组a县官元素的方差</td>
 </tr>
-</tbody></table>
-<h2 id="随机函数"><a href="#随机函数" class="headerlink" title="随机函数"></a>随机函数</h2><table>
+</tbody>
+</table>
+</div>
+<h2 id="随机函数"><a href="#随机函数" class="headerlink" title="随机函数"></a>随机函数</h2><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>函数</th>
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>np.random.rand()</td>
 <td></td>
 </tr>
@@ -668,23 +674,28 @@ if(canvas.getContext){
 </tr>
 <tr>
 <td>np.random.choice()</td>
-<td></td>
 </tr>
-</tbody></table>
-<h2 id="random梯度函数"><a href="#random梯度函数" class="headerlink" title="random梯度函数"></a>random梯度函数</h2><table>
+</tbody>
+</table>
+</div>
+<h2 id="random梯度函数"><a href="#random梯度函数" class="headerlink" title="random梯度函数"></a>random梯度函数</h2><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>函数</th>
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>np.gradient(f)</td>
 <td>计算数组f中元素的梯度，当f为多维时，返回每个维度梯度</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>梯度：连续值之间的变化率，即斜率</p>
-<p>XY坐标轴连续三个X坐标对应的Y轴值：a，b，c，其中，b的踢肚时：(c-a)&#x2F;2</p>
+<p>XY坐标轴连续三个X坐标对应的Y轴值：a，b，c，其中，b的踢肚时：(c-a)/2</p>
 <h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>数据存取与函数</p>
 <ul>
 <li>CSV文件</li>
@@ -702,16 +713,13 @@ if(canvas.getContext){
 <h2 id="图像的数组表示"><a href="#图像的数组表示" class="headerlink" title="图像的数组表示"></a>图像的数组表示</h2><p>图像是一个三维数组，维度分别是高度、宽度和像素RGB值</p>
 <p>示例代码：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">im=np.array(Image.<span class="built_in">open</span>(<span class="string">&quot;D:/&quot;</span>))</span><br><span class="line"><span class="built_in">print</span>(im.shape,im.dtype)</span><br><span class="line"><span class="comment">#输出(699,1012,3)uint8</span></span><br></pre></td></tr></table></figure>
-
 <h2 id="图像的变换"><a href="#图像的变换" class="headerlink" title="图像的变换"></a>图像的变换</h2><p>读入图像后，获得像素RGB值，修改后保存为新的文件</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">im=np.array(Image.<span class="built_in">open</span>(<span class="string">&quot;D:/&quot;</span>))</span><br><span class="line"><span class="built_in">print</span>(im.shape,im.dtype)</span><br><span class="line"></span><br><span class="line">b=[<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>]-a <span class="comment">#这是一个三维数组RGB的补值</span></span><br><span class="line"></span><br><span class="line">im = Image.fromarray(b.astype(<span class="string">&#x27;uint8&#x27;</span>))</span><br><span class="line">im.save(<span class="string">&#x27;b.jpg&#x27;</span>)</span><br><span class="line"><span class="comment">#输出(699,1012,3)uint8</span></span><br></pre></td></tr></table></figure>
-
 <h2 id="图像手绘风格"><a href="#图像手绘风格" class="headerlink" title="图像手绘风格"></a>图像手绘风格</h2><p><code>梯度的重构</code></p>
 <blockquote>
 <p>利用像素之间的梯度值和虚拟深度值对图像进行重构，根据灰度变化来模拟人类视觉的明暗程度</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">a= np.asarray(Image.<span class="built_in">open</span>(<span class="string">&#x27;ins.jpg&#x27;</span>).convert(<span class="string">&#x27;L&#x27;</span>)).astype(<span class="string">&#x27;float&#x27;</span>)</span><br><span class="line"></span><br><span class="line">depth = <span class="number">10.</span>         <span class="comment">#(0-100)预设深度值为10</span></span><br><span class="line">grad = np.gradient(a)      <span class="comment">#取图像灰度的梯度值，提取x和y方向的梯度值</span></span><br><span class="line">grad_x , grad_y = grad      <span class="comment"># 分别取横纵图相梯度值</span></span><br><span class="line">grad_x = grad_x*depth/<span class="number">100.</span><span class="comment">#根据深度调整x和y方向的梯度值</span></span><br><span class="line">grad_y = grad_y*depth/<span class="number">100.</span></span><br><span class="line">A = np.sqrt(grad_x**<span class="number">2</span> + grad_y**<span class="number">2</span> + <span class="number">1.</span>)</span><br><span class="line"></span><br><span class="line">uni_x = grad_x/A</span><br><span class="line">uni_y = grad_y/A</span><br><span class="line">uni_z = <span class="number">1.</span>/A</span><br><span class="line"></span><br><span class="line">vec_e1 = np.pi/<span class="number">2.2</span>                  <span class="comment">#光源的俯视角度，弧度值</span></span><br><span class="line">vec_az = np.pi/<span class="number">4.</span>                   <span class="comment"># 光源的方位角度，弧度值</span></span><br><span class="line">dx = np.cos(vec_e1)*np.cos(vec_az) <span class="comment"># 光源对x轴的影响 np.cos(vec_e1)为单位光线在地平面上的投影长度</span></span><br><span class="line">dy = np.cos(vec_e1)*np.sin(vec_az) <span class="comment"># 光源对y轴的影响</span></span><br><span class="line">dz = np.sin(vec_e1)             <span class="comment">#光源对z轴的影响</span></span><br><span class="line"></span><br><span class="line">b = <span class="number">255</span>*(dx*uni_x + dy*uni_y + dz*uni_z)<span class="comment"># 光源归一化</span></span><br><span class="line">b = b.clip(<span class="number">0</span>,<span class="number">255</span>) <span class="comment">#clip 截断，限制数组的上下界,减少像素溢出</span></span><br><span class="line"></span><br><span class="line">im = Image.fromarray(b.astype(<span class="string">&#x27;uint8&#x27;</span>))  <span class="comment">#重构图像</span></span><br><span class="line">im.show()</span><br><span class="line"><span class="comment"># im.save(&#x27;11.jpg&#x27;)</span></span><br></pre></td></tr></table></figure>
-
 <p>光源效果：</p>
 <p>根据灰度变化来模拟人类视觉的远近程度</p>
 <h1 id="matplotlib-pyplot"><a href="#matplotlib-pyplot" class="headerlink" title="matplotlib.pyplot"></a>matplotlib.pyplot</h1><h2 id="pyplot绘图区域"><a href="#pyplot绘图区域" class="headerlink" title="pyplot绘图区域"></a>pyplot绘图区域</h2><p>plt.subplot(nrows.ncols,lot_number)</p>
@@ -757,13 +765,15 @@ if(canvas.getContext){
 <p><code>d</code>瘦菱形标记</p>
 <p><code>|</code>垂直线标记</p>
 </li>
+</ul>
+<ul>
 <li><p>**kwargs：第二组或更多（x,y,format_string）</p>
 <ul>
-<li>color：控制颜色，color&#x3D;‘green’</li>
-<li>linestyle：线条风格，linestyle&#x3D;‘dashed’</li>
-<li>marker：标记风格，marker&#x3D;’o‘</li>
-<li>markerfacecolor：标记颜色，markerfacecolor&#x3D;’blue‘</li>
-<li>markersize：标记尺寸，markersize&#x3D;20</li>
+<li>color：控制颜色，color=‘green’</li>
+<li>linestyle：线条风格，linestyle=‘dashed’</li>
+<li>marker：标记风格，marker=’o‘</li>
+<li>markerfacecolor：标记颜色，markerfacecolor=’blue‘</li>
+<li>markersize：标记尺寸，markersize=20</li>
 <li>……</li>
 </ul>
 </li>
@@ -772,6 +782,7 @@ if(canvas.getContext){
 <h3 id="pyplot中文显示方法"><a href="#pyplot中文显示方法" class="headerlink" title="pyplot中文显示方法"></a>pyplot中文显示方法</h3><ul>
 <li>方法一：需要<strong>rcParams</strong>修改字体实现</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -779,7 +790,8 @@ if(canvas.getContext){
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>‘font.family’</td>
 <td>用于显示字体的名字</td>
 </tr>
@@ -791,20 +803,23 @@ if(canvas.getContext){
 <td>’font.size‘</td>
 <td>字体大小，整数字号或者’large‘、’x-small‘</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li>方法二：在有中文输出的地方，增加一个属性：fontproperties</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plt.xlabel(<span class="string">&quot;横轴(值)&quot;</span>,fontproperties=<span class="string">&#x27;SimHei&#x27;</span>,fontsize=<span class="number">20</span>)</span><br><span class="line">plt.ylabel(<span class="string">&quot;grade&quot;</span>,,fontproperties=<span class="string">&#x27;SimHei&#x27;</span>,fontsize=<span class="number">20</span>)</span><br></pre></td></tr></table></figure>
-
-<h2 id="pyplot的文本显示方法"><a href="#pyplot的文本显示方法" class="headerlink" title="pyplot的文本显示方法"></a>pyplot的文本显示方法</h2><table>
+<h2 id="pyplot的文本显示方法"><a href="#pyplot的文本显示方法" class="headerlink" title="pyplot的文本显示方法"></a>pyplot的文本显示方法</h2><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>函数</th>
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>plt.xlabel()</td>
 <td>对x轴添加文本标签</td>
 </tr>
@@ -824,25 +839,28 @@ if(canvas.getContext){
 <td>plt.annotate()</td>
 <td>在图形中增加带箭头注释</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <blockquote>
 <p>LaTeX语法 </p>
-<p>$正弦波实例 y &#x3D; cos(2pix)$</p>
+<p>$正弦波实例 y = cos(2pix)$</p>
 </blockquote>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">plt.annotate()</span><br></pre></td></tr></table></figure>
-
 <p><img src="/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/Users\JC\AppData\Roaming\Typora\typora-user-images\image-20220504183915496.png" alt="image-20220504183915496"></p>
-<p>plt.subplot2grid(GridSpec,CurSpec,colspan&#x3D;1,rowspan&#x3D;1)</p>
+<p>plt.subplot2grid(GridSpec,CurSpec,colspan=1,rowspan=1)</p>
 <p>理念：设定网格，选中网格，确定选中行列区域数量，编号从0开始</p>
 <h2 id="GridSpec类"><a href="#GridSpec类" class="headerlink" title="GridSpec类"></a>GridSpec类</h2><p>实行多种格子</p>
-<h2 id="pyplot基础图表函数"><a href="#pyplot基础图表函数" class="headerlink" title="pyplot基础图表函数"></a>pyplot基础图表函数</h2><table>
+<h2 id="pyplot基础图表函数"><a href="#pyplot基础图表函数" class="headerlink" title="pyplot基础图表函数"></a>pyplot基础图表函数</h2><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>函数</th>
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>plt.plot(x,y,fmt,…)</td>
 <td>绘制一个坐标图</td>
 </tr>
@@ -867,15 +885,15 @@ if(canvas.getContext){
 <td>绘制饼图</td>
 </tr>
 <tr>
-<td>plt.psd(x.NFFT&#x3D;256,pad_to,Fs)</td>
+<td>plt.psd(x.NFFT=256,pad_to,Fs)</td>
 <td>绘制功率谱密度图</td>
 </tr>
 <tr>
-<td>plt.specgram(x.NFFT&#x3D;256,pad_to,Fs)</td>
+<td>plt.specgram(x.NFFT=256,pad_to,Fs)</td>
 <td>绘制谱图</td>
 </tr>
 <tr>
-<td>plt.cohere(x,y,NFFT&#x3D;256,Fs)</td>
+<td>plt.cohere(x,y,NFFT=256,Fs)</td>
 <td>绘制x-y相关性函数</td>
 </tr>
 <tr>
@@ -906,8 +924,10 @@ if(canvas.getContext){
 <td>plt.plot_date()</td>
 <td>绘制数据日期</td>
 </tr>
-</tbody></table>
-<p>startangle&#x3D;90 起始角度</p>
+</tbody>
+</table>
+</div>
+<p>startangle=90 起始角度</p>
 <p>bin:直方图的个数</p>
 <p>normed：纵坐标出现元素的个数</p>
 
@@ -1112,6 +1132,12 @@ darkmode.showWidget();
   <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
 
 
 <script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>

@@ -582,9 +582,7 @@ if(canvas.getContext){
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>数据结构，过于简单的部分已省略</p>
-<span id="more"></span>
-
+    <div class="post-body" itemprop="articleBody"><p>数据结构，过于简单的部分已省略<br><span id="more"></span></p>
 <h2 id="3-数据结构"><a href="#3-数据结构" class="headerlink" title="3.数据结构"></a>3.数据结构</h2><h3 id="3-1线性数据结构"><a href="#3-1线性数据结构" class="headerlink" title="3.1线性数据结构"></a>3.1线性数据结构</h3><p>数据结构（Data Structure）：</p>
 <p>相互之间存在一种或多种特定关系的数据元素的集合，“结构“的数据元素的集合</p>
 <ul>
@@ -631,6 +629,7 @@ if(canvas.getContext){
 </blockquote>
 <p>队列：操作受限的线性逻辑关系的数据结构</p>
 <p>栈的常见操作</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -638,7 +637,8 @@ if(canvas.getContext){
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>创建create</td>
 <td>创建一个空栈</td>
 </tr>
@@ -658,10 +658,12 @@ if(canvas.getContext){
 <td>满栈判断full</td>
 <td>判断栈是否已经满，是返回true，否则返回false</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>根据用户输入，打印指定的一周中的某一天，例如输入1，打印“星期一”</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">weekdays  = “星期一星期二星期三星期四星期五星期六”</span><br><span class="line">weekdays[<span class="number">1</span>] = <span class="string">&quot;一&quot;</span></span><br></pre></td></tr></table></figure>
-
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -669,7 +671,8 @@ if(canvas.getContext){
 <th>描述</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>s[i]</td>
 <td>索引，返回字符串s的第i个元素</td>
 </tr>
@@ -677,15 +680,16 @@ if(canvas.getContext){
 <td>s[i:j]</td>
 <td>分片，返回包含字符串s第i到j个元素的子串</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>python实现代码</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">weekdays = <span class="string">&quot;星期一星期二星期三星期四星期五星期六&quot;</span></span><br><span class="line">number = <span class="built_in">eval</span>(<span class="built_in">input</span>(<span class="string">&quot;输入数字：&quot;</span>))</span><br><span class="line">start  = (number-<span class="number">1</span>)*<span class="number">3</span> //对应number的子串的第一个字符位置</span><br><span class="line"><span class="built_in">print</span>(weekdays[start:start+<span class="number">3</span>])//分片截取子串并输出</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
 <p>简单加密：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#实现简单加密，替换字母间隔为2的字符</span></span><br><span class="line">message=<span class="built_in">input</span>(<span class="string">&quot;请输入进行加密的信息&quot;</span>)</span><br><span class="line">new_message = <span class="string">&quot;&quot;</span><span class="comment">#生成一个新的字符串</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(message)):</span><br><span class="line">    re_ch = <span class="built_in">ord</span>(message[i])-<span class="number">97</span>+<span class="number">2</span></span><br><span class="line">    new_message=new_message + <span class="built_in">chr</span>(re_ch % <span class="number">26</span>+<span class="number">97</span>)</span><br><span class="line">    </span><br><span class="line"><span class="built_in">print</span>(new_message)</span><br></pre></td></tr></table></figure>
-
 <center>ASCII码中字符和值转换函数</center>
 
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -693,7 +697,8 @@ if(canvas.getContext){
 <th>描述</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>ord()</td>
 <td>返回ASCII序列中字符的值</td>
 </tr>
@@ -701,7 +706,9 @@ if(canvas.getContext){
 <td>chr()</td>
 <td>返回数值对应的表中字符</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h2 id="非线性数据结构"><a href="#非线性数据结构" class="headerlink" title="非线性数据结构"></a>非线性数据结构</h2><h3 id="树结构"><a href="#树结构" class="headerlink" title="树结构"></a>树结构</h3><p>度数：每个节点所有子树的个数</p>
 <p>树叶：度数是0的结点就是树叶</p>
 <p>二叉树不是特殊形态的树</p>
@@ -709,7 +716,7 @@ if(canvas.getContext){
 <h3 id="二叉排序树"><a href="#二叉排序树" class="headerlink" title="二叉排序树"></a>二叉排序树</h3><p>Binary Sort Tree或二叉查找树：</p>
 <h3 id="哈夫曼树"><a href="#哈夫曼树" class="headerlink" title="哈夫曼树"></a>哈夫曼树</h3><p>最优二叉树</p>
 <h3 id="图结构"><a href="#图结构" class="headerlink" title="图结构"></a>图结构</h3><p>多对多的关系</p>
-<p>由顶点和边组成的集合，用G&#x3D;（V，E）来表示，V是所有顶点的集合，E是所有边的集合</p>
+<p>由顶点和边组成的集合，用G=（V，E）来表示，V是所有顶点的集合，E是所有边的集合</p>
 <p>顶点（vertex）：表示某个事物或对象</p>
 <p>边（edge）：表示顶点或事物之间的逻辑关系</p>
 <p>边的权重（weight）：边上对应的值。可以对应距离、时间值、开销等。</p>
@@ -911,6 +918,12 @@ darkmode.showWidget();
   <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
 
 
 <script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>

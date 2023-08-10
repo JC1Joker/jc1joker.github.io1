@@ -7,61 +7,42 @@
 <p>使用Xshell连接linux</p>
 </blockquote>
 <span id="more"></span>
-
 <h2 id="1-本地网络配置-🌐"><a href="#1-本地网络配置-🌐" class="headerlink" title="1.本地网络配置 🌐"></a>1.本地网络配置 🌐</h2><h3 id="1-1-1-配置临时IP地址-📝"><a href="#1-1-1-配置临时IP地址-📝" class="headerlink" title="1.1.1 配置临时IP地址 📝"></a>1.1.1 配置临时IP地址 📝</h3><p>首先，使用以下命令配置临时IP地址：</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ifconfig eth0 192.168.1.53/24</span><br></pre></td></tr></table></figure>
-
 <p>然后添加子网掩码：</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">255.255.255.0</span><br></pre></td></tr></table></figure>
-
 <p>接下来，配置默认网关：</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">route add default gw 192.168.1.1</span><br></pre></td></tr></table></figure>
-
 <p>确认网络连接是否正常：</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ping 192.168.1.1</span><br></pre></td></tr></table></figure>
-
 <p>最后，编辑DNS配置文件：</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vim /etc/resolv.conf</span><br></pre></td></tr></table></figure>
-
 <p>添加以下行来配置DNS：</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">nameserver 8.8.8.8</span><br></pre></td></tr></table></figure>
-
 <h3 id="1-1-2-配置永久IP地址-📝"><a href="#1-1-2-配置永久IP地址-📝" class="headerlink" title="1.1.2 配置永久IP地址 📝"></a>1.1.2 配置永久IP地址 📝</h3><p>若要配置永久IP地址，请打开以下文件：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/network/interfaces</span><br></pre></td></tr></table></figure>
-
 <p>然后，注释掉dhcp配置，并添加以下静态IP配置：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">arduinoCopy codeauto eth0</span><br><span class="line"><span class="comment">#iface eth0 inet dhcp # 注释掉</span></span><br><span class="line">iface eth0 inet static</span><br><span class="line">address 192.168.3.53</span><br><span class="line">netmask 255.255.255.0</span><br><span class="line">gateway 192.168.1.1</span><br></pre></td></tr></table></figure>
-
 <p>接着，再次编辑DNS配置文件：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/resolv.conf</span><br></pre></td></tr></table></figure>
-
 <p>添加以下行来配置DNS：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nameserver 8.8.8.8</span><br></pre></td></tr></table></figure>
-
 <p>完成后，重启网络服务：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/etc/init.d/networking restart</span><br></pre></td></tr></table></figure>
-
 <p>或者，使用以下命令：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl restart networking</span><br></pre></td></tr></table></figure>
-
 <h2 id="2-配置sshd服务并使用Xshell连接-🔒🔌"><a href="#2-配置sshd服务并使用Xshell连接-🔒🔌" class="headerlink" title="2. 配置sshd服务并使用Xshell连接 🔒🔌"></a>2. 配置sshd服务并使用Xshell连接 🔒🔌</h2><p>为了配置sshd服务并使用Xshell连接，首先以管理员权限打开sshd配置文件：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo vim /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure>
-
 <p>如果你想显示行号，可以使用以下命令：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">:<span class="built_in">set</span> nu</span><br></pre></td></tr></table></figure>
-
 <p>然后，在32行和37行进行修改：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">codePermitRootLogin <span class="built_in">yes</span></span><br><span class="line">PubkeyAuthentication <span class="built_in">yes</span></span><br></pre></td></tr></table></figure>
-
 <p>接下来，重启sshd服务：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/etc/init.d/ssh restart</span><br></pre></td></tr></table></figure>
-
 <p>或者，使用以下命令：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl restart ssh</span><br></pre></td></tr></table></figure>
-
 <p>若要设置开机启动，可以运行以下命令：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">update-rc.d ssh <span class="built_in">enable</span></span><br></pre></td></tr></table></figure>
-
 <p>现在，你的linux配置已经完成！享受使用Xshell连接的便捷和安全体验吧！😊🔒</p>
 ]]></content>
       <tags>
@@ -71,47 +52,53 @@
   <entry>
     <title>Numpy笔记</title>
     <url>/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/NumPy_logo_2020.png"></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/NumPy_logo_2020.png" alt></p>
 <blockquote>
 <p>MOOC课程，数据分析相关课程，Numpy笔记</p>
 </blockquote>
 <span id="more"></span>
-<h2 id="统计函数"><a href="#统计函数" class="headerlink" title="统计函数"></a>统计函数</h2><table>
+<h2 id="统计函数"><a href="#统计函数" class="headerlink" title="统计函数"></a>统计函数</h2><div class="table-container">
+<table>
 <thead>
 <tr>
-<th align="center">函数</th>
-<th align="center">说明</th>
+<th style="text-align:center">函数</th>
+<th style="text-align:center">说明</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">sum(a,axis-None)</td>
-<td align="center">根据给定轴axis计算数组a相关元素之和，axis整数或元组</td>
+<tbody>
+<tr>
+<td style="text-align:center">sum(a,axis-None)</td>
+<td style="text-align:center">根据给定轴axis计算数组a相关元素之和，axis整数或元组</td>
 </tr>
 <tr>
-<td align="center">mean(a,axis-None)</td>
-<td align="center">根据给定轴axis计算数组a相关元素的期望，axis整数或元组</td>
+<td style="text-align:center">mean(a,axis-None)</td>
+<td style="text-align:center">根据给定轴axis计算数组a相关元素的期望，axis整数或元组</td>
 </tr>
 <tr>
-<td align="center">average(a,axis&#x3D;None)</td>
-<td align="center">根据给定轴axis计算数组a相关元素的加权平均值</td>
+<td style="text-align:center">average(a,axis=None)</td>
+<td style="text-align:center">根据给定轴axis计算数组a相关元素的加权平均值</td>
 </tr>
 <tr>
-<td align="center">std(a,axis&#x3D;None)</td>
-<td align="center">根据给定轴axis计算数组a相关元素的标准差</td>
+<td style="text-align:center">std(a,axis=None)</td>
+<td style="text-align:center">根据给定轴axis计算数组a相关元素的标准差</td>
 </tr>
 <tr>
-<td align="center">var(a,axis&#x3D;None)</td>
-<td align="center">根据给定轴axis计算数组a县官元素的方差</td>
+<td style="text-align:center">var(a,axis=None)</td>
+<td style="text-align:center">根据给定轴axis计算数组a县官元素的方差</td>
 </tr>
-</tbody></table>
-<h2 id="随机函数"><a href="#随机函数" class="headerlink" title="随机函数"></a>随机函数</h2><table>
+</tbody>
+</table>
+</div>
+<h2 id="随机函数"><a href="#随机函数" class="headerlink" title="随机函数"></a>随机函数</h2><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>函数</th>
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>np.random.rand()</td>
 <td></td>
 </tr>
@@ -137,23 +124,28 @@
 </tr>
 <tr>
 <td>np.random.choice()</td>
-<td></td>
 </tr>
-</tbody></table>
-<h2 id="random梯度函数"><a href="#random梯度函数" class="headerlink" title="random梯度函数"></a>random梯度函数</h2><table>
+</tbody>
+</table>
+</div>
+<h2 id="random梯度函数"><a href="#random梯度函数" class="headerlink" title="random梯度函数"></a>random梯度函数</h2><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>函数</th>
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>np.gradient(f)</td>
 <td>计算数组f中元素的梯度，当f为多维时，返回每个维度梯度</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>梯度：连续值之间的变化率，即斜率</p>
-<p>XY坐标轴连续三个X坐标对应的Y轴值：a，b，c，其中，b的踢肚时：(c-a)&#x2F;2</p>
+<p>XY坐标轴连续三个X坐标对应的Y轴值：a，b，c，其中，b的踢肚时：(c-a)/2</p>
 <h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>数据存取与函数</p>
 <ul>
 <li>CSV文件</li>
@@ -171,16 +163,13 @@
 <h2 id="图像的数组表示"><a href="#图像的数组表示" class="headerlink" title="图像的数组表示"></a>图像的数组表示</h2><p>图像是一个三维数组，维度分别是高度、宽度和像素RGB值</p>
 <p>示例代码：</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">im=np.array(Image.<span class="built_in">open</span>(<span class="string">&quot;D:/&quot;</span>))</span><br><span class="line"><span class="built_in">print</span>(im.shape,im.dtype)</span><br><span class="line"><span class="comment">#输出(699,1012,3)uint8</span></span><br></pre></td></tr></table></figure>
-
 <h2 id="图像的变换"><a href="#图像的变换" class="headerlink" title="图像的变换"></a>图像的变换</h2><p>读入图像后，获得像素RGB值，修改后保存为新的文件</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">im=np.array(Image.<span class="built_in">open</span>(<span class="string">&quot;D:/&quot;</span>))</span><br><span class="line"><span class="built_in">print</span>(im.shape,im.dtype)</span><br><span class="line"></span><br><span class="line">b=[<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>]-a <span class="comment">#这是一个三维数组RGB的补值</span></span><br><span class="line"></span><br><span class="line">im = Image.fromarray(b.astype(<span class="string">&#x27;uint8&#x27;</span>))</span><br><span class="line">im.save(<span class="string">&#x27;b.jpg&#x27;</span>)</span><br><span class="line"><span class="comment">#输出(699,1012,3)uint8</span></span><br></pre></td></tr></table></figure>
-
 <h2 id="图像手绘风格"><a href="#图像手绘风格" class="headerlink" title="图像手绘风格"></a>图像手绘风格</h2><p><code>梯度的重构</code></p>
 <blockquote>
 <p>利用像素之间的梯度值和虚拟深度值对图像进行重构，根据灰度变化来模拟人类视觉的明暗程度</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a= np.asarray(Image.<span class="built_in">open</span>(<span class="string">&#x27;ins.jpg&#x27;</span>).convert(<span class="string">&#x27;L&#x27;</span>)).astype(<span class="string">&#x27;float&#x27;</span>)</span><br><span class="line"></span><br><span class="line">depth = <span class="number">10.</span>         <span class="comment">#(0-100)预设深度值为10</span></span><br><span class="line">grad = np.gradient(a)      <span class="comment">#取图像灰度的梯度值，提取x和y方向的梯度值</span></span><br><span class="line">grad_x , grad_y = grad      <span class="comment"># 分别取横纵图相梯度值</span></span><br><span class="line">grad_x = grad_x*depth/<span class="number">100.</span><span class="comment">#根据深度调整x和y方向的梯度值</span></span><br><span class="line">grad_y = grad_y*depth/<span class="number">100.</span></span><br><span class="line">A = np.sqrt(grad_x**<span class="number">2</span> + grad_y**<span class="number">2</span> + <span class="number">1.</span>)</span><br><span class="line"></span><br><span class="line">uni_x = grad_x/A</span><br><span class="line">uni_y = grad_y/A</span><br><span class="line">uni_z = <span class="number">1.</span>/A</span><br><span class="line"></span><br><span class="line">vec_e1 = np.pi/<span class="number">2.2</span>                  <span class="comment">#光源的俯视角度，弧度值</span></span><br><span class="line">vec_az = np.pi/<span class="number">4.</span>                   <span class="comment"># 光源的方位角度，弧度值</span></span><br><span class="line">dx = np.cos(vec_e1)*np.cos(vec_az) <span class="comment"># 光源对x轴的影响 np.cos(vec_e1)为单位光线在地平面上的投影长度</span></span><br><span class="line">dy = np.cos(vec_e1)*np.sin(vec_az) <span class="comment"># 光源对y轴的影响</span></span><br><span class="line">dz = np.sin(vec_e1)             <span class="comment">#光源对z轴的影响</span></span><br><span class="line"></span><br><span class="line">b = <span class="number">255</span>*(dx*uni_x + dy*uni_y + dz*uni_z)<span class="comment"># 光源归一化</span></span><br><span class="line">b = b.clip(<span class="number">0</span>,<span class="number">255</span>) <span class="comment">#clip 截断，限制数组的上下界,减少像素溢出</span></span><br><span class="line"></span><br><span class="line">im = Image.fromarray(b.astype(<span class="string">&#x27;uint8&#x27;</span>))  <span class="comment">#重构图像</span></span><br><span class="line">im.show()</span><br><span class="line"><span class="comment"># im.save(&#x27;11.jpg&#x27;)</span></span><br></pre></td></tr></table></figure>
-
 <p>光源效果：</p>
 <p>根据灰度变化来模拟人类视觉的远近程度</p>
 <h1 id="matplotlib-pyplot"><a href="#matplotlib-pyplot" class="headerlink" title="matplotlib.pyplot"></a>matplotlib.pyplot</h1><h2 id="pyplot绘图区域"><a href="#pyplot绘图区域" class="headerlink" title="pyplot绘图区域"></a>pyplot绘图区域</h2><p>plt.subplot(nrows.ncols,lot_number)</p>
@@ -226,13 +215,15 @@
 <p><code>d</code>瘦菱形标记</p>
 <p><code>|</code>垂直线标记</p>
 </li>
+</ul>
+<ul>
 <li><p>**kwargs：第二组或更多（x,y,format_string）</p>
 <ul>
-<li>color：控制颜色，color&#x3D;‘green’</li>
-<li>linestyle：线条风格，linestyle&#x3D;‘dashed’</li>
-<li>marker：标记风格，marker&#x3D;’o‘</li>
-<li>markerfacecolor：标记颜色，markerfacecolor&#x3D;’blue‘</li>
-<li>markersize：标记尺寸，markersize&#x3D;20</li>
+<li>color：控制颜色，color=‘green’</li>
+<li>linestyle：线条风格，linestyle=‘dashed’</li>
+<li>marker：标记风格，marker=’o‘</li>
+<li>markerfacecolor：标记颜色，markerfacecolor=’blue‘</li>
+<li>markersize：标记尺寸，markersize=20</li>
 <li>……</li>
 </ul>
 </li>
@@ -241,6 +232,7 @@
 <h3 id="pyplot中文显示方法"><a href="#pyplot中文显示方法" class="headerlink" title="pyplot中文显示方法"></a>pyplot中文显示方法</h3><ul>
 <li>方法一：需要<strong>rcParams</strong>修改字体实现</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -248,7 +240,8 @@
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>‘font.family’</td>
 <td>用于显示字体的名字</td>
 </tr>
@@ -260,20 +253,23 @@
 <td>’font.size‘</td>
 <td>字体大小，整数字号或者’large‘、’x-small‘</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li>方法二：在有中文输出的地方，增加一个属性：fontproperties</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">plt.xlabel(<span class="string">&quot;横轴(值)&quot;</span>,fontproperties=<span class="string">&#x27;SimHei&#x27;</span>,fontsize=<span class="number">20</span>)</span><br><span class="line">plt.ylabel(<span class="string">&quot;grade&quot;</span>,,fontproperties=<span class="string">&#x27;SimHei&#x27;</span>,fontsize=<span class="number">20</span>)</span><br></pre></td></tr></table></figure>
-
-<h2 id="pyplot的文本显示方法"><a href="#pyplot的文本显示方法" class="headerlink" title="pyplot的文本显示方法"></a>pyplot的文本显示方法</h2><table>
+<h2 id="pyplot的文本显示方法"><a href="#pyplot的文本显示方法" class="headerlink" title="pyplot的文本显示方法"></a>pyplot的文本显示方法</h2><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>函数</th>
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>plt.xlabel()</td>
 <td>对x轴添加文本标签</td>
 </tr>
@@ -293,25 +289,28 @@
 <td>plt.annotate()</td>
 <td>在图形中增加带箭头注释</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <blockquote>
 <p>LaTeX语法 </p>
-<p>$正弦波实例 y &#x3D; cos(2pix)$</p>
+<p>$正弦波实例 y = cos(2pix)$</p>
 </blockquote>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">plt.annotate()</span><br></pre></td></tr></table></figure>
-
 <p><img src="/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/Users\JC\AppData\Roaming\Typora\typora-user-images\image-20220504183915496.png" alt="image-20220504183915496"></p>
-<p>plt.subplot2grid(GridSpec,CurSpec,colspan&#x3D;1,rowspan&#x3D;1)</p>
+<p>plt.subplot2grid(GridSpec,CurSpec,colspan=1,rowspan=1)</p>
 <p>理念：设定网格，选中网格，确定选中行列区域数量，编号从0开始</p>
 <h2 id="GridSpec类"><a href="#GridSpec类" class="headerlink" title="GridSpec类"></a>GridSpec类</h2><p>实行多种格子</p>
-<h2 id="pyplot基础图表函数"><a href="#pyplot基础图表函数" class="headerlink" title="pyplot基础图表函数"></a>pyplot基础图表函数</h2><table>
+<h2 id="pyplot基础图表函数"><a href="#pyplot基础图表函数" class="headerlink" title="pyplot基础图表函数"></a>pyplot基础图表函数</h2><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>函数</th>
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>plt.plot(x,y,fmt,…)</td>
 <td>绘制一个坐标图</td>
 </tr>
@@ -336,15 +335,15 @@
 <td>绘制饼图</td>
 </tr>
 <tr>
-<td>plt.psd(x.NFFT&#x3D;256,pad_to,Fs)</td>
+<td>plt.psd(x.NFFT=256,pad_to,Fs)</td>
 <td>绘制功率谱密度图</td>
 </tr>
 <tr>
-<td>plt.specgram(x.NFFT&#x3D;256,pad_to,Fs)</td>
+<td>plt.specgram(x.NFFT=256,pad_to,Fs)</td>
 <td>绘制谱图</td>
 </tr>
 <tr>
-<td>plt.cohere(x,y,NFFT&#x3D;256,Fs)</td>
+<td>plt.cohere(x,y,NFFT=256,Fs)</td>
 <td>绘制x-y相关性函数</td>
 </tr>
 <tr>
@@ -375,8 +374,10 @@
 <td>plt.plot_date()</td>
 <td>绘制数据日期</td>
 </tr>
-</tbody></table>
-<p>startangle&#x3D;90 起始角度</p>
+</tbody>
+</table>
+</div>
+<p>startangle=90 起始角度</p>
 <p>bin:直方图的个数</p>
 <p>normed：纵坐标出现元素的个数</p>
 ]]></content>
@@ -389,288 +390,13 @@
       </tags>
   </entry>
   <entry>
-    <title>Pandas笔记</title>
-    <url>/2023/06/07/Pandas%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>中国大学MOOC,python数据分析相关课程笔记–pandas部分</p>
-</blockquote>
-<span id="more"></span>
-<h2 id="pandas库"><a href="#pandas库" class="headerlink" title="pandas库"></a>pandas库</h2><p>pd.Series()# pd.series是pandas中用于表示一维数据的数据结构</p>
-<p>d.cumsum()计算前n项累加和</p>
-<p>[^1]: axis &#x3D; 0 代表对横轴操作，也就是第0轴；axis &#x3D; 1 代表对纵轴操作，也就是第1轴；</p>
-<h2 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h2><p>两个数据类型：Series，DataFrame</p>
-<p>基于商促数据类型的各类操作</p>
-<p>基本操作、运算操作、特征类操作、关联类操作</p>
-<table>
-<thead>
-<tr>
-<th align="center">Numpy</th>
-<th align="center">Pandas</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">基础数据类型</td>
-<td align="center">扩展数据类型</td>
-</tr>
-<tr>
-<td align="center">关注数据的结构表达(数据之间的维度表达)</td>
-<td align="center">关注数据的应用表达</td>
-</tr>
-<tr>
-<td align="center">基于<strong>维度</strong>的运算</td>
-<td align="center">基于<strong>索引</strong>的运算</td>
-</tr>
-</tbody></table>
-<h2 id="series类型"><a href="#series类型" class="headerlink" title="series类型"></a>series类型</h2><p>由一组数据及与之相关的数据索引组成</p>
-<p>index_0  data_a</p>
-<p>index_1 data_b</p>
-<ul>
-<li>python 列表，index与列表元素个数一致</li>
-<li>标量值，index表达Series类型的尺寸</li>
-<li>python字典，键值对中的“键”是索引，index从字典中进行选择操作</li>
-<li>ndarray，索引和数据都可以通过ndarray类型创建</li>
-<li>其他函数，range()函数等</li>
-</ul>
-<h3 id="从ndarray类型创建"><a href="#从ndarray类型创建" class="headerlink" title="从ndarray类型创建"></a>从ndarray类型创建</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">n = pd.Serise(np.arange(<span class="number">5</span>))</span><br><span class="line"></span><br><span class="line">输出：</span><br><span class="line"><span class="number">0</span>  <span class="number">0</span></span><br><span class="line"><span class="number">1</span>  <span class="number">1</span> </span><br><span class="line"><span class="number">2</span>  <span class="number">2</span> </span><br><span class="line"><span class="number">3</span>  <span class="number">3</span> </span><br><span class="line"><span class="number">4</span>  <span class="number">4</span> </span><br></pre></td></tr></table></figure>
-
-<h2 id="Series类型对齐操作"><a href="#Series类型对齐操作" class="headerlink" title="Series类型对齐操作"></a>Series类型对齐操作</h2><p>Series+Series</p>
-<p>Series类型在运算中会自动对齐不同索引的数据</p>
-<h2 id="name属性-name"><a href="#name属性-name" class="headerlink" title="name属性(.name)"></a>name属性(.name)</h2><p>Series对象和索引都可以有一个名字，存储在属性.name中</p>
-<p>Series是一维带“标签”数组</p>
-<p>Series基本操作类似ndarray和字典，根据索引对齐</p>
-<p>DataFrame类型</p>
-<p>二维ndarray对象</p>
-<p>由一维ndarray、列表、字典、元组或series构成的字典</p>
-<h2 id="如何改变Series和DataFrame对象"><a href="#如何改变Series和DataFrame对象" class="headerlink" title="如何改变Series和DataFrame对象"></a>如何改变Series和DataFrame对象</h2><p>增加或重排：重新索引</p>
-<h3 id="重新索引"><a href="#重新索引" class="headerlink" title="重新索引"></a>重新索引</h3><p>.reindex()</p>
-<p>.reindex(希望排列之后的index关系)能够改变或者重排Series和DataFrame索引</p>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>index,columns</td>
-<td>新的行列自定义索引</td>
-</tr>
-<tr>
-<td>fill_value</td>
-<td>重新索引中，用于填充缺失位置的值</td>
-</tr>
-<tr>
-<td>method</td>
-<td>填充方法，ffill当前值向前填充，bfill向后填充</td>
-</tr>
-<tr>
-<td>limit</td>
-<td>最大填充量</td>
-</tr>
-<tr>
-<td>copy</td>
-<td>默认True，生成新的对象，False时，新旧相等不复刻</td>
-</tr>
-</tbody></table>
-<h2 id="索引类型"><a href="#索引类型" class="headerlink" title="索引类型"></a>索引类型</h2><p>Series和DataFrame的索引时index类型</p>
-<p>index对象是不可修改类型</p>
-<p>常用方法</p>
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>.append(idx)</td>
-<td>连接另一个index对象，产生新的index对象</td>
-</tr>
-<tr>
-<td>.diff(idx)</td>
-<td>计算差集，产生新的index对象</td>
-</tr>
-<tr>
-<td>.intersection(idx)</td>
-<td>计算交集</td>
-</tr>
-<tr>
-<td>.union(idx)</td>
-<td>计算并集</td>
-</tr>
-<tr>
-<td>.delete(loc)</td>
-<td>删除loc位置处的元素</td>
-</tr>
-<tr>
-<td>.insert(loc.e)</td>
-<td>在loc位置增加一个元素</td>
-</tr>
-</tbody></table>
-<h2 id="删除指定索引对象"><a href="#删除指定索引对象" class="headerlink" title="删除指定索引对象"></a>删除指定索引对象</h2><p>.drop()能够删除Series和DataFrame指定行或列索引</p>
-<h2 id="pandas数据运算"><a href="#pandas数据运算" class="headerlink" title="pandas数据运算"></a>pandas数据运算</h2><p>算数运算法则</p>
-<p>算术运算根据行列索引，补齐后运算，运算默认产生浮点数</p>
-<p>补齐时缺项填充NaN（空值）</p>
-<p>二维和一维、一维和零维间的广播运算</p>
-<p>采用+-*&#x2F;符号进行的二元运算产生新的对象</p>
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>.add(d,**argws)</td>
-<td>类型间加法运算，可选参数</td>
-</tr>
-<tr>
-<td>.sub(d,**argws)</td>
-<td>类型间减法运算，可选参数</td>
-</tr>
-<tr>
-<td>.mul(d,**argws)</td>
-<td>类型间乘法运算，可选参数</td>
-</tr>
-<tr>
-<td>.div(d,**argws)</td>
-<td>类型见除法运算，可选参数</td>
-</tr>
-</tbody></table>
-<h2 id="比较运算法则"><a href="#比较运算法则" class="headerlink" title="比较运算法则"></a>比较运算法则</h2><p>比较运算只能比较相同索引的元素，不进行补齐。</p>
-<p>二维和一维、一维和零维间的广播运算</p>
-<p>采用&gt;&lt;&gt;&#x3D;&lt;&#x3D; &#x3D;&#x3D; !&#x3D;等符号进行的二元运算产生布尔对象</p>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>Series &#x3D; 索引+一维数据</p>
-<p>DataFrame &#x3D; 行列索引 + 二维数据</p>
-<p>理解数据类型与索引的关系，操作索引即操作数据</p>
-<p>像对待单一数据一样对待Series和DataFrame对象</p>
-<h2 id="数据排序"><a href="#数据排序" class="headerlink" title="数据排序"></a>数据排序</h2><p>.sort_index()方法在指定轴上根据索引进行排序，默认升序</p>
-<p>.sort_index(axis&#x3D;0,ascending&#x3D;True)</p>
-<p>ascending&#x3D;False降序</p>
-<p>.sort_values()方法在指定轴上根据数值进行排序，默认升序</p>
-<p>Serious.sort_values(axis&#x3D;0,ascending&#x3D;True)</p>
-<p>DataFrame.sort_values(<strong>by</strong>,axis&#x3D;0,ascending&#x3D;True)</p>
-<p>by:axis轴上的某个索引或索引列表</p>
-<p>NaN统一放到排序末尾</p>
-<h2 id="基本的统计分析函数"><a href="#基本的统计分析函数" class="headerlink" title="基本的统计分析函数"></a>基本的统计分析函数</h2><p>适用Series和DataFrame类型</p>
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>.sum()</td>
-<td>计算数据的总和</td>
-</tr>
-<tr>
-<td>.count()</td>
-<td>非NaN值的数量</td>
-</tr>
-<tr>
-<td>.mean() .median()</td>
-<td>计算数据的算术平均值、算数中位数</td>
-</tr>
-<tr>
-<td>.var() .std()</td>
-<td>计算数据的方差、标准差</td>
-</tr>
-<tr>
-<td>.min() .max()</td>
-<td>计算数据的最小值、最大值</td>
-</tr>
-</tbody></table>
-<p>统计汇总</p>
-<table>
-<thead>
-<tr>
-<th>.describe</th>
-<th>针对0轴(各列)的统计汇总[^1]</th>
-</tr>
-</thead>
-</table>
-<p>累计统计分析函数</p>
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>.cumsum()</td>
-<td>依次给出前1、2、……、n个数的和</td>
-</tr>
-<tr>
-<td>.cumprod()</td>
-<td>依次给出前1、2、……、n个数的积</td>
-</tr>
-<tr>
-<td>.cummax()</td>
-<td>依次给出前1、2、……、n个数的最大值</td>
-</tr>
-<tr>
-<td>.cummin()</td>
-<td>依次给出前1、2、……、n个数的最小值</td>
-</tr>
-</tbody></table>
-<p>滚动计算（窗口计算）</p>
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>说明（跨行运算）</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>.rolling(w).sum()</td>
-<td>依次计算相邻w个元素的和</td>
-</tr>
-<tr>
-<td>.rolling(w).mean()</td>
-<td>依次计算相邻w个元素的算数平均值</td>
-</tr>
-<tr>
-<td>.rolling(w).var()</td>
-<td>依次计算相邻w个元素的方差</td>
-</tr>
-<tr>
-<td>.rowing(w).std()</td>
-<td>依次计算相邻w个元素的标准差</td>
-</tr>
-<tr>
-<td>.rowing(w).main().max()</td>
-<td>以此计算相邻w个元素的最小值和最大值</td>
-</tr>
-</tbody></table>
-<h2 id="相关分析"><a href="#相关分析" class="headerlink" title="相关分析"></a>相关分析</h2><p>两个事物，表示x和y，如何判断它们之间的存在相关性</p>
-<p><strong>相关性</strong></p>
-<ul>
-<li>x增大，y增大，两个变量正相关</li>
-<li>x增大，y减小，两个变量负相关</li>
-<li>x增大，y无视，两个变量不相关</li>
-</ul>
-<p><strong>协方差</strong></p>
-<p>两个事物，表示x和y，如何判断它们之间的存在相关性</p>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>数据分析</tag>
-        <tag>Pandas</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>conda的使用技巧</title>
     <url>/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/anaconda.png"></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/anaconda.png" alt></p>
 <blockquote>
 <p>anaconda的换源，创建环境</p>
 </blockquote>
 <span id="more"></span>
-
 <h1 id="Win常用conda命令"><a href="#Win常用conda命令" class="headerlink" title="Win常用conda命令"></a>Win常用conda命令</h1><h2 id="1-查看当前环境下安装的工具"><a href="#1-查看当前环境下安装的工具" class="headerlink" title="1.查看当前环境下安装的工具"></a>1.查看当前环境下安装的工具</h2><blockquote>
 <p>pip list</p>
 </blockquote>
@@ -679,27 +405,25 @@
 <p>conda list</p>
 </blockquote>
 <h2 id="2-创建虚拟环境"><a href="#2-创建虚拟环境" class="headerlink" title="2.创建虚拟环境"></a>2.创建虚拟环境</h2><blockquote>
-<p>conda create –name[环境名称]</p>
+<p>conda create —name[环境名称]</p>
 </blockquote>
 <p>例</p>
 <blockquote>
-<p>conda create –name hacker</p>
-</blockquote>
-<blockquote>
+<p>conda create —name hacker</p>
 <p><code>conda create -n 新的环境名 python=指定版本（2.7/3.6/3.7）</code> # 注意需要在base中运行，不能在虚拟环境中执行</p>
 </blockquote>
 <p>即可创建一个名为hacker的虚拟环境</p>
 <h2 id="3-修改环境名称"><a href="#3-修改环境名称" class="headerlink" title="3.修改环境名称"></a>3.修改环境名称</h2><blockquote>
-<p>conda create –name newName（新环境名） –clone oldName（旧环境名）</p>
+<p>conda create —name newName（新环境名） —clone oldName（旧环境名）</p>
 </blockquote>
 <h2 id="4-删除环境"><a href="#4-删除环境" class="headerlink" title="4.删除环境"></a>4.删除环境</h2><blockquote>
-<p>conda remove –name oldName（旧环境名） –all </p>
+<p>conda remove —name oldName（旧环境名） —all </p>
 </blockquote>
 <h2 id="5-查看虚拟环境"><a href="#5-查看虚拟环境" class="headerlink" title="5.查看虚拟环境"></a>5.查看虚拟环境</h2><blockquote>
 <p>conda env list</p>
 <p>conda info -e</p>
 </blockquote>
-<p>其中带有*** **的表示当前所用的环境</p>
+<p>其中带有<strong>* </strong>的表示当前所用的环境</p>
 <h2 id="6-切换环境"><a href="#6-切换环境" class="headerlink" title="6.切换环境"></a>6.切换环境</h2><p>使用activate(激活)加上要切换的环境名称，即可切换</p>
 <blockquote>
 <p>conda activate[环境名称]</p>
@@ -712,47 +436,43 @@
 <p>conda deactivate</p>
 </blockquote>
 <h2 id="8-移除虚拟环境"><a href="#8-移除虚拟环境" class="headerlink" title="8.移除虚拟环境"></a>8.移除虚拟环境</h2><blockquote>
-<p>conda remove –name [环境] –all</p>
+<p>conda remove —name [环境] —all</p>
 </blockquote>
 <p>例</p>
 <blockquote>
-<p>conda remove –name learn –all</p>
+<p>conda remove —name learn —all</p>
 </blockquote>
 <h2 id="9-包的安装"><a href="#9-包的安装" class="headerlink" title="9.包的安装"></a>9.包的安装</h2><p>（无需进入环境）</p>
 <blockquote>
 <p>conda install [包名] -n [环境名]</p>
 </blockquote>
 <h2 id="10-包的更新"><a href="#10-包的更新" class="headerlink" title="10.包的更新"></a>10.包的更新</h2><blockquote>
-<p>conda update –all</p>
+<p>conda update —all</p>
 </blockquote>
 <h2 id="11-包的删除"><a href="#11-包的删除" class="headerlink" title="11.包的删除"></a>11.包的删除</h2><blockquote>
 <p>conda remove [包名]</p>
 </blockquote>
 <h2 id="12-查看可以安装的python版本"><a href="#12-查看可以安装的python版本" class="headerlink" title="12.查看可以安装的python版本"></a>12.查看可以安装的python版本</h2><blockquote>
-<p> conda search –full-name python&#96;</p>
+<p> conda search —full-name python`</p>
 </blockquote>
 <h2 id="13-镜像源"><a href="#13-镜像源" class="headerlink" title="13.镜像源"></a>13.镜像源</h2><h3 id="查看当前conda源"><a href="#查看当前conda源" class="headerlink" title="查看当前conda源"></a>查看当前conda源</h3><blockquote>
-<p>conda config –show</p>
+<p>conda config —show</p>
 </blockquote>
 <h3 id="恢复默认源"><a href="#恢复默认源" class="headerlink" title="恢复默认源"></a>恢复默认源</h3><blockquote>
-<p>conda config –remove-key channels</p>
+<p>conda config —remove-key channels</p>
 </blockquote>
-<h3 id="中科大源"><a href="#中科大源" class="headerlink" title="中科大源"></a>中科大源</h3><p>conda config –add channels <a href="https://mirrors.ustc.edu.cn/anaconda/pkgs/main/">https://mirrors.ustc.edu.cn/anaconda/pkgs/main/</a><br>conda config –add channels <a href="https://mirrors.ustc.edu.cn/anaconda/pkgs/free/">https://mirrors.ustc.edu.cn/anaconda/pkgs/free/</a><br>conda config –add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/">https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/</a><br>conda config –add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/">https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/</a><br>conda config –add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/">https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/</a><br>conda config –add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/">https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/</a><br>conda config –set show_channel_urls yes</p>
-<h3 id="清华源"><a href="#清华源" class="headerlink" title="清华源"></a>清华源</h3><p>conda config –add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/</a><br>conda config –add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge</a><br>conda config –add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</a><br>conda config –add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/</a><br>conda config –add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</a><br>conda config –set show_channel_urls yes</p>
+<h3 id="中科大源"><a href="#中科大源" class="headerlink" title="中科大源"></a>中科大源</h3><p>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/pkgs/main/">https://mirrors.ustc.edu.cn/anaconda/pkgs/main/</a><br>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/pkgs/free/">https://mirrors.ustc.edu.cn/anaconda/pkgs/free/</a><br>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/">https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/</a><br>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/">https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/</a><br>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/">https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/</a><br>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/">https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/</a><br>conda config —set show_channel_urls yes</p>
+<h3 id="清华源"><a href="#清华源" class="headerlink" title="清华源"></a>清华源</h3><p>conda config —add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/</a><br>conda config —add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge</a><br>conda config —add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</a><br>conda config —add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/</a><br>conda config —add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</a><br>conda config —set show_channel_urls yes</p>
 <h3 id="腾讯云"><a href="#腾讯云" class="headerlink" title="腾讯云"></a>腾讯云</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda config --add channels https://mirrors.cloud.tencent.com/anaconda/pkgs/free/</span><br><span class="line">conda config --add channels https://mirrors.cloud.tencent.com/anaconda/pkgs/main/</span><br><span class="line">conda config --set show_channel_urls yes</span><br></pre></td></tr></table></figure>
-
 <h2 id="14清理conda缓存"><a href="#14清理conda缓存" class="headerlink" title="14清理conda缓存"></a>14清理conda缓存</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda clean -p     </span><br><span class="line">conda clean -t      </span><br><span class="line">conda clean -y -all </span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash">删除没有用的包 --packages</span></span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash">删除tar打包 --tarballs</span></span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash">删除所有的安装包及cache(索引缓存、锁定文件、未使用过的包和tar包)</span></span><br></pre></td></tr></table></figure>
-
 <h2 id="15-pip国内源"><a href="#15-pip国内源" class="headerlink" title="15.pip国内源"></a>15.pip国内源</h2><p>阿里云 ：<a href="http://mirrors.aliyun.com/pypi/simple/">http://mirrors.aliyun.com/pypi/simple/</a><br>中国科技大学： <a href="https://pypi.mirrors.ustc.edu.cn/simple/">https://pypi.mirrors.ustc.edu.cn/simple/</a><br>豆瓣(douban) ：<a href="http://pypi.douban.com/simple/">http://pypi.douban.com/simple/</a><br>清华大学 ：<a href="https://pypi.tuna.tsinghua.edu.cn/simple/">https://pypi.tuna.tsinghua.edu.cn/simple/</a><br>中国科学技术大学： <a href="http://pypi.mirrors.ustc.edu.cn/simple/">http://pypi.mirrors.ustc.edu.cn/simple/</a></p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">使用豆瓣源安装</span></span><br><span class="line">pip install opencv-python -i http://pypi.douban.com/simple </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">报错说不信任该源，执行如下：</span></span><br><span class="line">pip install opencv-python -i http://pypi.douban.com/simple --trusted-host pypi.douban.com</span><br></pre></td></tr></table></figure>
-
 <h2 id="16-修改python版本"><a href="#16-修改python版本" class="headerlink" title="16.修改python版本"></a>16.修改python版本</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">1.新建一个anaconda虚拟环境，指定Python版本</span></span><br><span class="line">conda create -n envTest python=3.5</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">2.直接将现有的anaconda中python更改为3.5</span></span><br><span class="line">sudo conda install python=3.5</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">3.下载并安装对应Python版本的anaconda，anaconda4.2-&gt;python3.5</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">https://repo.continuum.io/archive/</span></span><br></pre></td></tr></table></figure>
-
 <h2 id="17-打开交互界面"><a href="#17-打开交互界面" class="headerlink" title="17.打开交互界面"></a>17.打开交互界面</h2><blockquote>
 <p>anaconda-navigator</p>
 </blockquote>
 <h2 id="18-临时更换pip源"><a href="#18-临时更换pip源" class="headerlink" title="18.临时更换pip源"></a>18.临时更换pip源</h2><blockquote>
-<p>pip install 库 -i <a href="http://pypi.douban.com/simple">http://pypi.douban.com/simple</a> –trusted-host pypi.douban.com</p>
+<p>pip install 库 -i <a href="http://pypi.douban.com/simple">http://pypi.douban.com/simple</a> —trusted-host pypi.douban.com</p>
 </blockquote>
 ]]></content>
       <categories>
@@ -763,23 +483,12 @@
       </tags>
   </entry>
   <entry>
-    <title>关于最近一些事的思考</title>
-    <url>/2023/06/09/%E5%85%B3%E4%BA%8E%E6%9C%80%E8%BF%91%E4%B8%80%E4%BA%9B%E4%BA%8B%E7%9A%84%E6%80%9D%E8%80%83/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  可能是因为学了计算机的缘故，我对任何事情都开始变得更加注重细节和准确性。无论是什么事情，我都希望能够弄清楚每一个细节。就像要求甲方必须清楚描述要做什么、有哪些具体需求，以及不可做什么等等。只有在明确了相关事情之后，我才能够着手进行第一步。我也非常感激自己拥有这种能力，因为有时候如果不去认真对待事情，最终吃亏的往往会是自己。</p>
-]]></content>
-      <tags>
-        <tag>随想</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>docker基础命令</title>
     <url>/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/Docker.png"></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/Docker.png" alt></p>
 <blockquote>
-<p>docker的基础命令</p>
+<p>docker的基础命令<br><span id="more"></span></p>
 </blockquote>
-<span id="more"></span>
-
 <p>docker pull 安装镜像</p>
 <p>docker run 运行镜像</p>
 <p>docker container run</p>
@@ -807,6 +516,336 @@
       </tags>
   </entry>
   <entry>
+    <title>nvidia-smi基础信息</title>
+    <url>/2023/06/08/nvidia-smi%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/08/nvidia-smi%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF/nvidia.png" alt></p>
+<blockquote>
+<p>nvidia-smi 查看当前GPU使用情况<br><span id="more"></span><br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">GPU：GPU 编号；</span><br><span class="line"></span><br><span class="line">Name：GPU 型号； </span><br><span class="line"></span><br><span class="line">Persistence-M：持续模式的状态。持续模式虽然耗能大，但是在新的GPU应用启动时，花费的时间更少，这里显示的是off的状态；</span><br><span class="line"></span><br><span class="line">Fan：风扇转速，从0到100%之间变动；</span><br><span class="line"></span><br><span class="line">Temp：温度，单位是摄氏度； </span><br><span class="line"></span><br><span class="line">Perf：性能状态，从P0到P12，P0表示最大性能，P12表示状态最小性能（即 GPU 未工作时为P0，达到最大工作限度时为P12）。 </span><br><span class="line"></span><br><span class="line">Pwr:Usage/Cap：能耗；</span><br><span class="line"></span><br><span class="line">Memory Usage：显存使用率； </span><br><span class="line"></span><br><span class="line">Bus-Id：涉及GPU总线的东西  Disp.A：Display Active，表示GPU的显示是否初始化；</span><br><span class="line"></span><br><span class="line">Volatile GPU-Util：浮动的GPU利用率；</span><br><span class="line"></span><br><span class="line">Uncorr. ECC：Error Correcting Code，错误检查与纠正； </span><br><span class="line"></span><br><span class="line">Compute M：compute mode，计算模式</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>Shell</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于最近一些事的思考</title>
+    <url>/2023/06/09/%E5%85%B3%E4%BA%8E%E6%9C%80%E8%BF%91%E4%B8%80%E4%BA%9B%E4%BA%8B%E7%9A%84%E6%80%9D%E8%80%83/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  可能是因为学了计算机的缘故，我对任何事情都开始变得更加注重细节和准确性。无论是什么事情，我都希望能够弄清楚每一个细节。就像要求甲方必须清楚描述要做什么、有哪些具体需求，以及不可做什么等等。只有在明确了相关事情之后，我才能够着手进行第一步。我也非常感激自己拥有这种能力，因为有时候如果不去认真对待事情，最终吃亏的往往会是自己。</p>
+]]></content>
+      <tags>
+        <tag>随想</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Pandas笔记</title>
+    <url>/2023/06/07/Pandas%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>中国大学MOOC,python数据分析相关课程笔记—pandas部分<br><span id="more"></span></p>
+<h2 id="pandas库"><a href="#pandas库" class="headerlink" title="pandas库"></a>pandas库</h2><p>pd.Series()# pd.series是pandas中用于表示一维数据的数据结构</p>
+</blockquote>
+<p>d.cumsum()计算前n项累加和</p>
+<blockquote id="fn_1">
+<sup>1</sup>. axis = 0 代表对横轴操作，也就是第0轴；axis = 1 代表对纵轴操作，也就是第1轴；<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
+</blockquote>
+<h2 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h2><p>两个数据类型：Series，DataFrame</p>
+<p>基于商促数据类型的各类操作</p>
+<p>基本操作、运算操作、特征类操作、关联类操作</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Numpy</th>
+<th style="text-align:center">Pandas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">基础数据类型</td>
+<td style="text-align:center">扩展数据类型</td>
+</tr>
+<tr>
+<td style="text-align:center">关注数据的结构表达(数据之间的维度表达)</td>
+<td style="text-align:center">关注数据的应用表达</td>
+</tr>
+<tr>
+<td style="text-align:center">基于<strong>维度</strong>的运算</td>
+<td style="text-align:center">基于<strong>索引</strong>的运算</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="series类型"><a href="#series类型" class="headerlink" title="series类型"></a>series类型</h2><p>由一组数据及与之相关的数据索引组成</p>
+<p>index_0  data_a</p>
+<p>index_1 data_b</p>
+<ul>
+<li>python 列表，index与列表元素个数一致</li>
+<li>标量值，index表达Series类型的尺寸</li>
+<li>python字典，键值对中的“键”是索引，index从字典中进行选择操作</li>
+<li>ndarray，索引和数据都可以通过ndarray类型创建</li>
+<li>其他函数，range()函数等</li>
+</ul>
+<h3 id="从ndarray类型创建"><a href="#从ndarray类型创建" class="headerlink" title="从ndarray类型创建"></a>从ndarray类型创建</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">n = pd.Serise(np.arange(<span class="number">5</span>))</span><br><span class="line"></span><br><span class="line">输出：</span><br><span class="line"><span class="number">0</span>  <span class="number">0</span></span><br><span class="line"><span class="number">1</span>  <span class="number">1</span> </span><br><span class="line"><span class="number">2</span>  <span class="number">2</span> </span><br><span class="line"><span class="number">3</span>  <span class="number">3</span> </span><br><span class="line"><span class="number">4</span>  <span class="number">4</span> </span><br></pre></td></tr></table></figure>
+<h2 id="Series类型对齐操作"><a href="#Series类型对齐操作" class="headerlink" title="Series类型对齐操作"></a>Series类型对齐操作</h2><p>Series+Series</p>
+<p>Series类型在运算中会自动对齐不同索引的数据</p>
+<h2 id="name属性-name"><a href="#name属性-name" class="headerlink" title="name属性(.name)"></a>name属性(.name)</h2><p>Series对象和索引都可以有一个名字，存储在属性.name中</p>
+<p>Series是一维带“标签”数组</p>
+<p>Series基本操作类似ndarray和字典，根据索引对齐</p>
+<p>DataFrame类型</p>
+<p>二维ndarray对象</p>
+<p>由一维ndarray、列表、字典、元组或series构成的字典</p>
+<h2 id="如何改变Series和DataFrame对象"><a href="#如何改变Series和DataFrame对象" class="headerlink" title="如何改变Series和DataFrame对象"></a>如何改变Series和DataFrame对象</h2><p>增加或重排：重新索引</p>
+<h3 id="重新索引"><a href="#重新索引" class="headerlink" title="重新索引"></a>重新索引</h3><p>.reindex()</p>
+<p>.reindex(希望排列之后的index关系)能够改变或者重排Series和DataFrame索引</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>index,columns</td>
+<td>新的行列自定义索引</td>
+</tr>
+<tr>
+<td>fill_value</td>
+<td>重新索引中，用于填充缺失位置的值</td>
+</tr>
+<tr>
+<td>method</td>
+<td>填充方法，ffill当前值向前填充，bfill向后填充</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>最大填充量</td>
+</tr>
+<tr>
+<td>copy</td>
+<td>默认True，生成新的对象，False时，新旧相等不复刻</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="索引类型"><a href="#索引类型" class="headerlink" title="索引类型"></a>索引类型</h2><p>Series和DataFrame的索引时index类型</p>
+<p>index对象是不可修改类型</p>
+<p>常用方法</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.append(idx)</td>
+<td>连接另一个index对象，产生新的index对象</td>
+</tr>
+<tr>
+<td>.diff(idx)</td>
+<td>计算差集，产生新的index对象</td>
+</tr>
+<tr>
+<td>.intersection(idx)</td>
+<td>计算交集</td>
+</tr>
+<tr>
+<td>.union(idx)</td>
+<td>计算并集</td>
+</tr>
+<tr>
+<td>.delete(loc)</td>
+<td>删除loc位置处的元素</td>
+</tr>
+<tr>
+<td>.insert(loc.e)</td>
+<td>在loc位置增加一个元素</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="删除指定索引对象"><a href="#删除指定索引对象" class="headerlink" title="删除指定索引对象"></a>删除指定索引对象</h2><p>.drop()能够删除Series和DataFrame指定行或列索引</p>
+<h2 id="pandas数据运算"><a href="#pandas数据运算" class="headerlink" title="pandas数据运算"></a>pandas数据运算</h2><p>算数运算法则</p>
+<p>算术运算根据行列索引，补齐后运算，运算默认产生浮点数</p>
+<p>补齐时缺项填充NaN（空值）</p>
+<p>二维和一维、一维和零维间的广播运算</p>
+<p>采用+-*/符号进行的二元运算产生新的对象</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.add(d,**argws)</td>
+<td>类型间加法运算，可选参数</td>
+</tr>
+<tr>
+<td>.sub(d,**argws)</td>
+<td>类型间减法运算，可选参数</td>
+</tr>
+<tr>
+<td>.mul(d,**argws)</td>
+<td>类型间乘法运算，可选参数</td>
+</tr>
+<tr>
+<td>.div(d,**argws)</td>
+<td>类型见除法运算，可选参数</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="比较运算法则"><a href="#比较运算法则" class="headerlink" title="比较运算法则"></a>比较运算法则</h2><p>比较运算只能比较相同索引的元素，不进行补齐。</p>
+<p>二维和一维、一维和零维间的广播运算</p>
+<p>采用&gt;&lt;&gt;=&lt;= == !=等符号进行的二元运算产生布尔对象</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>Series = 索引+一维数据</p>
+<p>DataFrame = 行列索引 + 二维数据</p>
+<p>理解数据类型与索引的关系，操作索引即操作数据</p>
+<p>像对待单一数据一样对待Series和DataFrame对象</p>
+<h2 id="数据排序"><a href="#数据排序" class="headerlink" title="数据排序"></a>数据排序</h2><p>.sort_index()方法在指定轴上根据索引进行排序，默认升序</p>
+<p>.sort_index(axis=0,ascending=True)</p>
+<p>ascending=False降序</p>
+<p>.sort_values()方法在指定轴上根据数值进行排序，默认升序</p>
+<p>Serious.sort_values(axis=0,ascending=True)</p>
+<p>DataFrame.sort_values(<strong>by</strong>,axis=0,ascending=True)</p>
+<p>by:axis轴上的某个索引或索引列表</p>
+<p>NaN统一放到排序末尾</p>
+<h2 id="基本的统计分析函数"><a href="#基本的统计分析函数" class="headerlink" title="基本的统计分析函数"></a>基本的统计分析函数</h2><p>适用Series和DataFrame类型</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.sum()</td>
+<td>计算数据的总和</td>
+</tr>
+<tr>
+<td>.count()</td>
+<td>非NaN值的数量</td>
+</tr>
+<tr>
+<td>.mean() .median()</td>
+<td>计算数据的算术平均值、算数中位数</td>
+</tr>
+<tr>
+<td>.var() .std()</td>
+<td>计算数据的方差、标准差</td>
+</tr>
+<tr>
+<td>.min() .max()</td>
+<td>计算数据的最小值、最大值</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>统计汇总</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>.describe</th>
+<th>针对0轴(各列)的统计汇总<sup><a href="#fn_1" id="reffn_1">1</a></sup></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>累计统计分析函数</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.cumsum()</td>
+<td>依次给出前1、2、……、n个数的和</td>
+</tr>
+<tr>
+<td>.cumprod()</td>
+<td>依次给出前1、2、……、n个数的积</td>
+</tr>
+<tr>
+<td>.cummax()</td>
+<td>依次给出前1、2、……、n个数的最大值</td>
+</tr>
+<tr>
+<td>.cummin()</td>
+<td>依次给出前1、2、……、n个数的最小值</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>滚动计算（窗口计算）</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明（跨行运算）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.rolling(w).sum()</td>
+<td>依次计算相邻w个元素的和</td>
+</tr>
+<tr>
+<td>.rolling(w).mean()</td>
+<td>依次计算相邻w个元素的算数平均值</td>
+</tr>
+<tr>
+<td>.rolling(w).var()</td>
+<td>依次计算相邻w个元素的方差</td>
+</tr>
+<tr>
+<td>.rowing(w).std()</td>
+<td>依次计算相邻w个元素的标准差</td>
+</tr>
+<tr>
+<td>.rowing(w).main().max()</td>
+<td>以此计算相邻w个元素的最小值和最大值</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="相关分析"><a href="#相关分析" class="headerlink" title="相关分析"></a>相关分析</h2><p>两个事物，表示x和y，如何判断它们之间的存在相关性</p>
+<p><strong>相关性</strong></p>
+<ul>
+<li>x增大，y增大，两个变量正相关</li>
+<li>x增大，y减小，两个变量负相关</li>
+<li>x增大，y无视，两个变量不相关</li>
+</ul>
+<p><strong>协方差</strong></p>
+<p>两个事物，表示x和y，如何判断它们之间的存在相关性</p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>数据分析</tag>
+        <tag>Pandas</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>我的第一篇博客</title>
     <url>/2023/06/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>你好，我是一名大三计算机科学与技术在校生，在此博客进行相关技术知识的分享</p>
@@ -816,28 +855,11 @@
       </tags>
   </entry>
   <entry>
-    <title>nvidia-smi基础信息</title>
-    <url>/2023/06/08/nvidia-smi%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/08/nvidia-smi%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF/nvidia.png"></p>
-<blockquote>
-<p>nvidia-smi 查看当前GPU使用情况</p>
-</blockquote>
-<span id="more"></span>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">GPU：GPU 编号；</span><br><span class="line"></span><br><span class="line">Name：GPU 型号； </span><br><span class="line"></span><br><span class="line">Persistence-M：持续模式的状态。持续模式虽然耗能大，但是在新的GPU应用启动时，花费的时间更少，这里显示的是off的状态；</span><br><span class="line"></span><br><span class="line">Fan：风扇转速，从0到100%之间变动；</span><br><span class="line"></span><br><span class="line">Temp：温度，单位是摄氏度； </span><br><span class="line"></span><br><span class="line">Perf：性能状态，从P0到P12，P0表示最大性能，P12表示状态最小性能（即 GPU 未工作时为P0，达到最大工作限度时为P12）。 </span><br><span class="line"></span><br><span class="line">Pwr:Usage/Cap：能耗；</span><br><span class="line"></span><br><span class="line">Memory Usage：显存使用率； </span><br><span class="line"></span><br><span class="line">Bus-Id：涉及GPU总线的东西  Disp.A：Display Active，表示GPU的显示是否初始化；</span><br><span class="line"></span><br><span class="line">Volatile GPU-Util：浮动的GPU利用率；</span><br><span class="line"></span><br><span class="line">Uncorr. ECC：Error Correcting Code，错误检查与纠正； </span><br><span class="line"></span><br><span class="line">Compute M：compute mode，计算模式</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <tags>
-        <tag>Shell</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>文案收集(更新中)</title>
     <url>/2023/06/25/%E6%96%87%E6%A1%88%E6%94%B6%E9%9B%86/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>收集的一些优质文案</p>
+<p>收集的一些优质文案<br><span id="more"></span></p>
 </blockquote>
-<span id="more"></span>
-
 <h3 id="城市类"><a href="#城市类" class="headerlink" title="城市类"></a>城市类</h3><ul>
 <li><p>亮起霓虹的城市夜灯，有了喧哗，变得更加妖媚</p>
 </li>
@@ -856,82 +878,9 @@
       </tags>
   </entry>
   <entry>
-    <title>请求响应报头相关名词解释</title>
-    <url>/2023/06/12/%E8%AF%B7%E6%B1%82%E5%93%8D%E5%BA%94%E6%8A%A5%E5%A4%B4%E7%9B%B8%E5%85%B3%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>本文主要说明常用的请求响应相关名词解释,建议读者具备网络基础</p>
-</blockquote>
-<span id="more"></span>
-<h2 id="常用的请求报头"><a href="#常用的请求报头" class="headerlink" title="常用的请求报头"></a>常用的请求报头</h2><h3 id="1-Host-主机和端口号"><a href="#1-Host-主机和端口号" class="headerlink" title="1. Host (主机和端口号)"></a>1. Host (主机和端口号)</h3><p>Host：对应网址URL中的Web名称和端口号，用于指定被请求资源的Internet主机和端口号，通常属于URL的一部分。</p>
-<h3 id="2-Connection-链接类型"><a href="#2-Connection-链接类型" class="headerlink" title="2. Connection (链接类型)"></a>2. Connection (链接类型)</h3><p>Connection：表示客户端与服务连接类型</p>
-<ol>
-<li>Client 发起一个包含 <code>Connection:keep-alive</code> 的请求，HTTP&#x2F;1.1使用 <code>keep-alive</code> 为默认值。</li>
-<li>Server收到请求后：<ul>
-<li>如果 Server 支持 keep-alive，回复一个包含 Connection:keep-alive 的响应，不关闭连接；</li>
-<li>如果 Server 不支持 keep-alive，回复一个包含 Connection:close 的响应，关闭连接。</li>
-</ul>
-</li>
-<li>如果client收到包含 <code>Connection:keep-alive</code> 的响应，向同一个连接发送下一个请求，直到一方主动关闭连接。</li>
-</ol>
-<p><strong>keep-alive在很多情况下能够重用连接，减少资源消耗，缩短响应时间，比如当浏览器需要多个文件时(比如一个HTML文件和相关的图形文件)，不需要每次都去请求建立连接。</strong></p>
-<h3 id="3-Upgrade-Insecure-Requests-升级为HTTPS请求"><a href="#3-Upgrade-Insecure-Requests-升级为HTTPS请求" class="headerlink" title="3. Upgrade-Insecure-Requests (升级为HTTPS请求)"></a>3. Upgrade-Insecure-Requests (升级为HTTPS请求)</h3><p>Upgrade-Insecure-Requests：升级不安全的请求，意思是会在加载 http 资源时自动替换成 https 请求，让浏览器不再显示https页面中的http请求警报。</p>
-<p>*<strong>HTTPS 是以安全为目标的 HTTP 通道，所以在 HTTPS 承载的页面上不允许出现 HTTP 请求，一旦出现就是提示或报错。*</strong></p>
-<h3 id="4-User-Agent-浏览器名称"><a href="#4-User-Agent-浏览器名称" class="headerlink" title="4. User-Agent (浏览器名称)"></a>4. User-Agent (浏览器名称)</h3><p>User-Agent：是客户浏览器的名称，以后会详细讲。</p>
-<h3 id="5-Accept-传输文件类型"><a href="#5-Accept-传输文件类型" class="headerlink" title="5. Accept (传输文件类型)"></a>5. Accept (传输文件类型)</h3><p>Accept：指浏览器或其他客户端可以接受的MIME（Multipurpose Internet Mail Extensions（多用途互联网邮件扩展））文件类型，服务器可以根据它判断并返回适当的文件格式。</p>
-<h5 id="举例："><a href="#举例：" class="headerlink" title="举例："></a>举例：</h5><p><code>Accept: */*</code>：表示什么都可以接收。</p>
-<p><code>Accept：image/gif</code>：表明客户端希望接受GIF图像格式的资源；</p>
-<p><code>Accept：text/html</code>：表明客户端希望接受html文本。</p>
-<p><code>Accept: text/html, application/xhtml+xml;q=0.9, image/*;q=0.8</code>：表示浏览器支持的 MIME 类型分别是 html文本、xhtml和xml文档、所有的图像格式资源。</p>
-<p>*<strong>q是权重系数，范围 0 &#x3D;&lt; q &lt;&#x3D; 1，q 值越大，请求越倾向于获得其“;”之前的类型表示的内容。若没有指定q值，则默认为1，按从左到右排序顺序；若被赋值为0，则用于表示浏览器不接受此内容类型。*</strong></p>
-<p>*<strong>Text：用于标准化地表示的文本信息，文本消息可以是多种字符集和或者多种格式的；Application：用于传输应用程序数据或者二进制数据。<a href="http://blog.sina.com.cn/s/blog_866e403f010179f1.html">详细请点击</a>*</strong></p>
-<h3 id="6-Referer-页面跳转处"><a href="#6-Referer-页面跳转处" class="headerlink" title="6. Referer (页面跳转处)"></a>6. Referer (页面跳转处)</h3><p>Referer：表明产生请求的网页来自于哪个URL，用户是从该 Referer页面访问到当前请求的页面。这个属性可以用来跟踪Web请求来自哪个页面，是从什么网站来的等。</p>
-<p>有时候遇到下载某网站图片，需要对应的referer，否则无法下载图片，那是因为人家做了防盗链，原理就是根据referer去判断是否是本网站的地址，如果不是，则拒绝，如果是，就可以下载；</p>
-<h3 id="7-Accept-Encoding（文件编解码格式）"><a href="#7-Accept-Encoding（文件编解码格式）" class="headerlink" title="7. Accept-Encoding（文件编解码格式）"></a>7. Accept-Encoding（文件编解码格式）</h3><p>Accept-Encoding：指出浏览器可以接受的编码方式。编码方式不同于文件格式，它是为了压缩文件并加速文件传递速度。浏览器在接收到Web响应之后先解码，然后再检查文件格式，许多情形下这可以减少大量的下载时间。</p>
-<h5 id="举例：Accept-Encoding-gzip-q-x3D-1-0-identity-q-x3D-0-5-q-x3D-0"><a href="#举例：Accept-Encoding-gzip-q-x3D-1-0-identity-q-x3D-0-5-q-x3D-0" class="headerlink" title="举例：Accept-Encoding:gzip;q&#x3D;1.0, identity; q&#x3D;0.5, *;q&#x3D;0"></a>举例：Accept-Encoding:gzip;q&#x3D;1.0, identity; q&#x3D;0.5, *;q&#x3D;0</h5><p>如果有多个Encoding同时匹配, 按照q值顺序排列，本例中按顺序支持 gzip, identity压缩编码，支持gzip的浏览器会返回经过gzip编码的HTML页面。 <strong>如果请求消息中没有设置这个域服务器假定客户端对各种内容编码都可以接受。</strong></p>
-<h3 id="8-Accept-Language（语言种类）"><a href="#8-Accept-Language（语言种类）" class="headerlink" title="8. Accept-Language（语言种类）"></a>8. Accept-Language（语言种类）</h3><p>Accept-Langeuage：指出浏览器可以接受的语言种类，如en或en-us指英语，zh或者zh-cn指中文，当服务器能够提供一种以上的语言版本时要用到。</p>
-<h3 id="9-Accept-Charset（字符编码）"><a href="#9-Accept-Charset（字符编码）" class="headerlink" title="9. Accept-Charset（字符编码）"></a>9. Accept-Charset（字符编码）</h3><p>Accept-Charset：指出浏览器可以接受的字符编码。</p>
-<h5 id="举例：Accept-Charset-iso-8859-1-gb2312-utf-8"><a href="#举例：Accept-Charset-iso-8859-1-gb2312-utf-8" class="headerlink" title="举例：Accept-Charset:iso-8859-1,gb2312,utf-8"></a>举例：Accept-Charset:iso-8859-1,gb2312,utf-8</h5><ul>
-<li>ISO8859-1：通常叫做Latin-1。Latin-1包括了书写所有西方欧洲语言不可缺少的附加字符，英文浏览器的默认值是ISO-8859-1.</li>
-<li>gb2312：标准简体中文字符集;</li>
-<li>utf-8：UNICODE 的一种变长字符编码，可以解决多种语言文本显示问题，从而实现应用国际化和本地化。</li>
-</ul>
-<p><strong>如果在请求消息中没有设置这个域，缺省是任何字符集都可以接受。</strong></p>
-<h3 id="10-Cookie-（Cookie）"><a href="#10-Cookie-（Cookie）" class="headerlink" title="10. Cookie （Cookie）"></a>10. Cookie （Cookie）</h3><p>Cookie：浏览器用这个属性向服务器发送Cookie。Cookie是在浏览器中寄存的小型数据体，它可以记载和服务器相关的用户信息，也可以用来实现会话功能，以后会详细讲。</p>
-<h3 id="11-Content-Type-POST数据类型"><a href="#11-Content-Type-POST数据类型" class="headerlink" title="11. Content-Type (POST数据类型)"></a>11. Content-Type (POST数据类型)</h3><p>Content-Type：POST请求里用来表示的内容类型。</p>
-<h5 id="举例：Content-Type-x3D-Text-x2F-XML-charset-x3D-gb2312："><a href="#举例：Content-Type-x3D-Text-x2F-XML-charset-x3D-gb2312：" class="headerlink" title="举例：Content-Type &#x3D; Text&#x2F;XML; charset&#x3D;gb2312："></a>举例：Content-Type &#x3D; Text&#x2F;XML; charset&#x3D;gb2312：</h5><p>指明该请求的消息体中包含的是纯文本的XML类型的数据，字符编码采用“gb2312”。</p>
-<h2 id="常用的响应报头-了解"><a href="#常用的响应报头-了解" class="headerlink" title="常用的响应报头(了解)"></a>常用的响应报头(了解)</h2><p>理论上所有的响应头信息都应该是回应请求头的。但是服务端为了效率，安全，还有其他方面的考虑，会添加相对应的响应头信息，从上图可以看到：</p>
-<h3 id="1-Cache-Control：must-revalidate-no-cache-private。"><a href="#1-Cache-Control：must-revalidate-no-cache-private。" class="headerlink" title="1. Cache-Control：must-revalidate, no-cache, private。"></a>1. Cache-Control：must-revalidate, no-cache, private。</h3><p>这个值告诉客户端，服务端不希望客户端缓存资源，在下次请求资源时，必须要从新请求服务器，不能从缓存副本中获取资源。</p>
-<ul>
-<li>Cache-Control是响应头中很重要的信息，当客户端请求头中包含Cache-Control:max-age&#x3D;0请求，明确表示不会缓存服务器资源时,Cache-Control作为作为回应信息，通常会返回no-cache，意思就是说，”那就不缓存呗”。</li>
-<li>当客户端在请求头中没有包含Cache-Control时，服务端往往会定,不同的资源不同的缓存策略，比如说oschina在缓存图片资源的策略就是Cache-Control：max-age&#x3D;86400,这个意思是，从当前时间开始，在86400秒的时间内，客户端可以直接从缓存副本中读取资源，而不需要向服务器请求。</li>
-</ul>
-<h3 id="2-Connection：keep-alive"><a href="#2-Connection：keep-alive" class="headerlink" title="2. Connection：keep-alive"></a>2. Connection：keep-alive</h3><p>这个字段作为回应客户端的Connection：keep-alive，告诉客户端服务器的tcp连接也是一个长连接，客户端可以继续使用这个tcp连接发送http请求。</p>
-<h3 id="3-Content-Encoding-gzip"><a href="#3-Content-Encoding-gzip" class="headerlink" title="3. Content-Encoding:gzip"></a>3. Content-Encoding:gzip</h3><p>告诉客户端，服务端发送的资源是采用gzip编码的，客户端看到这个信息后，应该采用gzip对资源进行解码。</p>
-<h3 id="4-Content-Type：text-x2F-html-charset-x3D-UTF-8"><a href="#4-Content-Type：text-x2F-html-charset-x3D-UTF-8" class="headerlink" title="4. Content-Type：text&#x2F;html;charset&#x3D;UTF-8"></a>4. Content-Type：text&#x2F;html;charset&#x3D;UTF-8</h3><p>告诉客户端，资源文件的类型，还有字符编码，客户端通过utf-8对资源进行解码，然后对资源进行html解析。通常我们会看到有些网站是乱码的，往往就是服务器端没有返回正确的编码。</p>
-<h3 id="5-Date：Sun-21-Sep-2016-06-18-21-GMT"><a href="#5-Date：Sun-21-Sep-2016-06-18-21-GMT" class="headerlink" title="5. Date：Sun, 21 Sep 2016 06:18:21 GMT"></a>5. Date：Sun, 21 Sep 2016 06:18:21 GMT</h3><p>这个是服务端发送资源时的服务器时间，GMT是格林尼治所在地的标准时间。http协议中发送的时间都是GMT的，这主要是解决在互联网上，不同时区在相互请求资源的时候，时间混乱问题。</p>
-<h3 id="6-Expires-Sun-1-Jan-2000-01-00-00-GMT"><a href="#6-Expires-Sun-1-Jan-2000-01-00-00-GMT" class="headerlink" title="6. Expires:Sun, 1 Jan 2000 01:00:00 GMT"></a>6. Expires:Sun, 1 Jan 2000 01:00:00 GMT</h3><p>这个响应头也是跟缓存有关的，告诉客户端在这个时间前，可以直接访问缓存副本，很显然这个值会存在问题，因为客户端和服务器的时间不一定会都是相同的，如果时间不同就会导致问题。所以这个响应头是没有Cache-Control：max-age&#x3D;*这个响应头准确的，因为max-age&#x3D;date中的date是个相对时间，不仅更好理解，也更准确。</p>
-<h3 id="7-Pragma-no-cache"><a href="#7-Pragma-no-cache" class="headerlink" title="7. Pragma:no-cache"></a>7. Pragma:no-cache</h3><p>这个含义与Cache-Control等同。</p>
-<h3 id="8-Server：Tengine-x2F-1-4-6"><a href="#8-Server：Tengine-x2F-1-4-6" class="headerlink" title="8.Server：Tengine&#x2F;1.4.6"></a>8.Server：Tengine&#x2F;1.4.6</h3><p>这个是服务器和相对应的版本，只是告诉客户端服务器的信息。</p>
-<h3 id="9-Transfer-Encoding：chunked"><a href="#9-Transfer-Encoding：chunked" class="headerlink" title="9. Transfer-Encoding：chunked"></a>9. Transfer-Encoding：chunked</h3><p>这个响应头告诉客户端，服务器发送的资源的方式是分块发送的。一般分块发送的资源都是服务器动态生成的，在发送时还不知道发送资源的大小，所以采用分块发送，每一块都是独立的，独立的块都能标示自己的长度，最后一块是0长度的，当客户端读到这个0长度的块时，就可以确定资源已经传输完了。</p>
-<h3 id="10-Vary-Accept-Encoding"><a href="#10-Vary-Accept-Encoding" class="headerlink" title="10. Vary: Accept-Encoding"></a>10. Vary: Accept-Encoding</h3><p>告诉缓存服务器，缓存压缩文件和非压缩文件两个版本，现在这个字段用处并不大，因为现在的浏览器都是支持压缩的。</p>
-<h2 id="Cookie-和-Session："><a href="#Cookie-和-Session：" class="headerlink" title="Cookie 和 Session："></a>Cookie 和 Session：</h2><p>服务器和客户端的交互仅限于请求&#x2F;响应过程，结束之后便断开，在下一次请求时，服务器会认为新的客户端。</p>
-<p>为了维护他们之间的链接，让服务器知道这是前一个用户发送的请求，必须在一个地方保存客户端的信息。</p>
-<p><strong>Cookie</strong>：通过在 客户端 记录的信息确定用户的身份。</p>
-<p><strong>Session</strong>：通过在 服务器端 记录的信息确定用户的身份。</p>
-]]></content>
-      <categories>
-        <category>计算机网络</category>
-      </categories>
-      <tags>
-        <tag>计算机网络</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>饿补计算机科学基础（一）--计算机基础</title>
     <url>/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>计算机基础，常识</p>
-<span id="more"></span>
-
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>计算机基础，常识<br><span id="more"></span></p>
 <h2 id="1-计算思维概念"><a href="#1-计算思维概念" class="headerlink" title="1.计算思维概念"></a>1.计算思维概念</h2><p>特点：抽象、自动化</p>
 <p>计算思维： </p>
 <ul>
@@ -943,7 +892,7 @@
 <p>抽象：完全超越物理的时空观，并完全用符号来表示</p>
 <p>自动化：表示形式应该有效地被信息处理代理执行</p>
 <h2 id="1-1符号化信息表达"><a href="#1-1符号化信息表达" class="headerlink" title="1.1符号化信息表达"></a>1.1符号化信息表达</h2><p>数值型和非数值型对象</p>
-<p>数值和非数值–符号化–&gt; 符号化编码 –语义化–&gt; 数值和非数值</p>
+<p>数值和非数值—符号化—&gt; 符号化编码 —语义化—&gt; 数值和非数值</p>
 <h2 id="1-2数值数据表示"><a href="#1-2数值数据表示" class="headerlink" title="1.2数值数据表示"></a>1.2数值数据表示</h2><p>数值型数据的表示</p>
 <p>进制转换：位权转换</p>
 <p>原码：负数原码的符号位为1</p>
@@ -963,11 +912,11 @@
 <p>形码类（五笔）、音码类（拼音输入法）</p>
 <p>字符的输出：字形码，记录字符形状</p>
 <p>点阵规模用0和1编码无亮点和有亮点形成字形信息，便于显示。</p>
-<p>点阵的方式：16 * 16 &#x2F; 32 * 32 &#x2F; 48 * 48</p>
+<p>点阵的方式：16 <em> 16 / 32 </em> 32 / 48 * 48</p>
 <h2 id="1-4多媒体信息的表示"><a href="#1-4多媒体信息的表示" class="headerlink" title="1.4多媒体信息的表示"></a>1.4多媒体信息的表示</h2><p>模拟量：在时间或者数值上都是连续的物理量</p>
 <p>数字量：在时间上或数量上都是离散的物理量（例如：计步器）</p>
-<p>图形：&#x3D;&#x3D;矢量&#x3D;&#x3D;图形文件形式存储，圆，直线、曲线等图形元素</p>
-<p>图像：&#x3D;&#x3D;模拟&#x3D;&#x3D;信号，通过数字照相机、摄像机捕捉的自然界真实场景画面产生的影像，数字化后以&#x3D;&#x3D;点阵&#x3D;&#x3D;（位图）的形式存储</p>
+<p>图形：==矢量==图形文件形式存储，圆，直线、曲线等图形元素</p>
+<p>图像：==模拟==信号，通过数字照相机、摄像机捕捉的自然界真实场景画面产生的影像，数字化后以==点阵==（位图）的形式存储</p>
 <h4 id="图像数字化方法"><a href="#图像数字化方法" class="headerlink" title="图像数字化方法"></a>图像数字化方法</h4><ol>
 <li><p>将连续色调的模拟图像经过采样、量化后转成数字影像（编码）</p>
 </li>
@@ -984,15 +933,83 @@
 <p>采样频率：每秒钟采样点的次数（Hz）</p>
 <p>声道数</p>
 <p>记录每秒存储声音容量公式为</p>
-<p>采样频率 X 量化位数（bit） ➗ 8 X 声道数 &#x3D; 每秒数据量</p>
+<p>采样频率 X 量化位数（bit） ➗ 8 X 声道数 = 每秒数据量</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>请求响应报头相关名词解释</title>
+    <url>/2023/06/12/%E8%AF%B7%E6%B1%82%E5%93%8D%E5%BA%94%E6%8A%A5%E5%A4%B4%E7%9B%B8%E5%85%B3%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>本文主要说明常用的请求响应相关名词解释,建议读者具备网络基础<br><span id="more"></span></p>
+<h2 id="常用的请求报头"><a href="#常用的请求报头" class="headerlink" title="常用的请求报头"></a>常用的请求报头</h2></blockquote>
+<h3 id="1-Host-主机和端口号"><a href="#1-Host-主机和端口号" class="headerlink" title="1. Host (主机和端口号)"></a>1. Host (主机和端口号)</h3><p>Host：对应网址URL中的Web名称和端口号，用于指定被请求资源的Internet主机和端口号，通常属于URL的一部分。</p>
+<h3 id="2-Connection-链接类型"><a href="#2-Connection-链接类型" class="headerlink" title="2. Connection (链接类型)"></a>2. Connection (链接类型)</h3><p>Connection：表示客户端与服务连接类型</p>
+<ol>
+<li>Client 发起一个包含 <code>Connection:keep-alive</code> 的请求，HTTP/1.1使用 <code>keep-alive</code> 为默认值。</li>
+<li>Server收到请求后：<ul>
+<li>如果 Server 支持 keep-alive，回复一个包含 Connection:keep-alive 的响应，不关闭连接；</li>
+<li>如果 Server 不支持 keep-alive，回复一个包含 Connection:close 的响应，关闭连接。</li>
+</ul>
+</li>
+<li>如果client收到包含 <code>Connection:keep-alive</code> 的响应，向同一个连接发送下一个请求，直到一方主动关闭连接。</li>
+</ol>
+<p><strong>keep-alive在很多情况下能够重用连接，减少资源消耗，缩短响应时间，比如当浏览器需要多个文件时(比如一个HTML文件和相关的图形文件)，不需要每次都去请求建立连接。</strong></p>
+<h3 id="3-Upgrade-Insecure-Requests-升级为HTTPS请求"><a href="#3-Upgrade-Insecure-Requests-升级为HTTPS请求" class="headerlink" title="3. Upgrade-Insecure-Requests (升级为HTTPS请求)"></a>3. Upgrade-Insecure-Requests (升级为HTTPS请求)</h3><p>Upgrade-Insecure-Requests：升级不安全的请求，意思是会在加载 http 资源时自动替换成 https 请求，让浏览器不再显示https页面中的http请求警报。</p>
+<p><strong><em>HTTPS 是以安全为目标的 HTTP 通道，所以在 HTTPS 承载的页面上不允许出现 HTTP 请求，一旦出现就是提示或报错。\</em></strong></p>
+<h3 id="4-User-Agent-浏览器名称"><a href="#4-User-Agent-浏览器名称" class="headerlink" title="4. User-Agent (浏览器名称)"></a>4. User-Agent (浏览器名称)</h3><p>User-Agent：是客户浏览器的名称，以后会详细讲。</p>
+<h3 id="5-Accept-传输文件类型"><a href="#5-Accept-传输文件类型" class="headerlink" title="5. Accept (传输文件类型)"></a>5. Accept (传输文件类型)</h3><p>Accept：指浏览器或其他客户端可以接受的MIME（Multipurpose Internet Mail Extensions（多用途互联网邮件扩展））文件类型，服务器可以根据它判断并返回适当的文件格式。</p>
+<h5 id="举例："><a href="#举例：" class="headerlink" title="举例："></a>举例：</h5><p><code>Accept: */*</code>：表示什么都可以接收。</p>
+<p><code>Accept：image/gif</code>：表明客户端希望接受GIF图像格式的资源；</p>
+<p><code>Accept：text/html</code>：表明客户端希望接受html文本。</p>
+<p><code>Accept: text/html, application/xhtml+xml;q=0.9, image/*;q=0.8</code>：表示浏览器支持的 MIME 类型分别是 html文本、xhtml和xml文档、所有的图像格式资源。</p>
+<p><strong><em>q是权重系数，范围 0 =&lt; q &lt;= 1，q 值越大，请求越倾向于获得其“;”之前的类型表示的内容。若没有指定q值，则默认为1，按从左到右排序顺序；若被赋值为0，则用于表示浏览器不接受此内容类型。\</em></strong></p>
+<p><strong><em>Text：用于标准化地表示的文本信息，文本消息可以是多种字符集和或者多种格式的；Application：用于传输应用程序数据或者二进制数据。<a href="http://blog.sina.com.cn/s/blog_866e403f010179f1.html">详细请点击</a>\</em></strong></p>
+<h3 id="6-Referer-页面跳转处"><a href="#6-Referer-页面跳转处" class="headerlink" title="6. Referer (页面跳转处)"></a>6. Referer (页面跳转处)</h3><p>Referer：表明产生请求的网页来自于哪个URL，用户是从该 Referer页面访问到当前请求的页面。这个属性可以用来跟踪Web请求来自哪个页面，是从什么网站来的等。</p>
+<p>有时候遇到下载某网站图片，需要对应的referer，否则无法下载图片，那是因为人家做了防盗链，原理就是根据referer去判断是否是本网站的地址，如果不是，则拒绝，如果是，就可以下载；</p>
+<h3 id="7-Accept-Encoding（文件编解码格式）"><a href="#7-Accept-Encoding（文件编解码格式）" class="headerlink" title="7. Accept-Encoding（文件编解码格式）"></a>7. Accept-Encoding（文件编解码格式）</h3><p>Accept-Encoding：指出浏览器可以接受的编码方式。编码方式不同于文件格式，它是为了压缩文件并加速文件传递速度。浏览器在接收到Web响应之后先解码，然后再检查文件格式，许多情形下这可以减少大量的下载时间。</p>
+<h5 id="举例：Accept-Encoding-gzip-q-1-0-identity-q-0-5-q-0"><a href="#举例：Accept-Encoding-gzip-q-1-0-identity-q-0-5-q-0" class="headerlink" title="举例：Accept-Encoding:gzip;q=1.0, identity; q=0.5, *;q=0"></a>举例：Accept-Encoding:gzip;q=1.0, identity; q=0.5, *;q=0</h5><p>如果有多个Encoding同时匹配, 按照q值顺序排列，本例中按顺序支持 gzip, identity压缩编码，支持gzip的浏览器会返回经过gzip编码的HTML页面。 <strong>如果请求消息中没有设置这个域服务器假定客户端对各种内容编码都可以接受。</strong></p>
+<h3 id="8-Accept-Language（语言种类）"><a href="#8-Accept-Language（语言种类）" class="headerlink" title="8. Accept-Language（语言种类）"></a>8. Accept-Language（语言种类）</h3><p>Accept-Langeuage：指出浏览器可以接受的语言种类，如en或en-us指英语，zh或者zh-cn指中文，当服务器能够提供一种以上的语言版本时要用到。</p>
+<h3 id="9-Accept-Charset（字符编码）"><a href="#9-Accept-Charset（字符编码）" class="headerlink" title="9. Accept-Charset（字符编码）"></a>9. Accept-Charset（字符编码）</h3><p>Accept-Charset：指出浏览器可以接受的字符编码。</p>
+<h5 id="举例：Accept-Charset-iso-8859-1-gb2312-utf-8"><a href="#举例：Accept-Charset-iso-8859-1-gb2312-utf-8" class="headerlink" title="举例：Accept-Charset:iso-8859-1,gb2312,utf-8"></a>举例：Accept-Charset:iso-8859-1,gb2312,utf-8</h5><ul>
+<li>ISO8859-1：通常叫做Latin-1。Latin-1包括了书写所有西方欧洲语言不可缺少的附加字符，英文浏览器的默认值是ISO-8859-1.</li>
+<li>gb2312：标准简体中文字符集;</li>
+<li>utf-8：UNICODE 的一种变长字符编码，可以解决多种语言文本显示问题，从而实现应用国际化和本地化。</li>
+</ul>
+<p><strong>如果在请求消息中没有设置这个域，缺省是任何字符集都可以接受。</strong></p>
+<h3 id="10-Cookie-（Cookie）"><a href="#10-Cookie-（Cookie）" class="headerlink" title="10. Cookie （Cookie）"></a>10. Cookie （Cookie）</h3><p>Cookie：浏览器用这个属性向服务器发送Cookie。Cookie是在浏览器中寄存的小型数据体，它可以记载和服务器相关的用户信息，也可以用来实现会话功能，以后会详细讲。</p>
+<h3 id="11-Content-Type-POST数据类型"><a href="#11-Content-Type-POST数据类型" class="headerlink" title="11. Content-Type (POST数据类型)"></a>11. Content-Type (POST数据类型)</h3><p>Content-Type：POST请求里用来表示的内容类型。</p>
+<h5 id="举例：Content-Type-Text-XML-charset-gb2312："><a href="#举例：Content-Type-Text-XML-charset-gb2312：" class="headerlink" title="举例：Content-Type = Text/XML; charset=gb2312："></a>举例：Content-Type = Text/XML; charset=gb2312：</h5><p>指明该请求的消息体中包含的是纯文本的XML类型的数据，字符编码采用“gb2312”。</p>
+<h2 id="常用的响应报头-了解"><a href="#常用的响应报头-了解" class="headerlink" title="常用的响应报头(了解)"></a>常用的响应报头(了解)</h2><p>理论上所有的响应头信息都应该是回应请求头的。但是服务端为了效率，安全，还有其他方面的考虑，会添加相对应的响应头信息，从上图可以看到：</p>
+<h3 id="1-Cache-Control：must-revalidate-no-cache-private。"><a href="#1-Cache-Control：must-revalidate-no-cache-private。" class="headerlink" title="1. Cache-Control：must-revalidate, no-cache, private。"></a>1. Cache-Control：must-revalidate, no-cache, private。</h3><p>这个值告诉客户端，服务端不希望客户端缓存资源，在下次请求资源时，必须要从新请求服务器，不能从缓存副本中获取资源。</p>
+<ul>
+<li>Cache-Control是响应头中很重要的信息，当客户端请求头中包含Cache-Control:max-age=0请求，明确表示不会缓存服务器资源时,Cache-Control作为作为回应信息，通常会返回no-cache，意思就是说，”那就不缓存呗”。</li>
+<li>当客户端在请求头中没有包含Cache-Control时，服务端往往会定,不同的资源不同的缓存策略，比如说oschina在缓存图片资源的策略就是Cache-Control：max-age=86400,这个意思是，从当前时间开始，在86400秒的时间内，客户端可以直接从缓存副本中读取资源，而不需要向服务器请求。</li>
+</ul>
+<h3 id="2-Connection：keep-alive"><a href="#2-Connection：keep-alive" class="headerlink" title="2. Connection：keep-alive"></a>2. Connection：keep-alive</h3><p>这个字段作为回应客户端的Connection：keep-alive，告诉客户端服务器的tcp连接也是一个长连接，客户端可以继续使用这个tcp连接发送http请求。</p>
+<h3 id="3-Content-Encoding-gzip"><a href="#3-Content-Encoding-gzip" class="headerlink" title="3. Content-Encoding:gzip"></a>3. Content-Encoding:gzip</h3><p>告诉客户端，服务端发送的资源是采用gzip编码的，客户端看到这个信息后，应该采用gzip对资源进行解码。</p>
+<h3 id="4-Content-Type：text-html-charset-UTF-8"><a href="#4-Content-Type：text-html-charset-UTF-8" class="headerlink" title="4. Content-Type：text/html;charset=UTF-8"></a>4. Content-Type：text/html;charset=UTF-8</h3><p>告诉客户端，资源文件的类型，还有字符编码，客户端通过utf-8对资源进行解码，然后对资源进行html解析。通常我们会看到有些网站是乱码的，往往就是服务器端没有返回正确的编码。</p>
+<h3 id="5-Date：Sun-21-Sep-2016-06-18-21-GMT"><a href="#5-Date：Sun-21-Sep-2016-06-18-21-GMT" class="headerlink" title="5. Date：Sun, 21 Sep 2016 06:18:21 GMT"></a>5. Date：Sun, 21 Sep 2016 06:18:21 GMT</h3><p>这个是服务端发送资源时的服务器时间，GMT是格林尼治所在地的标准时间。http协议中发送的时间都是GMT的，这主要是解决在互联网上，不同时区在相互请求资源的时候，时间混乱问题。</p>
+<h3 id="6-Expires-Sun-1-Jan-2000-01-00-00-GMT"><a href="#6-Expires-Sun-1-Jan-2000-01-00-00-GMT" class="headerlink" title="6. Expires:Sun, 1 Jan 2000 01:00:00 GMT"></a>6. Expires:Sun, 1 Jan 2000 01:00:00 GMT</h3><p>这个响应头也是跟缓存有关的，告诉客户端在这个时间前，可以直接访问缓存副本，很显然这个值会存在问题，因为客户端和服务器的时间不一定会都是相同的，如果时间不同就会导致问题。所以这个响应头是没有Cache-Control：max-age=*这个响应头准确的，因为max-age=date中的date是个相对时间，不仅更好理解，也更准确。</p>
+<h3 id="7-Pragma-no-cache"><a href="#7-Pragma-no-cache" class="headerlink" title="7. Pragma:no-cache"></a>7. Pragma:no-cache</h3><p>这个含义与Cache-Control等同。</p>
+<h3 id="8-Server：Tengine-1-4-6"><a href="#8-Server：Tengine-1-4-6" class="headerlink" title="8.Server：Tengine/1.4.6"></a>8.Server：Tengine/1.4.6</h3><p>这个是服务器和相对应的版本，只是告诉客户端服务器的信息。</p>
+<h3 id="9-Transfer-Encoding：chunked"><a href="#9-Transfer-Encoding：chunked" class="headerlink" title="9. Transfer-Encoding：chunked"></a>9. Transfer-Encoding：chunked</h3><p>这个响应头告诉客户端，服务器发送的资源的方式是分块发送的。一般分块发送的资源都是服务器动态生成的，在发送时还不知道发送资源的大小，所以采用分块发送，每一块都是独立的，独立的块都能标示自己的长度，最后一块是0长度的，当客户端读到这个0长度的块时，就可以确定资源已经传输完了。</p>
+<h3 id="10-Vary-Accept-Encoding"><a href="#10-Vary-Accept-Encoding" class="headerlink" title="10. Vary: Accept-Encoding"></a>10. Vary: Accept-Encoding</h3><p>告诉缓存服务器，缓存压缩文件和非压缩文件两个版本，现在这个字段用处并不大，因为现在的浏览器都是支持压缩的。</p>
+<h2 id="Cookie-和-Session："><a href="#Cookie-和-Session：" class="headerlink" title="Cookie 和 Session："></a>Cookie 和 Session：</h2><p>服务器和客户端的交互仅限于请求/响应过程，结束之后便断开，在下一次请求时，服务器会认为新的客户端。</p>
+<p>为了维护他们之间的链接，让服务器知道这是前一个用户发送的请求，必须在一个地方保存客户端的信息。</p>
+<p><strong>Cookie</strong>：通过在 客户端 记录的信息确定用户的身份。</p>
+<p><strong>Session</strong>：通过在 服务器端 记录的信息确定用户的身份。</p>
+]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>计算机网络</tag>
+      </tags>
   </entry>
   <entry>
     <title>饿补计算机科学基础（三）--数据结构</title>
     <url>/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%89%EF%BC%89-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>数据结构，过于简单的部分已省略</p>
-<span id="more"></span>
-
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>数据结构，过于简单的部分已省略<br><span id="more"></span></p>
 <h2 id="3-数据结构"><a href="#3-数据结构" class="headerlink" title="3.数据结构"></a>3.数据结构</h2><h3 id="3-1线性数据结构"><a href="#3-1线性数据结构" class="headerlink" title="3.1线性数据结构"></a>3.1线性数据结构</h3><p>数据结构（Data Structure）：</p>
 <p>相互之间存在一种或多种特定关系的数据元素的集合，“结构“的数据元素的集合</p>
 <ul>
@@ -1039,6 +1056,7 @@
 </blockquote>
 <p>队列：操作受限的线性逻辑关系的数据结构</p>
 <p>栈的常见操作</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1046,7 +1064,8 @@
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>创建create</td>
 <td>创建一个空栈</td>
 </tr>
@@ -1066,10 +1085,12 @@
 <td>满栈判断full</td>
 <td>判断栈是否已经满，是返回true，否则返回false</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>根据用户输入，打印指定的一周中的某一天，例如输入1，打印“星期一”</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">weekdays  = “星期一星期二星期三星期四星期五星期六”</span><br><span class="line">weekdays[<span class="number">1</span>] = <span class="string">&quot;一&quot;</span></span><br></pre></td></tr></table></figure>
-
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1077,7 +1098,8 @@
 <th>描述</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>s[i]</td>
 <td>索引，返回字符串s的第i个元素</td>
 </tr>
@@ -1085,15 +1107,16 @@
 <td>s[i:j]</td>
 <td>分片，返回包含字符串s第i到j个元素的子串</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>python实现代码</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">weekdays = <span class="string">&quot;星期一星期二星期三星期四星期五星期六&quot;</span></span><br><span class="line">number = <span class="built_in">eval</span>(<span class="built_in">input</span>(<span class="string">&quot;输入数字：&quot;</span>))</span><br><span class="line">start  = (number-<span class="number">1</span>)*<span class="number">3</span> //对应number的子串的第一个字符位置</span><br><span class="line"><span class="built_in">print</span>(weekdays[start:start+<span class="number">3</span>])//分片截取子串并输出</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
 <p>简单加密：</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#实现简单加密，替换字母间隔为2的字符</span></span><br><span class="line">message=<span class="built_in">input</span>(<span class="string">&quot;请输入进行加密的信息&quot;</span>)</span><br><span class="line">new_message = <span class="string">&quot;&quot;</span><span class="comment">#生成一个新的字符串</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(message)):</span><br><span class="line">    re_ch = <span class="built_in">ord</span>(message[i])-<span class="number">97</span>+<span class="number">2</span></span><br><span class="line">    new_message=new_message + <span class="built_in">chr</span>(re_ch % <span class="number">26</span>+<span class="number">97</span>)</span><br><span class="line">    </span><br><span class="line"><span class="built_in">print</span>(new_message)</span><br></pre></td></tr></table></figure>
-
 <center>ASCII码中字符和值转换函数</center>
 
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1101,7 +1124,8 @@
 <th>描述</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>ord()</td>
 <td>返回ASCII序列中字符的值</td>
 </tr>
@@ -1109,7 +1133,9 @@
 <td>chr()</td>
 <td>返回数值对应的表中字符</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h2 id="非线性数据结构"><a href="#非线性数据结构" class="headerlink" title="非线性数据结构"></a>非线性数据结构</h2><h3 id="树结构"><a href="#树结构" class="headerlink" title="树结构"></a>树结构</h3><p>度数：每个节点所有子树的个数</p>
 <p>树叶：度数是0的结点就是树叶</p>
 <p>二叉树不是特殊形态的树</p>
@@ -1117,7 +1143,7 @@
 <h3 id="二叉排序树"><a href="#二叉排序树" class="headerlink" title="二叉排序树"></a>二叉排序树</h3><p>Binary Sort Tree或二叉查找树：</p>
 <h3 id="哈夫曼树"><a href="#哈夫曼树" class="headerlink" title="哈夫曼树"></a>哈夫曼树</h3><p>最优二叉树</p>
 <h3 id="图结构"><a href="#图结构" class="headerlink" title="图结构"></a>图结构</h3><p>多对多的关系</p>
-<p>由顶点和边组成的集合，用G&#x3D;（V，E）来表示，V是所有顶点的集合，E是所有边的集合</p>
+<p>由顶点和边组成的集合，用G=（V，E）来表示，V是所有顶点的集合，E是所有边的集合</p>
 <p>顶点（vertex）：表示某个事物或对象</p>
 <p>边（edge）：表示顶点或事物之间的逻辑关系</p>
 <p>边的权重（weight）：边上对应的值。可以对应距离、时间值、开销等。</p>
@@ -1128,15 +1154,13 @@
     <url>/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89-%E7%AE%97%E6%B3%95/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>基于python编写的算法</p>
 <span id="more"></span>
-
 <h2 id="2-典型算法设计"><a href="#2-典型算法设计" class="headerlink" title="2.典型算法设计"></a>2.典型算法设计</h2><h3 id="1-递归"><a href="#1-递归" class="headerlink" title="(1).递归"></a>(1).递归</h3><p>递归方法（recursion algorithm）是指一种通过解决同类的规模较小的子问题而获得问题求解的方法</p>
 <ul>
 <li><p>问题的定义是递归定义的</p>
 </li>
 <li><p>问题的解法按递归算法实现的</p>
 </li>
-<li><p>数据的结构形式是按递归定义的（二叉树，广义表）</p>
-</li>
+<li>数据的结构形式是按递归定义的（二叉树，广义表）</li>
 </ul>
 <p>假如一个函数或者子程序是由自身所定义或调用的，成为递归</p>
 <ul>
@@ -1150,16 +1174,11 @@
 </li>
 </ul>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 阶乘的递归函数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fact</span>(<span class="params">n</span>):</span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">1</span>:<span class="comment">#递归出口</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> n * fact(n-<span class="number">1</span>)<span class="comment">#递归调用</span></span><br><span class="line">    </span><br><span class="line"><span class="built_in">print</span>（fact(<span class="number">3</span>)）</span><br></pre></td></tr></table></figure>
-
 <h4 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h4><p>二分查找算法（Binary search）递归实现：二分查找要求线性表必须采用顺序存储结构，而且表中元素按关键字有序排列</p>
 <p>反复执行的递归过程：缩小范围继续查找</p>
 <p>跳出提柜的出口：找到了，或者范围长度变成0</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">binarysearch_rec</span>(<span class="params">A, key, low, high</span>):  <span class="comment"># 二分查找算法的递归实现</span></span><br><span class="line">    <span class="keyword">if</span> low &gt; high:</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line">    mid = (low + high) // <span class="number">2</span>  <span class="comment"># 计算中间位置的索引，使用 (low + high) // 2</span></span><br><span class="line">    <span class="keyword">if</span> key == A[mid]:</span><br><span class="line">        <span class="keyword">return</span> mid</span><br><span class="line">    <span class="keyword">elif</span> key &lt; A[mid]:</span><br><span class="line">        <span class="keyword">return</span> binarysearch_rec(A, key, low, mid - <span class="number">1</span>)  <span class="comment"># 左边递归查找</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> binarysearch_rec(A, key, mid + <span class="number">1</span>, high)  <span class="comment"># 右边递归查找</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(binarysearch_rec([<span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">7</span>], <span class="number">4</span>, <span class="number">0</span>, <span class="number">3</span>))  <span class="comment"># 调用函数</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">binary_search</span>(<span class="params">A,Key</span>):</span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    j=<span class="built_in">len</span>(A)-<span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> i &lt;=j:</span><br><span class="line">        mid = (i+j)//<span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> A[mid]==Key:</span><br><span class="line">            <span class="keyword">return</span> mid</span><br><span class="line">        <span class="keyword">elif</span> A[mid]&lt;Key:</span><br><span class="line">            i=mid+<span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            j=mid-<span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(binary_search([<span class="number">3</span>,<span class="number">7</span>,<span class="number">45</span>,<span class="number">89</span>,<span class="number">90</span>],<span class="number">45</span>))</span><br></pre></td></tr></table></figure>
-
-
-
 <h3 id="2-迭代"><a href="#2-迭代" class="headerlink" title="(2).迭代"></a>(2).迭代</h3><p>重复反馈过程的活动，目的通常为了逼近随需目标或结果</p>
 <p>适合重复性操作</p>
 <ul>
@@ -1169,7 +1188,6 @@
 </ul>
 <p>例如：斐波那契数列</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">fib_rec</span>(<span class="params">n</span>):</span><br><span class="line">    a, b = <span class="number">1</span>, <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> n &gt; <span class="number">2</span>:</span><br><span class="line">        a, b = b, a + b</span><br><span class="line">        n = n - <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> a</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(fib_rec(<span class="number">2</span>))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
 <h3 id="3-排序"><a href="#3-排序" class="headerlink" title="(3).排序"></a>(3).排序</h3><p>将一组“无序”的记录序列调整为“有序”的记录序列的操作</p>
 <ul>
 <li><p>内部排序：整个排序过程不需要访问外存便能完成</p>
@@ -1181,41 +1199,39 @@
 <ul>
 <li>比较次数：</li>
 </ul>
-<p>​		第一轮比较n-1次，第二轮比较n-2次，第n-1轮比较1次，总得比较次数为（n-1） + ……+1≈n^2^&#x2F;2</p>
+<p>​        第一轮比较n-1次，第二轮比较n-2次，第n-1轮比较1次，总得比较次数为（n-1） + ……+1≈n^2^/2</p>
 <ul>
 <li>交换次数：</li>
 </ul>
-<p>​		和输入数据排列有关，最小交换0次，最多交换次数和比较次数一样，时间复杂度为O(n^2^)</p>
+<p>​        和输入数据排列有关，最小交换0次，最多交换次数和比较次数一样，时间复杂度为O(n^2^)</p>
 <ul>
 <li>效率：</li>
 </ul>
-<p>​		当在一轮排序过程中，未发生两个数字交换的时候，就可以不再进行后续几轮的排序。因此，冒泡排序在数据基本有序的情况下效率可以很高</p>
+<p>​        当在一轮排序过程中，未发生两个数字交换的时候，就可以不再进行后续几轮的排序。因此，冒泡排序在数据基本有序的情况下效率可以很高</p>
 <h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><p>循环结构:for i in range(N-1)</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">selection_sort</span>(<span class="params">A</span>): <span class="comment"># 选择排序</span></span><br><span class="line">    N = <span class="built_in">len</span>(A)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(N - <span class="number">1</span>): <span class="comment"># i控制排序的趟数</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(i + <span class="number">1</span>, N): <span class="comment"># j表示比较范围内元素下标</span></span><br><span class="line">            <span class="keyword">if</span> A[j] &lt; A[i]: <span class="comment"># 递增的条件</span></span><br><span class="line">                A[j], A[i] = A[i], A[j] <span class="comment"># 交换A[j],A[i]的值</span></span><br><span class="line">    <span class="keyword">return</span> A</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(selection_sort([<span class="number">12</span>, <span class="number">34</span>, <span class="number">28</span>, <span class="number">23</span>, <span class="number">6</span>]))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
 <p>思考：能否修改算法减少交换次数，实现每轮排序最多交换一次，如何实现？</p>
 <p>Selection Sort：简单排序，从待排序的数据中找到<strong>最小值</strong>（升序），或者最大值（降序），将其与序列<strong>最左边的数字进行交换</strong></p>
 <p>如果最小值本身在合适的位置上，本次就不在进行交换，开始第二轮交换</p>
 <ul>
 <li>比较次数：</li>
 </ul>
-<p>​		第一轮比较n-1次，第二轮比较n-2次，第n-1轮比较1次，总得比较次数为（n-1） + ……+1≈n^2^&#x2F;2</p>
+<p>​        第一轮比较n-1次，第二轮比较n-2次，第n-1轮比较1次，总得比较次数为（n-1） + ……+1≈n^2^/2</p>
 <ul>
 <li>交换次数：</li>
 </ul>
-<p>​		每轮中交换的次数最多是1次。输入数据排列是按照待排序顺序排序，则不需要进行任何交换，时间复杂度为O(n^2^)</p>
+<p>​        每轮中交换的次数最多是1次。输入数据排列是按照待排序顺序排序，则不需要进行任何交换，时间复杂度为O(n^2^)</p>
 <h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><p>Insert Sort：简单排序，从序列左端开始，将待排序的数据逐个插入到已排好序的数据中，是的插入后仍然有序</p>
 <p>待插入的数据和左边第一个已排好的相比</p>
-<p>#循环结构<br>for i in range(N):<br>    while j &gt;0</p>
-<p>#列表操作</p>
-<p>A.insert(i,x)#表示在列表中第i个位置插入元素x<br>A.pop(i)#表示从列表中弹出小标为i的元素，并且把它的值返回</p>
+<h1 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h1><p>for i in range(N):<br>    while j &gt;0</p>
+<h1 id="列表操作"><a href="#列表操作" class="headerlink" title="列表操作"></a>列表操作</h1><p>A.insert(i,x)#表示在列表中第i个位置插入元素x<br>A.pop(i)#表示从列表中弹出小标为i的元素，并且把它的值返回</p>
  <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">insert_sort</span>(<span class="params">A</span>): <span class="comment"># 插入排序</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(A)): <span class="comment"># 负责设置排序的趟数</span></span><br><span class="line">        j = i - <span class="number">1</span></span><br><span class="line">        temp = i</span><br><span class="line">        <span class="keyword">while</span> j &gt;= <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">if</span> A[temp] &lt; A[j]: <span class="comment"># 递增排序条件</span></span><br><span class="line">                A.insert(j, A.pop(temp))</span><br><span class="line">                temp = j</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            j = j - <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> A</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(insert_sort([<span class="number">12</span>, <span class="number">56</span>, <span class="number">22</span>, <span class="number">33</span>, <span class="number">1</span>, <span class="number">28</span>, <span class="number">21</span>, <span class="number">55</span>, <span class="number">6</span>]))</span><br></pre></td></tr></table></figure>
-
 <h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p>QuickSort：是对冒泡排序的一种改进</p>
 <p>首先随机选择一个基准值，然后将除了基准值以外的数分为“比基准值小的数”和“比基准值大的数”两个类别，再把基准值放到两个类别数中央。接着对两类别的数重复之前的操作</p>
 <p>随机选择左边的数为基准数，进行排序</p>
 <p>对序列中未比较其他数字都做重复的操作</p>
 <p>数据用列表表示，python中列表部分方法如下</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1224,7 +1240,8 @@
 <th>例子</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>append</td>
 <td>在列表末尾添加一项</td>
 <td>ls.append(x)</td>
@@ -1239,18 +1256,14 @@
 <td>链接两个列表</td>
 <td>ls+lt</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">quicksort</span>(<span class="params">A</span>):</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(A) &gt;= <span class="number">2</span>:  <span class="comment"># 递归出口</span></span><br><span class="line">        mid = A[<span class="number">0</span>]  <span class="comment"># 选择基准值，也可以选择中间值</span></span><br><span class="line">        A.remove(mid)</span><br><span class="line">        left, right = [], []</span><br><span class="line">        <span class="keyword">for</span> num <span class="keyword">in</span> A:</span><br><span class="line">            <span class="keyword">if</span> num &gt;= mid:</span><br><span class="line">                right.append(num)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                left.append(num)</span><br><span class="line">        <span class="keyword">return</span> quicksort(left) + [mid] + quicksort(right)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> A</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(quicksort([<span class="number">12</span>, <span class="number">3</span>, <span class="number">56</span>, <span class="number">10</span>, <span class="number">6</span>]))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
 <h3 id="查找和线性查找算法"><a href="#查找和线性查找算法" class="headerlink" title="查找和线性查找算法"></a>查找和线性查找算法</h3><p>查找：用关键字表示一个数据元素，查找时根据给定的某个值，在表中确定一个关键字的值等于给定值的记录或数据元素</p>
 <p>线性查找算法：又称顺序查找，是一种最简单的查找方法，它的基本思想是从第一个记录开始，逐个比较记录的关键字，直到给定的k值相等，则查找成功；若比较与文件中n个记录的关键字都不等，则查找失败。</p>
 <p>线性查找需要从一端开始不断地按照顺序检查数据，一一比较</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">linearsearch</span>(<span class="params">A, Key</span>):</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(A)):</span><br><span class="line">        <span class="keyword">if</span> A[i] == Key:</span><br><span class="line">            <span class="keyword">return</span> i</span><br><span class="line">        i = i + <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(linearsearch([<span class="number">12</span>, <span class="number">3</span>, <span class="number">45</span>, <span class="number">2</span>], <span class="number">45</span>))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
 ]]></content>
   </entry>
 </search>

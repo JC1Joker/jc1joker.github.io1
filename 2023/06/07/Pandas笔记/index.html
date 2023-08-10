@@ -19,12 +19,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"3kxr.me","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.17.0","exturl":false,"sidebar":{"position":"left","width":260,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="中国大学MOOC,python数据分析相关课程笔记–pandas部分">
+    <meta name="description" content="中国大学MOOC,python数据分析相关课程笔记—pandas部分">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Pandas笔记">
 <meta property="og:url" content="http://3kxr.me/2023/06/07/Pandas%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="3Kxr&#39;s Blog">
-<meta property="og:description" content="中国大学MOOC,python数据分析相关课程笔记–pandas部分">
+<meta property="og:description" content="中国大学MOOC,python数据分析相关课程笔记—pandas部分">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-06-07T03:56:19.000Z">
 <meta property="article:modified_time" content="2023-06-29T02:12:12.536Z">
@@ -600,35 +600,40 @@ if(canvas.getContext){
     
     
     <div class="post-body" itemprop="articleBody"><blockquote>
-<p>中国大学MOOC,python数据分析相关课程笔记–pandas部分</p>
-</blockquote>
-<span id="more"></span>
+<p>中国大学MOOC,python数据分析相关课程笔记—pandas部分<br><span id="more"></span></p>
 <h2 id="pandas库"><a href="#pandas库" class="headerlink" title="pandas库"></a>pandas库</h2><p>pd.Series()# pd.series是pandas中用于表示一维数据的数据结构</p>
+</blockquote>
 <p>d.cumsum()计算前n项累加和</p>
-<p>[^1]: axis &#x3D; 0 代表对横轴操作，也就是第0轴；axis &#x3D; 1 代表对纵轴操作，也就是第1轴；</p>
+<blockquote id="fn_1">
+<sup>1</sup>. axis = 0 代表对横轴操作，也就是第0轴；axis = 1 代表对纵轴操作，也就是第1轴；<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
+</blockquote>
 <h2 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h2><p>两个数据类型：Series，DataFrame</p>
 <p>基于商促数据类型的各类操作</p>
 <p>基本操作、运算操作、特征类操作、关联类操作</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">Numpy</th>
-<th align="center">Pandas</th>
+<th style="text-align:center">Numpy</th>
+<th style="text-align:center">Pandas</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">基础数据类型</td>
-<td align="center">扩展数据类型</td>
+<tbody>
+<tr>
+<td style="text-align:center">基础数据类型</td>
+<td style="text-align:center">扩展数据类型</td>
 </tr>
 <tr>
-<td align="center">关注数据的结构表达(数据之间的维度表达)</td>
-<td align="center">关注数据的应用表达</td>
+<td style="text-align:center">关注数据的结构表达(数据之间的维度表达)</td>
+<td style="text-align:center">关注数据的应用表达</td>
 </tr>
 <tr>
-<td align="center">基于<strong>维度</strong>的运算</td>
-<td align="center">基于<strong>索引</strong>的运算</td>
+<td style="text-align:center">基于<strong>维度</strong>的运算</td>
+<td style="text-align:center">基于<strong>索引</strong>的运算</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h2 id="series类型"><a href="#series类型" class="headerlink" title="series类型"></a>series类型</h2><p>由一组数据及与之相关的数据索引组成</p>
 <p>index_0  data_a</p>
 <p>index_1 data_b</p>
@@ -640,7 +645,6 @@ if(canvas.getContext){
 <li>其他函数，range()函数等</li>
 </ul>
 <h3 id="从ndarray类型创建"><a href="#从ndarray类型创建" class="headerlink" title="从ndarray类型创建"></a>从ndarray类型创建</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">n = pd.Serise(np.arange(<span class="number">5</span>))</span><br><span class="line"></span><br><span class="line">输出：</span><br><span class="line"><span class="number">0</span>  <span class="number">0</span></span><br><span class="line"><span class="number">1</span>  <span class="number">1</span> </span><br><span class="line"><span class="number">2</span>  <span class="number">2</span> </span><br><span class="line"><span class="number">3</span>  <span class="number">3</span> </span><br><span class="line"><span class="number">4</span>  <span class="number">4</span> </span><br></pre></td></tr></table></figure>
-
 <h2 id="Series类型对齐操作"><a href="#Series类型对齐操作" class="headerlink" title="Series类型对齐操作"></a>Series类型对齐操作</h2><p>Series+Series</p>
 <p>Series类型在运算中会自动对齐不同索引的数据</p>
 <h2 id="name属性-name"><a href="#name属性-name" class="headerlink" title="name属性(.name)"></a>name属性(.name)</h2><p>Series对象和索引都可以有一个名字，存储在属性.name中</p>
@@ -652,6 +656,7 @@ if(canvas.getContext){
 <h2 id="如何改变Series和DataFrame对象"><a href="#如何改变Series和DataFrame对象" class="headerlink" title="如何改变Series和DataFrame对象"></a>如何改变Series和DataFrame对象</h2><p>增加或重排：重新索引</p>
 <h3 id="重新索引"><a href="#重新索引" class="headerlink" title="重新索引"></a>重新索引</h3><p>.reindex()</p>
 <p>.reindex(希望排列之后的index关系)能够改变或者重排Series和DataFrame索引</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -659,7 +664,8 @@ if(canvas.getContext){
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>index,columns</td>
 <td>新的行列自定义索引</td>
 </tr>
@@ -679,10 +685,13 @@ if(canvas.getContext){
 <td>copy</td>
 <td>默认True，生成新的对象，False时，新旧相等不复刻</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h2 id="索引类型"><a href="#索引类型" class="headerlink" title="索引类型"></a>索引类型</h2><p>Series和DataFrame的索引时index类型</p>
 <p>index对象是不可修改类型</p>
 <p>常用方法</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -690,7 +699,8 @@ if(canvas.getContext){
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>.append(idx)</td>
 <td>连接另一个index对象，产生新的index对象</td>
 </tr>
@@ -714,13 +724,16 @@ if(canvas.getContext){
 <td>.insert(loc.e)</td>
 <td>在loc位置增加一个元素</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h2 id="删除指定索引对象"><a href="#删除指定索引对象" class="headerlink" title="删除指定索引对象"></a>删除指定索引对象</h2><p>.drop()能够删除Series和DataFrame指定行或列索引</p>
 <h2 id="pandas数据运算"><a href="#pandas数据运算" class="headerlink" title="pandas数据运算"></a>pandas数据运算</h2><p>算数运算法则</p>
 <p>算术运算根据行列索引，补齐后运算，运算默认产生浮点数</p>
 <p>补齐时缺项填充NaN（空值）</p>
 <p>二维和一维、一维和零维间的广播运算</p>
-<p>采用+-*&#x2F;符号进行的二元运算产生新的对象</p>
+<p>采用+-*/符号进行的二元运算产生新的对象</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -728,7 +741,8 @@ if(canvas.getContext){
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>.add(d,**argws)</td>
 <td>类型间加法运算，可选参数</td>
 </tr>
@@ -744,23 +758,26 @@ if(canvas.getContext){
 <td>.div(d,**argws)</td>
 <td>类型见除法运算，可选参数</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h2 id="比较运算法则"><a href="#比较运算法则" class="headerlink" title="比较运算法则"></a>比较运算法则</h2><p>比较运算只能比较相同索引的元素，不进行补齐。</p>
 <p>二维和一维、一维和零维间的广播运算</p>
-<p>采用&gt;&lt;&gt;&#x3D;&lt;&#x3D; &#x3D;&#x3D; !&#x3D;等符号进行的二元运算产生布尔对象</p>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>Series &#x3D; 索引+一维数据</p>
-<p>DataFrame &#x3D; 行列索引 + 二维数据</p>
+<p>采用&gt;&lt;&gt;=&lt;= == !=等符号进行的二元运算产生布尔对象</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>Series = 索引+一维数据</p>
+<p>DataFrame = 行列索引 + 二维数据</p>
 <p>理解数据类型与索引的关系，操作索引即操作数据</p>
 <p>像对待单一数据一样对待Series和DataFrame对象</p>
 <h2 id="数据排序"><a href="#数据排序" class="headerlink" title="数据排序"></a>数据排序</h2><p>.sort_index()方法在指定轴上根据索引进行排序，默认升序</p>
-<p>.sort_index(axis&#x3D;0,ascending&#x3D;True)</p>
-<p>ascending&#x3D;False降序</p>
+<p>.sort_index(axis=0,ascending=True)</p>
+<p>ascending=False降序</p>
 <p>.sort_values()方法在指定轴上根据数值进行排序，默认升序</p>
-<p>Serious.sort_values(axis&#x3D;0,ascending&#x3D;True)</p>
-<p>DataFrame.sort_values(<strong>by</strong>,axis&#x3D;0,ascending&#x3D;True)</p>
+<p>Serious.sort_values(axis=0,ascending=True)</p>
+<p>DataFrame.sort_values(<strong>by</strong>,axis=0,ascending=True)</p>
 <p>by:axis轴上的某个索引或索引列表</p>
 <p>NaN统一放到排序末尾</p>
 <h2 id="基本的统计分析函数"><a href="#基本的统计分析函数" class="headerlink" title="基本的统计分析函数"></a>基本的统计分析函数</h2><p>适用Series和DataFrame类型</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -768,7 +785,8 @@ if(canvas.getContext){
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>.sum()</td>
 <td>计算数据的总和</td>
 </tr>
@@ -788,17 +806,27 @@ if(canvas.getContext){
 <td>.min() .max()</td>
 <td>计算数据的最小值、最大值</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>统计汇总</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
 <th>.describe</th>
-<th>针对0轴(各列)的统计汇总[^1]</th>
+<th>针对0轴(各列)的统计汇总<sup><a href="#fn_1" id="reffn_1">1</a></sup></th>
 </tr>
 </thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
 </table>
+</div>
 <p>累计统计分析函数</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -806,7 +834,8 @@ if(canvas.getContext){
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>.cumsum()</td>
 <td>依次给出前1、2、……、n个数的和</td>
 </tr>
@@ -822,8 +851,11 @@ if(canvas.getContext){
 <td>.cummin()</td>
 <td>依次给出前1、2、……、n个数的最小值</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>滚动计算（窗口计算）</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -831,7 +863,8 @@ if(canvas.getContext){
 <th>说明（跨行运算）</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>.rolling(w).sum()</td>
 <td>依次计算相邻w个元素的和</td>
 </tr>
@@ -851,7 +884,9 @@ if(canvas.getContext){
 <td>.rowing(w).main().max()</td>
 <td>以此计算相邻w个元素的最小值和最大值</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h2 id="相关分析"><a href="#相关分析" class="headerlink" title="相关分析"></a>相关分析</h2><p>两个事物，表示x和y，如何判断它们之间的存在相关性</p>
 <p><strong>相关性</strong></p>
 <ul>
@@ -1063,6 +1098,12 @@ darkmode.showWidget();
   <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
 
 
 <script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
