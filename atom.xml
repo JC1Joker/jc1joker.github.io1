@@ -6,7 +6,7 @@
   <link href="http://3kxr.me/atom.xml" rel="self"/>
   
   <link href="http://3kxr.me/"/>
-  <updated>2023-08-01T13:31:49.170Z</updated>
+  <updated>2023-09-09T03:59:55.487Z</updated>
   <id>http://3kxr.me/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>win10系统开启相关功能</title>
+    <link href="http://3kxr.me/2023/09/09/win10%E7%B3%BB%E7%BB%9Fbug%E6%B1%87%E6%80%BB/"/>
+    <id>http://3kxr.me/2023/09/09/win10%E7%B3%BB%E7%BB%9Fbug%E6%B1%87%E6%80%BB/</id>
+    <published>2023-09-09T03:57:19.000Z</published>
+    <updated>2023-09-09T03:59:55.487Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="win10" scheme="http://3kxr.me/categories/win10/"/>
+    
+    
+    <category term="win10" scheme="http://3kxr.me/tags/win10/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux中开启ssh的配置😎🐱‍💻</title>
@@ -150,7 +175,7 @@
     <link href="http://3kxr.me/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
     <id>http://3kxr.me/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</id>
     <published>2023-06-20T02:10:39.000Z</published>
-    <updated>2023-09-08T08:12:52.536Z</updated>
+    <updated>2023-09-08T08:27:59.797Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/anaconda.png&quot; alt&gt;&lt;/p&gt;
