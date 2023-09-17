@@ -390,6 +390,137 @@
       </tags>
   </entry>
   <entry>
+    <title>conda的使用技巧</title>
+    <url>/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/anaconda.png" alt></p>
+<blockquote>
+<p>anaconda的换源，创建环境</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="Win常用conda命令"><a href="#Win常用conda命令" class="headerlink" title="Win常用conda命令"></a>Win常用conda命令</h1><h2 id="1-查看当前环境下安装的工具"><a href="#1-查看当前环境下安装的工具" class="headerlink" title="1.查看当前环境下安装的工具"></a>1.查看当前环境下安装的工具</h2><blockquote>
+<p>pip list</p>
+</blockquote>
+<p>或</p>
+<blockquote>
+<p>conda list</p>
+</blockquote>
+<h2 id="2-创建虚拟环境"><a href="#2-创建虚拟环境" class="headerlink" title="2.创建虚拟环境"></a>2.创建虚拟环境</h2><blockquote>
+<p>conda create —name[环境名称]</p>
+</blockquote>
+<p>例</p>
+<blockquote>
+<p>conda create —name hacker</p>
+<p><code>conda create -n 新的环境名 python=指定版本（2.7/3.6/3.7）</code> # 注意需要在base中运行，不能在虚拟环境中执行</p>
+</blockquote>
+<p>即可创建一个名为hacker的虚拟环境</p>
+<h2 id="3-修改环境名称"><a href="#3-修改环境名称" class="headerlink" title="3.修改环境名称"></a>3.修改环境名称</h2><blockquote>
+<p>conda create —name newName（新环境名） —clone oldName（旧环境名）</p>
+</blockquote>
+<h2 id="4-删除环境"><a href="#4-删除环境" class="headerlink" title="4.删除环境"></a>4.删除环境</h2><blockquote>
+<p>conda remove —name oldName（旧环境名） —all </p>
+</blockquote>
+<h2 id="5-查看虚拟环境"><a href="#5-查看虚拟环境" class="headerlink" title="5.查看虚拟环境"></a>5.查看虚拟环境</h2><blockquote>
+<p>conda env list</p>
+<p>conda info -e</p>
+</blockquote>
+<p>其中带有<strong>* </strong>的表示当前所用的环境</p>
+<h2 id="6-切换环境"><a href="#6-切换环境" class="headerlink" title="6.切换环境"></a>6.切换环境</h2><p>使用activate(激活)加上要切换的环境名称，即可切换</p>
+<blockquote>
+<p>conda activate[环境名称]</p>
+</blockquote>
+<p>例</p>
+<blockquote>
+<p>conda activate learn </p>
+</blockquote>
+<h2 id="7-退出虚拟环境"><a href="#7-退出虚拟环境" class="headerlink" title="7.退出虚拟环境"></a>7.退出虚拟环境</h2><blockquote>
+<p>conda deactivate</p>
+</blockquote>
+<h2 id="8-移除虚拟环境"><a href="#8-移除虚拟环境" class="headerlink" title="8.移除虚拟环境"></a>8.移除虚拟环境</h2><blockquote>
+<p>conda remove —name [环境] —all</p>
+</blockquote>
+<p>例</p>
+<blockquote>
+<p>conda remove —name learn —all</p>
+</blockquote>
+<h2 id="9-包的安装"><a href="#9-包的安装" class="headerlink" title="9.包的安装"></a>9.包的安装</h2><p>（无需进入环境）</p>
+<blockquote>
+<p>conda install [包名] -n [环境名]</p>
+</blockquote>
+<h2 id="10-包的更新"><a href="#10-包的更新" class="headerlink" title="10.包的更新"></a>10.包的更新</h2><blockquote>
+<p>conda update —all</p>
+</blockquote>
+<h2 id="11-包的删除"><a href="#11-包的删除" class="headerlink" title="11.包的删除"></a>11.包的删除</h2><blockquote>
+<p>conda remove [包名]</p>
+</blockquote>
+<h2 id="12-查看可以安装的python版本"><a href="#12-查看可以安装的python版本" class="headerlink" title="12.查看可以安装的python版本"></a>12.查看可以安装的python版本</h2><blockquote>
+<p> conda search —full-name python`</p>
+</blockquote>
+<h2 id="13-镜像源"><a href="#13-镜像源" class="headerlink" title="13.镜像源"></a>13.镜像源</h2><h3 id="查看当前conda源"><a href="#查看当前conda源" class="headerlink" title="查看当前conda源"></a>查看当前conda源</h3><blockquote>
+<p>conda config —show</p>
+</blockquote>
+<h3 id="恢复默认源"><a href="#恢复默认源" class="headerlink" title="恢复默认源"></a>恢复默认源</h3><blockquote>
+<p>conda config —remove-key channels</p>
+</blockquote>
+<h3 id="中科大源"><a href="#中科大源" class="headerlink" title="中科大源"></a>中科大源</h3><p>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/pkgs/main/">https://mirrors.ustc.edu.cn/anaconda/pkgs/main/</a><br>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/pkgs/free/">https://mirrors.ustc.edu.cn/anaconda/pkgs/free/</a><br>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/">https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/</a><br>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/">https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/</a><br>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/">https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/</a><br>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/">https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/</a><br>conda config —set show_channel_urls yes</p>
+<h3 id="清华源"><a href="#清华源" class="headerlink" title="清华源"></a>清华源</h3><p>conda config —add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/</a><br>conda config —add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge</a><br>conda config —add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</a><br>conda config —add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/</a><br>conda config —add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</a><br>conda config —set show_channel_urls yes</p>
+<h3 id="腾讯云"><a href="#腾讯云" class="headerlink" title="腾讯云"></a>腾讯云</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda config --add channels https://mirrors.cloud.tencent.com/anaconda/pkgs/free/</span><br><span class="line">conda config --add channels https://mirrors.cloud.tencent.com/anaconda/pkgs/main/</span><br><span class="line">conda config --set show_channel_urls yes</span><br></pre></td></tr></table></figure>
+<h2 id="14清理conda缓存"><a href="#14清理conda缓存" class="headerlink" title="14清理conda缓存"></a>14清理conda缓存</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda clean -p     </span><br><span class="line">conda clean -t      </span><br><span class="line">conda clean -y -all </span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash">删除没有用的包 --packages</span></span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash">删除tar打包 --tarballs</span></span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash">删除所有的安装包及cache(索引缓存、锁定文件、未使用过的包和tar包)</span></span><br></pre></td></tr></table></figure>
+<h2 id="15-pip国内源"><a href="#15-pip国内源" class="headerlink" title="15.pip国内源"></a>15.pip国内源</h2><p>阿里云 ：<a href="http://mirrors.aliyun.com/pypi/simple/">http://mirrors.aliyun.com/pypi/simple/</a><br>中国科技大学： <a href="https://pypi.mirrors.ustc.edu.cn/simple/">https://pypi.mirrors.ustc.edu.cn/simple/</a><br>豆瓣(douban) ：<a href="http://pypi.douban.com/simple/">http://pypi.douban.com/simple/</a><br>清华大学 ：<a href="https://pypi.tuna.tsinghua.edu.cn/simple/">https://pypi.tuna.tsinghua.edu.cn/simple/</a><br>中国科学技术大学： <a href="http://pypi.mirrors.ustc.edu.cn/simple/">http://pypi.mirrors.ustc.edu.cn/simple/</a></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">使用豆瓣源安装</span></span><br><span class="line">pip install opencv-python -i http://pypi.douban.com/simple </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">报错说不信任该源，执行如下：</span></span><br><span class="line">pip install opencv-python -i http://pypi.douban.com/simple --trusted-host pypi.douban.com</span><br></pre></td></tr></table></figure>
+<h2 id="16-修改python版本"><a href="#16-修改python版本" class="headerlink" title="16.修改python版本"></a>16.修改python版本</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">1.新建一个anaconda虚拟环境，指定Python版本</span></span><br><span class="line">conda create -n envTest python=3.5</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">2.直接将现有的anaconda中python更改为3.5</span></span><br><span class="line">sudo conda install python=3.5</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">3.下载并安装对应Python版本的anaconda，anaconda4.2-&gt;python3.5</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">https://repo.continuum.io/archive/</span></span><br></pre></td></tr></table></figure>
+<h2 id="17-打开交互界面"><a href="#17-打开交互界面" class="headerlink" title="17.打开交互界面"></a>17.打开交互界面</h2><blockquote>
+<p>anaconda-navigator</p>
+</blockquote>
+<h2 id="18-临时更换pip源"><a href="#18-临时更换pip源" class="headerlink" title="18.临时更换pip源"></a>18.临时更换pip源</h2><blockquote>
+<p>pip install 库 -i <a href="http://pypi.douban.com/simple">http://pypi.douban.com/simple</a> —trusted-host pypi.douban.com</p>
+</blockquote>
+<h2 id="19-修改python版本"><a href="#19-修改python版本" class="headerlink" title="19.修改python版本"></a>19.修改python版本</h2><blockquote>
+<p>conda install python=3.5</p>
+<p>当出现Solving environment: failed with initial frozen solve. Retrying with flexible solve.</p>
+<p>conda uninstall python</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Shell</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>docker基础命令</title>
+    <url>/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/Docker.png" alt></p>
+<blockquote>
+<p>docker的基础命令<br><span id="more"></span></p>
+</blockquote>
+<p>docker pull 安装镜像</p>
+<p>docker run 运行镜像</p>
+<p>docker container run</p>
+<p>说明：</p>
+<p>创建好image后，新建容器时使用；</p>
+<p>每次运行，都会创建一个新的容器；</p>
+<p>新建的容器可以通过 docker container ls -a 或者 docker ps -a 查看（加 -a 表示查看所有创建好的容器）；</p>
+<p>每次创建会返回一个【长的容器ID】；</p>
+<p>通常情况下，运行一次即可；</p>
+<p>docker containers list -a 查看当前运行的所有镜像</p>
+<p>docker exec -it 【docker的名称】 bash  进入docker运行的bash环境中</p>
+<p>docker container start 【containerID】运行已经创建的容器</p>
+<p>docker ps -a 查看所有容器</p>
+<p>docker stop 【containerID】</p>
+<p>docker rm 【containerID】（先停止容器后才能删除）</p>
+<p>docker export 制作基础镜像，使用 <strong>docker export</strong> 命令根据容器 <strong>ID</strong> 将镜像导出成一个文件</p>
+<p>docker import - new_hangger_server &lt; hangger_server.tar 将这个镜像文件导入进来。</p>
+<p>docker load 载入镜像</p>
+]]></content>
+      <categories>
+        <category>docker</category>
+      </categories>
+      <tags>
+        <tag>docker</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Pandas笔记</title>
     <url>/2023/06/07/Pandas%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -699,155 +830,12 @@
       </tags>
   </entry>
   <entry>
-    <title>conda的使用技巧</title>
-    <url>/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/anaconda.png" alt></p>
-<blockquote>
-<p>anaconda的换源，创建环境</p>
-</blockquote>
-<span id="more"></span>
-<h1 id="Win常用conda命令"><a href="#Win常用conda命令" class="headerlink" title="Win常用conda命令"></a>Win常用conda命令</h1><h2 id="1-查看当前环境下安装的工具"><a href="#1-查看当前环境下安装的工具" class="headerlink" title="1.查看当前环境下安装的工具"></a>1.查看当前环境下安装的工具</h2><blockquote>
-<p>pip list</p>
-</blockquote>
-<p>或</p>
-<blockquote>
-<p>conda list</p>
-</blockquote>
-<h2 id="2-创建虚拟环境"><a href="#2-创建虚拟环境" class="headerlink" title="2.创建虚拟环境"></a>2.创建虚拟环境</h2><blockquote>
-<p>conda create —name[环境名称]</p>
-</blockquote>
-<p>例</p>
-<blockquote>
-<p>conda create —name hacker</p>
-<p><code>conda create -n 新的环境名 python=指定版本（2.7/3.6/3.7）</code> # 注意需要在base中运行，不能在虚拟环境中执行</p>
-</blockquote>
-<p>即可创建一个名为hacker的虚拟环境</p>
-<h2 id="3-修改环境名称"><a href="#3-修改环境名称" class="headerlink" title="3.修改环境名称"></a>3.修改环境名称</h2><blockquote>
-<p>conda create —name newName（新环境名） —clone oldName（旧环境名）</p>
-</blockquote>
-<h2 id="4-删除环境"><a href="#4-删除环境" class="headerlink" title="4.删除环境"></a>4.删除环境</h2><blockquote>
-<p>conda remove —name oldName（旧环境名） —all </p>
-</blockquote>
-<h2 id="5-查看虚拟环境"><a href="#5-查看虚拟环境" class="headerlink" title="5.查看虚拟环境"></a>5.查看虚拟环境</h2><blockquote>
-<p>conda env list</p>
-<p>conda info -e</p>
-</blockquote>
-<p>其中带有<strong>* </strong>的表示当前所用的环境</p>
-<h2 id="6-切换环境"><a href="#6-切换环境" class="headerlink" title="6.切换环境"></a>6.切换环境</h2><p>使用activate(激活)加上要切换的环境名称，即可切换</p>
-<blockquote>
-<p>conda activate[环境名称]</p>
-</blockquote>
-<p>例</p>
-<blockquote>
-<p>conda activate learn </p>
-</blockquote>
-<h2 id="7-退出虚拟环境"><a href="#7-退出虚拟环境" class="headerlink" title="7.退出虚拟环境"></a>7.退出虚拟环境</h2><blockquote>
-<p>conda deactivate</p>
-</blockquote>
-<h2 id="8-移除虚拟环境"><a href="#8-移除虚拟环境" class="headerlink" title="8.移除虚拟环境"></a>8.移除虚拟环境</h2><blockquote>
-<p>conda remove —name [环境] —all</p>
-</blockquote>
-<p>例</p>
-<blockquote>
-<p>conda remove —name learn —all</p>
-</blockquote>
-<h2 id="9-包的安装"><a href="#9-包的安装" class="headerlink" title="9.包的安装"></a>9.包的安装</h2><p>（无需进入环境）</p>
-<blockquote>
-<p>conda install [包名] -n [环境名]</p>
-</blockquote>
-<h2 id="10-包的更新"><a href="#10-包的更新" class="headerlink" title="10.包的更新"></a>10.包的更新</h2><blockquote>
-<p>conda update —all</p>
-</blockquote>
-<h2 id="11-包的删除"><a href="#11-包的删除" class="headerlink" title="11.包的删除"></a>11.包的删除</h2><blockquote>
-<p>conda remove [包名]</p>
-</blockquote>
-<h2 id="12-查看可以安装的python版本"><a href="#12-查看可以安装的python版本" class="headerlink" title="12.查看可以安装的python版本"></a>12.查看可以安装的python版本</h2><blockquote>
-<p> conda search —full-name python`</p>
-</blockquote>
-<h2 id="13-镜像源"><a href="#13-镜像源" class="headerlink" title="13.镜像源"></a>13.镜像源</h2><h3 id="查看当前conda源"><a href="#查看当前conda源" class="headerlink" title="查看当前conda源"></a>查看当前conda源</h3><blockquote>
-<p>conda config —show</p>
-</blockquote>
-<h3 id="恢复默认源"><a href="#恢复默认源" class="headerlink" title="恢复默认源"></a>恢复默认源</h3><blockquote>
-<p>conda config —remove-key channels</p>
-</blockquote>
-<h3 id="中科大源"><a href="#中科大源" class="headerlink" title="中科大源"></a>中科大源</h3><p>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/pkgs/main/">https://mirrors.ustc.edu.cn/anaconda/pkgs/main/</a><br>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/pkgs/free/">https://mirrors.ustc.edu.cn/anaconda/pkgs/free/</a><br>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/">https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/</a><br>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/">https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/</a><br>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/">https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/</a><br>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/">https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/</a><br>conda config —set show_channel_urls yes</p>
-<h3 id="清华源"><a href="#清华源" class="headerlink" title="清华源"></a>清华源</h3><p>conda config —add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/</a><br>conda config —add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge</a><br>conda config —add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</a><br>conda config —add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/</a><br>conda config —add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</a><br>conda config —set show_channel_urls yes</p>
-<h3 id="腾讯云"><a href="#腾讯云" class="headerlink" title="腾讯云"></a>腾讯云</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda config --add channels https://mirrors.cloud.tencent.com/anaconda/pkgs/free/</span><br><span class="line">conda config --add channels https://mirrors.cloud.tencent.com/anaconda/pkgs/main/</span><br><span class="line">conda config --set show_channel_urls yes</span><br></pre></td></tr></table></figure>
-<h2 id="14清理conda缓存"><a href="#14清理conda缓存" class="headerlink" title="14清理conda缓存"></a>14清理conda缓存</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda clean -p     </span><br><span class="line">conda clean -t      </span><br><span class="line">conda clean -y -all </span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash">删除没有用的包 --packages</span></span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash">删除tar打包 --tarballs</span></span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash">删除所有的安装包及cache(索引缓存、锁定文件、未使用过的包和tar包)</span></span><br></pre></td></tr></table></figure>
-<h2 id="15-pip国内源"><a href="#15-pip国内源" class="headerlink" title="15.pip国内源"></a>15.pip国内源</h2><p>阿里云 ：<a href="http://mirrors.aliyun.com/pypi/simple/">http://mirrors.aliyun.com/pypi/simple/</a><br>中国科技大学： <a href="https://pypi.mirrors.ustc.edu.cn/simple/">https://pypi.mirrors.ustc.edu.cn/simple/</a><br>豆瓣(douban) ：<a href="http://pypi.douban.com/simple/">http://pypi.douban.com/simple/</a><br>清华大学 ：<a href="https://pypi.tuna.tsinghua.edu.cn/simple/">https://pypi.tuna.tsinghua.edu.cn/simple/</a><br>中国科学技术大学： <a href="http://pypi.mirrors.ustc.edu.cn/simple/">http://pypi.mirrors.ustc.edu.cn/simple/</a></p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">使用豆瓣源安装</span></span><br><span class="line">pip install opencv-python -i http://pypi.douban.com/simple </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">报错说不信任该源，执行如下：</span></span><br><span class="line">pip install opencv-python -i http://pypi.douban.com/simple --trusted-host pypi.douban.com</span><br></pre></td></tr></table></figure>
-<h2 id="16-修改python版本"><a href="#16-修改python版本" class="headerlink" title="16.修改python版本"></a>16.修改python版本</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">1.新建一个anaconda虚拟环境，指定Python版本</span></span><br><span class="line">conda create -n envTest python=3.5</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">2.直接将现有的anaconda中python更改为3.5</span></span><br><span class="line">sudo conda install python=3.5</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">3.下载并安装对应Python版本的anaconda，anaconda4.2-&gt;python3.5</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">https://repo.continuum.io/archive/</span></span><br></pre></td></tr></table></figure>
-<h2 id="17-打开交互界面"><a href="#17-打开交互界面" class="headerlink" title="17.打开交互界面"></a>17.打开交互界面</h2><blockquote>
-<p>anaconda-navigator</p>
-</blockquote>
-<h2 id="18-临时更换pip源"><a href="#18-临时更换pip源" class="headerlink" title="18.临时更换pip源"></a>18.临时更换pip源</h2><blockquote>
-<p>pip install 库 -i <a href="http://pypi.douban.com/simple">http://pypi.douban.com/simple</a> —trusted-host pypi.douban.com</p>
-</blockquote>
-<h2 id="19-修改python版本"><a href="#19-修改python版本" class="headerlink" title="19.修改python版本"></a>19.修改python版本</h2><blockquote>
-<p>conda install python=3.5</p>
-<p>当出现Solving environment: failed with initial frozen solve. Retrying with flexible solve.</p>
-<p>conda uninstall python</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Shell</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>docker基础命令</title>
-    <url>/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/Docker.png" alt></p>
-<blockquote>
-<p>docker的基础命令<br><span id="more"></span></p>
-</blockquote>
-<p>docker pull 安装镜像</p>
-<p>docker run 运行镜像</p>
-<p>docker container run</p>
-<p>说明：</p>
-<p>创建好image后，新建容器时使用；</p>
-<p>每次运行，都会创建一个新的容器；</p>
-<p>新建的容器可以通过 docker container ls -a 或者 docker ps -a 查看（加 -a 表示查看所有创建好的容器）；</p>
-<p>每次创建会返回一个【长的容器ID】；</p>
-<p>通常情况下，运行一次即可；</p>
-<p>docker containers list -a 查看当前运行的所有镜像</p>
-<p>docker exec -it 【docker的名称】 bash  进入docker运行的bash环境中</p>
-<p>docker container start 【containerID】运行已经创建的容器</p>
-<p>docker ps -a 查看所有容器</p>
-<p>docker stop 【containerID】</p>
-<p>docker rm 【containerID】（先停止容器后才能删除）</p>
-<p>docker export 制作基础镜像，使用 <strong>docker export</strong> 命令根据容器 <strong>ID</strong> 将镜像导出成一个文件</p>
-<p>docker import - new_hangger_server &lt; hangger_server.tar 将这个镜像文件导入进来。</p>
-<p>docker load 载入镜像</p>
-]]></content>
-      <categories>
-        <category>docker</category>
-      </categories>
-      <tags>
-        <tag>docker</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>关于最近一些事的思考</title>
     <url>/2023/06/09/%E5%85%B3%E4%BA%8E%E6%9C%80%E8%BF%91%E4%B8%80%E4%BA%9B%E4%BA%8B%E7%9A%84%E6%80%9D%E8%80%83/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  可能是因为学了计算机的缘故，我对任何事情都开始变得更加注重细节和准确性。无论是什么事情，我都希望能够弄清楚每一个细节。就像要求甲方必须清楚描述要做什么、有哪些具体需求，以及不可做什么等等。只有在明确了相关事情之后，我才能够着手进行第一步。我也非常感激自己拥有这种能力，因为有时候如果不去认真对待事情，最终吃亏的往往会是自己。</p>
 ]]></content>
       <tags>
         <tag>随想</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于hexo博客出现err: Error: Spawn failed的解决方案</title>
-    <url>/2023/09/15/%E5%85%B3%E4%BA%8Ehexo%E5%8D%9A%E5%AE%A2%E5%87%BA%E7%8E%B0err-Error-Spawn-failed%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="关于hexo博客出现err-Error-Spawn-failed的解决方案"><a href="#关于hexo博客出现err-Error-Spawn-failed的解决方案" class="headerlink" title="关于hexo博客出现err: Error: Spawn failed的解决方案"></a>关于hexo博客出现err: Error: Spawn failed的解决方案</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">##进入站点根目录</span></span><br><span class="line"><span class="built_in">cd</span> /usr/local/src/hexo/hanyubolg/</span><br><span class="line"></span><br><span class="line"><span class="comment">##删除git提交内容文件夹</span></span><br><span class="line"><span class="built_in">rm</span> -rf .deploy_git/</span><br><span class="line"></span><br><span class="line"><span class="comment">##执行</span></span><br><span class="line">git config --global core.autocrlf <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">##最后</span></span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>bug汇总</category>
-      </categories>
-      <tags>
-        <tag>bug</tag>
       </tags>
   </entry>
   <entry>
@@ -890,6 +878,18 @@
       </tags>
   </entry>
   <entry>
+    <title>关于hexo博客出现err: Error: Spawn failed的解决方案</title>
+    <url>/2023/09/15/%E5%85%B3%E4%BA%8Ehexo%E5%8D%9A%E5%AE%A2%E5%87%BA%E7%8E%B0err-Error-Spawn-failed%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="关于hexo博客出现err-Error-Spawn-failed的解决方案"><a href="#关于hexo博客出现err-Error-Spawn-failed的解决方案" class="headerlink" title="关于hexo博客出现err: Error: Spawn failed的解决方案"></a>关于hexo博客出现err: Error: Spawn failed的解决方案</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">##进入站点根目录</span></span><br><span class="line"><span class="built_in">cd</span> /usr/local/src/hexo/hanyubolg/</span><br><span class="line"></span><br><span class="line"><span class="comment">##删除git提交内容文件夹</span></span><br><span class="line"><span class="built_in">rm</span> -rf .deploy_git/</span><br><span class="line"></span><br><span class="line"><span class="comment">##执行</span></span><br><span class="line">git config --global core.autocrlf <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">##最后</span></span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>bug汇总</category>
+      </categories>
+      <tags>
+        <tag>bug</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>文案收集(更新中)</title>
     <url>/2023/06/25/%E6%96%87%E6%A1%88%E6%94%B6%E9%9B%86/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -911,6 +911,65 @@
       <tags>
         <tag>随想</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>饿补计算机科学基础（一）--计算机基础</title>
+    <url>/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>计算机基础，常识<br><span id="more"></span></p>
+<h2 id="1-计算思维概念"><a href="#1-计算思维概念" class="headerlink" title="1.计算思维概念"></a>1.计算思维概念</h2><p>特点：抽象、自动化</p>
+<p>计算思维： </p>
+<ul>
+<li>递归</li>
+<li>抽象和分解</li>
+<li>启发式推理</li>
+<li>冗余、容错、纠错</li>
+</ul>
+<p>抽象：完全超越物理的时空观，并完全用符号来表示</p>
+<p>自动化：表示形式应该有效地被信息处理代理执行</p>
+<h2 id="1-1符号化信息表达"><a href="#1-1符号化信息表达" class="headerlink" title="1.1符号化信息表达"></a>1.1符号化信息表达</h2><p>数值型和非数值型对象</p>
+<p>数值和非数值—符号化—&gt; 符号化编码 —语义化—&gt; 数值和非数值</p>
+<h2 id="1-2数值数据表示"><a href="#1-2数值数据表示" class="headerlink" title="1.2数值数据表示"></a>1.2数值数据表示</h2><p>数值型数据的表示</p>
+<p>进制转换：位权转换</p>
+<p>原码：负数原码的符号位为1</p>
+<p>反码：负数的反码为将原码除符号位外按位取反</p>
+<p>补码：负数的补码为将反码加1</p>
+<h2 id="1-3字符型数据的表示"><a href="#1-3字符型数据的表示" class="headerlink" title="1.3字符型数据的表示"></a>1.3字符型数据的表示</h2><h4 id="英文字符的表示"><a href="#英文字符的表示" class="headerlink" title="英文字符的表示"></a>英文字符的表示</h4><p>ASCII码-美国信息交换标准代码</p>
+<p>可表示128个不同字符：10数字、26个英文字母小写、26个英文字母大写、其他特殊符号</p>
+<p>a：97、A：65</p>
+<p>内存中用一个字节来存放一个ASCII码，最高位为校验位</p>
+<h4 id="汉字字符的表示"><a href="#汉字字符的表示" class="headerlink" title="汉字字符的表示"></a>汉字字符的表示</h4><p>GB2312-80国标码：</p>
+<p>机内码：汉字被计算机系统内部处理和存储而使用的代码</p>
+<p>GB18030-2005《信息技术中文编码字符集》：</p>
+<p>采用多字节编码</p>
+<h4 id="国际字符的表示"><a href="#国际字符的表示" class="headerlink" title="国际字符的表示"></a>国际字符的表示</h4><p>Unicode字符集编码：解决需要满足多语言、跨平台</p>
+<h4 id="字符的输入、输出"><a href="#字符的输入、输出" class="headerlink" title="字符的输入、输出"></a>字符的输入、输出</h4><p>输入码：在键盘上利用数字、符号、字母输入相应的字符</p>
+<p>汉字输入码“在键盘上利用数字、符号、拼音字母输入汉字的代码</p>
+<p>形码类（五笔）、音码类（拼音输入法）</p>
+<p>字符的输出：字形码，记录字符形状</p>
+<p>点阵规模用0和1编码无亮点和有亮点形成字形信息，便于显示。</p>
+<p>点阵的方式：16 <em> 16 / 32 </em> 32 / 48 * 48</p>
+<h2 id="1-4多媒体信息的表示"><a href="#1-4多媒体信息的表示" class="headerlink" title="1.4多媒体信息的表示"></a>1.4多媒体信息的表示</h2><p>模拟量：在时间或者数值上都是连续的物理量</p>
+<p>数字量：在时间上或数量上都是离散的物理量（例如：计步器）</p>
+<p>图形：==矢量==图形文件形式存储，圆，直线、曲线等图形元素</p>
+<p>图像：==模拟==信号，通过数字照相机、摄像机捕捉的自然界真实场景画面产生的影像，数字化后以==点阵==（位图）的形式存储</p>
+<h4 id="图像数字化方法"><a href="#图像数字化方法" class="headerlink" title="图像数字化方法"></a>图像数字化方法</h4><ol>
+<li><p>将连续色调的模拟图像经过采样、量化后转成数字影像（编码）</p>
+</li>
+<li><p>采样：将二位空间上连续的图像转换为离散点的过程，将图像按照行列分割成m * n个网格，每个网格对应一个像素</p>
+<p>图像分辨率</p>
+</li>
+<li><p>量化：图像离散化后，用有限个数的整数值来表示图像色彩浓淡连续变化值的过程</p>
+</li>
+</ol>
+<p>量化级数：量化时所确定的离散取值个数</p>
+<p>量化位数：表示量化的色彩值（或亮度）所需要的二进制位数，一般可以用8位，16位，32位</p>
+<p>注意：2^24^ ≈ 16Mb</p>
+<h3 id="1-4-2声音的数字化"><a href="#1-4-2声音的数字化" class="headerlink" title="1.4.2声音的数字化"></a>1.4.2声音的数字化</h3><p>声音数字化过程：采样、量化、编码</p>
+<p>采样频率：每秒钟采样点的次数（Hz）</p>
+<p>声道数</p>
+<p>记录每秒存储声音容量公式为</p>
+<p>采样频率 X 量化位数（bit） ➗ 8 X 声道数 = 每秒数据量</p>
+]]></content>
   </entry>
   <entry>
     <title>请求响应报头相关名词解释</title>
@@ -981,65 +1040,6 @@
       <tags>
         <tag>计算机网络</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>饿补计算机科学基础（一）--计算机基础</title>
-    <url>/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>计算机基础，常识<br><span id="more"></span></p>
-<h2 id="1-计算思维概念"><a href="#1-计算思维概念" class="headerlink" title="1.计算思维概念"></a>1.计算思维概念</h2><p>特点：抽象、自动化</p>
-<p>计算思维： </p>
-<ul>
-<li>递归</li>
-<li>抽象和分解</li>
-<li>启发式推理</li>
-<li>冗余、容错、纠错</li>
-</ul>
-<p>抽象：完全超越物理的时空观，并完全用符号来表示</p>
-<p>自动化：表示形式应该有效地被信息处理代理执行</p>
-<h2 id="1-1符号化信息表达"><a href="#1-1符号化信息表达" class="headerlink" title="1.1符号化信息表达"></a>1.1符号化信息表达</h2><p>数值型和非数值型对象</p>
-<p>数值和非数值—符号化—&gt; 符号化编码 —语义化—&gt; 数值和非数值</p>
-<h2 id="1-2数值数据表示"><a href="#1-2数值数据表示" class="headerlink" title="1.2数值数据表示"></a>1.2数值数据表示</h2><p>数值型数据的表示</p>
-<p>进制转换：位权转换</p>
-<p>原码：负数原码的符号位为1</p>
-<p>反码：负数的反码为将原码除符号位外按位取反</p>
-<p>补码：负数的补码为将反码加1</p>
-<h2 id="1-3字符型数据的表示"><a href="#1-3字符型数据的表示" class="headerlink" title="1.3字符型数据的表示"></a>1.3字符型数据的表示</h2><h4 id="英文字符的表示"><a href="#英文字符的表示" class="headerlink" title="英文字符的表示"></a>英文字符的表示</h4><p>ASCII码-美国信息交换标准代码</p>
-<p>可表示128个不同字符：10数字、26个英文字母小写、26个英文字母大写、其他特殊符号</p>
-<p>a：97、A：65</p>
-<p>内存中用一个字节来存放一个ASCII码，最高位为校验位</p>
-<h4 id="汉字字符的表示"><a href="#汉字字符的表示" class="headerlink" title="汉字字符的表示"></a>汉字字符的表示</h4><p>GB2312-80国标码：</p>
-<p>机内码：汉字被计算机系统内部处理和存储而使用的代码</p>
-<p>GB18030-2005《信息技术中文编码字符集》：</p>
-<p>采用多字节编码</p>
-<h4 id="国际字符的表示"><a href="#国际字符的表示" class="headerlink" title="国际字符的表示"></a>国际字符的表示</h4><p>Unicode字符集编码：解决需要满足多语言、跨平台</p>
-<h4 id="字符的输入、输出"><a href="#字符的输入、输出" class="headerlink" title="字符的输入、输出"></a>字符的输入、输出</h4><p>输入码：在键盘上利用数字、符号、字母输入相应的字符</p>
-<p>汉字输入码“在键盘上利用数字、符号、拼音字母输入汉字的代码</p>
-<p>形码类（五笔）、音码类（拼音输入法）</p>
-<p>字符的输出：字形码，记录字符形状</p>
-<p>点阵规模用0和1编码无亮点和有亮点形成字形信息，便于显示。</p>
-<p>点阵的方式：16 <em> 16 / 32 </em> 32 / 48 * 48</p>
-<h2 id="1-4多媒体信息的表示"><a href="#1-4多媒体信息的表示" class="headerlink" title="1.4多媒体信息的表示"></a>1.4多媒体信息的表示</h2><p>模拟量：在时间或者数值上都是连续的物理量</p>
-<p>数字量：在时间上或数量上都是离散的物理量（例如：计步器）</p>
-<p>图形：==矢量==图形文件形式存储，圆，直线、曲线等图形元素</p>
-<p>图像：==模拟==信号，通过数字照相机、摄像机捕捉的自然界真实场景画面产生的影像，数字化后以==点阵==（位图）的形式存储</p>
-<h4 id="图像数字化方法"><a href="#图像数字化方法" class="headerlink" title="图像数字化方法"></a>图像数字化方法</h4><ol>
-<li><p>将连续色调的模拟图像经过采样、量化后转成数字影像（编码）</p>
-</li>
-<li><p>采样：将二位空间上连续的图像转换为离散点的过程，将图像按照行列分割成m * n个网格，每个网格对应一个像素</p>
-<p>图像分辨率</p>
-</li>
-<li><p>量化：图像离散化后，用有限个数的整数值来表示图像色彩浓淡连续变化值的过程</p>
-</li>
-</ol>
-<p>量化级数：量化时所确定的离散取值个数</p>
-<p>量化位数：表示量化的色彩值（或亮度）所需要的二进制位数，一般可以用8位，16位，32位</p>
-<p>注意：2^24^ ≈ 16Mb</p>
-<h3 id="1-4-2声音的数字化"><a href="#1-4-2声音的数字化" class="headerlink" title="1.4.2声音的数字化"></a>1.4.2声音的数字化</h3><p>声音数字化过程：采样、量化、编码</p>
-<p>采样频率：每秒钟采样点的次数（Hz）</p>
-<p>声道数</p>
-<p>记录每秒存储声音容量公式为</p>
-<p>采样频率 X 量化位数（bit） ➗ 8 X 声道数 = 每秒数据量</p>
-]]></content>
   </entry>
   <entry>
     <title>饿补计算机科学基础（三）--数据结构</title>
