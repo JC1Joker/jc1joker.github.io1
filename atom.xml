@@ -6,7 +6,7 @@
   <link href="http://3kxr.me/atom.xml" rel="self"/>
   
   <link href="http://3kxr.me/"/>
-  <updated>2023-09-17T05:20:52.302Z</updated>
+  <updated>2023-09-17T05:27:43.135Z</updated>
   <id>http://3kxr.me/</id>
   
   <author>
@@ -21,11 +21,12 @@
     <link href="http://3kxr.me/2023/09/17/hexo-s-plugins/"/>
     <id>http://3kxr.me/2023/09/17/hexo-s-plugins/</id>
     <published>2023-09-17T05:19:23.000Z</published>
-    <updated>2023-09-17T05:20:52.302Z</updated>
+    <updated>2023-09-17T05:27:43.135Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;相关插件&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;</summary>
+&lt;p&gt;相关插件&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
     
     
     
