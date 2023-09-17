@@ -19,30 +19,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"3kxr.me","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.17.0","exturl":false,"sidebar":{"position":"left","width":260,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="docker的基础命令">
+    <meta name="description" content="django是一个开源的web应用框架，采用MTV框架模式 使用Django搭建网站 1.安装django环境1python3 -m pip install django 初始化django,创建第一个项目  django-admin stratproject mysite   manage.py 用于管理本项目的命令行工具  _ init_.py 一个普通的包初始化模块  settings.p">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="docker基础命令">
-<meta property="og:url" content="http://3kxr.me/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/index.html">
+<meta property="og:title" content="使用Django搭建网站">
+<meta property="og:url" content="http://3kxr.me/2023/09/17/%E4%BD%BF%E7%94%A8Django%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/index.html">
 <meta property="og:site_name" content="3Kxr&#39;s Blog">
-<meta property="og:description" content="docker的基础命令">
+<meta property="og:description" content="django是一个开源的web应用框架，采用MTV框架模式 使用Django搭建网站 1.安装django环境1python3 -m pip install django 初始化django,创建第一个项目  django-admin stratproject mysite   manage.py 用于管理本项目的命令行工具  _ init_.py 一个普通的包初始化模块  settings.p">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://3kxr.me/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/Docker.png">
-<meta property="article:published_time" content="2023-07-12T10:43:53.000Z">
-<meta property="article:modified_time" content="2023-07-12T10:50:22.562Z">
+<meta property="article:published_time" content="2023-09-17T05:12:22.000Z">
+<meta property="article:modified_time" content="2023-09-17T05:14:27.278Z">
 <meta property="article:author" content="3Kxr">
-<meta property="article:tag" content="docker">
+<meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://3kxr.me/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/Docker.png">
 
 
-<link rel="canonical" href="http://3kxr.me/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/">
+<link rel="canonical" href="http://3kxr.me/2023/09/17/%E4%BD%BF%E7%94%A8Django%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://3kxr.me/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/","path":"2023/07/12/docker基础命令/","title":"docker基础命令"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://3kxr.me/2023/09/17/%E4%BD%BF%E7%94%A8Django%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/","path":"2023/09/17/使用Django搭建网站/","title":"使用Django搭建网站"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>docker基础命令 | 3Kxr's Blog</title>
+<title>使用Django搭建网站 | 3Kxr's Blog</title>
   
 
 
@@ -141,7 +139,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -154,6 +152,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8Django%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99"><span class="nav-text">使用Django搭建网站</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%AE%89%E8%A3%85django%E7%8E%AF%E5%A2%83"><span class="nav-text">1.安装django环境</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%90%AF%E5%8A%A8%E8%BF%90%E8%A1%8Cdjango%E6%A1%86%E6%9E%B6"><span class="nav-text">2.启动运行django框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AAapp%E5%92%8C%E9%A1%B5%E9%9D%A2"><span class="nav-text">3.创建第一个app和页面</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%EF%BC%8C%E5%9C%A8%E9%A1%B9%E7%9B%AEmysite%E4%B8%8B%E7%9A%84settings-py"><span class="nav-text">修改配置文件，在项目mysite下的settings.py</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E6%89%A7%E8%A1%8C%E5%B1%82%E4%BB%A3%E7%A0%81"><span class="nav-text">添加执行层代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%A8%E9%A1%B9%E7%9B%AE%E6%96%87%E4%BB%B6%E5%A4%B9%E4%BF%AE%E6%94%B9urls-py-%E5%B0%86%E7%94%A8%E6%88%B7%E7%9A%84%E8%AE%BF%E9%97%AE%E5%9C%B0%E5%9D%80%E9%93%BE%E6%8E%A5%E5%88%B0%E6%89%A7%E8%A1%8C%E4%BB%A3%E7%A0%81"><span class="nav-text">在项目文件夹修改urls.py,将用户的访问地址链接到执行代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BAtemplates%E6%96%87%E4%BB%B6%E5%A4%B9%EF%BC%8C%E7%94%A8%E4%BA%8E%E5%AD%98%E6%94%BEindex-html%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9"><span class="nav-text">创建templates文件夹，用于存放index.html文件内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BAindex-html%E6%96%87%E4%BB%B6"><span class="nav-text">创建index.html文件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-init%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%8E%E5%88%9B%E5%BB%BA%E8%B4%A6%E5%8F%B7"><span class="nav-text">4.init数据库与创建账号</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -517,7 +516,7 @@ if(canvas.getContext){
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://3kxr.me/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/">
+    <link itemprop="mainEntityOfPage" href="http://3kxr.me/2023/09/17/%E4%BD%BF%E7%94%A8Django%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -530,12 +529,12 @@ if(canvas.getContext){
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="docker基础命令 | 3Kxr's Blog">
+      <meta itemprop="name" content="使用Django搭建网站 | 3Kxr's Blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          docker基础命令
+          使用Django搭建网站
         </h1>
 
         <div class="post-meta-container">
@@ -547,7 +546,7 @@ if(canvas.getContext){
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2023-07-12 18:43:53 / 修改时间：18:50:22" itemprop="dateCreated datePublished" datetime="2023-07-12T18:43:53+08:00">2023-07-12</time>
+      <time title="创建时间：2023-09-17 13:12:22 / 修改时间：13:14:27" itemprop="dateCreated datePublished" datetime="2023-09-17T13:12:22+08:00">2023-09-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -555,7 +554,7 @@ if(canvas.getContext){
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/docker/" itemprop="url" rel="index"><span itemprop="name">docker</span></a>
+          <a href="/categories/web/" itemprop="url" rel="index"><span itemprop="name">web</span></a>
         </span>
     </span>
 
@@ -573,7 +572,7 @@ if(canvas.getContext){
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>230</span>
+      <span>337</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -590,28 +589,42 @@ if(canvas.getContext){
     
     
     
-    <div class="post-body" itemprop="articleBody"><p><img src="/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/Docker.png" alt></p>
+    <div class="post-body" itemprop="articleBody"><blockquote>
+<p>django是一个开源的web应用框架，采用MTV框架模式</p>
+<h1 id="使用Django搭建网站"><a href="#使用Django搭建网站" class="headerlink" title="使用Django搭建网站"></a>使用Django搭建网站</h1></blockquote>
+<h4 id="1-安装django环境"><a href="#1-安装django环境" class="headerlink" title="1.安装django环境"></a>1.安装django环境</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 -m pip install django</span><br></pre></td></tr></table></figure>
+<p>初始化django,创建第一个项目</p>
 <blockquote>
-<p>docker的基础命令<br><span id="more"></span></p>
+<p>django-admin stratproject mysite</p>
 </blockquote>
-<p>docker pull 安装镜像</p>
-<p>docker run 运行镜像</p>
-<p>docker container run</p>
-<p>说明：</p>
-<p>创建好image后，新建容器时使用；</p>
-<p>每次运行，都会创建一个新的容器；</p>
-<p>新建的容器可以通过 docker container ls -a 或者 docker ps -a 查看（加 -a 表示查看所有创建好的容器）；</p>
-<p>每次创建会返回一个【长的容器ID】；</p>
-<p>通常情况下，运行一次即可；</p>
-<p>docker containers list -a 查看当前运行的所有镜像</p>
-<p>docker exec -it 【docker的名称】 bash  进入docker运行的bash环境中</p>
-<p>docker container start 【containerID】运行已经创建的容器</p>
-<p>docker ps -a 查看所有容器</p>
-<p>docker stop 【containerID】</p>
-<p>docker rm 【containerID】（先停止容器后才能删除）</p>
-<p>docker export 制作基础镜像，使用 <strong>docker export</strong> 命令根据容器 <strong>ID</strong> 将镜像导出成一个文件</p>
-<p>docker import - new_hangger_server &lt; hangger_server.tar 将这个镜像文件导入进来。</p>
-<p>docker load 载入镜像</p>
+<ul>
+<li><p>manage.py 用于管理本项目的命令行工具</p>
+</li>
+<li><p>_ init_.py 一个普通的包初始化模块</p>
+</li>
+<li><p>settings.py django 项目的配置文件，本项目引用的组件，项目名，数据库配置，时间，语言，静态文件访问地址和存储路径</p>
+</li>
+<li><p>wsgi.py Web Server gateway interface 接口信息用于服务器部署</p>
+</li>
+</ul>
+<h3 id="2-启动运行django框架"><a href="#2-启动运行django框架" class="headerlink" title="2.启动运行django框架"></a>2.启动运行django框架</h3><blockquote>
+<p>python3 manage.py runserver 0.0.0.0:8000</p>
+</blockquote>
+<h3 id="3-创建第一个app和页面"><a href="#3-创建第一个app和页面" class="headerlink" title="3.创建第一个app和页面"></a>3.创建第一个app和页面</h3><blockquote>
+<p>django-admin startapp firstapp</p>
+</blockquote>
+<h4 id="修改配置文件，在项目mysite下的settings-py"><a href="#修改配置文件，在项目mysite下的settings-py" class="headerlink" title="修改配置文件，在项目mysite下的settings.py"></a>修改配置文件，在项目mysite下的settings.py</h4><p>INSTALLED_APPS 增加 ‘firstapp’</p>
+<p>TEMPLATES ‘DIRS’ [os.path.join(BASE_DIR ,’templates’)]</p>
+<p>ALLOWED_HOSTS = [‘*’]</p>
+<h4 id="添加执行层代码"><a href="#添加执行层代码" class="headerlink" title="添加执行层代码"></a>添加执行层代码</h4><p>在mysite项目中 firstapp第一个创建的应用</p>
+<p>views.py</p>
+<p>定义第一个函数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">firsthtml</span>(<span class="params">request</span>):</span><br><span class="line">    <span class="comment">#渲染页面并呈现给客户</span></span><br><span class="line">    <span class="keyword">return</span> render(request,<span class="string">&#x27;index.html&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="在项目文件夹修改urls-py-将用户的访问地址链接到执行代码"><a href="#在项目文件夹修改urls-py-将用户的访问地址链接到执行代码" class="headerlink" title="在项目文件夹修改urls.py,将用户的访问地址链接到执行代码"></a>在项目文件夹修改urls.py,将用户的访问地址链接到执行代码</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> firstapp <span class="keyword">import</span> views</span><br><span class="line">urlpatterns = &#123;</span><br><span class="line">    path(<span class="string">&#x27;helloworld&#x27;</span>,views.firsthtml)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="创建templates文件夹，用于存放index-html文件内容"><a href="#创建templates文件夹，用于存放index-html文件内容" class="headerlink" title="创建templates文件夹，用于存放index.html文件内容"></a>创建templates文件夹，用于存放index.html文件内容</h4><h4 id="创建index-html文件"><a href="#创建index-html文件" class="headerlink" title="创建index.html文件"></a>创建index.html文件</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;hello&quot; &gt; templates/index.html</span><br></pre></td></tr></table></figure>
+<p>运行服务器查看效果</p>
+<p>python3 manage.py runserver 0.0.0.0:8000</p>
+<h3 id="4-init数据库与创建账号"><a href="#4-init数据库与创建账号" class="headerlink" title="4.init数据库与创建账号"></a>4.init数据库与创建账号</h3><p>在mysite中创建 管理员 账号<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">python manage.py makemigrations</span><br><span class="line"></span><br><span class="line">python manage.py migrate</span><br><span class="line"></span><br><span class="line">python manage.py createsuperuser</span><br></pre></td></tr></table></figure></p>
 
     </div>
 
@@ -630,7 +643,7 @@ if(canvas.getContext){
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://3kxr.me/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/" title="docker基础命令">http://3kxr.me/2023/07/12/docker基础命令/</a>
+      <a href="http://3kxr.me/2023/09/17/%E4%BD%BF%E7%94%A8Django%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/" title="使用Django搭建网站">http://3kxr.me/2023/09/17/使用Django搭建网站/</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -639,21 +652,18 @@ if(canvas.getContext){
 </div>
 
           <div class="post-tags">
-              <a href="/tags/docker/" rel="tag"><i class="fa fa-tag"></i> docker</a>
+              <a href="/tags/python/" rel="tag"><i class="fa fa-tag"></i> python</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/" rel="prev" title="Numpy笔记">
-                  <i class="fa fa-chevron-left"></i> Numpy笔记
+                <a href="/2023/09/15/%E5%85%B3%E4%BA%8Ehexo%E5%8D%9A%E5%AE%A2%E5%87%BA%E7%8E%B0err-Error-Spawn-failed%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" rel="prev" title="关于hexo博客出现err: Error: Spawn failed的解决方案">
+                  <i class="fa fa-chevron-left"></i> 关于hexo博客出现err: Error: Spawn failed的解决方案
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" rel="next" title="饿补计算机科学基础（一）--计算机基础">
-                  饿补计算机科学基础（一）--计算机基础 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
