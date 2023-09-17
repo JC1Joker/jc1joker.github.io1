@@ -6,7 +6,7 @@
   <link href="http://3kxr.me/atom.xml" rel="self"/>
   
   <link href="http://3kxr.me/"/>
-  <updated>2023-09-13T05:55:29.087Z</updated>
+  <updated>2023-09-15T04:09:04.676Z</updated>
   <id>http://3kxr.me/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>关于hexo博客出现err: Error: Spawn failed的解决方案</title>
+    <link href="http://3kxr.me/2023/09/15/%E5%85%B3%E4%BA%8Ehexo%E5%8D%9A%E5%AE%A2%E5%87%BA%E7%8E%B0err-Error-Spawn-failed%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>http://3kxr.me/2023/09/15/%E5%85%B3%E4%BA%8Ehexo%E5%8D%9A%E5%AE%A2%E5%87%BA%E7%8E%B0err-Error-Spawn-failed%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</id>
+    <published>2023-09-15T04:07:57.000Z</published>
+    <updated>2023-09-15T04:09:04.676Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="bug汇总" scheme="http://3kxr.me/categories/bug%E6%B1%87%E6%80%BB/"/>
+    
+    
+    <category term="bug" scheme="http://3kxr.me/tags/bug/"/>
+    
+  </entry>
+  
+  <entry>
     <title>win10配置问题速查手册</title>
     <link href="http://3kxr.me/2023/09/13/win10%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/"/>
     <id>http://3kxr.me/2023/09/13/win10%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/</id>
     <published>2023-09-13T05:53:13.000Z</published>
-    <updated>2023-09-13T05:55:29.087Z</updated>
+    <updated>2023-09-13T06:48:20.297Z</updated>
     
     
       
