@@ -1,462 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Linux中开启ssh的配置😎🐱‍💻</title>
-    <url>/2023/08/01/Linux%E4%B8%AD%E5%BC%80%E5%90%AFssh%E7%9A%84%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>使用Xshell连接linux</p>
-</blockquote>
-<span id="more"></span>
-<h2 id="1-本地网络配置-🌐"><a href="#1-本地网络配置-🌐" class="headerlink" title="1.本地网络配置 🌐"></a>1.本地网络配置 🌐</h2><h3 id="1-1-1-配置临时IP地址-📝"><a href="#1-1-1-配置临时IP地址-📝" class="headerlink" title="1.1.1 配置临时IP地址 📝"></a>1.1.1 配置临时IP地址 📝</h3><p>首先，使用以下命令配置临时IP地址：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ifconfig eth0 192.168.1.53/24</span><br></pre></td></tr></table></figure>
-<p>然后添加子网掩码：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">255.255.255.0</span><br></pre></td></tr></table></figure>
-<p>接下来，配置默认网关：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">route add default gw 192.168.1.1</span><br></pre></td></tr></table></figure>
-<p>确认网络连接是否正常：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ping 192.168.1.1</span><br></pre></td></tr></table></figure>
-<p>最后，编辑DNS配置文件：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vim /etc/resolv.conf</span><br></pre></td></tr></table></figure>
-<p>添加以下行来配置DNS：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">nameserver 8.8.8.8</span><br></pre></td></tr></table></figure>
-<h3 id="1-1-2-配置永久IP地址-📝"><a href="#1-1-2-配置永久IP地址-📝" class="headerlink" title="1.1.2 配置永久IP地址 📝"></a>1.1.2 配置永久IP地址 📝</h3><p>若要配置永久IP地址，请打开以下文件：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/network/interfaces</span><br></pre></td></tr></table></figure>
-<p>然后，注释掉dhcp配置，并添加以下静态IP配置：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">arduinoCopy codeauto eth0</span><br><span class="line"><span class="comment">#iface eth0 inet dhcp # 注释掉</span></span><br><span class="line">iface eth0 inet static</span><br><span class="line">address 192.168.3.53</span><br><span class="line">netmask 255.255.255.0</span><br><span class="line">gateway 192.168.1.1</span><br></pre></td></tr></table></figure>
-<p>接着，再次编辑DNS配置文件：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/resolv.conf</span><br></pre></td></tr></table></figure>
-<p>添加以下行来配置DNS：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nameserver 8.8.8.8</span><br></pre></td></tr></table></figure>
-<p>完成后，重启网络服务：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/etc/init.d/networking restart</span><br></pre></td></tr></table></figure>
-<p>或者，使用以下命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl restart networking</span><br></pre></td></tr></table></figure>
-<h2 id="2-配置sshd服务并使用Xshell连接-🔒🔌"><a href="#2-配置sshd服务并使用Xshell连接-🔒🔌" class="headerlink" title="2. 配置sshd服务并使用Xshell连接 🔒🔌"></a>2. 配置sshd服务并使用Xshell连接 🔒🔌</h2><p>为了配置sshd服务并使用Xshell连接，首先以管理员权限打开sshd配置文件：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo vim /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure>
-<p>如果你想显示行号，可以使用以下命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">:<span class="built_in">set</span> nu</span><br></pre></td></tr></table></figure>
-<p>然后，在32行和37行进行修改：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">codePermitRootLogin <span class="built_in">yes</span></span><br><span class="line">PubkeyAuthentication <span class="built_in">yes</span></span><br></pre></td></tr></table></figure>
-<p>接下来，重启sshd服务：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/etc/init.d/ssh restart</span><br></pre></td></tr></table></figure>
-<p>或者，使用以下命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl restart ssh</span><br></pre></td></tr></table></figure>
-<p>若要设置开机启动，可以运行以下命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">update-rc.d ssh <span class="built_in">enable</span></span><br></pre></td></tr></table></figure>
-<p>现在，你的linux配置已经完成！享受使用Xshell连接的便捷和安全体验吧！😊🔒</p>
-]]></content>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Pandas笔记</title>
-    <url>/2023/06/07/Pandas%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>中国大学MOOC,python数据分析相关课程笔记—pandas部分<br><span id="more"></span></p>
-<h2 id="pandas库"><a href="#pandas库" class="headerlink" title="pandas库"></a>pandas库</h2><p>pd.Series()# pd.series是pandas中用于表示一维数据的数据结构</p>
-</blockquote>
-<p>d.cumsum()计算前n项累加和</p>
-<blockquote id="fn_1">
-<sup>1</sup>. axis = 0 代表对横轴操作，也就是第0轴；axis = 1 代表对纵轴操作，也就是第1轴；<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
-</blockquote>
-<h2 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h2><p>两个数据类型：Series，DataFrame</p>
-<p>基于商促数据类型的各类操作</p>
-<p>基本操作、运算操作、特征类操作、关联类操作</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">Numpy</th>
-<th style="text-align:center">Pandas</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">基础数据类型</td>
-<td style="text-align:center">扩展数据类型</td>
-</tr>
-<tr>
-<td style="text-align:center">关注数据的结构表达(数据之间的维度表达)</td>
-<td style="text-align:center">关注数据的应用表达</td>
-</tr>
-<tr>
-<td style="text-align:center">基于<strong>维度</strong>的运算</td>
-<td style="text-align:center">基于<strong>索引</strong>的运算</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="series类型"><a href="#series类型" class="headerlink" title="series类型"></a>series类型</h2><p>由一组数据及与之相关的数据索引组成</p>
-<p>index_0  data_a</p>
-<p>index_1 data_b</p>
-<ul>
-<li>python 列表，index与列表元素个数一致</li>
-<li>标量值，index表达Series类型的尺寸</li>
-<li>python字典，键值对中的“键”是索引，index从字典中进行选择操作</li>
-<li>ndarray，索引和数据都可以通过ndarray类型创建</li>
-<li>其他函数，range()函数等</li>
-</ul>
-<h3 id="从ndarray类型创建"><a href="#从ndarray类型创建" class="headerlink" title="从ndarray类型创建"></a>从ndarray类型创建</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">n = pd.Serise(np.arange(<span class="number">5</span>))</span><br><span class="line"></span><br><span class="line">输出：</span><br><span class="line"><span class="number">0</span>  <span class="number">0</span></span><br><span class="line"><span class="number">1</span>  <span class="number">1</span> </span><br><span class="line"><span class="number">2</span>  <span class="number">2</span> </span><br><span class="line"><span class="number">3</span>  <span class="number">3</span> </span><br><span class="line"><span class="number">4</span>  <span class="number">4</span> </span><br></pre></td></tr></table></figure>
-<h2 id="Series类型对齐操作"><a href="#Series类型对齐操作" class="headerlink" title="Series类型对齐操作"></a>Series类型对齐操作</h2><p>Series+Series</p>
-<p>Series类型在运算中会自动对齐不同索引的数据</p>
-<h2 id="name属性-name"><a href="#name属性-name" class="headerlink" title="name属性(.name)"></a>name属性(.name)</h2><p>Series对象和索引都可以有一个名字，存储在属性.name中</p>
-<p>Series是一维带“标签”数组</p>
-<p>Series基本操作类似ndarray和字典，根据索引对齐</p>
-<p>DataFrame类型</p>
-<p>二维ndarray对象</p>
-<p>由一维ndarray、列表、字典、元组或series构成的字典</p>
-<h2 id="如何改变Series和DataFrame对象"><a href="#如何改变Series和DataFrame对象" class="headerlink" title="如何改变Series和DataFrame对象"></a>如何改变Series和DataFrame对象</h2><p>增加或重排：重新索引</p>
-<h3 id="重新索引"><a href="#重新索引" class="headerlink" title="重新索引"></a>重新索引</h3><p>.reindex()</p>
-<p>.reindex(希望排列之后的index关系)能够改变或者重排Series和DataFrame索引</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>index,columns</td>
-<td>新的行列自定义索引</td>
-</tr>
-<tr>
-<td>fill_value</td>
-<td>重新索引中，用于填充缺失位置的值</td>
-</tr>
-<tr>
-<td>method</td>
-<td>填充方法，ffill当前值向前填充，bfill向后填充</td>
-</tr>
-<tr>
-<td>limit</td>
-<td>最大填充量</td>
-</tr>
-<tr>
-<td>copy</td>
-<td>默认True，生成新的对象，False时，新旧相等不复刻</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="索引类型"><a href="#索引类型" class="headerlink" title="索引类型"></a>索引类型</h2><p>Series和DataFrame的索引时index类型</p>
-<p>index对象是不可修改类型</p>
-<p>常用方法</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>.append(idx)</td>
-<td>连接另一个index对象，产生新的index对象</td>
-</tr>
-<tr>
-<td>.diff(idx)</td>
-<td>计算差集，产生新的index对象</td>
-</tr>
-<tr>
-<td>.intersection(idx)</td>
-<td>计算交集</td>
-</tr>
-<tr>
-<td>.union(idx)</td>
-<td>计算并集</td>
-</tr>
-<tr>
-<td>.delete(loc)</td>
-<td>删除loc位置处的元素</td>
-</tr>
-<tr>
-<td>.insert(loc.e)</td>
-<td>在loc位置增加一个元素</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="删除指定索引对象"><a href="#删除指定索引对象" class="headerlink" title="删除指定索引对象"></a>删除指定索引对象</h2><p>.drop()能够删除Series和DataFrame指定行或列索引</p>
-<h2 id="pandas数据运算"><a href="#pandas数据运算" class="headerlink" title="pandas数据运算"></a>pandas数据运算</h2><p>算数运算法则</p>
-<p>算术运算根据行列索引，补齐后运算，运算默认产生浮点数</p>
-<p>补齐时缺项填充NaN（空值）</p>
-<p>二维和一维、一维和零维间的广播运算</p>
-<p>采用+-*/符号进行的二元运算产生新的对象</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>.add(d,**argws)</td>
-<td>类型间加法运算，可选参数</td>
-</tr>
-<tr>
-<td>.sub(d,**argws)</td>
-<td>类型间减法运算，可选参数</td>
-</tr>
-<tr>
-<td>.mul(d,**argws)</td>
-<td>类型间乘法运算，可选参数</td>
-</tr>
-<tr>
-<td>.div(d,**argws)</td>
-<td>类型见除法运算，可选参数</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="比较运算法则"><a href="#比较运算法则" class="headerlink" title="比较运算法则"></a>比较运算法则</h2><p>比较运算只能比较相同索引的元素，不进行补齐。</p>
-<p>二维和一维、一维和零维间的广播运算</p>
-<p>采用&gt;&lt;&gt;=&lt;= == !=等符号进行的二元运算产生布尔对象</p>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>Series = 索引+一维数据</p>
-<p>DataFrame = 行列索引 + 二维数据</p>
-<p>理解数据类型与索引的关系，操作索引即操作数据</p>
-<p>像对待单一数据一样对待Series和DataFrame对象</p>
-<h2 id="数据排序"><a href="#数据排序" class="headerlink" title="数据排序"></a>数据排序</h2><p>.sort_index()方法在指定轴上根据索引进行排序，默认升序</p>
-<p>.sort_index(axis=0,ascending=True)</p>
-<p>ascending=False降序</p>
-<p>.sort_values()方法在指定轴上根据数值进行排序，默认升序</p>
-<p>Serious.sort_values(axis=0,ascending=True)</p>
-<p>DataFrame.sort_values(<strong>by</strong>,axis=0,ascending=True)</p>
-<p>by:axis轴上的某个索引或索引列表</p>
-<p>NaN统一放到排序末尾</p>
-<h2 id="基本的统计分析函数"><a href="#基本的统计分析函数" class="headerlink" title="基本的统计分析函数"></a>基本的统计分析函数</h2><p>适用Series和DataFrame类型</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>.sum()</td>
-<td>计算数据的总和</td>
-</tr>
-<tr>
-<td>.count()</td>
-<td>非NaN值的数量</td>
-</tr>
-<tr>
-<td>.mean() .median()</td>
-<td>计算数据的算术平均值、算数中位数</td>
-</tr>
-<tr>
-<td>.var() .std()</td>
-<td>计算数据的方差、标准差</td>
-</tr>
-<tr>
-<td>.min() .max()</td>
-<td>计算数据的最小值、最大值</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>统计汇总</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>.describe</th>
-<th>针对0轴(各列)的统计汇总<sup><a href="#fn_1" id="reffn_1">1</a></sup></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>累计统计分析函数</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>.cumsum()</td>
-<td>依次给出前1、2、……、n个数的和</td>
-</tr>
-<tr>
-<td>.cumprod()</td>
-<td>依次给出前1、2、……、n个数的积</td>
-</tr>
-<tr>
-<td>.cummax()</td>
-<td>依次给出前1、2、……、n个数的最大值</td>
-</tr>
-<tr>
-<td>.cummin()</td>
-<td>依次给出前1、2、……、n个数的最小值</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>滚动计算（窗口计算）</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>说明（跨行运算）</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>.rolling(w).sum()</td>
-<td>依次计算相邻w个元素的和</td>
-</tr>
-<tr>
-<td>.rolling(w).mean()</td>
-<td>依次计算相邻w个元素的算数平均值</td>
-</tr>
-<tr>
-<td>.rolling(w).var()</td>
-<td>依次计算相邻w个元素的方差</td>
-</tr>
-<tr>
-<td>.rowing(w).std()</td>
-<td>依次计算相邻w个元素的标准差</td>
-</tr>
-<tr>
-<td>.rowing(w).main().max()</td>
-<td>以此计算相邻w个元素的最小值和最大值</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="相关分析"><a href="#相关分析" class="headerlink" title="相关分析"></a>相关分析</h2><p>两个事物，表示x和y，如何判断它们之间的存在相关性</p>
-<p><strong>相关性</strong></p>
-<ul>
-<li>x增大，y增大，两个变量正相关</li>
-<li>x增大，y减小，两个变量负相关</li>
-<li>x增大，y无视，两个变量不相关</li>
-</ul>
-<p><strong>协方差</strong></p>
-<p>两个事物，表示x和y，如何判断它们之间的存在相关性</p>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>数据分析</tag>
-        <tag>Pandas</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>conda的使用技巧</title>
-    <url>/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/anaconda.png" alt></p>
-<blockquote>
-<p>anaconda的换源，创建环境</p>
-</blockquote>
-<span id="more"></span>
-<h1 id="Win常用conda命令"><a href="#Win常用conda命令" class="headerlink" title="Win常用conda命令"></a>Win常用conda命令</h1><h2 id="1-查看当前环境下安装的工具"><a href="#1-查看当前环境下安装的工具" class="headerlink" title="1.查看当前环境下安装的工具"></a>1.查看当前环境下安装的工具</h2><blockquote>
-<p>pip list</p>
-</blockquote>
-<p>或</p>
-<blockquote>
-<p>conda list</p>
-</blockquote>
-<h2 id="2-创建虚拟环境"><a href="#2-创建虚拟环境" class="headerlink" title="2.创建虚拟环境"></a>2.创建虚拟环境</h2><blockquote>
-<p>conda create —name[环境名称]</p>
-</blockquote>
-<p>例</p>
-<blockquote>
-<p>conda create —name hacker</p>
-<p><code>conda create -n 新的环境名 python=指定版本（2.7/3.6/3.7）</code> # 注意需要在base中运行，不能在虚拟环境中执行</p>
-</blockquote>
-<p>即可创建一个名为hacker的虚拟环境</p>
-<h2 id="3-修改环境名称"><a href="#3-修改环境名称" class="headerlink" title="3.修改环境名称"></a>3.修改环境名称</h2><blockquote>
-<p>conda create —name newName（新环境名） —clone oldName（旧环境名）</p>
-</blockquote>
-<h2 id="4-删除环境"><a href="#4-删除环境" class="headerlink" title="4.删除环境"></a>4.删除环境</h2><blockquote>
-<p>conda remove —name oldName（旧环境名） —all </p>
-</blockquote>
-<h2 id="5-查看虚拟环境"><a href="#5-查看虚拟环境" class="headerlink" title="5.查看虚拟环境"></a>5.查看虚拟环境</h2><blockquote>
-<p>conda env list</p>
-<p>conda info -e</p>
-</blockquote>
-<p>其中带有<strong>* </strong>的表示当前所用的环境</p>
-<h2 id="6-切换环境"><a href="#6-切换环境" class="headerlink" title="6.切换环境"></a>6.切换环境</h2><p>使用activate(激活)加上要切换的环境名称，即可切换</p>
-<blockquote>
-<p>conda activate[环境名称]</p>
-</blockquote>
-<p>例</p>
-<blockquote>
-<p>conda activate learn </p>
-</blockquote>
-<h2 id="7-退出虚拟环境"><a href="#7-退出虚拟环境" class="headerlink" title="7.退出虚拟环境"></a>7.退出虚拟环境</h2><blockquote>
-<p>conda deactivate</p>
-</blockquote>
-<h2 id="8-移除虚拟环境"><a href="#8-移除虚拟环境" class="headerlink" title="8.移除虚拟环境"></a>8.移除虚拟环境</h2><blockquote>
-<p>conda remove —name [环境] —all</p>
-</blockquote>
-<p>例</p>
-<blockquote>
-<p>conda remove —name learn —all</p>
-</blockquote>
-<h2 id="9-包的安装"><a href="#9-包的安装" class="headerlink" title="9.包的安装"></a>9.包的安装</h2><p>（无需进入环境）</p>
-<blockquote>
-<p>conda install [包名] -n [环境名]</p>
-</blockquote>
-<h2 id="10-包的更新"><a href="#10-包的更新" class="headerlink" title="10.包的更新"></a>10.包的更新</h2><blockquote>
-<p>conda update —all</p>
-</blockquote>
-<h2 id="11-包的删除"><a href="#11-包的删除" class="headerlink" title="11.包的删除"></a>11.包的删除</h2><blockquote>
-<p>conda remove [包名]</p>
-</blockquote>
-<h2 id="12-查看可以安装的python版本"><a href="#12-查看可以安装的python版本" class="headerlink" title="12.查看可以安装的python版本"></a>12.查看可以安装的python版本</h2><blockquote>
-<p> conda search —full-name python`</p>
-</blockquote>
-<h2 id="13-镜像源"><a href="#13-镜像源" class="headerlink" title="13.镜像源"></a>13.镜像源</h2><h3 id="查看当前conda源"><a href="#查看当前conda源" class="headerlink" title="查看当前conda源"></a>查看当前conda源</h3><blockquote>
-<p>conda config —show</p>
-</blockquote>
-<h3 id="恢复默认源"><a href="#恢复默认源" class="headerlink" title="恢复默认源"></a>恢复默认源</h3><blockquote>
-<p>conda config —remove-key channels</p>
-</blockquote>
-<h3 id="中科大源"><a href="#中科大源" class="headerlink" title="中科大源"></a>中科大源</h3><p>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/pkgs/main/">https://mirrors.ustc.edu.cn/anaconda/pkgs/main/</a><br>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/pkgs/free/">https://mirrors.ustc.edu.cn/anaconda/pkgs/free/</a><br>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/">https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/</a><br>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/">https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/</a><br>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/">https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/</a><br>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/">https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/</a><br>conda config —set show_channel_urls yes</p>
-<h3 id="清华源"><a href="#清华源" class="headerlink" title="清华源"></a>清华源</h3><p>conda config —add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/</a><br>conda config —add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge</a><br>conda config —add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</a><br>conda config —add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/</a><br>conda config —add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</a><br>conda config —set show_channel_urls yes</p>
-<h3 id="腾讯云"><a href="#腾讯云" class="headerlink" title="腾讯云"></a>腾讯云</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda config --add channels https://mirrors.cloud.tencent.com/anaconda/pkgs/free/</span><br><span class="line">conda config --add channels https://mirrors.cloud.tencent.com/anaconda/pkgs/main/</span><br><span class="line">conda config --set show_channel_urls yes</span><br></pre></td></tr></table></figure>
-<h2 id="14清理conda缓存"><a href="#14清理conda缓存" class="headerlink" title="14清理conda缓存"></a>14清理conda缓存</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda clean -p     </span><br><span class="line">conda clean -t      </span><br><span class="line">conda clean -y -all </span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash">删除没有用的包 --packages</span></span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash">删除tar打包 --tarballs</span></span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash">删除所有的安装包及cache(索引缓存、锁定文件、未使用过的包和tar包)</span></span><br></pre></td></tr></table></figure>
-<h2 id="15-pip国内源"><a href="#15-pip国内源" class="headerlink" title="15.pip国内源"></a>15.pip国内源</h2><p>阿里云 ：<a href="http://mirrors.aliyun.com/pypi/simple/">http://mirrors.aliyun.com/pypi/simple/</a><br>中国科技大学： <a href="https://pypi.mirrors.ustc.edu.cn/simple/">https://pypi.mirrors.ustc.edu.cn/simple/</a><br>豆瓣(douban) ：<a href="http://pypi.douban.com/simple/">http://pypi.douban.com/simple/</a><br>清华大学 ：<a href="https://pypi.tuna.tsinghua.edu.cn/simple/">https://pypi.tuna.tsinghua.edu.cn/simple/</a><br>中国科学技术大学： <a href="http://pypi.mirrors.ustc.edu.cn/simple/">http://pypi.mirrors.ustc.edu.cn/simple/</a></p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">使用豆瓣源安装</span></span><br><span class="line">pip install opencv-python -i http://pypi.douban.com/simple </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">报错说不信任该源，执行如下：</span></span><br><span class="line">pip install opencv-python -i http://pypi.douban.com/simple --trusted-host pypi.douban.com</span><br></pre></td></tr></table></figure>
-<h2 id="16-修改python版本"><a href="#16-修改python版本" class="headerlink" title="16.修改python版本"></a>16.修改python版本</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">1.新建一个anaconda虚拟环境，指定Python版本</span></span><br><span class="line">conda create -n envTest python=3.5</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">2.直接将现有的anaconda中python更改为3.5</span></span><br><span class="line">sudo conda install python=3.5</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">3.下载并安装对应Python版本的anaconda，anaconda4.2-&gt;python3.5</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">https://repo.continuum.io/archive/</span></span><br></pre></td></tr></table></figure>
-<h2 id="17-打开交互界面"><a href="#17-打开交互界面" class="headerlink" title="17.打开交互界面"></a>17.打开交互界面</h2><blockquote>
-<p>anaconda-navigator</p>
-</blockquote>
-<h2 id="18-临时更换pip源"><a href="#18-临时更换pip源" class="headerlink" title="18.临时更换pip源"></a>18.临时更换pip源</h2><blockquote>
-<p>pip install 库 -i <a href="http://pypi.douban.com/simple">http://pypi.douban.com/simple</a> —trusted-host pypi.douban.com</p>
-</blockquote>
-<h2 id="19-修改python版本"><a href="#19-修改python版本" class="headerlink" title="19.修改python版本"></a>19.修改python版本</h2><blockquote>
-<p>conda install python=3.5</p>
-<p>当出现Solving environment: failed with initial frozen solve. Retrying with flexible solve.</p>
-<p>conda uninstall python</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Shell</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Numpy笔记</title>
     <url>/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/NumPy_logo_2020.png" alt></p>
@@ -797,6 +341,462 @@
       </tags>
   </entry>
   <entry>
+    <title>Pandas笔记</title>
+    <url>/2023/06/07/Pandas%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>中国大学MOOC,python数据分析相关课程笔记—pandas部分<br><span id="more"></span></p>
+<h2 id="pandas库"><a href="#pandas库" class="headerlink" title="pandas库"></a>pandas库</h2><p>pd.Series()# pd.series是pandas中用于表示一维数据的数据结构</p>
+</blockquote>
+<p>d.cumsum()计算前n项累加和</p>
+<blockquote id="fn_1">
+<sup>1</sup>. axis = 0 代表对横轴操作，也就是第0轴；axis = 1 代表对纵轴操作，也就是第1轴；<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
+</blockquote>
+<h2 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h2><p>两个数据类型：Series，DataFrame</p>
+<p>基于商促数据类型的各类操作</p>
+<p>基本操作、运算操作、特征类操作、关联类操作</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Numpy</th>
+<th style="text-align:center">Pandas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">基础数据类型</td>
+<td style="text-align:center">扩展数据类型</td>
+</tr>
+<tr>
+<td style="text-align:center">关注数据的结构表达(数据之间的维度表达)</td>
+<td style="text-align:center">关注数据的应用表达</td>
+</tr>
+<tr>
+<td style="text-align:center">基于<strong>维度</strong>的运算</td>
+<td style="text-align:center">基于<strong>索引</strong>的运算</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="series类型"><a href="#series类型" class="headerlink" title="series类型"></a>series类型</h2><p>由一组数据及与之相关的数据索引组成</p>
+<p>index_0  data_a</p>
+<p>index_1 data_b</p>
+<ul>
+<li>python 列表，index与列表元素个数一致</li>
+<li>标量值，index表达Series类型的尺寸</li>
+<li>python字典，键值对中的“键”是索引，index从字典中进行选择操作</li>
+<li>ndarray，索引和数据都可以通过ndarray类型创建</li>
+<li>其他函数，range()函数等</li>
+</ul>
+<h3 id="从ndarray类型创建"><a href="#从ndarray类型创建" class="headerlink" title="从ndarray类型创建"></a>从ndarray类型创建</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">n = pd.Serise(np.arange(<span class="number">5</span>))</span><br><span class="line"></span><br><span class="line">输出：</span><br><span class="line"><span class="number">0</span>  <span class="number">0</span></span><br><span class="line"><span class="number">1</span>  <span class="number">1</span> </span><br><span class="line"><span class="number">2</span>  <span class="number">2</span> </span><br><span class="line"><span class="number">3</span>  <span class="number">3</span> </span><br><span class="line"><span class="number">4</span>  <span class="number">4</span> </span><br></pre></td></tr></table></figure>
+<h2 id="Series类型对齐操作"><a href="#Series类型对齐操作" class="headerlink" title="Series类型对齐操作"></a>Series类型对齐操作</h2><p>Series+Series</p>
+<p>Series类型在运算中会自动对齐不同索引的数据</p>
+<h2 id="name属性-name"><a href="#name属性-name" class="headerlink" title="name属性(.name)"></a>name属性(.name)</h2><p>Series对象和索引都可以有一个名字，存储在属性.name中</p>
+<p>Series是一维带“标签”数组</p>
+<p>Series基本操作类似ndarray和字典，根据索引对齐</p>
+<p>DataFrame类型</p>
+<p>二维ndarray对象</p>
+<p>由一维ndarray、列表、字典、元组或series构成的字典</p>
+<h2 id="如何改变Series和DataFrame对象"><a href="#如何改变Series和DataFrame对象" class="headerlink" title="如何改变Series和DataFrame对象"></a>如何改变Series和DataFrame对象</h2><p>增加或重排：重新索引</p>
+<h3 id="重新索引"><a href="#重新索引" class="headerlink" title="重新索引"></a>重新索引</h3><p>.reindex()</p>
+<p>.reindex(希望排列之后的index关系)能够改变或者重排Series和DataFrame索引</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>index,columns</td>
+<td>新的行列自定义索引</td>
+</tr>
+<tr>
+<td>fill_value</td>
+<td>重新索引中，用于填充缺失位置的值</td>
+</tr>
+<tr>
+<td>method</td>
+<td>填充方法，ffill当前值向前填充，bfill向后填充</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>最大填充量</td>
+</tr>
+<tr>
+<td>copy</td>
+<td>默认True，生成新的对象，False时，新旧相等不复刻</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="索引类型"><a href="#索引类型" class="headerlink" title="索引类型"></a>索引类型</h2><p>Series和DataFrame的索引时index类型</p>
+<p>index对象是不可修改类型</p>
+<p>常用方法</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.append(idx)</td>
+<td>连接另一个index对象，产生新的index对象</td>
+</tr>
+<tr>
+<td>.diff(idx)</td>
+<td>计算差集，产生新的index对象</td>
+</tr>
+<tr>
+<td>.intersection(idx)</td>
+<td>计算交集</td>
+</tr>
+<tr>
+<td>.union(idx)</td>
+<td>计算并集</td>
+</tr>
+<tr>
+<td>.delete(loc)</td>
+<td>删除loc位置处的元素</td>
+</tr>
+<tr>
+<td>.insert(loc.e)</td>
+<td>在loc位置增加一个元素</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="删除指定索引对象"><a href="#删除指定索引对象" class="headerlink" title="删除指定索引对象"></a>删除指定索引对象</h2><p>.drop()能够删除Series和DataFrame指定行或列索引</p>
+<h2 id="pandas数据运算"><a href="#pandas数据运算" class="headerlink" title="pandas数据运算"></a>pandas数据运算</h2><p>算数运算法则</p>
+<p>算术运算根据行列索引，补齐后运算，运算默认产生浮点数</p>
+<p>补齐时缺项填充NaN（空值）</p>
+<p>二维和一维、一维和零维间的广播运算</p>
+<p>采用+-*/符号进行的二元运算产生新的对象</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.add(d,**argws)</td>
+<td>类型间加法运算，可选参数</td>
+</tr>
+<tr>
+<td>.sub(d,**argws)</td>
+<td>类型间减法运算，可选参数</td>
+</tr>
+<tr>
+<td>.mul(d,**argws)</td>
+<td>类型间乘法运算，可选参数</td>
+</tr>
+<tr>
+<td>.div(d,**argws)</td>
+<td>类型见除法运算，可选参数</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="比较运算法则"><a href="#比较运算法则" class="headerlink" title="比较运算法则"></a>比较运算法则</h2><p>比较运算只能比较相同索引的元素，不进行补齐。</p>
+<p>二维和一维、一维和零维间的广播运算</p>
+<p>采用&gt;&lt;&gt;=&lt;= == !=等符号进行的二元运算产生布尔对象</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>Series = 索引+一维数据</p>
+<p>DataFrame = 行列索引 + 二维数据</p>
+<p>理解数据类型与索引的关系，操作索引即操作数据</p>
+<p>像对待单一数据一样对待Series和DataFrame对象</p>
+<h2 id="数据排序"><a href="#数据排序" class="headerlink" title="数据排序"></a>数据排序</h2><p>.sort_index()方法在指定轴上根据索引进行排序，默认升序</p>
+<p>.sort_index(axis=0,ascending=True)</p>
+<p>ascending=False降序</p>
+<p>.sort_values()方法在指定轴上根据数值进行排序，默认升序</p>
+<p>Serious.sort_values(axis=0,ascending=True)</p>
+<p>DataFrame.sort_values(<strong>by</strong>,axis=0,ascending=True)</p>
+<p>by:axis轴上的某个索引或索引列表</p>
+<p>NaN统一放到排序末尾</p>
+<h2 id="基本的统计分析函数"><a href="#基本的统计分析函数" class="headerlink" title="基本的统计分析函数"></a>基本的统计分析函数</h2><p>适用Series和DataFrame类型</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.sum()</td>
+<td>计算数据的总和</td>
+</tr>
+<tr>
+<td>.count()</td>
+<td>非NaN值的数量</td>
+</tr>
+<tr>
+<td>.mean() .median()</td>
+<td>计算数据的算术平均值、算数中位数</td>
+</tr>
+<tr>
+<td>.var() .std()</td>
+<td>计算数据的方差、标准差</td>
+</tr>
+<tr>
+<td>.min() .max()</td>
+<td>计算数据的最小值、最大值</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>统计汇总</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>.describe</th>
+<th>针对0轴(各列)的统计汇总<sup><a href="#fn_1" id="reffn_1">1</a></sup></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>累计统计分析函数</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.cumsum()</td>
+<td>依次给出前1、2、……、n个数的和</td>
+</tr>
+<tr>
+<td>.cumprod()</td>
+<td>依次给出前1、2、……、n个数的积</td>
+</tr>
+<tr>
+<td>.cummax()</td>
+<td>依次给出前1、2、……、n个数的最大值</td>
+</tr>
+<tr>
+<td>.cummin()</td>
+<td>依次给出前1、2、……、n个数的最小值</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>滚动计算（窗口计算）</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明（跨行运算）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.rolling(w).sum()</td>
+<td>依次计算相邻w个元素的和</td>
+</tr>
+<tr>
+<td>.rolling(w).mean()</td>
+<td>依次计算相邻w个元素的算数平均值</td>
+</tr>
+<tr>
+<td>.rolling(w).var()</td>
+<td>依次计算相邻w个元素的方差</td>
+</tr>
+<tr>
+<td>.rowing(w).std()</td>
+<td>依次计算相邻w个元素的标准差</td>
+</tr>
+<tr>
+<td>.rowing(w).main().max()</td>
+<td>以此计算相邻w个元素的最小值和最大值</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="相关分析"><a href="#相关分析" class="headerlink" title="相关分析"></a>相关分析</h2><p>两个事物，表示x和y，如何判断它们之间的存在相关性</p>
+<p><strong>相关性</strong></p>
+<ul>
+<li>x增大，y增大，两个变量正相关</li>
+<li>x增大，y减小，两个变量负相关</li>
+<li>x增大，y无视，两个变量不相关</li>
+</ul>
+<p><strong>协方差</strong></p>
+<p>两个事物，表示x和y，如何判断它们之间的存在相关性</p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>数据分析</tag>
+        <tag>Pandas</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux中开启ssh的配置😎🐱‍💻</title>
+    <url>/2023/08/01/Linux%E4%B8%AD%E5%BC%80%E5%90%AFssh%E7%9A%84%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>使用Xshell连接linux</p>
+</blockquote>
+<span id="more"></span>
+<h2 id="1-本地网络配置-🌐"><a href="#1-本地网络配置-🌐" class="headerlink" title="1.本地网络配置 🌐"></a>1.本地网络配置 🌐</h2><h3 id="1-1-1-配置临时IP地址-📝"><a href="#1-1-1-配置临时IP地址-📝" class="headerlink" title="1.1.1 配置临时IP地址 📝"></a>1.1.1 配置临时IP地址 📝</h3><p>首先，使用以下命令配置临时IP地址：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ifconfig eth0 192.168.1.53/24</span><br></pre></td></tr></table></figure>
+<p>然后添加子网掩码：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">255.255.255.0</span><br></pre></td></tr></table></figure>
+<p>接下来，配置默认网关：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">route add default gw 192.168.1.1</span><br></pre></td></tr></table></figure>
+<p>确认网络连接是否正常：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ping 192.168.1.1</span><br></pre></td></tr></table></figure>
+<p>最后，编辑DNS配置文件：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vim /etc/resolv.conf</span><br></pre></td></tr></table></figure>
+<p>添加以下行来配置DNS：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">nameserver 8.8.8.8</span><br></pre></td></tr></table></figure>
+<h3 id="1-1-2-配置永久IP地址-📝"><a href="#1-1-2-配置永久IP地址-📝" class="headerlink" title="1.1.2 配置永久IP地址 📝"></a>1.1.2 配置永久IP地址 📝</h3><p>若要配置永久IP地址，请打开以下文件：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/network/interfaces</span><br></pre></td></tr></table></figure>
+<p>然后，注释掉dhcp配置，并添加以下静态IP配置：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">arduinoCopy codeauto eth0</span><br><span class="line"><span class="comment">#iface eth0 inet dhcp # 注释掉</span></span><br><span class="line">iface eth0 inet static</span><br><span class="line">address 192.168.3.53</span><br><span class="line">netmask 255.255.255.0</span><br><span class="line">gateway 192.168.1.1</span><br></pre></td></tr></table></figure>
+<p>接着，再次编辑DNS配置文件：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/resolv.conf</span><br></pre></td></tr></table></figure>
+<p>添加以下行来配置DNS：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nameserver 8.8.8.8</span><br></pre></td></tr></table></figure>
+<p>完成后，重启网络服务：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/etc/init.d/networking restart</span><br></pre></td></tr></table></figure>
+<p>或者，使用以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl restart networking</span><br></pre></td></tr></table></figure>
+<h2 id="2-配置sshd服务并使用Xshell连接-🔒🔌"><a href="#2-配置sshd服务并使用Xshell连接-🔒🔌" class="headerlink" title="2. 配置sshd服务并使用Xshell连接 🔒🔌"></a>2. 配置sshd服务并使用Xshell连接 🔒🔌</h2><p>为了配置sshd服务并使用Xshell连接，首先以管理员权限打开sshd配置文件：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo vim /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure>
+<p>如果你想显示行号，可以使用以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">:<span class="built_in">set</span> nu</span><br></pre></td></tr></table></figure>
+<p>然后，在32行和37行进行修改：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">codePermitRootLogin <span class="built_in">yes</span></span><br><span class="line">PubkeyAuthentication <span class="built_in">yes</span></span><br></pre></td></tr></table></figure>
+<p>接下来，重启sshd服务：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/etc/init.d/ssh restart</span><br></pre></td></tr></table></figure>
+<p>或者，使用以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl restart ssh</span><br></pre></td></tr></table></figure>
+<p>若要设置开机启动，可以运行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">update-rc.d ssh <span class="built_in">enable</span></span><br></pre></td></tr></table></figure>
+<p>现在，你的linux配置已经完成！享受使用Xshell连接的便捷和安全体验吧！😊🔒</p>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>conda的使用技巧</title>
+    <url>/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/anaconda.png" alt></p>
+<blockquote>
+<p>anaconda的换源，创建环境</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="Win常用conda命令"><a href="#Win常用conda命令" class="headerlink" title="Win常用conda命令"></a>Win常用conda命令</h1><h2 id="1-查看当前环境下安装的工具"><a href="#1-查看当前环境下安装的工具" class="headerlink" title="1.查看当前环境下安装的工具"></a>1.查看当前环境下安装的工具</h2><blockquote>
+<p>pip list</p>
+</blockquote>
+<p>或</p>
+<blockquote>
+<p>conda list</p>
+</blockquote>
+<h2 id="2-创建虚拟环境"><a href="#2-创建虚拟环境" class="headerlink" title="2.创建虚拟环境"></a>2.创建虚拟环境</h2><blockquote>
+<p>conda create —name[环境名称]</p>
+</blockquote>
+<p>例</p>
+<blockquote>
+<p>conda create —name hacker</p>
+<p><code>conda create -n 新的环境名 python=指定版本（2.7/3.6/3.7）</code> # 注意需要在base中运行，不能在虚拟环境中执行</p>
+</blockquote>
+<p>即可创建一个名为hacker的虚拟环境</p>
+<h2 id="3-修改环境名称"><a href="#3-修改环境名称" class="headerlink" title="3.修改环境名称"></a>3.修改环境名称</h2><blockquote>
+<p>conda create —name newName（新环境名） —clone oldName（旧环境名）</p>
+</blockquote>
+<h2 id="4-删除环境"><a href="#4-删除环境" class="headerlink" title="4.删除环境"></a>4.删除环境</h2><blockquote>
+<p>conda remove —name oldName（旧环境名） —all </p>
+</blockquote>
+<h2 id="5-查看虚拟环境"><a href="#5-查看虚拟环境" class="headerlink" title="5.查看虚拟环境"></a>5.查看虚拟环境</h2><blockquote>
+<p>conda env list</p>
+<p>conda info -e</p>
+</blockquote>
+<p>其中带有<strong>* </strong>的表示当前所用的环境</p>
+<h2 id="6-切换环境"><a href="#6-切换环境" class="headerlink" title="6.切换环境"></a>6.切换环境</h2><p>使用activate(激活)加上要切换的环境名称，即可切换</p>
+<blockquote>
+<p>conda activate[环境名称]</p>
+</blockquote>
+<p>例</p>
+<blockquote>
+<p>conda activate learn </p>
+</blockquote>
+<h2 id="7-退出虚拟环境"><a href="#7-退出虚拟环境" class="headerlink" title="7.退出虚拟环境"></a>7.退出虚拟环境</h2><blockquote>
+<p>conda deactivate</p>
+</blockquote>
+<h2 id="8-移除虚拟环境"><a href="#8-移除虚拟环境" class="headerlink" title="8.移除虚拟环境"></a>8.移除虚拟环境</h2><blockquote>
+<p>conda remove —name [环境] —all</p>
+</blockquote>
+<p>例</p>
+<blockquote>
+<p>conda remove —name learn —all</p>
+</blockquote>
+<h2 id="9-包的安装"><a href="#9-包的安装" class="headerlink" title="9.包的安装"></a>9.包的安装</h2><p>（无需进入环境）</p>
+<blockquote>
+<p>conda install [包名] -n [环境名]</p>
+</blockquote>
+<h2 id="10-包的更新"><a href="#10-包的更新" class="headerlink" title="10.包的更新"></a>10.包的更新</h2><blockquote>
+<p>conda update —all</p>
+</blockquote>
+<h2 id="11-包的删除"><a href="#11-包的删除" class="headerlink" title="11.包的删除"></a>11.包的删除</h2><blockquote>
+<p>conda remove [包名]</p>
+</blockquote>
+<h2 id="12-查看可以安装的python版本"><a href="#12-查看可以安装的python版本" class="headerlink" title="12.查看可以安装的python版本"></a>12.查看可以安装的python版本</h2><blockquote>
+<p> conda search —full-name python`</p>
+</blockquote>
+<h2 id="13-镜像源"><a href="#13-镜像源" class="headerlink" title="13.镜像源"></a>13.镜像源</h2><h3 id="查看当前conda源"><a href="#查看当前conda源" class="headerlink" title="查看当前conda源"></a>查看当前conda源</h3><blockquote>
+<p>conda config —show</p>
+</blockquote>
+<h3 id="恢复默认源"><a href="#恢复默认源" class="headerlink" title="恢复默认源"></a>恢复默认源</h3><blockquote>
+<p>conda config —remove-key channels</p>
+</blockquote>
+<h3 id="中科大源"><a href="#中科大源" class="headerlink" title="中科大源"></a>中科大源</h3><p>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/pkgs/main/">https://mirrors.ustc.edu.cn/anaconda/pkgs/main/</a><br>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/pkgs/free/">https://mirrors.ustc.edu.cn/anaconda/pkgs/free/</a><br>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/">https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/</a><br>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/">https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/</a><br>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/">https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/</a><br>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/">https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/</a><br>conda config —set show_channel_urls yes</p>
+<h3 id="清华源"><a href="#清华源" class="headerlink" title="清华源"></a>清华源</h3><p>conda config —add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/</a><br>conda config —add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge</a><br>conda config —add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</a><br>conda config —add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/</a><br>conda config —add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</a><br>conda config —set show_channel_urls yes</p>
+<h3 id="腾讯云"><a href="#腾讯云" class="headerlink" title="腾讯云"></a>腾讯云</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda config --add channels https://mirrors.cloud.tencent.com/anaconda/pkgs/free/</span><br><span class="line">conda config --add channels https://mirrors.cloud.tencent.com/anaconda/pkgs/main/</span><br><span class="line">conda config --set show_channel_urls yes</span><br></pre></td></tr></table></figure>
+<h2 id="14清理conda缓存"><a href="#14清理conda缓存" class="headerlink" title="14清理conda缓存"></a>14清理conda缓存</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda clean -p     </span><br><span class="line">conda clean -t      </span><br><span class="line">conda clean -y -all </span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash">删除没有用的包 --packages</span></span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash">删除tar打包 --tarballs</span></span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash">删除所有的安装包及cache(索引缓存、锁定文件、未使用过的包和tar包)</span></span><br></pre></td></tr></table></figure>
+<h2 id="15-pip国内源"><a href="#15-pip国内源" class="headerlink" title="15.pip国内源"></a>15.pip国内源</h2><p>阿里云 ：<a href="http://mirrors.aliyun.com/pypi/simple/">http://mirrors.aliyun.com/pypi/simple/</a><br>中国科技大学： <a href="https://pypi.mirrors.ustc.edu.cn/simple/">https://pypi.mirrors.ustc.edu.cn/simple/</a><br>豆瓣(douban) ：<a href="http://pypi.douban.com/simple/">http://pypi.douban.com/simple/</a><br>清华大学 ：<a href="https://pypi.tuna.tsinghua.edu.cn/simple/">https://pypi.tuna.tsinghua.edu.cn/simple/</a><br>中国科学技术大学： <a href="http://pypi.mirrors.ustc.edu.cn/simple/">http://pypi.mirrors.ustc.edu.cn/simple/</a></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">使用豆瓣源安装</span></span><br><span class="line">pip install opencv-python -i http://pypi.douban.com/simple </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">报错说不信任该源，执行如下：</span></span><br><span class="line">pip install opencv-python -i http://pypi.douban.com/simple --trusted-host pypi.douban.com</span><br></pre></td></tr></table></figure>
+<h2 id="16-修改python版本"><a href="#16-修改python版本" class="headerlink" title="16.修改python版本"></a>16.修改python版本</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">1.新建一个anaconda虚拟环境，指定Python版本</span></span><br><span class="line">conda create -n envTest python=3.5</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">2.直接将现有的anaconda中python更改为3.5</span></span><br><span class="line">sudo conda install python=3.5</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">3.下载并安装对应Python版本的anaconda，anaconda4.2-&gt;python3.5</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">https://repo.continuum.io/archive/</span></span><br></pre></td></tr></table></figure>
+<h2 id="17-打开交互界面"><a href="#17-打开交互界面" class="headerlink" title="17.打开交互界面"></a>17.打开交互界面</h2><blockquote>
+<p>anaconda-navigator</p>
+</blockquote>
+<h2 id="18-临时更换pip源"><a href="#18-临时更换pip源" class="headerlink" title="18.临时更换pip源"></a>18.临时更换pip源</h2><blockquote>
+<p>pip install 库 -i <a href="http://pypi.douban.com/simple">http://pypi.douban.com/simple</a> —trusted-host pypi.douban.com</p>
+</blockquote>
+<h2 id="19-修改python版本"><a href="#19-修改python版本" class="headerlink" title="19.修改python版本"></a>19.修改python版本</h2><blockquote>
+<p>conda install python=3.5</p>
+<p>当出现Solving environment: failed with initial frozen solve. Retrying with flexible solve.</p>
+<p>conda uninstall python</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Shell</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>docker基础命令</title>
     <url>/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/Docker.png" alt></p>
@@ -873,6 +873,31 @@
       </tags>
   </entry>
   <entry>
+    <title>z私人空间</title>
+    <url>/2023/09/18/z%E7%A7%81%E4%BA%BA%E7%A9%BA%E9%97%B4/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，这个密码貌似错误哦，请重新试一下。" data-whm="抱歉，这个文章禁止纠正，不过您还是能看看解密后的内容。">
+  <script id="hbeData" type="hbeData" data-hmacdigest="d18a237a4106c29b23bc91d1084ca1c2c29dd27b98cf75b0b0b645a799d0be33">b47b36384a43ca4c06237ee26bed4fc376152fbe79e6a904d08432a19073bb458f3e513847a58b9bb52432b27efb3af7d639f62cd9090c0b01d77bcd0b4289a88af59b0252f7f86f7e1167bacfa9c46ef7ae08e829c28087a4fd35d1e03cbf3f3e02d7b9f13c5ee1fc15cc4640e3d5f530c30e81e578f8bb5e1a6e5aae1a97e963a1c9eb93abd9449b84af5654fc1bb94548964bcc60499543b00fbec85735a209b2b0db2435217520b56732635ea835e3c2d57522408c134f6fe2efcbef9e52d94498b933e9c0498d2d78b8673bbbdf160f67e5ed25a025bd2e29c635fb4ccfacd27a4c5bc475928a556627d6c94e343d3f261afffd9061ce12e0fb1ed6a3b9af9185611d58c1dea747de3a4890b36c5a666ec2a56a498ef685a2d07eea69ad6204fbde76d6c8ac0af9abad0dd84738b126daf8506724d54ca14e2baa891d121862725b5e1f49e58911bceb59e05747838986eca61655bb21214736f10dc31296571f03454ec8c74e121b7b364e7f9faa68055e2aebf74e3eab1f1923907c2df0bccdedca403bf96fa0d8d64991b61effdec828feb9f39615f097018349c94af32a0ba7d0c9e7f2b17384d2afa2b3875d101d7cf1a6578b0370774215f889528b363efd76affb8e0e09a286a2339ffbac111e7c3f9942209a8cf6f1fee9904b4cd174bb6684833ec0be32395c50eab1ea08829e7e8bb2dcae2ac5ed8cf63cc0</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">这里需要密码进行查看</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+  </entry>
+  <entry>
+    <title>关于最近一些事的思考</title>
+    <url>/2023/06/09/%E5%85%B3%E4%BA%8E%E6%9C%80%E8%BF%91%E4%B8%80%E4%BA%9B%E4%BA%8B%E7%9A%84%E6%80%9D%E8%80%83/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  可能是因为学了计算机的缘故，我对任何事情都开始变得更加注重细节和准确性。无论是什么事情，我都希望能够弄清楚每一个细节。就像要求甲方必须清楚描述要做什么、有哪些具体需求，以及不可做什么等等。只有在明确了相关事情之后，我才能够着手进行第一步。我也非常感激自己拥有这种能力，因为有时候如果不去认真对待事情，最终吃亏的往往会是自己。</p>
+]]></content>
+      <tags>
+        <tag>随想</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>使用Django搭建网站</title>
     <url>/2023/09/17/%E4%BD%BF%E7%94%A8Django%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -920,52 +945,6 @@
       </tags>
   </entry>
   <entry>
-    <title>z私人空间</title>
-    <url>/2023/09/18/z%E7%A7%81%E4%BA%BA%E7%A9%BA%E9%97%B4/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，这个密码貌似错误哦，请重新试一下。" data-whm="抱歉，这个文章禁止纠正，不过您还是能看看解密后的内容。">
-  <script id="hbeData" type="hbeData" data-hmacdigest="46e46e2021da0a6e09e7a2ccd23ba08a8d04bb29b2c5b873a14d523577cb3c35">b47b36384a43ca4c06237ee26bed4fc376152fbe79e6a904d08432a19073bb458f3e513847a58b9bb52432b27efb3af7d639f62cd9090c0b01d77bcd0b4289a88af59b0252f7f86f7e1167bacfa9c46ef7ae08e829c28087a4fd35d1e03cbf3f3e02d7b9f13c5ee1fc15cc4640e3d5f530c30e81e578f8bb5e1a6e5aae1a97e963a1c9eb93abd9449b84af5654fc1bb94548964bcc60499543b00fbec85735a209b2b0db2435217520b56732635ea835e3c2d57522408c134f6fe2efcbef9e52d94498b933e9c0498d2d78b8673bbbdf160f67e5ed25a025bd2e29c635fb4ccfacd27a4c5bc475928a556627d6c94e343d3f261afffd9061ce12e0fb1ed6a3b9af9185611d58c1dea747de3a4890b36c5a666ec2a56a498ef685a2d07eea69ad6204fbde76d6c8ac0af9abad0dd84738b126daf8506724d54ca14e2baa891d121862725b5e1f49e58911bceb59e05747838986eca61655bb21214736f10dc31296571f03454ec8c74e121b7b364e7f9faa68055e2aebf74e3eab1f1923907c2df0bccdedca403bf96fa0d8d64991b61effdec828feb9f39615f097018349c94af32a0ba7d0c9e7f2b17384d2afa2b3875d101d7cf1a6578b0370774215f8895238c129ad2447f6861b10eda0cb8787e6</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">这里需要密码进行查看</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-  </entry>
-  <entry>
-    <title>关于hexo博客出现err: Error: Spawn failed的解决方案</title>
-    <url>/2023/09/15/%E5%85%B3%E4%BA%8Ehexo%E5%8D%9A%E5%AE%A2%E5%87%BA%E7%8E%B0err-Error-Spawn-failed%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="关于hexo博客出现err-Error-Spawn-failed的解决方案"><a href="#关于hexo博客出现err-Error-Spawn-failed的解决方案" class="headerlink" title="关于hexo博客出现err: Error: Spawn failed的解决方案"></a>关于hexo博客出现err: Error: Spawn failed的解决方案</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">##进入站点根目录</span></span><br><span class="line"><span class="built_in">cd</span> /usr/local/src/hexo/hanyubolg/</span><br><span class="line"></span><br><span class="line"><span class="comment">##删除git提交内容文件夹</span></span><br><span class="line"><span class="built_in">rm</span> -rf .deploy_git/</span><br><span class="line"></span><br><span class="line"><span class="comment">##执行</span></span><br><span class="line">git config --global core.autocrlf <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">##最后</span></span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>bug汇总</category>
-      </categories>
-      <tags>
-        <tag>bug</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我的第一篇博客</title>
-    <url>/2023/06/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>你好，我是一名大三计算机科学与技术在校生，在此博客进行相关技术知识的分享</p>
-]]></content>
-      <tags>
-        <tag>第一篇博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于最近一些事的思考</title>
-    <url>/2023/06/09/%E5%85%B3%E4%BA%8E%E6%9C%80%E8%BF%91%E4%B8%80%E4%BA%9B%E4%BA%8B%E7%9A%84%E6%80%9D%E8%80%83/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  可能是因为学了计算机的缘故，我对任何事情都开始变得更加注重细节和准确性。无论是什么事情，我都希望能够弄清楚每一个细节。就像要求甲方必须清楚描述要做什么、有哪些具体需求，以及不可做什么等等。只有在明确了相关事情之后，我才能够着手进行第一步。我也非常感激自己拥有这种能力，因为有时候如果不去认真对待事情，最终吃亏的往往会是自己。</p>
-]]></content>
-      <tags>
-        <tag>随想</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>文案收集(更新中)</title>
     <url>/2023/06/25/%E6%96%87%E6%A1%88%E6%94%B6%E9%9B%86/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -986,6 +965,27 @@
       </categories>
       <tags>
         <tag>随想</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我的第一篇博客</title>
+    <url>/2023/06/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>你好，我是一名大三计算机科学与技术在校生，在此博客进行相关技术知识的分享</p>
+]]></content>
+      <tags>
+        <tag>第一篇博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于hexo博客出现err: Error: Spawn failed的解决方案</title>
+    <url>/2023/09/15/%E5%85%B3%E4%BA%8Ehexo%E5%8D%9A%E5%AE%A2%E5%87%BA%E7%8E%B0err-Error-Spawn-failed%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="关于hexo博客出现err-Error-Spawn-failed的解决方案"><a href="#关于hexo博客出现err-Error-Spawn-failed的解决方案" class="headerlink" title="关于hexo博客出现err: Error: Spawn failed的解决方案"></a>关于hexo博客出现err: Error: Spawn failed的解决方案</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">##进入站点根目录</span></span><br><span class="line"><span class="built_in">cd</span> /usr/local/src/hexo/hanyubolg/</span><br><span class="line"></span><br><span class="line"><span class="comment">##删除git提交内容文件夹</span></span><br><span class="line"><span class="built_in">rm</span> -rf .deploy_git/</span><br><span class="line"></span><br><span class="line"><span class="comment">##执行</span></span><br><span class="line">git config --global core.autocrlf <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">##最后</span></span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>bug汇总</category>
+      </categories>
+      <tags>
+        <tag>bug</tag>
       </tags>
   </entry>
   <entry>
