@@ -83,16 +83,6 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo&#39;s plugins</title>
-    <url>/2023/09/17/hexo-s-plugins/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>相关插件</p>
-</blockquote>
-<span id="more"></span>
-<p>配置支持mermaid<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-filter-mermaid-diagrams</span><br></pre></td></tr></table></figure></p>
-]]></content>
-  </entry>
-  <entry>
     <title>Numpy笔记</title>
     <url>/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/NumPy_logo_2020.png" alt></p>
@@ -433,18 +423,6 @@
       </tags>
   </entry>
   <entry>
-    <title>nvidia-smi基础信息</title>
-    <url>/2023/06/08/nvidia-smi%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/08/nvidia-smi%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF/nvidia.png" alt></p>
-<blockquote>
-<p>nvidia-smi 查看当前GPU使用情况<br><span id="more"></span><br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">GPU：GPU 编号；</span><br><span class="line"></span><br><span class="line">Name：GPU 型号； </span><br><span class="line"></span><br><span class="line">Persistence-M：持续模式的状态。持续模式虽然耗能大，但是在新的GPU应用启动时，花费的时间更少，这里显示的是off的状态；</span><br><span class="line"></span><br><span class="line">Fan：风扇转速，从0到100%之间变动；</span><br><span class="line"></span><br><span class="line">Temp：温度，单位是摄氏度； </span><br><span class="line"></span><br><span class="line">Perf：性能状态，从P0到P12，P0表示最大性能，P12表示状态最小性能（即 GPU 未工作时为P0，达到最大工作限度时为P12）。 </span><br><span class="line"></span><br><span class="line">Pwr:Usage/Cap：能耗；</span><br><span class="line"></span><br><span class="line">Memory Usage：显存使用率； </span><br><span class="line"></span><br><span class="line">Bus-Id：涉及GPU总线的东西  Disp.A：Display Active，表示GPU的显示是否初始化；</span><br><span class="line"></span><br><span class="line">Volatile GPU-Util：浮动的GPU利用率；</span><br><span class="line"></span><br><span class="line">Uncorr. ECC：Error Correcting Code，错误检查与纠正； </span><br><span class="line"></span><br><span class="line">Compute M：compute mode，计算模式</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
-</blockquote>
-]]></content>
-      <tags>
-        <tag>Shell</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Pandas笔记</title>
     <url>/2023/06/07/Pandas%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -754,69 +732,6 @@
       </tags>
   </entry>
   <entry>
-    <title>z私人空间</title>
-    <url>/2023/09/18/z%E7%A7%81%E4%BA%BA%E7%A9%BA%E9%97%B4/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，这个密码貌似错误哦，请重新试一下。" data-whm="抱歉，这个文章禁止纠正，不过您还是能看看解密后的内容。">
-  <script id="hbeData" type="hbeData" data-hmacdigest="4b07ef6565c8ad9168a861af021167854b48cd512aec57e153bc68a2c58e3a00">b47b36384a43ca4c06237ee26bed4fc376152fbe79e6a904d08432a19073bb458f3e513847a58b9bb52432b27efb3af7d639f62cd9090c0b01d77bcd0b4289a88af59b0252f7f86f7e1167bacfa9c46ef7ae08e829c28087a4fd35d1e03cbf3f3e02d7b9f13c5ee1fc15cc4640e3d5f530c30e81e578f8bb5e1a6e5aae1a97e963a1c9eb93abd9449b84af5654fc1bb94548964bcc60499543b00fbec85735a209b2b0db2435217520b56732635ea835e3c2d57522408c134f6fe2efcbef9e52d94498b933e9c0498d2d78b8673bbbdf160f67e5ed25a025bd2e29c635fb4ccfacd27a4c5bc475928a556627d6c94e343d3f261afffd9061ce12e0fb1ed6a3b9af9185611d58c1dea747de3a4890b36c5a666ec2a56a498ef685a2d07eea69ad6204fbde76d6c8ac0af9abad0dd84738b126daf8506724d54ca14e2baa891d121862725b5e1f49e58911bceb59e05747838986eca61655bb21214736f10dc31296571f03454ec8c74e121b7b364e7f9faa68055e2aebf74e3eab1f1923907c2df0bccdedca403bf96fa0d8d64991b61effdec828feb9f39615f097018349c94af32a0ba7d0c9e7f2b17384d2afa2b3875d101d7cf1a6578b0370774215f889528b363efd76affb8e0e09a286a2339ffbac111e7c3f9942209a8cf6f1fee9904b4cd174bb6684833ec0be32395c50eab1f1f5aac303ed8ab21551ee2caee23215</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">这里需要密码进行查看</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-  </entry>
-  <entry>
-    <title>使用Django搭建网站</title>
-    <url>/2023/09/17/%E4%BD%BF%E7%94%A8Django%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>django是一个开源的web应用框架，采用MTV框架模式<br><span id="more"></span></p>
-<h1 id="使用Django搭建网站"><a href="#使用Django搭建网站" class="headerlink" title="使用Django搭建网站"></a>使用Django搭建网站</h1></blockquote>
-<h4 id="1-安装django环境"><a href="#1-安装django环境" class="headerlink" title="1.安装django环境"></a>1.安装django环境</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">python3 -m pip install django</span><br></pre></td></tr></table></figure>
-<p>初始化django,创建第一个项目</p>
-<blockquote>
-<p>django-admin stratproject mysite</p>
-</blockquote>
-<ul>
-<li><p>manage.py 用于管理本项目的命令行工具</p>
-</li>
-<li><p>_ init_.py 一个普通的包初始化模块</p>
-</li>
-<li><p>settings.py django 项目的配置文件，本项目引用的组件，项目名，数据库配置，时间，语言，静态文件访问地址和存储路径</p>
-</li>
-<li><p>wsgi.py Web Server gateway interface 接口信息用于服务器部署</p>
-</li>
-</ul>
-<h3 id="2-启动运行django框架"><a href="#2-启动运行django框架" class="headerlink" title="2.启动运行django框架"></a>2.启动运行django框架</h3><blockquote>
-<p>python3 manage.py runserver 0.0.0.0:8000</p>
-</blockquote>
-<h3 id="3-创建第一个app和页面"><a href="#3-创建第一个app和页面" class="headerlink" title="3.创建第一个app和页面"></a>3.创建第一个app和页面</h3><blockquote>
-<p>django-admin startapp firstapp</p>
-</blockquote>
-<h4 id="修改配置文件，在项目mysite下的settings-py"><a href="#修改配置文件，在项目mysite下的settings-py" class="headerlink" title="修改配置文件，在项目mysite下的settings.py"></a>修改配置文件，在项目mysite下的settings.py</h4><p>INSTALLED_APPS 增加 ‘firstapp’</p>
-<p>TEMPLATES ‘DIRS’ [os.path.join(BASE_DIR ,’templates’)]</p>
-<p>ALLOWED_HOSTS = [‘*’]</p>
-<h4 id="添加执行层代码"><a href="#添加执行层代码" class="headerlink" title="添加执行层代码"></a>添加执行层代码</h4><p>在mysite项目中 firstapp第一个创建的应用</p>
-<p>views.py</p>
-<p>定义第一个函数</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">firsthtml</span>(<span class="params">request</span>):</span><br><span class="line">    <span class="comment">#渲染页面并呈现给客户</span></span><br><span class="line">    <span class="keyword">return</span> render(request,<span class="string">&#x27;index.html&#x27;</span>)</span><br></pre></td></tr></table></figure>
-<h4 id="在项目文件夹修改urls-py-将用户的访问地址链接到执行代码"><a href="#在项目文件夹修改urls-py-将用户的访问地址链接到执行代码" class="headerlink" title="在项目文件夹修改urls.py,将用户的访问地址链接到执行代码"></a>在项目文件夹修改urls.py,将用户的访问地址链接到执行代码</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> firstapp <span class="keyword">import</span> views</span><br><span class="line">urlpatterns = &#123;</span><br><span class="line">    path(<span class="string">&#x27;helloworld&#x27;</span>,views.firsthtml)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="创建templates文件夹，用于存放index-html文件内容"><a href="#创建templates文件夹，用于存放index-html文件内容" class="headerlink" title="创建templates文件夹，用于存放index.html文件内容"></a>创建templates文件夹，用于存放index.html文件内容</h4><h4 id="创建index-html文件"><a href="#创建index-html文件" class="headerlink" title="创建index.html文件"></a>创建index.html文件</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo &quot;hello&quot; &gt; templates/index.html</span><br></pre></td></tr></table></figure>
-<p>运行服务器查看效果</p>
-<p>python3 manage.py runserver 0.0.0.0:8000</p>
-<h3 id="4-init数据库与创建账号"><a href="#4-init数据库与创建账号" class="headerlink" title="4.init数据库与创建账号"></a>4.init数据库与创建账号</h3><p>在mysite中创建 管理员 账号<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">python manage.py makemigrations</span><br><span class="line"></span><br><span class="line">python manage.py migrate</span><br><span class="line"></span><br><span class="line">python manage.py createsuperuser</span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>conda的使用技巧</title>
     <url>/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/anaconda.png" alt></p>
@@ -915,16 +830,26 @@
       </tags>
   </entry>
   <entry>
-    <title>关于hexo博客出现err: Error: Spawn failed的解决方案</title>
-    <url>/2023/09/15/%E5%85%B3%E4%BA%8Ehexo%E5%8D%9A%E5%AE%A2%E5%87%BA%E7%8E%B0err-Error-Spawn-failed%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="关于hexo博客出现err-Error-Spawn-failed的解决方案"><a href="#关于hexo博客出现err-Error-Spawn-failed的解决方案" class="headerlink" title="关于hexo博客出现err: Error: Spawn failed的解决方案"></a>关于hexo博客出现err: Error: Spawn failed的解决方案</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">##进入站点根目录</span></span><br><span class="line"><span class="built_in">cd</span> /usr/local/src/hexo/hanyubolg/</span><br><span class="line"></span><br><span class="line"><span class="comment">##删除git提交内容文件夹</span></span><br><span class="line"><span class="built_in">rm</span> -rf .deploy_git/</span><br><span class="line"></span><br><span class="line"><span class="comment">##执行</span></span><br><span class="line">git config --global core.autocrlf <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">##最后</span></span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    <title>nvidia-smi基础信息</title>
+    <url>/2023/06/08/nvidia-smi%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/08/nvidia-smi%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF/nvidia.png" alt></p>
+<blockquote>
+<p>nvidia-smi 查看当前GPU使用情况<br><span id="more"></span><br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">GPU：GPU 编号；</span><br><span class="line"></span><br><span class="line">Name：GPU 型号； </span><br><span class="line"></span><br><span class="line">Persistence-M：持续模式的状态。持续模式虽然耗能大，但是在新的GPU应用启动时，花费的时间更少，这里显示的是off的状态；</span><br><span class="line"></span><br><span class="line">Fan：风扇转速，从0到100%之间变动；</span><br><span class="line"></span><br><span class="line">Temp：温度，单位是摄氏度； </span><br><span class="line"></span><br><span class="line">Perf：性能状态，从P0到P12，P0表示最大性能，P12表示状态最小性能（即 GPU 未工作时为P0，达到最大工作限度时为P12）。 </span><br><span class="line"></span><br><span class="line">Pwr:Usage/Cap：能耗；</span><br><span class="line"></span><br><span class="line">Memory Usage：显存使用率； </span><br><span class="line"></span><br><span class="line">Bus-Id：涉及GPU总线的东西  Disp.A：Display Active，表示GPU的显示是否初始化；</span><br><span class="line"></span><br><span class="line">Volatile GPU-Util：浮动的GPU利用率；</span><br><span class="line"></span><br><span class="line">Uncorr. ECC：Error Correcting Code，错误检查与纠正； </span><br><span class="line"></span><br><span class="line">Compute M：compute mode，计算模式</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+</blockquote>
 ]]></content>
-      <categories>
-        <category>bug汇总</category>
-      </categories>
       <tags>
-        <tag>bug</tag>
+        <tag>Shell</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>hexo&#39;s plugins</title>
+    <url>/2023/09/17/hexo-s-plugins/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>相关插件</p>
+</blockquote>
+<span id="more"></span>
+<p>配置支持mermaid<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-filter-mermaid-diagrams</span><br></pre></td></tr></table></figure></p>
+]]></content>
   </entry>
   <entry>
     <title>win10配置问题速查手册</title>
@@ -948,12 +873,171 @@
       </tags>
   </entry>
   <entry>
-    <title>我的第一篇博客</title>
-    <url>/2023/06/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>你好，我是一名大三计算机科学与技术在校生，在此博客进行相关技术知识的分享</p>
+    <title>z私人空间</title>
+    <url>/2023/09/18/z%E7%A7%81%E4%BA%BA%E7%A9%BA%E9%97%B4/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，这个密码貌似错误哦，请重新试一下。" data-whm="抱歉，这个文章禁止纠正，不过您还是能看看解密后的内容。">
+  <script id="hbeData" type="hbeData" data-hmacdigest="4b07ef6565c8ad9168a861af021167854b48cd512aec57e153bc68a2c58e3a00">b47b36384a43ca4c06237ee26bed4fc376152fbe79e6a904d08432a19073bb458f3e513847a58b9bb52432b27efb3af7d639f62cd9090c0b01d77bcd0b4289a88af59b0252f7f86f7e1167bacfa9c46ef7ae08e829c28087a4fd35d1e03cbf3f3e02d7b9f13c5ee1fc15cc4640e3d5f530c30e81e578f8bb5e1a6e5aae1a97e963a1c9eb93abd9449b84af5654fc1bb94548964bcc60499543b00fbec85735a209b2b0db2435217520b56732635ea835e3c2d57522408c134f6fe2efcbef9e52d94498b933e9c0498d2d78b8673bbbdf160f67e5ed25a025bd2e29c635fb4ccfacd27a4c5bc475928a556627d6c94e343d3f261afffd9061ce12e0fb1ed6a3b9af9185611d58c1dea747de3a4890b36c5a666ec2a56a498ef685a2d07eea69ad6204fbde76d6c8ac0af9abad0dd84738b126daf8506724d54ca14e2baa891d121862725b5e1f49e58911bceb59e05747838986eca61655bb21214736f10dc31296571f03454ec8c74e121b7b364e7f9faa68055e2aebf74e3eab1f1923907c2df0bccdedca403bf96fa0d8d64991b61effdec828feb9f39615f097018349c94af32a0ba7d0c9e7f2b17384d2afa2b3875d101d7cf1a6578b0370774215f889528b363efd76affb8e0e09a286a2339ffbac111e7c3f9942209a8cf6f1fee9904b4cd174bb6684833ec0be32395c50eab1f1f5aac303ed8ab21551ee2caee23215</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">这里需要密码进行查看</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+  </entry>
+  <entry>
+    <title>使用Django搭建网站</title>
+    <url>/2023/09/17/%E4%BD%BF%E7%94%A8Django%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>django是一个开源的web应用框架，采用MTV框架模式<br><span id="more"></span></p>
+<h1 id="使用Django搭建网站"><a href="#使用Django搭建网站" class="headerlink" title="使用Django搭建网站"></a>使用Django搭建网站</h1></blockquote>
+<h4 id="1-安装django环境"><a href="#1-安装django环境" class="headerlink" title="1.安装django环境"></a>1.安装django环境</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">python3 -m pip install django</span><br></pre></td></tr></table></figure>
+<p>初始化django,创建第一个项目</p>
+<blockquote>
+<p>django-admin stratproject mysite</p>
+</blockquote>
+<ul>
+<li><p>manage.py 用于管理本项目的命令行工具</p>
+</li>
+<li><p>_ init_.py 一个普通的包初始化模块</p>
+</li>
+<li><p>settings.py django 项目的配置文件，本项目引用的组件，项目名，数据库配置，时间，语言，静态文件访问地址和存储路径</p>
+</li>
+<li><p>wsgi.py Web Server gateway interface 接口信息用于服务器部署</p>
+</li>
+</ul>
+<h3 id="2-启动运行django框架"><a href="#2-启动运行django框架" class="headerlink" title="2.启动运行django框架"></a>2.启动运行django框架</h3><blockquote>
+<p>python3 manage.py runserver 0.0.0.0:8000</p>
+</blockquote>
+<h3 id="3-创建第一个app和页面"><a href="#3-创建第一个app和页面" class="headerlink" title="3.创建第一个app和页面"></a>3.创建第一个app和页面</h3><blockquote>
+<p>django-admin startapp firstapp</p>
+</blockquote>
+<h4 id="修改配置文件，在项目mysite下的settings-py"><a href="#修改配置文件，在项目mysite下的settings-py" class="headerlink" title="修改配置文件，在项目mysite下的settings.py"></a>修改配置文件，在项目mysite下的settings.py</h4><p>INSTALLED_APPS 增加 ‘firstapp’</p>
+<p>TEMPLATES ‘DIRS’ [os.path.join(BASE_DIR ,’templates’)]</p>
+<p>ALLOWED_HOSTS = [‘*’]</p>
+<h4 id="添加执行层代码"><a href="#添加执行层代码" class="headerlink" title="添加执行层代码"></a>添加执行层代码</h4><p>在mysite项目中 firstapp第一个创建的应用</p>
+<p>views.py</p>
+<p>定义第一个函数</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">firsthtml</span>(<span class="params">request</span>):</span><br><span class="line">    <span class="comment">#渲染页面并呈现给客户</span></span><br><span class="line">    <span class="keyword">return</span> render(request,<span class="string">&#x27;index.html&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="在项目文件夹修改urls-py-将用户的访问地址链接到执行代码"><a href="#在项目文件夹修改urls-py-将用户的访问地址链接到执行代码" class="headerlink" title="在项目文件夹修改urls.py,将用户的访问地址链接到执行代码"></a>在项目文件夹修改urls.py,将用户的访问地址链接到执行代码</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> firstapp <span class="keyword">import</span> views</span><br><span class="line">urlpatterns = &#123;</span><br><span class="line">    path(<span class="string">&#x27;helloworld&#x27;</span>,views.firsthtml)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="创建templates文件夹，用于存放index-html文件内容"><a href="#创建templates文件夹，用于存放index-html文件内容" class="headerlink" title="创建templates文件夹，用于存放index.html文件内容"></a>创建templates文件夹，用于存放index.html文件内容</h4><h4 id="创建index-html文件"><a href="#创建index-html文件" class="headerlink" title="创建index.html文件"></a>创建index.html文件</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo &quot;hello&quot; &gt; templates/index.html</span><br></pre></td></tr></table></figure>
+<p>运行服务器查看效果</p>
+<p>python3 manage.py runserver 0.0.0.0:8000</p>
+<h3 id="4-init数据库与创建账号"><a href="#4-init数据库与创建账号" class="headerlink" title="4.init数据库与创建账号"></a>4.init数据库与创建账号</h3><p>在mysite中创建 管理员 账号<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">python manage.py makemigrations</span><br><span class="line"></span><br><span class="line">python manage.py migrate</span><br><span class="line"></span><br><span class="line">python manage.py createsuperuser</span><br></pre></td></tr></table></figure></p>
 ]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
       <tags>
-        <tag>第一篇博客</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于hexo博客出现err: Error: Spawn failed的解决方案</title>
+    <url>/2023/09/15/%E5%85%B3%E4%BA%8Ehexo%E5%8D%9A%E5%AE%A2%E5%87%BA%E7%8E%B0err-Error-Spawn-failed%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="关于hexo博客出现err-Error-Spawn-failed的解决方案"><a href="#关于hexo博客出现err-Error-Spawn-failed的解决方案" class="headerlink" title="关于hexo博客出现err: Error: Spawn failed的解决方案"></a>关于hexo博客出现err: Error: Spawn failed的解决方案</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">##进入站点根目录</span></span><br><span class="line"><span class="built_in">cd</span> /usr/local/src/hexo/hanyubolg/</span><br><span class="line"></span><br><span class="line"><span class="comment">##删除git提交内容文件夹</span></span><br><span class="line"><span class="built_in">rm</span> -rf .deploy_git/</span><br><span class="line"></span><br><span class="line"><span class="comment">##执行</span></span><br><span class="line">git config --global core.autocrlf <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">##最后</span></span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>bug汇总</category>
+      </categories>
+      <tags>
+        <tag>bug</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>文案收集(更新中)</title>
+    <url>/2023/06/25/%E6%96%87%E6%A1%88%E6%94%B6%E9%9B%86/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>收集的一些优质文案<br><span id="more"></span></p>
+</blockquote>
+<h3 id="城市类"><a href="#城市类" class="headerlink" title="城市类"></a>城市类</h3><ul>
+<li><p>亮起霓虹的城市夜灯，有了喧哗，变得更加妖媚</p>
+</li>
+<li><p>夏天的阳光就是最好的滤镜</p>
+</li>
+</ul>
+<h3 id="艺术类"><a href="#艺术类" class="headerlink" title="艺术类"></a>艺术类</h3><ul>
+<li>中国艺术最大的特色，从是个到绘画到戏剧，都讲究乐而不谣，哀而不怨，雍容有度，讲究典雅，自然，反对装腔作势和过火的恶趣，反对无目的地炫耀技巧。而这些也是世界一切高级艺术共同的准则。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>文案</category>
+      </categories>
+      <tags>
+        <tag>随想</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>请求响应报头相关名词解释</title>
+    <url>/2023/06/12/%E8%AF%B7%E6%B1%82%E5%93%8D%E5%BA%94%E6%8A%A5%E5%A4%B4%E7%9B%B8%E5%85%B3%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>本文主要说明常用的请求响应相关名词解释,建议读者具备网络基础<br><span id="more"></span></p>
+<h2 id="常用的请求报头"><a href="#常用的请求报头" class="headerlink" title="常用的请求报头"></a>常用的请求报头</h2></blockquote>
+<h3 id="1-Host-主机和端口号"><a href="#1-Host-主机和端口号" class="headerlink" title="1. Host (主机和端口号)"></a>1. Host (主机和端口号)</h3><p>Host：对应网址URL中的Web名称和端口号，用于指定被请求资源的Internet主机和端口号，通常属于URL的一部分。</p>
+<h3 id="2-Connection-链接类型"><a href="#2-Connection-链接类型" class="headerlink" title="2. Connection (链接类型)"></a>2. Connection (链接类型)</h3><p>Connection：表示客户端与服务连接类型</p>
+<ol>
+<li>Client 发起一个包含 <code>Connection:keep-alive</code> 的请求，HTTP/1.1使用 <code>keep-alive</code> 为默认值。</li>
+<li>Server收到请求后：<ul>
+<li>如果 Server 支持 keep-alive，回复一个包含 Connection:keep-alive 的响应，不关闭连接；</li>
+<li>如果 Server 不支持 keep-alive，回复一个包含 Connection:close 的响应，关闭连接。</li>
+</ul>
+</li>
+<li>如果client收到包含 <code>Connection:keep-alive</code> 的响应，向同一个连接发送下一个请求，直到一方主动关闭连接。</li>
+</ol>
+<p><strong>keep-alive在很多情况下能够重用连接，减少资源消耗，缩短响应时间，比如当浏览器需要多个文件时(比如一个HTML文件和相关的图形文件)，不需要每次都去请求建立连接。</strong></p>
+<h3 id="3-Upgrade-Insecure-Requests-升级为HTTPS请求"><a href="#3-Upgrade-Insecure-Requests-升级为HTTPS请求" class="headerlink" title="3. Upgrade-Insecure-Requests (升级为HTTPS请求)"></a>3. Upgrade-Insecure-Requests (升级为HTTPS请求)</h3><p>Upgrade-Insecure-Requests：升级不安全的请求，意思是会在加载 http 资源时自动替换成 https 请求，让浏览器不再显示https页面中的http请求警报。</p>
+<p><strong><em>HTTPS 是以安全为目标的 HTTP 通道，所以在 HTTPS 承载的页面上不允许出现 HTTP 请求，一旦出现就是提示或报错。\</em></strong></p>
+<h3 id="4-User-Agent-浏览器名称"><a href="#4-User-Agent-浏览器名称" class="headerlink" title="4. User-Agent (浏览器名称)"></a>4. User-Agent (浏览器名称)</h3><p>User-Agent：是客户浏览器的名称，以后会详细讲。</p>
+<h3 id="5-Accept-传输文件类型"><a href="#5-Accept-传输文件类型" class="headerlink" title="5. Accept (传输文件类型)"></a>5. Accept (传输文件类型)</h3><p>Accept：指浏览器或其他客户端可以接受的MIME（Multipurpose Internet Mail Extensions（多用途互联网邮件扩展））文件类型，服务器可以根据它判断并返回适当的文件格式。</p>
+<h5 id="举例："><a href="#举例：" class="headerlink" title="举例："></a>举例：</h5><p><code>Accept: */*</code>：表示什么都可以接收。</p>
+<p><code>Accept：image/gif</code>：表明客户端希望接受GIF图像格式的资源；</p>
+<p><code>Accept：text/html</code>：表明客户端希望接受html文本。</p>
+<p><code>Accept: text/html, application/xhtml+xml;q=0.9, image/*;q=0.8</code>：表示浏览器支持的 MIME 类型分别是 html文本、xhtml和xml文档、所有的图像格式资源。</p>
+<p><strong><em>q是权重系数，范围 0 =&lt; q &lt;= 1，q 值越大，请求越倾向于获得其“;”之前的类型表示的内容。若没有指定q值，则默认为1，按从左到右排序顺序；若被赋值为0，则用于表示浏览器不接受此内容类型。\</em></strong></p>
+<p><strong><em>Text：用于标准化地表示的文本信息，文本消息可以是多种字符集和或者多种格式的；Application：用于传输应用程序数据或者二进制数据。<a href="http://blog.sina.com.cn/s/blog_866e403f010179f1.html">详细请点击</a>\</em></strong></p>
+<h3 id="6-Referer-页面跳转处"><a href="#6-Referer-页面跳转处" class="headerlink" title="6. Referer (页面跳转处)"></a>6. Referer (页面跳转处)</h3><p>Referer：表明产生请求的网页来自于哪个URL，用户是从该 Referer页面访问到当前请求的页面。这个属性可以用来跟踪Web请求来自哪个页面，是从什么网站来的等。</p>
+<p>有时候遇到下载某网站图片，需要对应的referer，否则无法下载图片，那是因为人家做了防盗链，原理就是根据referer去判断是否是本网站的地址，如果不是，则拒绝，如果是，就可以下载；</p>
+<h3 id="7-Accept-Encoding（文件编解码格式）"><a href="#7-Accept-Encoding（文件编解码格式）" class="headerlink" title="7. Accept-Encoding（文件编解码格式）"></a>7. Accept-Encoding（文件编解码格式）</h3><p>Accept-Encoding：指出浏览器可以接受的编码方式。编码方式不同于文件格式，它是为了压缩文件并加速文件传递速度。浏览器在接收到Web响应之后先解码，然后再检查文件格式，许多情形下这可以减少大量的下载时间。</p>
+<h5 id="举例：Accept-Encoding-gzip-q-1-0-identity-q-0-5-q-0"><a href="#举例：Accept-Encoding-gzip-q-1-0-identity-q-0-5-q-0" class="headerlink" title="举例：Accept-Encoding:gzip;q=1.0, identity; q=0.5, *;q=0"></a>举例：Accept-Encoding:gzip;q=1.0, identity; q=0.5, *;q=0</h5><p>如果有多个Encoding同时匹配, 按照q值顺序排列，本例中按顺序支持 gzip, identity压缩编码，支持gzip的浏览器会返回经过gzip编码的HTML页面。 <strong>如果请求消息中没有设置这个域服务器假定客户端对各种内容编码都可以接受。</strong></p>
+<h3 id="8-Accept-Language（语言种类）"><a href="#8-Accept-Language（语言种类）" class="headerlink" title="8. Accept-Language（语言种类）"></a>8. Accept-Language（语言种类）</h3><p>Accept-Langeuage：指出浏览器可以接受的语言种类，如en或en-us指英语，zh或者zh-cn指中文，当服务器能够提供一种以上的语言版本时要用到。</p>
+<h3 id="9-Accept-Charset（字符编码）"><a href="#9-Accept-Charset（字符编码）" class="headerlink" title="9. Accept-Charset（字符编码）"></a>9. Accept-Charset（字符编码）</h3><p>Accept-Charset：指出浏览器可以接受的字符编码。</p>
+<h5 id="举例：Accept-Charset-iso-8859-1-gb2312-utf-8"><a href="#举例：Accept-Charset-iso-8859-1-gb2312-utf-8" class="headerlink" title="举例：Accept-Charset:iso-8859-1,gb2312,utf-8"></a>举例：Accept-Charset:iso-8859-1,gb2312,utf-8</h5><ul>
+<li>ISO8859-1：通常叫做Latin-1。Latin-1包括了书写所有西方欧洲语言不可缺少的附加字符，英文浏览器的默认值是ISO-8859-1.</li>
+<li>gb2312：标准简体中文字符集;</li>
+<li>utf-8：UNICODE 的一种变长字符编码，可以解决多种语言文本显示问题，从而实现应用国际化和本地化。</li>
+</ul>
+<p><strong>如果在请求消息中没有设置这个域，缺省是任何字符集都可以接受。</strong></p>
+<h3 id="10-Cookie-（Cookie）"><a href="#10-Cookie-（Cookie）" class="headerlink" title="10. Cookie （Cookie）"></a>10. Cookie （Cookie）</h3><p>Cookie：浏览器用这个属性向服务器发送Cookie。Cookie是在浏览器中寄存的小型数据体，它可以记载和服务器相关的用户信息，也可以用来实现会话功能，以后会详细讲。</p>
+<h3 id="11-Content-Type-POST数据类型"><a href="#11-Content-Type-POST数据类型" class="headerlink" title="11. Content-Type (POST数据类型)"></a>11. Content-Type (POST数据类型)</h3><p>Content-Type：POST请求里用来表示的内容类型。</p>
+<h5 id="举例：Content-Type-Text-XML-charset-gb2312："><a href="#举例：Content-Type-Text-XML-charset-gb2312：" class="headerlink" title="举例：Content-Type = Text/XML; charset=gb2312："></a>举例：Content-Type = Text/XML; charset=gb2312：</h5><p>指明该请求的消息体中包含的是纯文本的XML类型的数据，字符编码采用“gb2312”。</p>
+<h2 id="常用的响应报头-了解"><a href="#常用的响应报头-了解" class="headerlink" title="常用的响应报头(了解)"></a>常用的响应报头(了解)</h2><p>理论上所有的响应头信息都应该是回应请求头的。但是服务端为了效率，安全，还有其他方面的考虑，会添加相对应的响应头信息，从上图可以看到：</p>
+<h3 id="1-Cache-Control：must-revalidate-no-cache-private。"><a href="#1-Cache-Control：must-revalidate-no-cache-private。" class="headerlink" title="1. Cache-Control：must-revalidate, no-cache, private。"></a>1. Cache-Control：must-revalidate, no-cache, private。</h3><p>这个值告诉客户端，服务端不希望客户端缓存资源，在下次请求资源时，必须要从新请求服务器，不能从缓存副本中获取资源。</p>
+<ul>
+<li>Cache-Control是响应头中很重要的信息，当客户端请求头中包含Cache-Control:max-age=0请求，明确表示不会缓存服务器资源时,Cache-Control作为作为回应信息，通常会返回no-cache，意思就是说，”那就不缓存呗”。</li>
+<li>当客户端在请求头中没有包含Cache-Control时，服务端往往会定,不同的资源不同的缓存策略，比如说oschina在缓存图片资源的策略就是Cache-Control：max-age=86400,这个意思是，从当前时间开始，在86400秒的时间内，客户端可以直接从缓存副本中读取资源，而不需要向服务器请求。</li>
+</ul>
+<h3 id="2-Connection：keep-alive"><a href="#2-Connection：keep-alive" class="headerlink" title="2. Connection：keep-alive"></a>2. Connection：keep-alive</h3><p>这个字段作为回应客户端的Connection：keep-alive，告诉客户端服务器的tcp连接也是一个长连接，客户端可以继续使用这个tcp连接发送http请求。</p>
+<h3 id="3-Content-Encoding-gzip"><a href="#3-Content-Encoding-gzip" class="headerlink" title="3. Content-Encoding:gzip"></a>3. Content-Encoding:gzip</h3><p>告诉客户端，服务端发送的资源是采用gzip编码的，客户端看到这个信息后，应该采用gzip对资源进行解码。</p>
+<h3 id="4-Content-Type：text-html-charset-UTF-8"><a href="#4-Content-Type：text-html-charset-UTF-8" class="headerlink" title="4. Content-Type：text/html;charset=UTF-8"></a>4. Content-Type：text/html;charset=UTF-8</h3><p>告诉客户端，资源文件的类型，还有字符编码，客户端通过utf-8对资源进行解码，然后对资源进行html解析。通常我们会看到有些网站是乱码的，往往就是服务器端没有返回正确的编码。</p>
+<h3 id="5-Date：Sun-21-Sep-2016-06-18-21-GMT"><a href="#5-Date：Sun-21-Sep-2016-06-18-21-GMT" class="headerlink" title="5. Date：Sun, 21 Sep 2016 06:18:21 GMT"></a>5. Date：Sun, 21 Sep 2016 06:18:21 GMT</h3><p>这个是服务端发送资源时的服务器时间，GMT是格林尼治所在地的标准时间。http协议中发送的时间都是GMT的，这主要是解决在互联网上，不同时区在相互请求资源的时候，时间混乱问题。</p>
+<h3 id="6-Expires-Sun-1-Jan-2000-01-00-00-GMT"><a href="#6-Expires-Sun-1-Jan-2000-01-00-00-GMT" class="headerlink" title="6. Expires:Sun, 1 Jan 2000 01:00:00 GMT"></a>6. Expires:Sun, 1 Jan 2000 01:00:00 GMT</h3><p>这个响应头也是跟缓存有关的，告诉客户端在这个时间前，可以直接访问缓存副本，很显然这个值会存在问题，因为客户端和服务器的时间不一定会都是相同的，如果时间不同就会导致问题。所以这个响应头是没有Cache-Control：max-age=*这个响应头准确的，因为max-age=date中的date是个相对时间，不仅更好理解，也更准确。</p>
+<h3 id="7-Pragma-no-cache"><a href="#7-Pragma-no-cache" class="headerlink" title="7. Pragma:no-cache"></a>7. Pragma:no-cache</h3><p>这个含义与Cache-Control等同。</p>
+<h3 id="8-Server：Tengine-1-4-6"><a href="#8-Server：Tengine-1-4-6" class="headerlink" title="8.Server：Tengine/1.4.6"></a>8.Server：Tengine/1.4.6</h3><p>这个是服务器和相对应的版本，只是告诉客户端服务器的信息。</p>
+<h3 id="9-Transfer-Encoding：chunked"><a href="#9-Transfer-Encoding：chunked" class="headerlink" title="9. Transfer-Encoding：chunked"></a>9. Transfer-Encoding：chunked</h3><p>这个响应头告诉客户端，服务器发送的资源的方式是分块发送的。一般分块发送的资源都是服务器动态生成的，在发送时还不知道发送资源的大小，所以采用分块发送，每一块都是独立的，独立的块都能标示自己的长度，最后一块是0长度的，当客户端读到这个0长度的块时，就可以确定资源已经传输完了。</p>
+<h3 id="10-Vary-Accept-Encoding"><a href="#10-Vary-Accept-Encoding" class="headerlink" title="10. Vary: Accept-Encoding"></a>10. Vary: Accept-Encoding</h3><p>告诉缓存服务器，缓存压缩文件和非压缩文件两个版本，现在这个字段用处并不大，因为现在的浏览器都是支持压缩的。</p>
+<h2 id="Cookie-和-Session："><a href="#Cookie-和-Session：" class="headerlink" title="Cookie 和 Session："></a>Cookie 和 Session：</h2><p>服务器和客户端的交互仅限于请求/响应过程，结束之后便断开，在下一次请求时，服务器会认为新的客户端。</p>
+<p>为了维护他们之间的链接，让服务器知道这是前一个用户发送的请求，必须在一个地方保存客户端的信息。</p>
+<p><strong>Cookie</strong>：通过在 客户端 记录的信息确定用户的身份。</p>
+<p><strong>Session</strong>：通过在 服务器端 记录的信息确定用户的身份。</p>
+]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>计算机网络</tag>
       </tags>
   </entry>
   <entry>
@@ -966,6 +1050,15 @@
       <categories>
         <category>随想</category>
       </categories>
+      <tags>
+        <tag>随想</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于最近一些事的思考</title>
+    <url>/2023/06/09/%E5%85%B3%E4%BA%8E%E6%9C%80%E8%BF%91%E4%B8%80%E4%BA%9B%E4%BA%8B%E7%9A%84%E6%80%9D%E8%80%83/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  可能是因为学了计算机的缘故，我对任何事情都开始变得更加注重细节和准确性。无论是什么事情，我都希望能够弄清楚每一个细节。就像要求甲方必须清楚描述要做什么、有哪些具体需求，以及不可做什么等等。只有在明确了相关事情之后，我才能够着手进行第一步。我也非常感激自己拥有这种能力，因为有时候如果不去认真对待事情，最终吃亏的往往会是自己。</p>
+]]></content>
       <tags>
         <tag>随想</tag>
       </tags>
@@ -1030,12 +1123,12 @@
 ]]></content>
   </entry>
   <entry>
-    <title>关于最近一些事的思考</title>
-    <url>/2023/06/09/%E5%85%B3%E4%BA%8E%E6%9C%80%E8%BF%91%E4%B8%80%E4%BA%9B%E4%BA%8B%E7%9A%84%E6%80%9D%E8%80%83/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  可能是因为学了计算机的缘故，我对任何事情都开始变得更加注重细节和准确性。无论是什么事情，我都希望能够弄清楚每一个细节。就像要求甲方必须清楚描述要做什么、有哪些具体需求，以及不可做什么等等。只有在明确了相关事情之后，我才能够着手进行第一步。我也非常感激自己拥有这种能力，因为有时候如果不去认真对待事情，最终吃亏的往往会是自己。</p>
+    <title>我的第一篇博客</title>
+    <url>/2023/06/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>你好，我是一名大三计算机科学与技术在校生，在此博客进行相关技术知识的分享</p>
 ]]></content>
       <tags>
-        <tag>随想</tag>
+        <tag>第一篇博客</tag>
       </tags>
   </entry>
   <entry>
@@ -1180,99 +1273,6 @@
 <p>边（edge）：表示顶点或事物之间的逻辑关系</p>
 <p>边的权重（weight）：边上对应的值。可以对应距离、时间值、开销等。</p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>请求响应报头相关名词解释</title>
-    <url>/2023/06/12/%E8%AF%B7%E6%B1%82%E5%93%8D%E5%BA%94%E6%8A%A5%E5%A4%B4%E7%9B%B8%E5%85%B3%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>本文主要说明常用的请求响应相关名词解释,建议读者具备网络基础<br><span id="more"></span></p>
-<h2 id="常用的请求报头"><a href="#常用的请求报头" class="headerlink" title="常用的请求报头"></a>常用的请求报头</h2></blockquote>
-<h3 id="1-Host-主机和端口号"><a href="#1-Host-主机和端口号" class="headerlink" title="1. Host (主机和端口号)"></a>1. Host (主机和端口号)</h3><p>Host：对应网址URL中的Web名称和端口号，用于指定被请求资源的Internet主机和端口号，通常属于URL的一部分。</p>
-<h3 id="2-Connection-链接类型"><a href="#2-Connection-链接类型" class="headerlink" title="2. Connection (链接类型)"></a>2. Connection (链接类型)</h3><p>Connection：表示客户端与服务连接类型</p>
-<ol>
-<li>Client 发起一个包含 <code>Connection:keep-alive</code> 的请求，HTTP/1.1使用 <code>keep-alive</code> 为默认值。</li>
-<li>Server收到请求后：<ul>
-<li>如果 Server 支持 keep-alive，回复一个包含 Connection:keep-alive 的响应，不关闭连接；</li>
-<li>如果 Server 不支持 keep-alive，回复一个包含 Connection:close 的响应，关闭连接。</li>
-</ul>
-</li>
-<li>如果client收到包含 <code>Connection:keep-alive</code> 的响应，向同一个连接发送下一个请求，直到一方主动关闭连接。</li>
-</ol>
-<p><strong>keep-alive在很多情况下能够重用连接，减少资源消耗，缩短响应时间，比如当浏览器需要多个文件时(比如一个HTML文件和相关的图形文件)，不需要每次都去请求建立连接。</strong></p>
-<h3 id="3-Upgrade-Insecure-Requests-升级为HTTPS请求"><a href="#3-Upgrade-Insecure-Requests-升级为HTTPS请求" class="headerlink" title="3. Upgrade-Insecure-Requests (升级为HTTPS请求)"></a>3. Upgrade-Insecure-Requests (升级为HTTPS请求)</h3><p>Upgrade-Insecure-Requests：升级不安全的请求，意思是会在加载 http 资源时自动替换成 https 请求，让浏览器不再显示https页面中的http请求警报。</p>
-<p><strong><em>HTTPS 是以安全为目标的 HTTP 通道，所以在 HTTPS 承载的页面上不允许出现 HTTP 请求，一旦出现就是提示或报错。\</em></strong></p>
-<h3 id="4-User-Agent-浏览器名称"><a href="#4-User-Agent-浏览器名称" class="headerlink" title="4. User-Agent (浏览器名称)"></a>4. User-Agent (浏览器名称)</h3><p>User-Agent：是客户浏览器的名称，以后会详细讲。</p>
-<h3 id="5-Accept-传输文件类型"><a href="#5-Accept-传输文件类型" class="headerlink" title="5. Accept (传输文件类型)"></a>5. Accept (传输文件类型)</h3><p>Accept：指浏览器或其他客户端可以接受的MIME（Multipurpose Internet Mail Extensions（多用途互联网邮件扩展））文件类型，服务器可以根据它判断并返回适当的文件格式。</p>
-<h5 id="举例："><a href="#举例：" class="headerlink" title="举例："></a>举例：</h5><p><code>Accept: */*</code>：表示什么都可以接收。</p>
-<p><code>Accept：image/gif</code>：表明客户端希望接受GIF图像格式的资源；</p>
-<p><code>Accept：text/html</code>：表明客户端希望接受html文本。</p>
-<p><code>Accept: text/html, application/xhtml+xml;q=0.9, image/*;q=0.8</code>：表示浏览器支持的 MIME 类型分别是 html文本、xhtml和xml文档、所有的图像格式资源。</p>
-<p><strong><em>q是权重系数，范围 0 =&lt; q &lt;= 1，q 值越大，请求越倾向于获得其“;”之前的类型表示的内容。若没有指定q值，则默认为1，按从左到右排序顺序；若被赋值为0，则用于表示浏览器不接受此内容类型。\</em></strong></p>
-<p><strong><em>Text：用于标准化地表示的文本信息，文本消息可以是多种字符集和或者多种格式的；Application：用于传输应用程序数据或者二进制数据。<a href="http://blog.sina.com.cn/s/blog_866e403f010179f1.html">详细请点击</a>\</em></strong></p>
-<h3 id="6-Referer-页面跳转处"><a href="#6-Referer-页面跳转处" class="headerlink" title="6. Referer (页面跳转处)"></a>6. Referer (页面跳转处)</h3><p>Referer：表明产生请求的网页来自于哪个URL，用户是从该 Referer页面访问到当前请求的页面。这个属性可以用来跟踪Web请求来自哪个页面，是从什么网站来的等。</p>
-<p>有时候遇到下载某网站图片，需要对应的referer，否则无法下载图片，那是因为人家做了防盗链，原理就是根据referer去判断是否是本网站的地址，如果不是，则拒绝，如果是，就可以下载；</p>
-<h3 id="7-Accept-Encoding（文件编解码格式）"><a href="#7-Accept-Encoding（文件编解码格式）" class="headerlink" title="7. Accept-Encoding（文件编解码格式）"></a>7. Accept-Encoding（文件编解码格式）</h3><p>Accept-Encoding：指出浏览器可以接受的编码方式。编码方式不同于文件格式，它是为了压缩文件并加速文件传递速度。浏览器在接收到Web响应之后先解码，然后再检查文件格式，许多情形下这可以减少大量的下载时间。</p>
-<h5 id="举例：Accept-Encoding-gzip-q-1-0-identity-q-0-5-q-0"><a href="#举例：Accept-Encoding-gzip-q-1-0-identity-q-0-5-q-0" class="headerlink" title="举例：Accept-Encoding:gzip;q=1.0, identity; q=0.5, *;q=0"></a>举例：Accept-Encoding:gzip;q=1.0, identity; q=0.5, *;q=0</h5><p>如果有多个Encoding同时匹配, 按照q值顺序排列，本例中按顺序支持 gzip, identity压缩编码，支持gzip的浏览器会返回经过gzip编码的HTML页面。 <strong>如果请求消息中没有设置这个域服务器假定客户端对各种内容编码都可以接受。</strong></p>
-<h3 id="8-Accept-Language（语言种类）"><a href="#8-Accept-Language（语言种类）" class="headerlink" title="8. Accept-Language（语言种类）"></a>8. Accept-Language（语言种类）</h3><p>Accept-Langeuage：指出浏览器可以接受的语言种类，如en或en-us指英语，zh或者zh-cn指中文，当服务器能够提供一种以上的语言版本时要用到。</p>
-<h3 id="9-Accept-Charset（字符编码）"><a href="#9-Accept-Charset（字符编码）" class="headerlink" title="9. Accept-Charset（字符编码）"></a>9. Accept-Charset（字符编码）</h3><p>Accept-Charset：指出浏览器可以接受的字符编码。</p>
-<h5 id="举例：Accept-Charset-iso-8859-1-gb2312-utf-8"><a href="#举例：Accept-Charset-iso-8859-1-gb2312-utf-8" class="headerlink" title="举例：Accept-Charset:iso-8859-1,gb2312,utf-8"></a>举例：Accept-Charset:iso-8859-1,gb2312,utf-8</h5><ul>
-<li>ISO8859-1：通常叫做Latin-1。Latin-1包括了书写所有西方欧洲语言不可缺少的附加字符，英文浏览器的默认值是ISO-8859-1.</li>
-<li>gb2312：标准简体中文字符集;</li>
-<li>utf-8：UNICODE 的一种变长字符编码，可以解决多种语言文本显示问题，从而实现应用国际化和本地化。</li>
-</ul>
-<p><strong>如果在请求消息中没有设置这个域，缺省是任何字符集都可以接受。</strong></p>
-<h3 id="10-Cookie-（Cookie）"><a href="#10-Cookie-（Cookie）" class="headerlink" title="10. Cookie （Cookie）"></a>10. Cookie （Cookie）</h3><p>Cookie：浏览器用这个属性向服务器发送Cookie。Cookie是在浏览器中寄存的小型数据体，它可以记载和服务器相关的用户信息，也可以用来实现会话功能，以后会详细讲。</p>
-<h3 id="11-Content-Type-POST数据类型"><a href="#11-Content-Type-POST数据类型" class="headerlink" title="11. Content-Type (POST数据类型)"></a>11. Content-Type (POST数据类型)</h3><p>Content-Type：POST请求里用来表示的内容类型。</p>
-<h5 id="举例：Content-Type-Text-XML-charset-gb2312："><a href="#举例：Content-Type-Text-XML-charset-gb2312：" class="headerlink" title="举例：Content-Type = Text/XML; charset=gb2312："></a>举例：Content-Type = Text/XML; charset=gb2312：</h5><p>指明该请求的消息体中包含的是纯文本的XML类型的数据，字符编码采用“gb2312”。</p>
-<h2 id="常用的响应报头-了解"><a href="#常用的响应报头-了解" class="headerlink" title="常用的响应报头(了解)"></a>常用的响应报头(了解)</h2><p>理论上所有的响应头信息都应该是回应请求头的。但是服务端为了效率，安全，还有其他方面的考虑，会添加相对应的响应头信息，从上图可以看到：</p>
-<h3 id="1-Cache-Control：must-revalidate-no-cache-private。"><a href="#1-Cache-Control：must-revalidate-no-cache-private。" class="headerlink" title="1. Cache-Control：must-revalidate, no-cache, private。"></a>1. Cache-Control：must-revalidate, no-cache, private。</h3><p>这个值告诉客户端，服务端不希望客户端缓存资源，在下次请求资源时，必须要从新请求服务器，不能从缓存副本中获取资源。</p>
-<ul>
-<li>Cache-Control是响应头中很重要的信息，当客户端请求头中包含Cache-Control:max-age=0请求，明确表示不会缓存服务器资源时,Cache-Control作为作为回应信息，通常会返回no-cache，意思就是说，”那就不缓存呗”。</li>
-<li>当客户端在请求头中没有包含Cache-Control时，服务端往往会定,不同的资源不同的缓存策略，比如说oschina在缓存图片资源的策略就是Cache-Control：max-age=86400,这个意思是，从当前时间开始，在86400秒的时间内，客户端可以直接从缓存副本中读取资源，而不需要向服务器请求。</li>
-</ul>
-<h3 id="2-Connection：keep-alive"><a href="#2-Connection：keep-alive" class="headerlink" title="2. Connection：keep-alive"></a>2. Connection：keep-alive</h3><p>这个字段作为回应客户端的Connection：keep-alive，告诉客户端服务器的tcp连接也是一个长连接，客户端可以继续使用这个tcp连接发送http请求。</p>
-<h3 id="3-Content-Encoding-gzip"><a href="#3-Content-Encoding-gzip" class="headerlink" title="3. Content-Encoding:gzip"></a>3. Content-Encoding:gzip</h3><p>告诉客户端，服务端发送的资源是采用gzip编码的，客户端看到这个信息后，应该采用gzip对资源进行解码。</p>
-<h3 id="4-Content-Type：text-html-charset-UTF-8"><a href="#4-Content-Type：text-html-charset-UTF-8" class="headerlink" title="4. Content-Type：text/html;charset=UTF-8"></a>4. Content-Type：text/html;charset=UTF-8</h3><p>告诉客户端，资源文件的类型，还有字符编码，客户端通过utf-8对资源进行解码，然后对资源进行html解析。通常我们会看到有些网站是乱码的，往往就是服务器端没有返回正确的编码。</p>
-<h3 id="5-Date：Sun-21-Sep-2016-06-18-21-GMT"><a href="#5-Date：Sun-21-Sep-2016-06-18-21-GMT" class="headerlink" title="5. Date：Sun, 21 Sep 2016 06:18:21 GMT"></a>5. Date：Sun, 21 Sep 2016 06:18:21 GMT</h3><p>这个是服务端发送资源时的服务器时间，GMT是格林尼治所在地的标准时间。http协议中发送的时间都是GMT的，这主要是解决在互联网上，不同时区在相互请求资源的时候，时间混乱问题。</p>
-<h3 id="6-Expires-Sun-1-Jan-2000-01-00-00-GMT"><a href="#6-Expires-Sun-1-Jan-2000-01-00-00-GMT" class="headerlink" title="6. Expires:Sun, 1 Jan 2000 01:00:00 GMT"></a>6. Expires:Sun, 1 Jan 2000 01:00:00 GMT</h3><p>这个响应头也是跟缓存有关的，告诉客户端在这个时间前，可以直接访问缓存副本，很显然这个值会存在问题，因为客户端和服务器的时间不一定会都是相同的，如果时间不同就会导致问题。所以这个响应头是没有Cache-Control：max-age=*这个响应头准确的，因为max-age=date中的date是个相对时间，不仅更好理解，也更准确。</p>
-<h3 id="7-Pragma-no-cache"><a href="#7-Pragma-no-cache" class="headerlink" title="7. Pragma:no-cache"></a>7. Pragma:no-cache</h3><p>这个含义与Cache-Control等同。</p>
-<h3 id="8-Server：Tengine-1-4-6"><a href="#8-Server：Tengine-1-4-6" class="headerlink" title="8.Server：Tengine/1.4.6"></a>8.Server：Tengine/1.4.6</h3><p>这个是服务器和相对应的版本，只是告诉客户端服务器的信息。</p>
-<h3 id="9-Transfer-Encoding：chunked"><a href="#9-Transfer-Encoding：chunked" class="headerlink" title="9. Transfer-Encoding：chunked"></a>9. Transfer-Encoding：chunked</h3><p>这个响应头告诉客户端，服务器发送的资源的方式是分块发送的。一般分块发送的资源都是服务器动态生成的，在发送时还不知道发送资源的大小，所以采用分块发送，每一块都是独立的，独立的块都能标示自己的长度，最后一块是0长度的，当客户端读到这个0长度的块时，就可以确定资源已经传输完了。</p>
-<h3 id="10-Vary-Accept-Encoding"><a href="#10-Vary-Accept-Encoding" class="headerlink" title="10. Vary: Accept-Encoding"></a>10. Vary: Accept-Encoding</h3><p>告诉缓存服务器，缓存压缩文件和非压缩文件两个版本，现在这个字段用处并不大，因为现在的浏览器都是支持压缩的。</p>
-<h2 id="Cookie-和-Session："><a href="#Cookie-和-Session：" class="headerlink" title="Cookie 和 Session："></a>Cookie 和 Session：</h2><p>服务器和客户端的交互仅限于请求/响应过程，结束之后便断开，在下一次请求时，服务器会认为新的客户端。</p>
-<p>为了维护他们之间的链接，让服务器知道这是前一个用户发送的请求，必须在一个地方保存客户端的信息。</p>
-<p><strong>Cookie</strong>：通过在 客户端 记录的信息确定用户的身份。</p>
-<p><strong>Session</strong>：通过在 服务器端 记录的信息确定用户的身份。</p>
-]]></content>
-      <categories>
-        <category>计算机网络</category>
-      </categories>
-      <tags>
-        <tag>计算机网络</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>文案收集(更新中)</title>
-    <url>/2023/06/25/%E6%96%87%E6%A1%88%E6%94%B6%E9%9B%86/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>收集的一些优质文案<br><span id="more"></span></p>
-</blockquote>
-<h3 id="城市类"><a href="#城市类" class="headerlink" title="城市类"></a>城市类</h3><ul>
-<li><p>亮起霓虹的城市夜灯，有了喧哗，变得更加妖媚</p>
-</li>
-<li><p>夏天的阳光就是最好的滤镜</p>
-</li>
-</ul>
-<h3 id="艺术类"><a href="#艺术类" class="headerlink" title="艺术类"></a>艺术类</h3><ul>
-<li>中国艺术最大的特色，从是个到绘画到戏剧，都讲究乐而不谣，哀而不怨，雍容有度，讲究典雅，自然，反对装腔作势和过火的恶趣，反对无目的地炫耀技巧。而这些也是世界一切高级艺术共同的准则。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>文案</category>
-      </categories>
-      <tags>
-        <tag>随想</tag>
-      </tags>
   </entry>
   <entry>
     <title>饿补计算机科学基础（二）--算法</title>
