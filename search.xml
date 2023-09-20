@@ -50,6 +50,22 @@
       </tags>
   </entry>
   <entry>
+    <title>Fitness Zone</title>
+    <url>/2023/09/20/Fitness-Zone/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>💪这里记载着一些健身小记<br><span id="more"></span></p>
+</blockquote>
+<p>从2021年以后没有健身，在23年9月中旬渐渐恢复健身，但是消失了曾经的那种健身的乐趣，或许是当时第一次接触健身，感觉健身带来的多巴胺会让自己放松，身心愉悦，又或许是最近过于疲惫，感觉少了一些什么东西，却又感受不到，毕竟其中停止健身两年时间，<del>期间训练了巴西柔术</del>，自己的体能必然会下降。</p>
+]]></content>
+      <categories>
+        <category>健身</category>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>健身</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Numpy笔记</title>
     <url>/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/NumPy_logo_2020.png" alt></p>
@@ -699,39 +715,6 @@
       </tags>
   </entry>
   <entry>
-    <title>docker基础命令</title>
-    <url>/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/Docker.png" alt></p>
-<blockquote>
-<p>docker的基础命令<br><span id="more"></span></p>
-</blockquote>
-<p>docker pull 安装镜像</p>
-<p>docker run 运行镜像</p>
-<p>docker container run</p>
-<p>说明：</p>
-<p>创建好image后，新建容器时使用；</p>
-<p>每次运行，都会创建一个新的容器；</p>
-<p>新建的容器可以通过 docker container ls -a 或者 docker ps -a 查看（加 -a 表示查看所有创建好的容器）；</p>
-<p>每次创建会返回一个【长的容器ID】；</p>
-<p>通常情况下，运行一次即可；</p>
-<p>docker containers list -a 查看当前运行的所有镜像</p>
-<p>docker exec -it 【docker的名称】 bash  进入docker运行的bash环境中</p>
-<p>docker container start 【containerID】运行已经创建的容器</p>
-<p>docker ps -a 查看所有容器</p>
-<p>docker stop 【containerID】</p>
-<p>docker rm 【containerID】（先停止容器后才能删除）</p>
-<p>docker export 制作基础镜像，使用 <strong>docker export</strong> 命令根据容器 <strong>ID</strong> 将镜像导出成一个文件</p>
-<p>docker import - new_hangger_server &lt; hangger_server.tar 将这个镜像文件导入进来。</p>
-<p>docker load 载入镜像</p>
-]]></content>
-      <categories>
-        <category>docker</category>
-      </categories>
-      <tags>
-        <tag>docker</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>conda的使用技巧</title>
     <url>/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/anaconda.png" alt></p>
@@ -830,6 +813,49 @@
       </tags>
   </entry>
   <entry>
+    <title>docker基础命令</title>
+    <url>/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/Docker.png" alt></p>
+<blockquote>
+<p>docker的基础命令<br><span id="more"></span></p>
+</blockquote>
+<p>docker pull 安装镜像</p>
+<p>docker run 运行镜像</p>
+<p>docker container run</p>
+<p>说明：</p>
+<p>创建好image后，新建容器时使用；</p>
+<p>每次运行，都会创建一个新的容器；</p>
+<p>新建的容器可以通过 docker container ls -a 或者 docker ps -a 查看（加 -a 表示查看所有创建好的容器）；</p>
+<p>每次创建会返回一个【长的容器ID】；</p>
+<p>通常情况下，运行一次即可；</p>
+<p>docker containers list -a 查看当前运行的所有镜像</p>
+<p>docker exec -it 【docker的名称】 bash  进入docker运行的bash环境中</p>
+<p>docker container start 【containerID】运行已经创建的容器</p>
+<p>docker ps -a 查看所有容器</p>
+<p>docker stop 【containerID】</p>
+<p>docker rm 【containerID】（先停止容器后才能删除）</p>
+<p>docker export 制作基础镜像，使用 <strong>docker export</strong> 命令根据容器 <strong>ID</strong> 将镜像导出成一个文件</p>
+<p>docker import - new_hangger_server &lt; hangger_server.tar 将这个镜像文件导入进来。</p>
+<p>docker load 载入镜像</p>
+]]></content>
+      <categories>
+        <category>docker</category>
+      </categories>
+      <tags>
+        <tag>docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo&#39;s plugins</title>
+    <url>/2023/09/17/hexo-s-plugins/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>相关插件</p>
+</blockquote>
+<span id="more"></span>
+<p>配置支持mermaid<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-filter-mermaid-diagrams</span><br></pre></td></tr></table></figure></p>
+]]></content>
+  </entry>
+  <entry>
     <title>nvidia-smi基础信息</title>
     <url>/2023/06/08/nvidia-smi%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/08/nvidia-smi%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF/nvidia.png" alt></p>
@@ -842,14 +868,13 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo&#39;s plugins</title>
-    <url>/2023/09/17/hexo-s-plugins/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>相关插件</p>
-</blockquote>
-<span id="more"></span>
-<p>配置支持mermaid<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-filter-mermaid-diagrams</span><br></pre></td></tr></table></figure></p>
+    <title>我的第一篇博客</title>
+    <url>/2023/06/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>你好，我是一名大三计算机科学与技术在校生，在此博客进行相关技术知识的分享</p>
 ]]></content>
+      <tags>
+        <tag>第一篇博客</tag>
+      </tags>
   </entry>
   <entry>
     <title>win10配置问题速查手册</title>
@@ -941,36 +966,63 @@
       </tags>
   </entry>
   <entry>
-    <title>文案收集(更新中)</title>
-    <url>/2023/06/25/%E6%96%87%E6%A1%88%E6%94%B6%E9%9B%86/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>收集的一些优质文案<br><span id="more"></span></p>
-</blockquote>
-<h3 id="城市类"><a href="#城市类" class="headerlink" title="城市类"></a>城市类</h3><ul>
-<li><p>亮起霓虹的城市夜灯，有了喧哗，变得更加妖媚</p>
-</li>
-<li><p>夏天的阳光就是最好的滤镜</p>
-</li>
+    <title>饿补计算机科学基础（一）--计算机基础</title>
+    <url>/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>计算机基础，常识<br><span id="more"></span></p>
+<h2 id="1-计算思维概念"><a href="#1-计算思维概念" class="headerlink" title="1.计算思维概念"></a>1.计算思维概念</h2><p>特点：抽象、自动化</p>
+<p>计算思维： </p>
+<ul>
+<li>递归</li>
+<li>抽象和分解</li>
+<li>启发式推理</li>
+<li>冗余、容错、纠错</li>
 </ul>
-<h3 id="艺术类"><a href="#艺术类" class="headerlink" title="艺术类"></a>艺术类</h3><ul>
-<li>中国艺术最大的特色，从是个到绘画到戏剧，都讲究乐而不谣，哀而不怨，雍容有度，讲究典雅，自然，反对装腔作势和过火的恶趣，反对无目的地炫耀技巧。而这些也是世界一切高级艺术共同的准则。</li>
-</ul>
+<p>抽象：完全超越物理的时空观，并完全用符号来表示</p>
+<p>自动化：表示形式应该有效地被信息处理代理执行</p>
+<h2 id="1-1符号化信息表达"><a href="#1-1符号化信息表达" class="headerlink" title="1.1符号化信息表达"></a>1.1符号化信息表达</h2><p>数值型和非数值型对象</p>
+<p>数值和非数值—符号化—&gt; 符号化编码 —语义化—&gt; 数值和非数值</p>
+<h2 id="1-2数值数据表示"><a href="#1-2数值数据表示" class="headerlink" title="1.2数值数据表示"></a>1.2数值数据表示</h2><p>数值型数据的表示</p>
+<p>进制转换：位权转换</p>
+<p>原码：负数原码的符号位为1</p>
+<p>反码：负数的反码为将原码除符号位外按位取反</p>
+<p>补码：负数的补码为将反码加1</p>
+<h2 id="1-3字符型数据的表示"><a href="#1-3字符型数据的表示" class="headerlink" title="1.3字符型数据的表示"></a>1.3字符型数据的表示</h2><h4 id="英文字符的表示"><a href="#英文字符的表示" class="headerlink" title="英文字符的表示"></a>英文字符的表示</h4><p>ASCII码-美国信息交换标准代码</p>
+<p>可表示128个不同字符：10数字、26个英文字母小写、26个英文字母大写、其他特殊符号</p>
+<p>a：97、A：65</p>
+<p>内存中用一个字节来存放一个ASCII码，最高位为校验位</p>
+<h4 id="汉字字符的表示"><a href="#汉字字符的表示" class="headerlink" title="汉字字符的表示"></a>汉字字符的表示</h4><p>GB2312-80国标码：</p>
+<p>机内码：汉字被计算机系统内部处理和存储而使用的代码</p>
+<p>GB18030-2005《信息技术中文编码字符集》：</p>
+<p>采用多字节编码</p>
+<h4 id="国际字符的表示"><a href="#国际字符的表示" class="headerlink" title="国际字符的表示"></a>国际字符的表示</h4><p>Unicode字符集编码：解决需要满足多语言、跨平台</p>
+<h4 id="字符的输入、输出"><a href="#字符的输入、输出" class="headerlink" title="字符的输入、输出"></a>字符的输入、输出</h4><p>输入码：在键盘上利用数字、符号、字母输入相应的字符</p>
+<p>汉字输入码“在键盘上利用数字、符号、拼音字母输入汉字的代码</p>
+<p>形码类（五笔）、音码类（拼音输入法）</p>
+<p>字符的输出：字形码，记录字符形状</p>
+<p>点阵规模用0和1编码无亮点和有亮点形成字形信息，便于显示。</p>
+<p>点阵的方式：16 <em> 16 / 32 </em> 32 / 48 * 48</p>
+<h2 id="1-4多媒体信息的表示"><a href="#1-4多媒体信息的表示" class="headerlink" title="1.4多媒体信息的表示"></a>1.4多媒体信息的表示</h2><p>模拟量：在时间或者数值上都是连续的物理量</p>
+<p>数字量：在时间上或数量上都是离散的物理量（例如：计步器）</p>
+<p>图形：==矢量==图形文件形式存储，圆，直线、曲线等图形元素</p>
+<p>图像：==模拟==信号，通过数字照相机、摄像机捕捉的自然界真实场景画面产生的影像，数字化后以==点阵==（位图）的形式存储</p>
+<h4 id="图像数字化方法"><a href="#图像数字化方法" class="headerlink" title="图像数字化方法"></a>图像数字化方法</h4><ol>
+<li><p>将连续色调的模拟图像经过采样、量化后转成数字影像（编码）</p>
+</li>
+<li><p>采样：将二位空间上连续的图像转换为离散点的过程，将图像按照行列分割成m * n个网格，每个网格对应一个像素</p>
+<p>图像分辨率</p>
+</li>
+<li><p>量化：图像离散化后，用有限个数的整数值来表示图像色彩浓淡连续变化值的过程</p>
+</li>
+</ol>
+<p>量化级数：量化时所确定的离散取值个数</p>
+<p>量化位数：表示量化的色彩值（或亮度）所需要的二进制位数，一般可以用8位，16位，32位</p>
+<p>注意：2^24^ ≈ 16Mb</p>
+<h3 id="1-4-2声音的数字化"><a href="#1-4-2声音的数字化" class="headerlink" title="1.4.2声音的数字化"></a>1.4.2声音的数字化</h3><p>声音数字化过程：采样、量化、编码</p>
+<p>采样频率：每秒钟采样点的次数（Hz）</p>
+<p>声道数</p>
+<p>记录每秒存储声音容量公式为</p>
+<p>采样频率 X 量化位数（bit） ➗ 8 X 声道数 = 每秒数据量</p>
 ]]></content>
-      <categories>
-        <category>文案</category>
-      </categories>
-      <tags>
-        <tag>随想</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我的第一篇博客</title>
-    <url>/2023/06/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>你好，我是一名大三计算机科学与技术在校生，在此博客进行相关技术知识的分享</p>
-]]></content>
-      <tags>
-        <tag>第一篇博客</tag>
-      </tags>
   </entry>
   <entry>
     <title>请求响应报头相关名词解释</title>
@@ -1055,63 +1107,144 @@
       </tags>
   </entry>
   <entry>
-    <title>饿补计算机科学基础（一）--计算机基础</title>
-    <url>/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>计算机基础，常识<br><span id="more"></span></p>
-<h2 id="1-计算思维概念"><a href="#1-计算思维概念" class="headerlink" title="1.计算思维概念"></a>1.计算思维概念</h2><p>特点：抽象、自动化</p>
-<p>计算思维： </p>
+    <title>饿补计算机科学基础（二）--算法</title>
+    <url>/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89-%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>基于python编写的算法</p>
+<span id="more"></span>
+<h2 id="2-典型算法设计"><a href="#2-典型算法设计" class="headerlink" title="2.典型算法设计"></a>2.典型算法设计</h2><h3 id="1-递归"><a href="#1-递归" class="headerlink" title="(1).递归"></a>(1).递归</h3><p>递归方法（recursion algorithm）是指一种通过解决同类的规模较小的子问题而获得问题求解的方法</p>
 <ul>
-<li>递归</li>
-<li>抽象和分解</li>
-<li>启发式推理</li>
-<li>冗余、容错、纠错</li>
+<li><p>问题的定义是递归定义的</p>
+</li>
+<li><p>问题的解法按递归算法实现的</p>
+</li>
+<li>数据的结构形式是按递归定义的（二叉树，广义表）</li>
 </ul>
-<p>抽象：完全超越物理的时空观，并完全用符号来表示</p>
-<p>自动化：表示形式应该有效地被信息处理代理执行</p>
-<h2 id="1-1符号化信息表达"><a href="#1-1符号化信息表达" class="headerlink" title="1.1符号化信息表达"></a>1.1符号化信息表达</h2><p>数值型和非数值型对象</p>
-<p>数值和非数值—符号化—&gt; 符号化编码 —语义化—&gt; 数值和非数值</p>
-<h2 id="1-2数值数据表示"><a href="#1-2数值数据表示" class="headerlink" title="1.2数值数据表示"></a>1.2数值数据表示</h2><p>数值型数据的表示</p>
-<p>进制转换：位权转换</p>
-<p>原码：负数原码的符号位为1</p>
-<p>反码：负数的反码为将原码除符号位外按位取反</p>
-<p>补码：负数的补码为将反码加1</p>
-<h2 id="1-3字符型数据的表示"><a href="#1-3字符型数据的表示" class="headerlink" title="1.3字符型数据的表示"></a>1.3字符型数据的表示</h2><h4 id="英文字符的表示"><a href="#英文字符的表示" class="headerlink" title="英文字符的表示"></a>英文字符的表示</h4><p>ASCII码-美国信息交换标准代码</p>
-<p>可表示128个不同字符：10数字、26个英文字母小写、26个英文字母大写、其他特殊符号</p>
-<p>a：97、A：65</p>
-<p>内存中用一个字节来存放一个ASCII码，最高位为校验位</p>
-<h4 id="汉字字符的表示"><a href="#汉字字符的表示" class="headerlink" title="汉字字符的表示"></a>汉字字符的表示</h4><p>GB2312-80国标码：</p>
-<p>机内码：汉字被计算机系统内部处理和存储而使用的代码</p>
-<p>GB18030-2005《信息技术中文编码字符集》：</p>
-<p>采用多字节编码</p>
-<h4 id="国际字符的表示"><a href="#国际字符的表示" class="headerlink" title="国际字符的表示"></a>国际字符的表示</h4><p>Unicode字符集编码：解决需要满足多语言、跨平台</p>
-<h4 id="字符的输入、输出"><a href="#字符的输入、输出" class="headerlink" title="字符的输入、输出"></a>字符的输入、输出</h4><p>输入码：在键盘上利用数字、符号、字母输入相应的字符</p>
-<p>汉字输入码“在键盘上利用数字、符号、拼音字母输入汉字的代码</p>
-<p>形码类（五笔）、音码类（拼音输入法）</p>
-<p>字符的输出：字形码，记录字符形状</p>
-<p>点阵规模用0和1编码无亮点和有亮点形成字形信息，便于显示。</p>
-<p>点阵的方式：16 <em> 16 / 32 </em> 32 / 48 * 48</p>
-<h2 id="1-4多媒体信息的表示"><a href="#1-4多媒体信息的表示" class="headerlink" title="1.4多媒体信息的表示"></a>1.4多媒体信息的表示</h2><p>模拟量：在时间或者数值上都是连续的物理量</p>
-<p>数字量：在时间上或数量上都是离散的物理量（例如：计步器）</p>
-<p>图形：==矢量==图形文件形式存储，圆，直线、曲线等图形元素</p>
-<p>图像：==模拟==信号，通过数字照相机、摄像机捕捉的自然界真实场景画面产生的影像，数字化后以==点阵==（位图）的形式存储</p>
-<h4 id="图像数字化方法"><a href="#图像数字化方法" class="headerlink" title="图像数字化方法"></a>图像数字化方法</h4><ol>
-<li><p>将连续色调的模拟图像经过采样、量化后转成数字影像（编码）</p>
+<p>假如一个函数或者子程序是由自身所定义或调用的，成为递归</p>
+<ul>
+<li><p>递归函数的要素：</p>
+<ul>
+<li><p>一个可以反复执行的递归过程</p>
 </li>
-<li><p>采样：将二位空间上连续的图像转换为离散点的过程，将图像按照行列分割成m * n个网格，每个网格对应一个像素</p>
-<p>图像分辨率</p>
+<li><p>跳出递归过程的出口（不再进行递归的条件）</p>
 </li>
-<li><p>量化：图像离散化后，用有限个数的整数值来表示图像色彩浓淡连续变化值的过程</p>
+</ul>
 </li>
-</ol>
-<p>量化级数：量化时所确定的离散取值个数</p>
-<p>量化位数：表示量化的色彩值（或亮度）所需要的二进制位数，一般可以用8位，16位，32位</p>
-<p>注意：2^24^ ≈ 16Mb</p>
-<h3 id="1-4-2声音的数字化"><a href="#1-4-2声音的数字化" class="headerlink" title="1.4.2声音的数字化"></a>1.4.2声音的数字化</h3><p>声音数字化过程：采样、量化、编码</p>
-<p>采样频率：每秒钟采样点的次数（Hz）</p>
-<p>声道数</p>
-<p>记录每秒存储声音容量公式为</p>
-<p>采样频率 X 量化位数（bit） ➗ 8 X 声道数 = 每秒数据量</p>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 阶乘的递归函数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fact</span>(<span class="params">n</span>):</span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">1</span>:<span class="comment">#递归出口</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> n * fact(n-<span class="number">1</span>)<span class="comment">#递归调用</span></span><br><span class="line">    </span><br><span class="line"><span class="built_in">print</span>（fact(<span class="number">3</span>)）</span><br></pre></td></tr></table></figure>
+<h4 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h4><p>二分查找算法（Binary search）递归实现：二分查找要求线性表必须采用顺序存储结构，而且表中元素按关键字有序排列</p>
+<p>反复执行的递归过程：缩小范围继续查找</p>
+<p>跳出提柜的出口：找到了，或者范围长度变成0</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">binarysearch_rec</span>(<span class="params">A, key, low, high</span>):  <span class="comment"># 二分查找算法的递归实现</span></span><br><span class="line">    <span class="keyword">if</span> low &gt; high:</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line">    mid = (low + high) // <span class="number">2</span>  <span class="comment"># 计算中间位置的索引，使用 (low + high) // 2</span></span><br><span class="line">    <span class="keyword">if</span> key == A[mid]:</span><br><span class="line">        <span class="keyword">return</span> mid</span><br><span class="line">    <span class="keyword">elif</span> key &lt; A[mid]:</span><br><span class="line">        <span class="keyword">return</span> binarysearch_rec(A, key, low, mid - <span class="number">1</span>)  <span class="comment"># 左边递归查找</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> binarysearch_rec(A, key, mid + <span class="number">1</span>, high)  <span class="comment"># 右边递归查找</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(binarysearch_rec([<span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">7</span>], <span class="number">4</span>, <span class="number">0</span>, <span class="number">3</span>))  <span class="comment"># 调用函数</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">binary_search</span>(<span class="params">A,Key</span>):</span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    j=<span class="built_in">len</span>(A)-<span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> i &lt;=j:</span><br><span class="line">        mid = (i+j)//<span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> A[mid]==Key:</span><br><span class="line">            <span class="keyword">return</span> mid</span><br><span class="line">        <span class="keyword">elif</span> A[mid]&lt;Key:</span><br><span class="line">            i=mid+<span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            j=mid-<span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(binary_search([<span class="number">3</span>,<span class="number">7</span>,<span class="number">45</span>,<span class="number">89</span>,<span class="number">90</span>],<span class="number">45</span>))</span><br></pre></td></tr></table></figure>
+<h3 id="2-迭代"><a href="#2-迭代" class="headerlink" title="(2).迭代"></a>(2).迭代</h3><p>重复反馈过程的活动，目的通常为了逼近随需目标或结果</p>
+<p>适合重复性操作</p>
+<ul>
+<li>迭代起点：直接或间接地不断由旧值递推出新值的变量</li>
+<li>迭代关系式：变量的前一个值推出其下一个值得公式或关系</li>
+<li>结束条件：什么情况下不在迭代</li>
+</ul>
+<p>例如：斐波那契数列</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">fib_rec</span>(<span class="params">n</span>):</span><br><span class="line">    a, b = <span class="number">1</span>, <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> n &gt; <span class="number">2</span>:</span><br><span class="line">        a, b = b, a + b</span><br><span class="line">        n = n - <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> a</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(fib_rec(<span class="number">2</span>))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="3-排序"><a href="#3-排序" class="headerlink" title="(3).排序"></a>(3).排序</h3><p>将一组“无序”的记录序列调整为“有序”的记录序列的操作</p>
+<ul>
+<li><p>内部排序：整个排序过程不需要访问外存便能完成</p>
+</li>
+<li><p>外部排序：参加排序的记录数量很大，整个序列排序过程不可能在内存中完成</p>
+</li>
+</ul>
+<h4 id="冒泡算法"><a href="#冒泡算法" class="headerlink" title="冒泡算法"></a>冒泡算法</h4><p>Bubble sort：简单排序，从序列一段开始比较相邻两个数字的大小，再根据结果交换两个数字的位置</p>
+<ul>
+<li>比较次数：</li>
+</ul>
+<p>​        第一轮比较n-1次，第二轮比较n-2次，第n-1轮比较1次，总得比较次数为（n-1） + ……+1≈n^2^/2</p>
+<ul>
+<li>交换次数：</li>
+</ul>
+<p>​        和输入数据排列有关，最小交换0次，最多交换次数和比较次数一样，时间复杂度为O(n^2^)</p>
+<ul>
+<li>效率：</li>
+</ul>
+<p>​        当在一轮排序过程中，未发生两个数字交换的时候，就可以不再进行后续几轮的排序。因此，冒泡排序在数据基本有序的情况下效率可以很高</p>
+<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><p>循环结构:for i in range(N-1)</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">selection_sort</span>(<span class="params">A</span>): <span class="comment"># 选择排序</span></span><br><span class="line">    N = <span class="built_in">len</span>(A)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(N - <span class="number">1</span>): <span class="comment"># i控制排序的趟数</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(i + <span class="number">1</span>, N): <span class="comment"># j表示比较范围内元素下标</span></span><br><span class="line">            <span class="keyword">if</span> A[j] &lt; A[i]: <span class="comment"># 递增的条件</span></span><br><span class="line">                A[j], A[i] = A[i], A[j] <span class="comment"># 交换A[j],A[i]的值</span></span><br><span class="line">    <span class="keyword">return</span> A</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(selection_sort([<span class="number">12</span>, <span class="number">34</span>, <span class="number">28</span>, <span class="number">23</span>, <span class="number">6</span>]))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>思考：能否修改算法减少交换次数，实现每轮排序最多交换一次，如何实现？</p>
+<p>Selection Sort：简单排序，从待排序的数据中找到<strong>最小值</strong>（升序），或者最大值（降序），将其与序列<strong>最左边的数字进行交换</strong></p>
+<p>如果最小值本身在合适的位置上，本次就不在进行交换，开始第二轮交换</p>
+<ul>
+<li>比较次数：</li>
+</ul>
+<p>​        第一轮比较n-1次，第二轮比较n-2次，第n-1轮比较1次，总得比较次数为（n-1） + ……+1≈n^2^/2</p>
+<ul>
+<li>交换次数：</li>
+</ul>
+<p>​        每轮中交换的次数最多是1次。输入数据排列是按照待排序顺序排序，则不需要进行任何交换，时间复杂度为O(n^2^)</p>
+<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><p>Insert Sort：简单排序，从序列左端开始，将待排序的数据逐个插入到已排好序的数据中，是的插入后仍然有序</p>
+<p>待插入的数据和左边第一个已排好的相比</p>
+<h1 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h1><p>for i in range(N):<br>    while j &gt;0</p>
+<h1 id="列表操作"><a href="#列表操作" class="headerlink" title="列表操作"></a>列表操作</h1><p>A.insert(i,x)#表示在列表中第i个位置插入元素x<br>A.pop(i)#表示从列表中弹出小标为i的元素，并且把它的值返回</p>
+ <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">insert_sort</span>(<span class="params">A</span>): <span class="comment"># 插入排序</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(A)): <span class="comment"># 负责设置排序的趟数</span></span><br><span class="line">        j = i - <span class="number">1</span></span><br><span class="line">        temp = i</span><br><span class="line">        <span class="keyword">while</span> j &gt;= <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">if</span> A[temp] &lt; A[j]: <span class="comment"># 递增排序条件</span></span><br><span class="line">                A.insert(j, A.pop(temp))</span><br><span class="line">                temp = j</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            j = j - <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> A</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(insert_sort([<span class="number">12</span>, <span class="number">56</span>, <span class="number">22</span>, <span class="number">33</span>, <span class="number">1</span>, <span class="number">28</span>, <span class="number">21</span>, <span class="number">55</span>, <span class="number">6</span>]))</span><br></pre></td></tr></table></figure>
+<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p>QuickSort：是对冒泡排序的一种改进</p>
+<p>首先随机选择一个基准值，然后将除了基准值以外的数分为“比基准值小的数”和“比基准值大的数”两个类别，再把基准值放到两个类别数中央。接着对两类别的数重复之前的操作</p>
+<p>随机选择左边的数为基准数，进行排序</p>
+<p>对序列中未比较其他数字都做重复的操作</p>
+<p>数据用列表表示，python中列表部分方法如下</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>append</td>
+<td>在列表末尾添加一项</td>
+<td>ls.append(x)</td>
+</tr>
+<tr>
+<td>remove</td>
+<td>把列表中出现的第一个元素x删除</td>
+<td>ls.remove(x)</td>
+</tr>
+<tr>
+<td>ls+lt</td>
+<td>链接两个列表</td>
+<td>ls+lt</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">quicksort</span>(<span class="params">A</span>):</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(A) &gt;= <span class="number">2</span>:  <span class="comment"># 递归出口</span></span><br><span class="line">        mid = A[<span class="number">0</span>]  <span class="comment"># 选择基准值，也可以选择中间值</span></span><br><span class="line">        A.remove(mid)</span><br><span class="line">        left, right = [], []</span><br><span class="line">        <span class="keyword">for</span> num <span class="keyword">in</span> A:</span><br><span class="line">            <span class="keyword">if</span> num &gt;= mid:</span><br><span class="line">                right.append(num)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                left.append(num)</span><br><span class="line">        <span class="keyword">return</span> quicksort(left) + [mid] + quicksort(right)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> A</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(quicksort([<span class="number">12</span>, <span class="number">3</span>, <span class="number">56</span>, <span class="number">10</span>, <span class="number">6</span>]))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="查找和线性查找算法"><a href="#查找和线性查找算法" class="headerlink" title="查找和线性查找算法"></a>查找和线性查找算法</h3><p>查找：用关键字表示一个数据元素，查找时根据给定的某个值，在表中确定一个关键字的值等于给定值的记录或数据元素</p>
+<p>线性查找算法：又称顺序查找，是一种最简单的查找方法，它的基本思想是从第一个记录开始，逐个比较记录的关键字，直到给定的k值相等，则查找成功；若比较与文件中n个记录的关键字都不等，则查找失败。</p>
+<p>线性查找需要从一端开始不断地按照顺序检查数据，一一比较</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">linearsearch</span>(<span class="params">A, Key</span>):</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(A)):</span><br><span class="line">        <span class="keyword">if</span> A[i] == Key:</span><br><span class="line">            <span class="keyword">return</span> i</span><br><span class="line">        i = i + <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(linearsearch([<span class="number">12</span>, <span class="number">3</span>, <span class="number">45</span>, <span class="number">2</span>], <span class="number">45</span>))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 ]]></content>
+  </entry>
+  <entry>
+    <title>文案收集(更新中)</title>
+    <url>/2023/06/25/%E6%96%87%E6%A1%88%E6%94%B6%E9%9B%86/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>收集的一些优质文案<br><span id="more"></span></p>
+</blockquote>
+<h3 id="城市类"><a href="#城市类" class="headerlink" title="城市类"></a>城市类</h3><ul>
+<li><p>亮起霓虹的城市夜灯，有了喧哗，变得更加妖媚</p>
+</li>
+<li><p>夏天的阳光就是最好的滤镜</p>
+</li>
+</ul>
+<h3 id="艺术类"><a href="#艺术类" class="headerlink" title="艺术类"></a>艺术类</h3><ul>
+<li>中国艺术最大的特色，从是个到绘画到戏剧，都讲究乐而不谣，哀而不怨，雍容有度，讲究典雅，自然，反对装腔作势和过火的恶趣，反对无目的地炫耀技巧。而这些也是世界一切高级艺术共同的准则。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>文案</category>
+      </categories>
+      <tags>
+        <tag>随想</tag>
+      </tags>
   </entry>
   <entry>
     <title>饿补计算机科学基础（三）--数据结构</title>
@@ -1254,123 +1387,6 @@
 <p>顶点（vertex）：表示某个事物或对象</p>
 <p>边（edge）：表示顶点或事物之间的逻辑关系</p>
 <p>边的权重（weight）：边上对应的值。可以对应距离、时间值、开销等。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>饿补计算机科学基础（二）--算法</title>
-    <url>/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89-%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>基于python编写的算法</p>
-<span id="more"></span>
-<h2 id="2-典型算法设计"><a href="#2-典型算法设计" class="headerlink" title="2.典型算法设计"></a>2.典型算法设计</h2><h3 id="1-递归"><a href="#1-递归" class="headerlink" title="(1).递归"></a>(1).递归</h3><p>递归方法（recursion algorithm）是指一种通过解决同类的规模较小的子问题而获得问题求解的方法</p>
-<ul>
-<li><p>问题的定义是递归定义的</p>
-</li>
-<li><p>问题的解法按递归算法实现的</p>
-</li>
-<li>数据的结构形式是按递归定义的（二叉树，广义表）</li>
-</ul>
-<p>假如一个函数或者子程序是由自身所定义或调用的，成为递归</p>
-<ul>
-<li><p>递归函数的要素：</p>
-<ul>
-<li><p>一个可以反复执行的递归过程</p>
-</li>
-<li><p>跳出递归过程的出口（不再进行递归的条件）</p>
-</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 阶乘的递归函数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fact</span>(<span class="params">n</span>):</span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">1</span>:<span class="comment">#递归出口</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> n * fact(n-<span class="number">1</span>)<span class="comment">#递归调用</span></span><br><span class="line">    </span><br><span class="line"><span class="built_in">print</span>（fact(<span class="number">3</span>)）</span><br></pre></td></tr></table></figure>
-<h4 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h4><p>二分查找算法（Binary search）递归实现：二分查找要求线性表必须采用顺序存储结构，而且表中元素按关键字有序排列</p>
-<p>反复执行的递归过程：缩小范围继续查找</p>
-<p>跳出提柜的出口：找到了，或者范围长度变成0</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">binarysearch_rec</span>(<span class="params">A, key, low, high</span>):  <span class="comment"># 二分查找算法的递归实现</span></span><br><span class="line">    <span class="keyword">if</span> low &gt; high:</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line">    mid = (low + high) // <span class="number">2</span>  <span class="comment"># 计算中间位置的索引，使用 (low + high) // 2</span></span><br><span class="line">    <span class="keyword">if</span> key == A[mid]:</span><br><span class="line">        <span class="keyword">return</span> mid</span><br><span class="line">    <span class="keyword">elif</span> key &lt; A[mid]:</span><br><span class="line">        <span class="keyword">return</span> binarysearch_rec(A, key, low, mid - <span class="number">1</span>)  <span class="comment"># 左边递归查找</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> binarysearch_rec(A, key, mid + <span class="number">1</span>, high)  <span class="comment"># 右边递归查找</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(binarysearch_rec([<span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">7</span>], <span class="number">4</span>, <span class="number">0</span>, <span class="number">3</span>))  <span class="comment"># 调用函数</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">binary_search</span>(<span class="params">A,Key</span>):</span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    j=<span class="built_in">len</span>(A)-<span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> i &lt;=j:</span><br><span class="line">        mid = (i+j)//<span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> A[mid]==Key:</span><br><span class="line">            <span class="keyword">return</span> mid</span><br><span class="line">        <span class="keyword">elif</span> A[mid]&lt;Key:</span><br><span class="line">            i=mid+<span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            j=mid-<span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(binary_search([<span class="number">3</span>,<span class="number">7</span>,<span class="number">45</span>,<span class="number">89</span>,<span class="number">90</span>],<span class="number">45</span>))</span><br></pre></td></tr></table></figure>
-<h3 id="2-迭代"><a href="#2-迭代" class="headerlink" title="(2).迭代"></a>(2).迭代</h3><p>重复反馈过程的活动，目的通常为了逼近随需目标或结果</p>
-<p>适合重复性操作</p>
-<ul>
-<li>迭代起点：直接或间接地不断由旧值递推出新值的变量</li>
-<li>迭代关系式：变量的前一个值推出其下一个值得公式或关系</li>
-<li>结束条件：什么情况下不在迭代</li>
-</ul>
-<p>例如：斐波那契数列</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">fib_rec</span>(<span class="params">n</span>):</span><br><span class="line">    a, b = <span class="number">1</span>, <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> n &gt; <span class="number">2</span>:</span><br><span class="line">        a, b = b, a + b</span><br><span class="line">        n = n - <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> a</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(fib_rec(<span class="number">2</span>))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="3-排序"><a href="#3-排序" class="headerlink" title="(3).排序"></a>(3).排序</h3><p>将一组“无序”的记录序列调整为“有序”的记录序列的操作</p>
-<ul>
-<li><p>内部排序：整个排序过程不需要访问外存便能完成</p>
-</li>
-<li><p>外部排序：参加排序的记录数量很大，整个序列排序过程不可能在内存中完成</p>
-</li>
-</ul>
-<h4 id="冒泡算法"><a href="#冒泡算法" class="headerlink" title="冒泡算法"></a>冒泡算法</h4><p>Bubble sort：简单排序，从序列一段开始比较相邻两个数字的大小，再根据结果交换两个数字的位置</p>
-<ul>
-<li>比较次数：</li>
-</ul>
-<p>​        第一轮比较n-1次，第二轮比较n-2次，第n-1轮比较1次，总得比较次数为（n-1） + ……+1≈n^2^/2</p>
-<ul>
-<li>交换次数：</li>
-</ul>
-<p>​        和输入数据排列有关，最小交换0次，最多交换次数和比较次数一样，时间复杂度为O(n^2^)</p>
-<ul>
-<li>效率：</li>
-</ul>
-<p>​        当在一轮排序过程中，未发生两个数字交换的时候，就可以不再进行后续几轮的排序。因此，冒泡排序在数据基本有序的情况下效率可以很高</p>
-<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><p>循环结构:for i in range(N-1)</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">selection_sort</span>(<span class="params">A</span>): <span class="comment"># 选择排序</span></span><br><span class="line">    N = <span class="built_in">len</span>(A)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(N - <span class="number">1</span>): <span class="comment"># i控制排序的趟数</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(i + <span class="number">1</span>, N): <span class="comment"># j表示比较范围内元素下标</span></span><br><span class="line">            <span class="keyword">if</span> A[j] &lt; A[i]: <span class="comment"># 递增的条件</span></span><br><span class="line">                A[j], A[i] = A[i], A[j] <span class="comment"># 交换A[j],A[i]的值</span></span><br><span class="line">    <span class="keyword">return</span> A</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(selection_sort([<span class="number">12</span>, <span class="number">34</span>, <span class="number">28</span>, <span class="number">23</span>, <span class="number">6</span>]))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>思考：能否修改算法减少交换次数，实现每轮排序最多交换一次，如何实现？</p>
-<p>Selection Sort：简单排序，从待排序的数据中找到<strong>最小值</strong>（升序），或者最大值（降序），将其与序列<strong>最左边的数字进行交换</strong></p>
-<p>如果最小值本身在合适的位置上，本次就不在进行交换，开始第二轮交换</p>
-<ul>
-<li>比较次数：</li>
-</ul>
-<p>​        第一轮比较n-1次，第二轮比较n-2次，第n-1轮比较1次，总得比较次数为（n-1） + ……+1≈n^2^/2</p>
-<ul>
-<li>交换次数：</li>
-</ul>
-<p>​        每轮中交换的次数最多是1次。输入数据排列是按照待排序顺序排序，则不需要进行任何交换，时间复杂度为O(n^2^)</p>
-<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><p>Insert Sort：简单排序，从序列左端开始，将待排序的数据逐个插入到已排好序的数据中，是的插入后仍然有序</p>
-<p>待插入的数据和左边第一个已排好的相比</p>
-<h1 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h1><p>for i in range(N):<br>    while j &gt;0</p>
-<h1 id="列表操作"><a href="#列表操作" class="headerlink" title="列表操作"></a>列表操作</h1><p>A.insert(i,x)#表示在列表中第i个位置插入元素x<br>A.pop(i)#表示从列表中弹出小标为i的元素，并且把它的值返回</p>
- <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">insert_sort</span>(<span class="params">A</span>): <span class="comment"># 插入排序</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(A)): <span class="comment"># 负责设置排序的趟数</span></span><br><span class="line">        j = i - <span class="number">1</span></span><br><span class="line">        temp = i</span><br><span class="line">        <span class="keyword">while</span> j &gt;= <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">if</span> A[temp] &lt; A[j]: <span class="comment"># 递增排序条件</span></span><br><span class="line">                A.insert(j, A.pop(temp))</span><br><span class="line">                temp = j</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            j = j - <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> A</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(insert_sort([<span class="number">12</span>, <span class="number">56</span>, <span class="number">22</span>, <span class="number">33</span>, <span class="number">1</span>, <span class="number">28</span>, <span class="number">21</span>, <span class="number">55</span>, <span class="number">6</span>]))</span><br></pre></td></tr></table></figure>
-<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p>QuickSort：是对冒泡排序的一种改进</p>
-<p>首先随机选择一个基准值，然后将除了基准值以外的数分为“比基准值小的数”和“比基准值大的数”两个类别，再把基准值放到两个类别数中央。接着对两类别的数重复之前的操作</p>
-<p>随机选择左边的数为基准数，进行排序</p>
-<p>对序列中未比较其他数字都做重复的操作</p>
-<p>数据用列表表示，python中列表部分方法如下</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>说明</th>
-<th>例子</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>append</td>
-<td>在列表末尾添加一项</td>
-<td>ls.append(x)</td>
-</tr>
-<tr>
-<td>remove</td>
-<td>把列表中出现的第一个元素x删除</td>
-<td>ls.remove(x)</td>
-</tr>
-<tr>
-<td>ls+lt</td>
-<td>链接两个列表</td>
-<td>ls+lt</td>
-</tr>
-</tbody>
-</table>
-</div>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">quicksort</span>(<span class="params">A</span>):</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(A) &gt;= <span class="number">2</span>:  <span class="comment"># 递归出口</span></span><br><span class="line">        mid = A[<span class="number">0</span>]  <span class="comment"># 选择基准值，也可以选择中间值</span></span><br><span class="line">        A.remove(mid)</span><br><span class="line">        left, right = [], []</span><br><span class="line">        <span class="keyword">for</span> num <span class="keyword">in</span> A:</span><br><span class="line">            <span class="keyword">if</span> num &gt;= mid:</span><br><span class="line">                right.append(num)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                left.append(num)</span><br><span class="line">        <span class="keyword">return</span> quicksort(left) + [mid] + quicksort(right)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> A</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(quicksort([<span class="number">12</span>, <span class="number">3</span>, <span class="number">56</span>, <span class="number">10</span>, <span class="number">6</span>]))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="查找和线性查找算法"><a href="#查找和线性查找算法" class="headerlink" title="查找和线性查找算法"></a>查找和线性查找算法</h3><p>查找：用关键字表示一个数据元素，查找时根据给定的某个值，在表中确定一个关键字的值等于给定值的记录或数据元素</p>
-<p>线性查找算法：又称顺序查找，是一种最简单的查找方法，它的基本思想是从第一个记录开始，逐个比较记录的关键字，直到给定的k值相等，则查找成功；若比较与文件中n个记录的关键字都不等，则查找失败。</p>
-<p>线性查找需要从一端开始不断地按照顺序检查数据，一一比较</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">linearsearch</span>(<span class="params">A, Key</span>):</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(A)):</span><br><span class="line">        <span class="keyword">if</span> A[i] == Key:</span><br><span class="line">            <span class="keyword">return</span> i</span><br><span class="line">        i = i + <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(linearsearch([<span class="number">12</span>, <span class="number">3</span>, <span class="number">45</span>, <span class="number">2</span>], <span class="number">45</span>))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 ]]></content>
   </entry>
 </search>
