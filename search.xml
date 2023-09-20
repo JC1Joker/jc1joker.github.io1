@@ -50,6 +50,49 @@
       </tags>
   </entry>
   <entry>
+    <title>docker基础命令</title>
+    <url>/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/Docker.png" alt></p>
+<blockquote>
+<p>docker的基础命令<br><span id="more"></span></p>
+</blockquote>
+<p>docker pull 安装镜像</p>
+<p>docker run 运行镜像</p>
+<p>docker container run</p>
+<p>说明：</p>
+<p>创建好image后，新建容器时使用；</p>
+<p>每次运行，都会创建一个新的容器；</p>
+<p>新建的容器可以通过 docker container ls -a 或者 docker ps -a 查看（加 -a 表示查看所有创建好的容器）；</p>
+<p>每次创建会返回一个【长的容器ID】；</p>
+<p>通常情况下，运行一次即可；</p>
+<p>docker containers list -a 查看当前运行的所有镜像</p>
+<p>docker exec -it 【docker的名称】 bash  进入docker运行的bash环境中</p>
+<p>docker container start 【containerID】运行已经创建的容器</p>
+<p>docker ps -a 查看所有容器</p>
+<p>docker stop 【containerID】</p>
+<p>docker rm 【containerID】（先停止容器后才能删除）</p>
+<p>docker export 制作基础镜像，使用 <strong>docker export</strong> 命令根据容器 <strong>ID</strong> 将镜像导出成一个文件</p>
+<p>docker import - new_hangger_server &lt; hangger_server.tar 将这个镜像文件导入进来。</p>
+<p>docker load 载入镜像</p>
+]]></content>
+      <categories>
+        <category>docker</category>
+      </categories>
+      <tags>
+        <tag>docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo&#39;s plugins</title>
+    <url>/2023/09/17/hexo-s-plugins/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>相关插件</p>
+</blockquote>
+<span id="more"></span>
+<p>配置支持mermaid<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-filter-mermaid-diagrams</span><br></pre></td></tr></table></figure></p>
+]]></content>
+  </entry>
+  <entry>
     <title>Numpy笔记</title>
     <url>/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/NumPy_logo_2020.png" alt></p>
@@ -390,6 +433,116 @@
       </tags>
   </entry>
   <entry>
+    <title>nvidia-smi基础信息</title>
+    <url>/2023/06/08/nvidia-smi%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/08/nvidia-smi%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF/nvidia.png" alt></p>
+<blockquote>
+<p>nvidia-smi 查看当前GPU使用情况<br><span id="more"></span><br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">GPU：GPU 编号；</span><br><span class="line"></span><br><span class="line">Name：GPU 型号； </span><br><span class="line"></span><br><span class="line">Persistence-M：持续模式的状态。持续模式虽然耗能大，但是在新的GPU应用启动时，花费的时间更少，这里显示的是off的状态；</span><br><span class="line"></span><br><span class="line">Fan：风扇转速，从0到100%之间变动；</span><br><span class="line"></span><br><span class="line">Temp：温度，单位是摄氏度； </span><br><span class="line"></span><br><span class="line">Perf：性能状态，从P0到P12，P0表示最大性能，P12表示状态最小性能（即 GPU 未工作时为P0，达到最大工作限度时为P12）。 </span><br><span class="line"></span><br><span class="line">Pwr:Usage/Cap：能耗；</span><br><span class="line"></span><br><span class="line">Memory Usage：显存使用率； </span><br><span class="line"></span><br><span class="line">Bus-Id：涉及GPU总线的东西  Disp.A：Display Active，表示GPU的显示是否初始化；</span><br><span class="line"></span><br><span class="line">Volatile GPU-Util：浮动的GPU利用率；</span><br><span class="line"></span><br><span class="line">Uncorr. ECC：Error Correcting Code，错误检查与纠正； </span><br><span class="line"></span><br><span class="line">Compute M：compute mode，计算模式</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>Shell</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>conda的使用技巧</title>
+    <url>/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/anaconda.png" alt></p>
+<blockquote>
+<p>anaconda的换源，创建环境</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="Win常用conda命令"><a href="#Win常用conda命令" class="headerlink" title="Win常用conda命令"></a>Win常用conda命令</h1><h2 id="1-查看当前环境下安装的工具"><a href="#1-查看当前环境下安装的工具" class="headerlink" title="1.查看当前环境下安装的工具"></a>1.查看当前环境下安装的工具</h2><blockquote>
+<p>pip list</p>
+</blockquote>
+<p>或</p>
+<blockquote>
+<p>conda list</p>
+</blockquote>
+<h2 id="2-创建虚拟环境"><a href="#2-创建虚拟环境" class="headerlink" title="2.创建虚拟环境"></a>2.创建虚拟环境</h2><blockquote>
+<p>conda create —name[环境名称]</p>
+</blockquote>
+<p>例</p>
+<blockquote>
+<p>conda create —name hacker</p>
+<p><code>conda create -n 新的环境名 python=指定版本（2.7/3.6/3.7）</code> # 注意需要在base中运行，不能在虚拟环境中执行</p>
+</blockquote>
+<p>即可创建一个名为hacker的虚拟环境</p>
+<h2 id="3-修改环境名称"><a href="#3-修改环境名称" class="headerlink" title="3.修改环境名称"></a>3.修改环境名称</h2><blockquote>
+<p>conda create —name newName（新环境名） —clone oldName（旧环境名）</p>
+</blockquote>
+<h2 id="4-删除环境"><a href="#4-删除环境" class="headerlink" title="4.删除环境"></a>4.删除环境</h2><blockquote>
+<p>conda remove —name oldName（旧环境名） —all </p>
+</blockquote>
+<h2 id="5-查看虚拟环境"><a href="#5-查看虚拟环境" class="headerlink" title="5.查看虚拟环境"></a>5.查看虚拟环境</h2><blockquote>
+<p>conda env list</p>
+<p>conda info -e</p>
+</blockquote>
+<p>其中带有<strong>* </strong>的表示当前所用的环境</p>
+<h2 id="6-切换环境"><a href="#6-切换环境" class="headerlink" title="6.切换环境"></a>6.切换环境</h2><p>使用activate(激活)加上要切换的环境名称，即可切换</p>
+<blockquote>
+<p>conda activate[环境名称]</p>
+</blockquote>
+<p>例</p>
+<blockquote>
+<p>conda activate learn </p>
+</blockquote>
+<h2 id="7-退出虚拟环境"><a href="#7-退出虚拟环境" class="headerlink" title="7.退出虚拟环境"></a>7.退出虚拟环境</h2><blockquote>
+<p>conda deactivate</p>
+</blockquote>
+<h2 id="8-移除虚拟环境"><a href="#8-移除虚拟环境" class="headerlink" title="8.移除虚拟环境"></a>8.移除虚拟环境</h2><blockquote>
+<p>conda remove —name [环境] —all</p>
+</blockquote>
+<p>例</p>
+<blockquote>
+<p>conda remove —name learn —all</p>
+</blockquote>
+<h2 id="9-包的安装"><a href="#9-包的安装" class="headerlink" title="9.包的安装"></a>9.包的安装</h2><p>（无需进入环境）</p>
+<blockquote>
+<p>conda install [包名] -n [环境名]</p>
+</blockquote>
+<h2 id="10-包的更新"><a href="#10-包的更新" class="headerlink" title="10.包的更新"></a>10.包的更新</h2><blockquote>
+<p>conda update —all</p>
+</blockquote>
+<h2 id="11-包的删除"><a href="#11-包的删除" class="headerlink" title="11.包的删除"></a>11.包的删除</h2><blockquote>
+<p>conda remove [包名]</p>
+</blockquote>
+<h2 id="12-查看可以安装的python版本"><a href="#12-查看可以安装的python版本" class="headerlink" title="12.查看可以安装的python版本"></a>12.查看可以安装的python版本</h2><blockquote>
+<p> conda search —full-name python`</p>
+</blockquote>
+<h2 id="13-镜像源"><a href="#13-镜像源" class="headerlink" title="13.镜像源"></a>13.镜像源</h2><h3 id="查看当前conda源"><a href="#查看当前conda源" class="headerlink" title="查看当前conda源"></a>查看当前conda源</h3><blockquote>
+<p>conda config —show</p>
+</blockquote>
+<h3 id="恢复默认源"><a href="#恢复默认源" class="headerlink" title="恢复默认源"></a>恢复默认源</h3><blockquote>
+<p>conda config —remove-key channels</p>
+</blockquote>
+<h3 id="中科大源"><a href="#中科大源" class="headerlink" title="中科大源"></a>中科大源</h3><p>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/pkgs/main/">https://mirrors.ustc.edu.cn/anaconda/pkgs/main/</a><br>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/pkgs/free/">https://mirrors.ustc.edu.cn/anaconda/pkgs/free/</a><br>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/">https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/</a><br>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/">https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/</a><br>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/">https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/</a><br>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/">https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/</a><br>conda config —set show_channel_urls yes</p>
+<h3 id="清华源"><a href="#清华源" class="headerlink" title="清华源"></a>清华源</h3><p>conda config —add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/</a><br>conda config —add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge</a><br>conda config —add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</a><br>conda config —add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/</a><br>conda config —add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</a><br>conda config —set show_channel_urls yes</p>
+<h3 id="腾讯云"><a href="#腾讯云" class="headerlink" title="腾讯云"></a>腾讯云</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda config --add channels https://mirrors.cloud.tencent.com/anaconda/pkgs/free/</span><br><span class="line">conda config --add channels https://mirrors.cloud.tencent.com/anaconda/pkgs/main/</span><br><span class="line">conda config --set show_channel_urls yes</span><br></pre></td></tr></table></figure>
+<h2 id="14清理conda缓存"><a href="#14清理conda缓存" class="headerlink" title="14清理conda缓存"></a>14清理conda缓存</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda clean -p     </span><br><span class="line">conda clean -t      </span><br><span class="line">conda clean -y -all </span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash">删除没有用的包 --packages</span></span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash">删除tar打包 --tarballs</span></span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash">删除所有的安装包及cache(索引缓存、锁定文件、未使用过的包和tar包)</span></span><br></pre></td></tr></table></figure>
+<h2 id="15-pip国内源"><a href="#15-pip国内源" class="headerlink" title="15.pip国内源"></a>15.pip国内源</h2><p>阿里云 ：<a href="http://mirrors.aliyun.com/pypi/simple/">http://mirrors.aliyun.com/pypi/simple/</a><br>中国科技大学： <a href="https://pypi.mirrors.ustc.edu.cn/simple/">https://pypi.mirrors.ustc.edu.cn/simple/</a><br>豆瓣(douban) ：<a href="http://pypi.douban.com/simple/">http://pypi.douban.com/simple/</a><br>清华大学 ：<a href="https://pypi.tuna.tsinghua.edu.cn/simple/">https://pypi.tuna.tsinghua.edu.cn/simple/</a><br>中国科学技术大学： <a href="http://pypi.mirrors.ustc.edu.cn/simple/">http://pypi.mirrors.ustc.edu.cn/simple/</a></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">使用豆瓣源安装</span></span><br><span class="line">pip install opencv-python -i http://pypi.douban.com/simple </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">报错说不信任该源，执行如下：</span></span><br><span class="line">pip install opencv-python -i http://pypi.douban.com/simple --trusted-host pypi.douban.com</span><br></pre></td></tr></table></figure>
+<h2 id="16-修改python版本"><a href="#16-修改python版本" class="headerlink" title="16.修改python版本"></a>16.修改python版本</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">1.新建一个anaconda虚拟环境，指定Python版本</span></span><br><span class="line">conda create -n envTest python=3.5</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">2.直接将现有的anaconda中python更改为3.5</span></span><br><span class="line">sudo conda install python=3.5</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">3.下载并安装对应Python版本的anaconda，anaconda4.2-&gt;python3.5</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">https://repo.continuum.io/archive/</span></span><br></pre></td></tr></table></figure>
+<h2 id="17-打开交互界面"><a href="#17-打开交互界面" class="headerlink" title="17.打开交互界面"></a>17.打开交互界面</h2><blockquote>
+<p>anaconda-navigator</p>
+</blockquote>
+<h2 id="18-临时更换pip源"><a href="#18-临时更换pip源" class="headerlink" title="18.临时更换pip源"></a>18.临时更换pip源</h2><blockquote>
+<p>pip install 库 -i <a href="http://pypi.douban.com/simple">http://pypi.douban.com/simple</a> —trusted-host pypi.douban.com</p>
+</blockquote>
+<h2 id="19-修改python版本"><a href="#19-修改python版本" class="headerlink" title="19.修改python版本"></a>19.修改python版本</h2><blockquote>
+<p>conda install python=3.5</p>
+<p>当出现Solving environment: failed with initial frozen solve. Retrying with flexible solve.</p>
+<p>conda uninstall python</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Shell</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Pandas笔记</title>
     <url>/2023/06/07/Pandas%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -699,156 +852,33 @@
       </tags>
   </entry>
   <entry>
-    <title>conda的使用技巧</title>
-    <url>/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/anaconda.png" alt></p>
-<blockquote>
-<p>anaconda的换源，创建环境</p>
-</blockquote>
-<span id="more"></span>
-<h1 id="Win常用conda命令"><a href="#Win常用conda命令" class="headerlink" title="Win常用conda命令"></a>Win常用conda命令</h1><h2 id="1-查看当前环境下安装的工具"><a href="#1-查看当前环境下安装的工具" class="headerlink" title="1.查看当前环境下安装的工具"></a>1.查看当前环境下安装的工具</h2><blockquote>
-<p>pip list</p>
-</blockquote>
-<p>或</p>
-<blockquote>
-<p>conda list</p>
-</blockquote>
-<h2 id="2-创建虚拟环境"><a href="#2-创建虚拟环境" class="headerlink" title="2.创建虚拟环境"></a>2.创建虚拟环境</h2><blockquote>
-<p>conda create —name[环境名称]</p>
-</blockquote>
-<p>例</p>
-<blockquote>
-<p>conda create —name hacker</p>
-<p><code>conda create -n 新的环境名 python=指定版本（2.7/3.6/3.7）</code> # 注意需要在base中运行，不能在虚拟环境中执行</p>
-</blockquote>
-<p>即可创建一个名为hacker的虚拟环境</p>
-<h2 id="3-修改环境名称"><a href="#3-修改环境名称" class="headerlink" title="3.修改环境名称"></a>3.修改环境名称</h2><blockquote>
-<p>conda create —name newName（新环境名） —clone oldName（旧环境名）</p>
-</blockquote>
-<h2 id="4-删除环境"><a href="#4-删除环境" class="headerlink" title="4.删除环境"></a>4.删除环境</h2><blockquote>
-<p>conda remove —name oldName（旧环境名） —all </p>
-</blockquote>
-<h2 id="5-查看虚拟环境"><a href="#5-查看虚拟环境" class="headerlink" title="5.查看虚拟环境"></a>5.查看虚拟环境</h2><blockquote>
-<p>conda env list</p>
-<p>conda info -e</p>
-</blockquote>
-<p>其中带有<strong>* </strong>的表示当前所用的环境</p>
-<h2 id="6-切换环境"><a href="#6-切换环境" class="headerlink" title="6.切换环境"></a>6.切换环境</h2><p>使用activate(激活)加上要切换的环境名称，即可切换</p>
-<blockquote>
-<p>conda activate[环境名称]</p>
-</blockquote>
-<p>例</p>
-<blockquote>
-<p>conda activate learn </p>
-</blockquote>
-<h2 id="7-退出虚拟环境"><a href="#7-退出虚拟环境" class="headerlink" title="7.退出虚拟环境"></a>7.退出虚拟环境</h2><blockquote>
-<p>conda deactivate</p>
-</blockquote>
-<h2 id="8-移除虚拟环境"><a href="#8-移除虚拟环境" class="headerlink" title="8.移除虚拟环境"></a>8.移除虚拟环境</h2><blockquote>
-<p>conda remove —name [环境] —all</p>
-</blockquote>
-<p>例</p>
-<blockquote>
-<p>conda remove —name learn —all</p>
-</blockquote>
-<h2 id="9-包的安装"><a href="#9-包的安装" class="headerlink" title="9.包的安装"></a>9.包的安装</h2><p>（无需进入环境）</p>
-<blockquote>
-<p>conda install [包名] -n [环境名]</p>
-</blockquote>
-<h2 id="10-包的更新"><a href="#10-包的更新" class="headerlink" title="10.包的更新"></a>10.包的更新</h2><blockquote>
-<p>conda update —all</p>
-</blockquote>
-<h2 id="11-包的删除"><a href="#11-包的删除" class="headerlink" title="11.包的删除"></a>11.包的删除</h2><blockquote>
-<p>conda remove [包名]</p>
-</blockquote>
-<h2 id="12-查看可以安装的python版本"><a href="#12-查看可以安装的python版本" class="headerlink" title="12.查看可以安装的python版本"></a>12.查看可以安装的python版本</h2><blockquote>
-<p> conda search —full-name python`</p>
-</blockquote>
-<h2 id="13-镜像源"><a href="#13-镜像源" class="headerlink" title="13.镜像源"></a>13.镜像源</h2><h3 id="查看当前conda源"><a href="#查看当前conda源" class="headerlink" title="查看当前conda源"></a>查看当前conda源</h3><blockquote>
-<p>conda config —show</p>
-</blockquote>
-<h3 id="恢复默认源"><a href="#恢复默认源" class="headerlink" title="恢复默认源"></a>恢复默认源</h3><blockquote>
-<p>conda config —remove-key channels</p>
-</blockquote>
-<h3 id="中科大源"><a href="#中科大源" class="headerlink" title="中科大源"></a>中科大源</h3><p>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/pkgs/main/">https://mirrors.ustc.edu.cn/anaconda/pkgs/main/</a><br>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/pkgs/free/">https://mirrors.ustc.edu.cn/anaconda/pkgs/free/</a><br>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/">https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/</a><br>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/">https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/</a><br>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/">https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/</a><br>conda config —add channels <a href="https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/">https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/</a><br>conda config —set show_channel_urls yes</p>
-<h3 id="清华源"><a href="#清华源" class="headerlink" title="清华源"></a>清华源</h3><p>conda config —add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/</a><br>conda config —add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge</a><br>conda config —add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</a><br>conda config —add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/</a><br>conda config —add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</a><br>conda config —set show_channel_urls yes</p>
-<h3 id="腾讯云"><a href="#腾讯云" class="headerlink" title="腾讯云"></a>腾讯云</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda config --add channels https://mirrors.cloud.tencent.com/anaconda/pkgs/free/</span><br><span class="line">conda config --add channels https://mirrors.cloud.tencent.com/anaconda/pkgs/main/</span><br><span class="line">conda config --set show_channel_urls yes</span><br></pre></td></tr></table></figure>
-<h2 id="14清理conda缓存"><a href="#14清理conda缓存" class="headerlink" title="14清理conda缓存"></a>14清理conda缓存</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda clean -p     </span><br><span class="line">conda clean -t      </span><br><span class="line">conda clean -y -all </span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash">删除没有用的包 --packages</span></span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash">删除tar打包 --tarballs</span></span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash">删除所有的安装包及cache(索引缓存、锁定文件、未使用过的包和tar包)</span></span><br></pre></td></tr></table></figure>
-<h2 id="15-pip国内源"><a href="#15-pip国内源" class="headerlink" title="15.pip国内源"></a>15.pip国内源</h2><p>阿里云 ：<a href="http://mirrors.aliyun.com/pypi/simple/">http://mirrors.aliyun.com/pypi/simple/</a><br>中国科技大学： <a href="https://pypi.mirrors.ustc.edu.cn/simple/">https://pypi.mirrors.ustc.edu.cn/simple/</a><br>豆瓣(douban) ：<a href="http://pypi.douban.com/simple/">http://pypi.douban.com/simple/</a><br>清华大学 ：<a href="https://pypi.tuna.tsinghua.edu.cn/simple/">https://pypi.tuna.tsinghua.edu.cn/simple/</a><br>中国科学技术大学： <a href="http://pypi.mirrors.ustc.edu.cn/simple/">http://pypi.mirrors.ustc.edu.cn/simple/</a></p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">使用豆瓣源安装</span></span><br><span class="line">pip install opencv-python -i http://pypi.douban.com/simple </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">报错说不信任该源，执行如下：</span></span><br><span class="line">pip install opencv-python -i http://pypi.douban.com/simple --trusted-host pypi.douban.com</span><br></pre></td></tr></table></figure>
-<h2 id="16-修改python版本"><a href="#16-修改python版本" class="headerlink" title="16.修改python版本"></a>16.修改python版本</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">1.新建一个anaconda虚拟环境，指定Python版本</span></span><br><span class="line">conda create -n envTest python=3.5</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">2.直接将现有的anaconda中python更改为3.5</span></span><br><span class="line">sudo conda install python=3.5</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">3.下载并安装对应Python版本的anaconda，anaconda4.2-&gt;python3.5</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">https://repo.continuum.io/archive/</span></span><br></pre></td></tr></table></figure>
-<h2 id="17-打开交互界面"><a href="#17-打开交互界面" class="headerlink" title="17.打开交互界面"></a>17.打开交互界面</h2><blockquote>
-<p>anaconda-navigator</p>
-</blockquote>
-<h2 id="18-临时更换pip源"><a href="#18-临时更换pip源" class="headerlink" title="18.临时更换pip源"></a>18.临时更换pip源</h2><blockquote>
-<p>pip install 库 -i <a href="http://pypi.douban.com/simple">http://pypi.douban.com/simple</a> —trusted-host pypi.douban.com</p>
-</blockquote>
-<h2 id="19-修改python版本"><a href="#19-修改python版本" class="headerlink" title="19.修改python版本"></a>19.修改python版本</h2><blockquote>
-<p>conda install python=3.5</p>
-<p>当出现Solving environment: failed with initial frozen solve. Retrying with flexible solve.</p>
-<p>conda uninstall python</p>
-</blockquote>
+    <title>win10配置问题速查手册</title>
+    <url>/2023/09/13/win10%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><span id="more"></span>
+<h2 id="⚙-配置类"><a href="#⚙-配置类" class="headerlink" title="⚙ 配置类"></a>⚙ 配置类</h2><h3 id="1-开启-Hyper-V-⚡"><a href="#1-开启-Hyper-V-⚡" class="headerlink" title="1. 开启 Hyper-V ⚡"></a>1. 开启 Hyper-V ⚡</h3><p>在这一部分，我们将学习如何开启 Hyper-V。这是一个包含了一些命令行操作的示例，可以通过一个批处理（bat）文件执行。这些操作将帮助你启用 Hyper-V。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">pushd</span> <span class="string">&quot;%~dp0&quot;</span></span><br><span class="line"><span class="built_in">dir</span> /b %SystemRoot%\servicing\Packages\*Hyper-V*.mum &gt;hyper-v.txt</span><br><span class="line"><span class="keyword">for</span> /f %%i <span class="keyword">in</span> (<span class="string">&#x27;findstr /i . hyper-v.txt 2^&gt;nul&#x27;</span>) <span class="keyword">do</span> dism /online /norestart /add-package:<span class="string">&quot;%SystemRoot%\servicing\Packages\%%i&quot;</span></span><br><span class="line">del hyper-v.txt</span><br><span class="line">Dism /online /enable-feature /featurename:Microsoft-Hyper-V-All /LimitAccess /ALL</span><br></pre></td></tr></table></figure>
+<h3 id="2-查看-Win10-系统启动项-👀"><a href="#2-查看-Win10-系统启动项-👀" class="headerlink" title="2. 查看 Win10 系统启动项 👀"></a>2. 查看 Win10 系统启动项 👀</h3><p>在这一部分，我们将了解如何查看 Win10 系统的启动项。这是通过任务管理器和一些操作来实现的，以确保你能够轻松地管理启动项。</p>
+<pre class="mermaid">graph LR;
+任务管理器 --> 启动 --查找程序--> 右键禁用;</pre>
+
+<h3 id="3-更改-Win10-电脑锁屏界面用户名-🚪👤"><a href="#3-更改-Win10-电脑锁屏界面用户名-🚪👤" class="headerlink" title="3. 更改 Win10 电脑锁屏界面用户名 🚪👤"></a>3. 更改 Win10 电脑锁屏界面用户名 🚪👤</h3><p>这一部分将向你展示如何更改 Win10 电脑锁屏界面上显示的用户名。这个过程可以通过开始菜单和计算机管理来完成。</p>
+<pre class="mermaid">graph LR
+开始菜单 --右键--> 计算机管理 --> 用户和组</pre>
 ]]></content>
       <categories>
-        <category>Python</category>
+        <category>win10</category>
       </categories>
       <tags>
-        <tag>Shell</tag>
+        <tag>win10</tag>
       </tags>
   </entry>
   <entry>
-    <title>docker基础命令</title>
-    <url>/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/Docker.png" alt></p>
-<blockquote>
-<p>docker的基础命令<br><span id="more"></span></p>
-</blockquote>
-<p>docker pull 安装镜像</p>
-<p>docker run 运行镜像</p>
-<p>docker container run</p>
-<p>说明：</p>
-<p>创建好image后，新建容器时使用；</p>
-<p>每次运行，都会创建一个新的容器；</p>
-<p>新建的容器可以通过 docker container ls -a 或者 docker ps -a 查看（加 -a 表示查看所有创建好的容器）；</p>
-<p>每次创建会返回一个【长的容器ID】；</p>
-<p>通常情况下，运行一次即可；</p>
-<p>docker containers list -a 查看当前运行的所有镜像</p>
-<p>docker exec -it 【docker的名称】 bash  进入docker运行的bash环境中</p>
-<p>docker container start 【containerID】运行已经创建的容器</p>
-<p>docker ps -a 查看所有容器</p>
-<p>docker stop 【containerID】</p>
-<p>docker rm 【containerID】（先停止容器后才能删除）</p>
-<p>docker export 制作基础镜像，使用 <strong>docker export</strong> 命令根据容器 <strong>ID</strong> 将镜像导出成一个文件</p>
-<p>docker import - new_hangger_server &lt; hangger_server.tar 将这个镜像文件导入进来。</p>
-<p>docker load 载入镜像</p>
-]]></content>
-      <categories>
-        <category>docker</category>
-      </categories>
-      <tags>
-        <tag>docker</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo&#39;s plugins</title>
-    <url>/2023/09/17/hexo-s-plugins/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>相关插件</p>
-</blockquote>
-<span id="more"></span>
-<p>配置支持mermaid<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-filter-mermaid-diagrams</span><br></pre></td></tr></table></figure></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>nvidia-smi基础信息</title>
-    <url>/2023/06/08/nvidia-smi%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/08/nvidia-smi%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF/nvidia.png" alt></p>
-<blockquote>
-<p>nvidia-smi 查看当前GPU使用情况<br><span id="more"></span><br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">GPU：GPU 编号；</span><br><span class="line"></span><br><span class="line">Name：GPU 型号； </span><br><span class="line"></span><br><span class="line">Persistence-M：持续模式的状态。持续模式虽然耗能大，但是在新的GPU应用启动时，花费的时间更少，这里显示的是off的状态；</span><br><span class="line"></span><br><span class="line">Fan：风扇转速，从0到100%之间变动；</span><br><span class="line"></span><br><span class="line">Temp：温度，单位是摄氏度； </span><br><span class="line"></span><br><span class="line">Perf：性能状态，从P0到P12，P0表示最大性能，P12表示状态最小性能（即 GPU 未工作时为P0，达到最大工作限度时为P12）。 </span><br><span class="line"></span><br><span class="line">Pwr:Usage/Cap：能耗；</span><br><span class="line"></span><br><span class="line">Memory Usage：显存使用率； </span><br><span class="line"></span><br><span class="line">Bus-Id：涉及GPU总线的东西  Disp.A：Display Active，表示GPU的显示是否初始化；</span><br><span class="line"></span><br><span class="line">Volatile GPU-Util：浮动的GPU利用率；</span><br><span class="line"></span><br><span class="line">Uncorr. ECC：Error Correcting Code，错误检查与纠正； </span><br><span class="line"></span><br><span class="line">Compute M：compute mode，计算模式</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
-</blockquote>
+    <title>关于最近一些事的思考</title>
+    <url>/2023/06/09/%E5%85%B3%E4%BA%8E%E6%9C%80%E8%BF%91%E4%B8%80%E4%BA%9B%E4%BA%8B%E7%9A%84%E6%80%9D%E8%80%83/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  可能是因为学了计算机的缘故，我对任何事情都开始变得更加注重细节和准确性。无论是什么事情，我都希望能够弄清楚每一个细节。就像要求甲方必须清楚描述要做什么、有哪些具体需求，以及不可做什么等等。只有在明确了相关事情之后，我才能够着手进行第一步。我也非常感激自己拥有这种能力，因为有时候如果不去认真对待事情，最终吃亏的往往会是自己。</p>
 ]]></content>
       <tags>
-        <tag>Shell</tag>
+        <tag>随想</tag>
       </tags>
   </entry>
   <entry>
@@ -908,45 +938,6 @@
       </categories>
       <tags>
         <tag>bug</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>win10配置问题速查手册</title>
-    <url>/2023/09/13/win10%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><span id="more"></span>
-<h2 id="⚙-配置类"><a href="#⚙-配置类" class="headerlink" title="⚙ 配置类"></a>⚙ 配置类</h2><h3 id="1-开启-Hyper-V-⚡"><a href="#1-开启-Hyper-V-⚡" class="headerlink" title="1. 开启 Hyper-V ⚡"></a>1. 开启 Hyper-V ⚡</h3><p>在这一部分，我们将学习如何开启 Hyper-V。这是一个包含了一些命令行操作的示例，可以通过一个批处理（bat）文件执行。这些操作将帮助你启用 Hyper-V。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">pushd</span> <span class="string">&quot;%~dp0&quot;</span></span><br><span class="line"><span class="built_in">dir</span> /b %SystemRoot%\servicing\Packages\*Hyper-V*.mum &gt;hyper-v.txt</span><br><span class="line"><span class="keyword">for</span> /f %%i <span class="keyword">in</span> (<span class="string">&#x27;findstr /i . hyper-v.txt 2^&gt;nul&#x27;</span>) <span class="keyword">do</span> dism /online /norestart /add-package:<span class="string">&quot;%SystemRoot%\servicing\Packages\%%i&quot;</span></span><br><span class="line">del hyper-v.txt</span><br><span class="line">Dism /online /enable-feature /featurename:Microsoft-Hyper-V-All /LimitAccess /ALL</span><br></pre></td></tr></table></figure>
-<h3 id="2-查看-Win10-系统启动项-👀"><a href="#2-查看-Win10-系统启动项-👀" class="headerlink" title="2. 查看 Win10 系统启动项 👀"></a>2. 查看 Win10 系统启动项 👀</h3><p>在这一部分，我们将了解如何查看 Win10 系统的启动项。这是通过任务管理器和一些操作来实现的，以确保你能够轻松地管理启动项。</p>
-<pre class="mermaid">graph LR;
-任务管理器 --> 启动 --查找程序--> 右键禁用;</pre>
-
-<h3 id="3-更改-Win10-电脑锁屏界面用户名-🚪👤"><a href="#3-更改-Win10-电脑锁屏界面用户名-🚪👤" class="headerlink" title="3. 更改 Win10 电脑锁屏界面用户名 🚪👤"></a>3. 更改 Win10 电脑锁屏界面用户名 🚪👤</h3><p>这一部分将向你展示如何更改 Win10 电脑锁屏界面上显示的用户名。这个过程可以通过开始菜单和计算机管理来完成。</p>
-<pre class="mermaid">graph LR
-开始菜单 --右键--> 计算机管理 --> 用户和组</pre>
-]]></content>
-      <categories>
-        <category>win10</category>
-      </categories>
-      <tags>
-        <tag>win10</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于最近一些事的思考</title>
-    <url>/2023/06/09/%E5%85%B3%E4%BA%8E%E6%9C%80%E8%BF%91%E4%B8%80%E4%BA%9B%E4%BA%8B%E7%9A%84%E6%80%9D%E8%80%83/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  可能是因为学了计算机的缘故，我对任何事情都开始变得更加注重细节和准确性。无论是什么事情，我都希望能够弄清楚每一个细节。就像要求甲方必须清楚描述要做什么、有哪些具体需求，以及不可做什么等等。只有在明确了相关事情之后，我才能够着手进行第一步。我也非常感激自己拥有这种能力，因为有时候如果不去认真对待事情，最终吃亏的往往会是自己。</p>
-]]></content>
-      <tags>
-        <tag>随想</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我的第一篇博客</title>
-    <url>/2023/06/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>你好，我是一名大三计算机科学与技术在校生，在此博客进行相关技术知识的分享</p>
-]]></content>
-      <tags>
-        <tag>第一篇博客</tag>
       </tags>
   </entry>
   <entry>
@@ -1043,22 +1034,6 @@
       </tags>
   </entry>
   <entry>
-    <title>随想日记0919</title>
-    <url>/2023/09/19/%E9%9A%8F%E6%83%B3%E6%97%A5%E8%AE%B00919/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>仅代表个人言论</p>
-</blockquote>
-<span id="more"></span>
-<p>我并不想去做那些无益且浪费时间的琐事。人生如此短暂，我们应该珍惜每一刻去追求那些真正有价值、有意义的事情。对于“马原”这门课程所要求的分组讨论和撰写那些毫无意义的哲学论文，我认为这并不能帮助我更好地学习哲学。事实上，我可以将这项作业交给ChatGPT去完成。从今天开始，我将不再参与任何无益且浪费时间的活动。:)</p>
-]]></content>
-      <categories>
-        <category>随想</category>
-      </categories>
-      <tags>
-        <tag>随想</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>饿补计算机科学基础（一）--计算机基础</title>
     <url>/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>计算机基础，常识<br><span id="more"></span></p>
@@ -1115,123 +1090,6 @@
 <p>声道数</p>
 <p>记录每秒存储声音容量公式为</p>
 <p>采样频率 X 量化位数（bit） ➗ 8 X 声道数 = 每秒数据量</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>饿补计算机科学基础（二）--算法</title>
-    <url>/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89-%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>基于python编写的算法</p>
-<span id="more"></span>
-<h2 id="2-典型算法设计"><a href="#2-典型算法设计" class="headerlink" title="2.典型算法设计"></a>2.典型算法设计</h2><h3 id="1-递归"><a href="#1-递归" class="headerlink" title="(1).递归"></a>(1).递归</h3><p>递归方法（recursion algorithm）是指一种通过解决同类的规模较小的子问题而获得问题求解的方法</p>
-<ul>
-<li><p>问题的定义是递归定义的</p>
-</li>
-<li><p>问题的解法按递归算法实现的</p>
-</li>
-<li>数据的结构形式是按递归定义的（二叉树，广义表）</li>
-</ul>
-<p>假如一个函数或者子程序是由自身所定义或调用的，成为递归</p>
-<ul>
-<li><p>递归函数的要素：</p>
-<ul>
-<li><p>一个可以反复执行的递归过程</p>
-</li>
-<li><p>跳出递归过程的出口（不再进行递归的条件）</p>
-</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 阶乘的递归函数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fact</span>(<span class="params">n</span>):</span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">1</span>:<span class="comment">#递归出口</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> n * fact(n-<span class="number">1</span>)<span class="comment">#递归调用</span></span><br><span class="line">    </span><br><span class="line"><span class="built_in">print</span>（fact(<span class="number">3</span>)）</span><br></pre></td></tr></table></figure>
-<h4 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h4><p>二分查找算法（Binary search）递归实现：二分查找要求线性表必须采用顺序存储结构，而且表中元素按关键字有序排列</p>
-<p>反复执行的递归过程：缩小范围继续查找</p>
-<p>跳出提柜的出口：找到了，或者范围长度变成0</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">binarysearch_rec</span>(<span class="params">A, key, low, high</span>):  <span class="comment"># 二分查找算法的递归实现</span></span><br><span class="line">    <span class="keyword">if</span> low &gt; high:</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line">    mid = (low + high) // <span class="number">2</span>  <span class="comment"># 计算中间位置的索引，使用 (low + high) // 2</span></span><br><span class="line">    <span class="keyword">if</span> key == A[mid]:</span><br><span class="line">        <span class="keyword">return</span> mid</span><br><span class="line">    <span class="keyword">elif</span> key &lt; A[mid]:</span><br><span class="line">        <span class="keyword">return</span> binarysearch_rec(A, key, low, mid - <span class="number">1</span>)  <span class="comment"># 左边递归查找</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> binarysearch_rec(A, key, mid + <span class="number">1</span>, high)  <span class="comment"># 右边递归查找</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(binarysearch_rec([<span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">7</span>], <span class="number">4</span>, <span class="number">0</span>, <span class="number">3</span>))  <span class="comment"># 调用函数</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">binary_search</span>(<span class="params">A,Key</span>):</span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    j=<span class="built_in">len</span>(A)-<span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> i &lt;=j:</span><br><span class="line">        mid = (i+j)//<span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> A[mid]==Key:</span><br><span class="line">            <span class="keyword">return</span> mid</span><br><span class="line">        <span class="keyword">elif</span> A[mid]&lt;Key:</span><br><span class="line">            i=mid+<span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            j=mid-<span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(binary_search([<span class="number">3</span>,<span class="number">7</span>,<span class="number">45</span>,<span class="number">89</span>,<span class="number">90</span>],<span class="number">45</span>))</span><br></pre></td></tr></table></figure>
-<h3 id="2-迭代"><a href="#2-迭代" class="headerlink" title="(2).迭代"></a>(2).迭代</h3><p>重复反馈过程的活动，目的通常为了逼近随需目标或结果</p>
-<p>适合重复性操作</p>
-<ul>
-<li>迭代起点：直接或间接地不断由旧值递推出新值的变量</li>
-<li>迭代关系式：变量的前一个值推出其下一个值得公式或关系</li>
-<li>结束条件：什么情况下不在迭代</li>
-</ul>
-<p>例如：斐波那契数列</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">fib_rec</span>(<span class="params">n</span>):</span><br><span class="line">    a, b = <span class="number">1</span>, <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> n &gt; <span class="number">2</span>:</span><br><span class="line">        a, b = b, a + b</span><br><span class="line">        n = n - <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> a</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(fib_rec(<span class="number">2</span>))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="3-排序"><a href="#3-排序" class="headerlink" title="(3).排序"></a>(3).排序</h3><p>将一组“无序”的记录序列调整为“有序”的记录序列的操作</p>
-<ul>
-<li><p>内部排序：整个排序过程不需要访问外存便能完成</p>
-</li>
-<li><p>外部排序：参加排序的记录数量很大，整个序列排序过程不可能在内存中完成</p>
-</li>
-</ul>
-<h4 id="冒泡算法"><a href="#冒泡算法" class="headerlink" title="冒泡算法"></a>冒泡算法</h4><p>Bubble sort：简单排序，从序列一段开始比较相邻两个数字的大小，再根据结果交换两个数字的位置</p>
-<ul>
-<li>比较次数：</li>
-</ul>
-<p>​        第一轮比较n-1次，第二轮比较n-2次，第n-1轮比较1次，总得比较次数为（n-1） + ……+1≈n^2^/2</p>
-<ul>
-<li>交换次数：</li>
-</ul>
-<p>​        和输入数据排列有关，最小交换0次，最多交换次数和比较次数一样，时间复杂度为O(n^2^)</p>
-<ul>
-<li>效率：</li>
-</ul>
-<p>​        当在一轮排序过程中，未发生两个数字交换的时候，就可以不再进行后续几轮的排序。因此，冒泡排序在数据基本有序的情况下效率可以很高</p>
-<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><p>循环结构:for i in range(N-1)</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">selection_sort</span>(<span class="params">A</span>): <span class="comment"># 选择排序</span></span><br><span class="line">    N = <span class="built_in">len</span>(A)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(N - <span class="number">1</span>): <span class="comment"># i控制排序的趟数</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(i + <span class="number">1</span>, N): <span class="comment"># j表示比较范围内元素下标</span></span><br><span class="line">            <span class="keyword">if</span> A[j] &lt; A[i]: <span class="comment"># 递增的条件</span></span><br><span class="line">                A[j], A[i] = A[i], A[j] <span class="comment"># 交换A[j],A[i]的值</span></span><br><span class="line">    <span class="keyword">return</span> A</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(selection_sort([<span class="number">12</span>, <span class="number">34</span>, <span class="number">28</span>, <span class="number">23</span>, <span class="number">6</span>]))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>思考：能否修改算法减少交换次数，实现每轮排序最多交换一次，如何实现？</p>
-<p>Selection Sort：简单排序，从待排序的数据中找到<strong>最小值</strong>（升序），或者最大值（降序），将其与序列<strong>最左边的数字进行交换</strong></p>
-<p>如果最小值本身在合适的位置上，本次就不在进行交换，开始第二轮交换</p>
-<ul>
-<li>比较次数：</li>
-</ul>
-<p>​        第一轮比较n-1次，第二轮比较n-2次，第n-1轮比较1次，总得比较次数为（n-1） + ……+1≈n^2^/2</p>
-<ul>
-<li>交换次数：</li>
-</ul>
-<p>​        每轮中交换的次数最多是1次。输入数据排列是按照待排序顺序排序，则不需要进行任何交换，时间复杂度为O(n^2^)</p>
-<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><p>Insert Sort：简单排序，从序列左端开始，将待排序的数据逐个插入到已排好序的数据中，是的插入后仍然有序</p>
-<p>待插入的数据和左边第一个已排好的相比</p>
-<h1 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h1><p>for i in range(N):<br>    while j &gt;0</p>
-<h1 id="列表操作"><a href="#列表操作" class="headerlink" title="列表操作"></a>列表操作</h1><p>A.insert(i,x)#表示在列表中第i个位置插入元素x<br>A.pop(i)#表示从列表中弹出小标为i的元素，并且把它的值返回</p>
- <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">insert_sort</span>(<span class="params">A</span>): <span class="comment"># 插入排序</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(A)): <span class="comment"># 负责设置排序的趟数</span></span><br><span class="line">        j = i - <span class="number">1</span></span><br><span class="line">        temp = i</span><br><span class="line">        <span class="keyword">while</span> j &gt;= <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">if</span> A[temp] &lt; A[j]: <span class="comment"># 递增排序条件</span></span><br><span class="line">                A.insert(j, A.pop(temp))</span><br><span class="line">                temp = j</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            j = j - <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> A</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(insert_sort([<span class="number">12</span>, <span class="number">56</span>, <span class="number">22</span>, <span class="number">33</span>, <span class="number">1</span>, <span class="number">28</span>, <span class="number">21</span>, <span class="number">55</span>, <span class="number">6</span>]))</span><br></pre></td></tr></table></figure>
-<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p>QuickSort：是对冒泡排序的一种改进</p>
-<p>首先随机选择一个基准值，然后将除了基准值以外的数分为“比基准值小的数”和“比基准值大的数”两个类别，再把基准值放到两个类别数中央。接着对两类别的数重复之前的操作</p>
-<p>随机选择左边的数为基准数，进行排序</p>
-<p>对序列中未比较其他数字都做重复的操作</p>
-<p>数据用列表表示，python中列表部分方法如下</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>说明</th>
-<th>例子</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>append</td>
-<td>在列表末尾添加一项</td>
-<td>ls.append(x)</td>
-</tr>
-<tr>
-<td>remove</td>
-<td>把列表中出现的第一个元素x删除</td>
-<td>ls.remove(x)</td>
-</tr>
-<tr>
-<td>ls+lt</td>
-<td>链接两个列表</td>
-<td>ls+lt</td>
-</tr>
-</tbody>
-</table>
-</div>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">quicksort</span>(<span class="params">A</span>):</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(A) &gt;= <span class="number">2</span>:  <span class="comment"># 递归出口</span></span><br><span class="line">        mid = A[<span class="number">0</span>]  <span class="comment"># 选择基准值，也可以选择中间值</span></span><br><span class="line">        A.remove(mid)</span><br><span class="line">        left, right = [], []</span><br><span class="line">        <span class="keyword">for</span> num <span class="keyword">in</span> A:</span><br><span class="line">            <span class="keyword">if</span> num &gt;= mid:</span><br><span class="line">                right.append(num)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                left.append(num)</span><br><span class="line">        <span class="keyword">return</span> quicksort(left) + [mid] + quicksort(right)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> A</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(quicksort([<span class="number">12</span>, <span class="number">3</span>, <span class="number">56</span>, <span class="number">10</span>, <span class="number">6</span>]))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="查找和线性查找算法"><a href="#查找和线性查找算法" class="headerlink" title="查找和线性查找算法"></a>查找和线性查找算法</h3><p>查找：用关键字表示一个数据元素，查找时根据给定的某个值，在表中确定一个关键字的值等于给定值的记录或数据元素</p>
-<p>线性查找算法：又称顺序查找，是一种最简单的查找方法，它的基本思想是从第一个记录开始，逐个比较记录的关键字，直到给定的k值相等，则查找成功；若比较与文件中n个记录的关键字都不等，则查找失败。</p>
-<p>线性查找需要从一端开始不断地按照顺序检查数据，一一比较</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">linearsearch</span>(<span class="params">A, Key</span>):</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(A)):</span><br><span class="line">        <span class="keyword">if</span> A[i] == Key:</span><br><span class="line">            <span class="keyword">return</span> i</span><br><span class="line">        i = i + <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(linearsearch([<span class="number">12</span>, <span class="number">3</span>, <span class="number">45</span>, <span class="number">2</span>], <span class="number">45</span>))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 ]]></content>
   </entry>
   <entry>
@@ -1375,6 +1233,144 @@
 <p>顶点（vertex）：表示某个事物或对象</p>
 <p>边（edge）：表示顶点或事物之间的逻辑关系</p>
 <p>边的权重（weight）：边上对应的值。可以对应距离、时间值、开销等。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>随想日记0919</title>
+    <url>/2023/09/19/%E9%9A%8F%E6%83%B3%E6%97%A5%E8%AE%B00919/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>我并不想去做那些无益且浪费时间的琐事。人生如此短暂，我们应该珍惜每一刻去追求那些真正有价值、有意义的事情。对于“马原”这门课程所要求的分组讨论和撰写那些毫无意义的哲学论文，我认为这并不能帮助我更好地学习哲学。事实上，我可以将这项作业交给ChatGPT去完成。从今天开始，我将不再参与任何无益且浪费时间的活动。:)</p>
+]]></content>
+      <categories>
+        <category>随想</category>
+      </categories>
+      <tags>
+        <tag>随想</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我的第一篇博客</title>
+    <url>/2023/06/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>你好，我是一名大三计算机科学与技术在校生，在此博客进行相关技术知识的分享</p>
+]]></content>
+      <tags>
+        <tag>第一篇博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>饿补计算机科学基础（二）--算法</title>
+    <url>/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89-%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>基于python编写的算法</p>
+<span id="more"></span>
+<h2 id="2-典型算法设计"><a href="#2-典型算法设计" class="headerlink" title="2.典型算法设计"></a>2.典型算法设计</h2><h3 id="1-递归"><a href="#1-递归" class="headerlink" title="(1).递归"></a>(1).递归</h3><p>递归方法（recursion algorithm）是指一种通过解决同类的规模较小的子问题而获得问题求解的方法</p>
+<ul>
+<li><p>问题的定义是递归定义的</p>
+</li>
+<li><p>问题的解法按递归算法实现的</p>
+</li>
+<li>数据的结构形式是按递归定义的（二叉树，广义表）</li>
+</ul>
+<p>假如一个函数或者子程序是由自身所定义或调用的，成为递归</p>
+<ul>
+<li><p>递归函数的要素：</p>
+<ul>
+<li><p>一个可以反复执行的递归过程</p>
+</li>
+<li><p>跳出递归过程的出口（不再进行递归的条件）</p>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 阶乘的递归函数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fact</span>(<span class="params">n</span>):</span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">1</span>:<span class="comment">#递归出口</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> n * fact(n-<span class="number">1</span>)<span class="comment">#递归调用</span></span><br><span class="line">    </span><br><span class="line"><span class="built_in">print</span>（fact(<span class="number">3</span>)）</span><br></pre></td></tr></table></figure>
+<h4 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h4><p>二分查找算法（Binary search）递归实现：二分查找要求线性表必须采用顺序存储结构，而且表中元素按关键字有序排列</p>
+<p>反复执行的递归过程：缩小范围继续查找</p>
+<p>跳出提柜的出口：找到了，或者范围长度变成0</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">binarysearch_rec</span>(<span class="params">A, key, low, high</span>):  <span class="comment"># 二分查找算法的递归实现</span></span><br><span class="line">    <span class="keyword">if</span> low &gt; high:</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line">    mid = (low + high) // <span class="number">2</span>  <span class="comment"># 计算中间位置的索引，使用 (low + high) // 2</span></span><br><span class="line">    <span class="keyword">if</span> key == A[mid]:</span><br><span class="line">        <span class="keyword">return</span> mid</span><br><span class="line">    <span class="keyword">elif</span> key &lt; A[mid]:</span><br><span class="line">        <span class="keyword">return</span> binarysearch_rec(A, key, low, mid - <span class="number">1</span>)  <span class="comment"># 左边递归查找</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> binarysearch_rec(A, key, mid + <span class="number">1</span>, high)  <span class="comment"># 右边递归查找</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(binarysearch_rec([<span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">7</span>], <span class="number">4</span>, <span class="number">0</span>, <span class="number">3</span>))  <span class="comment"># 调用函数</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">binary_search</span>(<span class="params">A,Key</span>):</span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    j=<span class="built_in">len</span>(A)-<span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> i &lt;=j:</span><br><span class="line">        mid = (i+j)//<span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> A[mid]==Key:</span><br><span class="line">            <span class="keyword">return</span> mid</span><br><span class="line">        <span class="keyword">elif</span> A[mid]&lt;Key:</span><br><span class="line">            i=mid+<span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            j=mid-<span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(binary_search([<span class="number">3</span>,<span class="number">7</span>,<span class="number">45</span>,<span class="number">89</span>,<span class="number">90</span>],<span class="number">45</span>))</span><br></pre></td></tr></table></figure>
+<h3 id="2-迭代"><a href="#2-迭代" class="headerlink" title="(2).迭代"></a>(2).迭代</h3><p>重复反馈过程的活动，目的通常为了逼近随需目标或结果</p>
+<p>适合重复性操作</p>
+<ul>
+<li>迭代起点：直接或间接地不断由旧值递推出新值的变量</li>
+<li>迭代关系式：变量的前一个值推出其下一个值得公式或关系</li>
+<li>结束条件：什么情况下不在迭代</li>
+</ul>
+<p>例如：斐波那契数列</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">fib_rec</span>(<span class="params">n</span>):</span><br><span class="line">    a, b = <span class="number">1</span>, <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> n &gt; <span class="number">2</span>:</span><br><span class="line">        a, b = b, a + b</span><br><span class="line">        n = n - <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> a</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(fib_rec(<span class="number">2</span>))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="3-排序"><a href="#3-排序" class="headerlink" title="(3).排序"></a>(3).排序</h3><p>将一组“无序”的记录序列调整为“有序”的记录序列的操作</p>
+<ul>
+<li><p>内部排序：整个排序过程不需要访问外存便能完成</p>
+</li>
+<li><p>外部排序：参加排序的记录数量很大，整个序列排序过程不可能在内存中完成</p>
+</li>
+</ul>
+<h4 id="冒泡算法"><a href="#冒泡算法" class="headerlink" title="冒泡算法"></a>冒泡算法</h4><p>Bubble sort：简单排序，从序列一段开始比较相邻两个数字的大小，再根据结果交换两个数字的位置</p>
+<ul>
+<li>比较次数：</li>
+</ul>
+<p>​        第一轮比较n-1次，第二轮比较n-2次，第n-1轮比较1次，总得比较次数为（n-1） + ……+1≈n^2^/2</p>
+<ul>
+<li>交换次数：</li>
+</ul>
+<p>​        和输入数据排列有关，最小交换0次，最多交换次数和比较次数一样，时间复杂度为O(n^2^)</p>
+<ul>
+<li>效率：</li>
+</ul>
+<p>​        当在一轮排序过程中，未发生两个数字交换的时候，就可以不再进行后续几轮的排序。因此，冒泡排序在数据基本有序的情况下效率可以很高</p>
+<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><p>循环结构:for i in range(N-1)</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">selection_sort</span>(<span class="params">A</span>): <span class="comment"># 选择排序</span></span><br><span class="line">    N = <span class="built_in">len</span>(A)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(N - <span class="number">1</span>): <span class="comment"># i控制排序的趟数</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(i + <span class="number">1</span>, N): <span class="comment"># j表示比较范围内元素下标</span></span><br><span class="line">            <span class="keyword">if</span> A[j] &lt; A[i]: <span class="comment"># 递增的条件</span></span><br><span class="line">                A[j], A[i] = A[i], A[j] <span class="comment"># 交换A[j],A[i]的值</span></span><br><span class="line">    <span class="keyword">return</span> A</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(selection_sort([<span class="number">12</span>, <span class="number">34</span>, <span class="number">28</span>, <span class="number">23</span>, <span class="number">6</span>]))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>思考：能否修改算法减少交换次数，实现每轮排序最多交换一次，如何实现？</p>
+<p>Selection Sort：简单排序，从待排序的数据中找到<strong>最小值</strong>（升序），或者最大值（降序），将其与序列<strong>最左边的数字进行交换</strong></p>
+<p>如果最小值本身在合适的位置上，本次就不在进行交换，开始第二轮交换</p>
+<ul>
+<li>比较次数：</li>
+</ul>
+<p>​        第一轮比较n-1次，第二轮比较n-2次，第n-1轮比较1次，总得比较次数为（n-1） + ……+1≈n^2^/2</p>
+<ul>
+<li>交换次数：</li>
+</ul>
+<p>​        每轮中交换的次数最多是1次。输入数据排列是按照待排序顺序排序，则不需要进行任何交换，时间复杂度为O(n^2^)</p>
+<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><p>Insert Sort：简单排序，从序列左端开始，将待排序的数据逐个插入到已排好序的数据中，是的插入后仍然有序</p>
+<p>待插入的数据和左边第一个已排好的相比</p>
+<h1 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h1><p>for i in range(N):<br>    while j &gt;0</p>
+<h1 id="列表操作"><a href="#列表操作" class="headerlink" title="列表操作"></a>列表操作</h1><p>A.insert(i,x)#表示在列表中第i个位置插入元素x<br>A.pop(i)#表示从列表中弹出小标为i的元素，并且把它的值返回</p>
+ <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">insert_sort</span>(<span class="params">A</span>): <span class="comment"># 插入排序</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(A)): <span class="comment"># 负责设置排序的趟数</span></span><br><span class="line">        j = i - <span class="number">1</span></span><br><span class="line">        temp = i</span><br><span class="line">        <span class="keyword">while</span> j &gt;= <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">if</span> A[temp] &lt; A[j]: <span class="comment"># 递增排序条件</span></span><br><span class="line">                A.insert(j, A.pop(temp))</span><br><span class="line">                temp = j</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            j = j - <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> A</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(insert_sort([<span class="number">12</span>, <span class="number">56</span>, <span class="number">22</span>, <span class="number">33</span>, <span class="number">1</span>, <span class="number">28</span>, <span class="number">21</span>, <span class="number">55</span>, <span class="number">6</span>]))</span><br></pre></td></tr></table></figure>
+<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p>QuickSort：是对冒泡排序的一种改进</p>
+<p>首先随机选择一个基准值，然后将除了基准值以外的数分为“比基准值小的数”和“比基准值大的数”两个类别，再把基准值放到两个类别数中央。接着对两类别的数重复之前的操作</p>
+<p>随机选择左边的数为基准数，进行排序</p>
+<p>对序列中未比较其他数字都做重复的操作</p>
+<p>数据用列表表示，python中列表部分方法如下</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>append</td>
+<td>在列表末尾添加一项</td>
+<td>ls.append(x)</td>
+</tr>
+<tr>
+<td>remove</td>
+<td>把列表中出现的第一个元素x删除</td>
+<td>ls.remove(x)</td>
+</tr>
+<tr>
+<td>ls+lt</td>
+<td>链接两个列表</td>
+<td>ls+lt</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">quicksort</span>(<span class="params">A</span>):</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(A) &gt;= <span class="number">2</span>:  <span class="comment"># 递归出口</span></span><br><span class="line">        mid = A[<span class="number">0</span>]  <span class="comment"># 选择基准值，也可以选择中间值</span></span><br><span class="line">        A.remove(mid)</span><br><span class="line">        left, right = [], []</span><br><span class="line">        <span class="keyword">for</span> num <span class="keyword">in</span> A:</span><br><span class="line">            <span class="keyword">if</span> num &gt;= mid:</span><br><span class="line">                right.append(num)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                left.append(num)</span><br><span class="line">        <span class="keyword">return</span> quicksort(left) + [mid] + quicksort(right)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> A</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(quicksort([<span class="number">12</span>, <span class="number">3</span>, <span class="number">56</span>, <span class="number">10</span>, <span class="number">6</span>]))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="查找和线性查找算法"><a href="#查找和线性查找算法" class="headerlink" title="查找和线性查找算法"></a>查找和线性查找算法</h3><p>查找：用关键字表示一个数据元素，查找时根据给定的某个值，在表中确定一个关键字的值等于给定值的记录或数据元素</p>
+<p>线性查找算法：又称顺序查找，是一种最简单的查找方法，它的基本思想是从第一个记录开始，逐个比较记录的关键字，直到给定的k值相等，则查找成功；若比较与文件中n个记录的关键字都不等，则查找失败。</p>
+<p>线性查找需要从一端开始不断地按照顺序检查数据，一一比较</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">linearsearch</span>(<span class="params">A, Key</span>):</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(A)):</span><br><span class="line">        <span class="keyword">if</span> A[i] == Key:</span><br><span class="line">            <span class="keyword">return</span> i</span><br><span class="line">        i = i + <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(linearsearch([<span class="number">12</span>, <span class="number">3</span>, <span class="number">45</span>, <span class="number">2</span>], <span class="number">45</span>))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 ]]></content>
   </entry>
 </search>
