@@ -6,7 +6,7 @@
   <link href="http://3kxr.me/atom.xml" rel="self"/>
   
   <link href="http://3kxr.me/"/>
-  <updated>2023-09-20T08:59:43.783Z</updated>
+  <updated>2023-09-21T06:20:19.235Z</updated>
   <id>http://3kxr.me/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MySQL基础板块</title>
+    <link href="http://3kxr.me/2023/09/21/MySQL%E5%9F%BA%E7%A1%80%E6%9D%BF%E5%9D%97/"/>
+    <id>http://3kxr.me/2023/09/21/MySQL%E5%9F%BA%E7%A1%80%E6%9D%BF%E5%9D%97/</id>
+    <published>2023-09-21T06:17:31.000Z</published>
+    <updated>2023-09-21T06:20:19.235Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="基础知识" scheme="http://3kxr.me/categories/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    
+    
+    <category term="基础知识" scheme="http://3kxr.me/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    
+  </entry>
   
   <entry>
     <title>Fitness Zone</title>
