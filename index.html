@@ -721,7 +721,7 @@ if(canvas.getContext){
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2023-09-21 14:17:31 / 修改时间：14:20:19" itemprop="dateCreated datePublished" datetime="2023-09-21T14:17:31+08:00">2023-09-21</time>
+      <time title="创建时间：2023-09-21 14:17:31 / 修改时间：17:24:43" itemprop="dateCreated datePublished" datetime="2023-09-21T14:17:31+08:00">2023-09-21</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -740,7 +740,7 @@ if(canvas.getContext){
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>246</span>
+      <span>247</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -761,82 +761,14 @@ if(canvas.getContext){
           <blockquote>
 <p>SQL基础说明，为巩固基础知识，现创建基础知识板块，其中包含workbench的使用技巧</p>
 </blockquote>
-<p>安装部分略过（皮一下）</p>
-<ul>
-<li><p>数据定义语言DDL</p>
-<ul>
-<li><p>create</p>
-</li>
-<li><p>alter</p>
-</li>
-<li><p>drop</p>
-</li>
-</ul>
-</li>
-<li><p>数据操作语言DML</p>
-<ul>
-<li><p>insert</p>
-</li>
-<li><p>delete</p>
-</li>
-<li><p>update</p>
-</li>
-<li><p>select</p>
-</li>
-</ul>
-</li>
-<li><p>数据控制语言DCL</p>
-<ul>
-<li><p>grant</p>
-</li>
-<li><p>remove</p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="🔍关于数据操作语言SELECT-的查询语句格式"><a href="#🔍关于数据操作语言SELECT-的查询语句格式" class="headerlink" title="🔍关于数据操作语言SELECT 的查询语句格式"></a>🔍关于数据操作语言SELECT 的查询语句格式</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> [<span class="keyword">distinct</span><span class="operator">/</span><span class="keyword">all</span>] <span class="keyword">from</span> table_name</span><br></pre></td></tr></table></figure>
-<h4 id="1-无条件查询"><a href="#1-无条件查询" class="headerlink" title="1.无条件查询"></a>1.无条件查询</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name;</span><br></pre></td></tr></table></figure>
-<h4 id="2-DISTINCT去除重复数据"><a href="#2-DISTINCT去除重复数据" class="headerlink" title="2.DISTINCT去除重复数据"></a>2.DISTINCT去除重复数据</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">distinct</span> <span class="operator">*</span> <span class="keyword">from</span> table_name;</span><br></pre></td></tr></table></figure>
-<p>给列起别名</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> book <span class="keyword">as</span> <span class="string">&#x27;书&#x27;</span> <span class="keyword">from</span> bookstore;</span><br></pre></td></tr></table></figure>
-<h3 id="提取前N条SQL语句"><a href="#提取前N条SQL语句" class="headerlink" title="提取前N条SQL语句"></a>提取前N条SQL语句</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">order</span> <span class="keyword">by</span> columnName </span><br></pre></td></tr></table></figure>
-<h2 id="⚙MySQL-workbench使用技巧"><a href="#⚙MySQL-workbench使用技巧" class="headerlink" title="⚙MySQL workbench使用技巧"></a>⚙MySQL workbench使用技巧</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>快捷键</th>
-<th>用途</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Ctrl + Shift + Enter</td>
-<td>执行选中的SQL(如无选中则执行所有)</td>
-</tr>
-<tr>
-<td>Ctrl + Enter</td>
-<td>执行当前这句SQL (注意MySQL Workbench的编辑器会要求每一句SQL必须以;结尾, 否则会高亮提示错误)</td>
-</tr>
-<tr>
-<td>Ctrl + /</td>
-<td>注释掉选中SQL语句</td>
-</tr>
-<tr>
-<td>Ctrl + B</td>
-<td>格式化SQL语句</td>
-</tr>
-<tr>
-<td>Ctrl + T</td>
-<td>新开SQL编辑器</td>
-</tr>
-<tr>
-<td>Ctrl + Alt + X</td>
-<td>查看执行解释 (explain current statement)</td>
-</tr>
-</tbody>
-</table>
-</div>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/09/21/MySQL%E5%9F%BA%E7%A1%80%E6%9D%BF%E5%9D%97/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
