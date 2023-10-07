@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Fitness Zone</title>
+    <url>/2023/09/20/Fitness-Zone/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>💪这里记载着一些健身小记<br><span id="more"></span></p>
+</blockquote>
+<p>从2021年以后没有健身，在23年9月中旬渐渐恢复健身，但是消失了曾经的那种健身的乐趣，或许是当时第一次接触健身，感觉健身带来的多巴胺会让自己放松，身心愉悦，又或许是最近过于疲惫，感觉少了一些什么东西，却又感受不到，毕竟其中停止健身两年时间，<del>期间训练了巴西柔术</del>，自己的体能必然会下降。</p>
+]]></content>
+      <categories>
+        <category>健身</category>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>健身</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Linux中开启ssh的配置😎🐱‍💻</title>
     <url>/2023/08/01/Linux%E4%B8%AD%E5%BC%80%E5%90%AFssh%E7%9A%84%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -50,19 +66,36 @@
       </tags>
   </entry>
   <entry>
-    <title>Fitness Zone</title>
-    <url>/2023/09/20/Fitness-Zone/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>💪这里记载着一些健身小记<br><span id="more"></span></p>
+    <title>docker基础命令</title>
+    <url>/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/Docker.png" alt></p>
+<blockquote>
+<p>docker的基础命令<br><span id="more"></span></p>
 </blockquote>
-<p>从2021年以后没有健身，在23年9月中旬渐渐恢复健身，但是消失了曾经的那种健身的乐趣，或许是当时第一次接触健身，感觉健身带来的多巴胺会让自己放松，身心愉悦，又或许是最近过于疲惫，感觉少了一些什么东西，却又感受不到，毕竟其中停止健身两年时间，<del>期间训练了巴西柔术</del>，自己的体能必然会下降。</p>
+<p>docker pull 安装镜像</p>
+<p>docker run 运行镜像</p>
+<p>docker container run</p>
+<p>说明：</p>
+<p>创建好image后，新建容器时使用；</p>
+<p>每次运行，都会创建一个新的容器；</p>
+<p>新建的容器可以通过 docker container ls -a 或者 docker ps -a 查看（加 -a 表示查看所有创建好的容器）；</p>
+<p>每次创建会返回一个【长的容器ID】；</p>
+<p>通常情况下，运行一次即可；</p>
+<p>docker containers list -a 查看当前运行的所有镜像</p>
+<p>docker exec -it 【docker的名称】 bash  进入docker运行的bash环境中</p>
+<p>docker container start 【containerID】运行已经创建的容器</p>
+<p>docker ps -a 查看所有容器</p>
+<p>docker stop 【containerID】</p>
+<p>docker rm 【containerID】（先停止容器后才能删除）</p>
+<p>docker export 制作基础镜像，使用 <strong>docker export</strong> 命令根据容器 <strong>ID</strong> 将镜像导出成一个文件</p>
+<p>docker import - new_hangger_server &lt; hangger_server.tar 将这个镜像文件导入进来。</p>
+<p>docker load 载入镜像</p>
 ]]></content>
       <categories>
-        <category>健身</category>
-        <category>随笔</category>
+        <category>docker</category>
       </categories>
       <tags>
-        <tag>健身</tag>
+        <tag>docker</tag>
       </tags>
   </entry>
   <entry>
@@ -156,36 +189,353 @@
       </tags>
   </entry>
   <entry>
-    <title>docker基础命令</title>
-    <url>/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/Docker.png" alt></p>
-<blockquote>
-<p>docker的基础命令<br><span id="more"></span></p>
+    <title>hexo&#39;s plugins</title>
+    <url>/2023/09/17/hexo-s-plugins/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>相关插件</p>
 </blockquote>
-<p>docker pull 安装镜像</p>
-<p>docker run 运行镜像</p>
-<p>docker container run</p>
-<p>说明：</p>
-<p>创建好image后，新建容器时使用；</p>
-<p>每次运行，都会创建一个新的容器；</p>
-<p>新建的容器可以通过 docker container ls -a 或者 docker ps -a 查看（加 -a 表示查看所有创建好的容器）；</p>
-<p>每次创建会返回一个【长的容器ID】；</p>
-<p>通常情况下，运行一次即可；</p>
-<p>docker containers list -a 查看当前运行的所有镜像</p>
-<p>docker exec -it 【docker的名称】 bash  进入docker运行的bash环境中</p>
-<p>docker container start 【containerID】运行已经创建的容器</p>
-<p>docker ps -a 查看所有容器</p>
-<p>docker stop 【containerID】</p>
-<p>docker rm 【containerID】（先停止容器后才能删除）</p>
-<p>docker export 制作基础镜像，使用 <strong>docker export</strong> 命令根据容器 <strong>ID</strong> 将镜像导出成一个文件</p>
-<p>docker import - new_hangger_server &lt; hangger_server.tar 将这个镜像文件导入进来。</p>
-<p>docker load 载入镜像</p>
+<span id="more"></span>
+<p>配置支持mermaid<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-filter-mermaid-diagrams</span><br></pre></td></tr></table></figure></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Numpy笔记</title>
+    <url>/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/NumPy_logo_2020.png" alt></p>
+<blockquote>
+<p>MOOC课程，数据分析相关课程，Numpy笔记</p>
+</blockquote>
+<span id="more"></span>
+<h2 id="统计函数"><a href="#统计函数" class="headerlink" title="统计函数"></a>统计函数</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">sum(a,axis-None)</td>
+<td style="text-align:center">根据给定轴axis计算数组a相关元素之和，axis整数或元组</td>
+</tr>
+<tr>
+<td style="text-align:center">mean(a,axis-None)</td>
+<td style="text-align:center">根据给定轴axis计算数组a相关元素的期望，axis整数或元组</td>
+</tr>
+<tr>
+<td style="text-align:center">average(a,axis=None)</td>
+<td style="text-align:center">根据给定轴axis计算数组a相关元素的加权平均值</td>
+</tr>
+<tr>
+<td style="text-align:center">std(a,axis=None)</td>
+<td style="text-align:center">根据给定轴axis计算数组a相关元素的标准差</td>
+</tr>
+<tr>
+<td style="text-align:center">var(a,axis=None)</td>
+<td style="text-align:center">根据给定轴axis计算数组a县官元素的方差</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="随机函数"><a href="#随机函数" class="headerlink" title="随机函数"></a>随机函数</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>np.random.rand()</td>
+<td></td>
+</tr>
+<tr>
+<td>np.random.randn()</td>
+<td></td>
+</tr>
+<tr>
+<td>np.random.randint()</td>
+<td></td>
+</tr>
+<tr>
+<td>np.random.seed()</td>
+<td></td>
+</tr>
+<tr>
+<td>np.random.shuffle()</td>
+<td></td>
+</tr>
+<tr>
+<td>np.random.permutation()</td>
+<td></td>
+</tr>
+<tr>
+<td>np.random.choice()</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="random梯度函数"><a href="#random梯度函数" class="headerlink" title="random梯度函数"></a>random梯度函数</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>np.gradient(f)</td>
+<td>计算数组f中元素的梯度，当f为多维时，返回每个维度梯度</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>梯度：连续值之间的变化率，即斜率</p>
+<p>XY坐标轴连续三个X坐标对应的Y轴值：a，b，c，其中，b的踢肚时：(c-a)/2</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>数据存取与函数</p>
+<ul>
+<li>CSV文件</li>
+<li>np.loadtxt()</li>
+<li>np.savetxt()</li>
+</ul>
+<p>多维数组存取</p>
+<ul>
+<li>a.tofile()</li>
+<li>np.fromfile()</li>
+<li>np.save()</li>
+<li>np.savez()</li>
+<li>np.load()</li>
+</ul>
+<h2 id="图像的数组表示"><a href="#图像的数组表示" class="headerlink" title="图像的数组表示"></a>图像的数组表示</h2><p>图像是一个三维数组，维度分别是高度、宽度和像素RGB值</p>
+<p>示例代码：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">im=np.array(Image.<span class="built_in">open</span>(<span class="string">&quot;D:/&quot;</span>))</span><br><span class="line"><span class="built_in">print</span>(im.shape,im.dtype)</span><br><span class="line"><span class="comment">#输出(699,1012,3)uint8</span></span><br></pre></td></tr></table></figure>
+<h2 id="图像的变换"><a href="#图像的变换" class="headerlink" title="图像的变换"></a>图像的变换</h2><p>读入图像后，获得像素RGB值，修改后保存为新的文件</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">im=np.array(Image.<span class="built_in">open</span>(<span class="string">&quot;D:/&quot;</span>))</span><br><span class="line"><span class="built_in">print</span>(im.shape,im.dtype)</span><br><span class="line"></span><br><span class="line">b=[<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>]-a <span class="comment">#这是一个三维数组RGB的补值</span></span><br><span class="line"></span><br><span class="line">im = Image.fromarray(b.astype(<span class="string">&#x27;uint8&#x27;</span>))</span><br><span class="line">im.save(<span class="string">&#x27;b.jpg&#x27;</span>)</span><br><span class="line"><span class="comment">#输出(699,1012,3)uint8</span></span><br></pre></td></tr></table></figure>
+<h2 id="图像手绘风格"><a href="#图像手绘风格" class="headerlink" title="图像手绘风格"></a>图像手绘风格</h2><p><code>梯度的重构</code></p>
+<blockquote>
+<p>利用像素之间的梯度值和虚拟深度值对图像进行重构，根据灰度变化来模拟人类视觉的明暗程度</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a= np.asarray(Image.<span class="built_in">open</span>(<span class="string">&#x27;ins.jpg&#x27;</span>).convert(<span class="string">&#x27;L&#x27;</span>)).astype(<span class="string">&#x27;float&#x27;</span>)</span><br><span class="line"></span><br><span class="line">depth = <span class="number">10.</span>         <span class="comment">#(0-100)预设深度值为10</span></span><br><span class="line">grad = np.gradient(a)      <span class="comment">#取图像灰度的梯度值，提取x和y方向的梯度值</span></span><br><span class="line">grad_x , grad_y = grad      <span class="comment"># 分别取横纵图相梯度值</span></span><br><span class="line">grad_x = grad_x*depth/<span class="number">100.</span><span class="comment">#根据深度调整x和y方向的梯度值</span></span><br><span class="line">grad_y = grad_y*depth/<span class="number">100.</span></span><br><span class="line">A = np.sqrt(grad_x**<span class="number">2</span> + grad_y**<span class="number">2</span> + <span class="number">1.</span>)</span><br><span class="line"></span><br><span class="line">uni_x = grad_x/A</span><br><span class="line">uni_y = grad_y/A</span><br><span class="line">uni_z = <span class="number">1.</span>/A</span><br><span class="line"></span><br><span class="line">vec_e1 = np.pi/<span class="number">2.2</span>                  <span class="comment">#光源的俯视角度，弧度值</span></span><br><span class="line">vec_az = np.pi/<span class="number">4.</span>                   <span class="comment"># 光源的方位角度，弧度值</span></span><br><span class="line">dx = np.cos(vec_e1)*np.cos(vec_az) <span class="comment"># 光源对x轴的影响 np.cos(vec_e1)为单位光线在地平面上的投影长度</span></span><br><span class="line">dy = np.cos(vec_e1)*np.sin(vec_az) <span class="comment"># 光源对y轴的影响</span></span><br><span class="line">dz = np.sin(vec_e1)             <span class="comment">#光源对z轴的影响</span></span><br><span class="line"></span><br><span class="line">b = <span class="number">255</span>*(dx*uni_x + dy*uni_y + dz*uni_z)<span class="comment"># 光源归一化</span></span><br><span class="line">b = b.clip(<span class="number">0</span>,<span class="number">255</span>) <span class="comment">#clip 截断，限制数组的上下界,减少像素溢出</span></span><br><span class="line"></span><br><span class="line">im = Image.fromarray(b.astype(<span class="string">&#x27;uint8&#x27;</span>))  <span class="comment">#重构图像</span></span><br><span class="line">im.show()</span><br><span class="line"><span class="comment"># im.save(&#x27;11.jpg&#x27;)</span></span><br></pre></td></tr></table></figure>
+<p>光源效果：</p>
+<p>根据灰度变化来模拟人类视觉的远近程度</p>
+<h1 id="matplotlib-pyplot"><a href="#matplotlib-pyplot" class="headerlink" title="matplotlib.pyplot"></a>matplotlib.pyplot</h1><h2 id="pyplot绘图区域"><a href="#pyplot绘图区域" class="headerlink" title="pyplot绘图区域"></a>pyplot绘图区域</h2><p>plt.subplot(nrows.ncols,lot_number)</p>
+<h2 id="plot"><a href="#plot" class="headerlink" title="plot"></a>plot</h2><p>plt.plot(x,y,format_string,**kwargs)</p>
+<ul>
+<li><p>x:X轴数据，列表或数组，可选</p>
+</li>
+<li><p>y:Y轴数据，列表或数组</p>
+</li>
+<li><p>format_string：控制曲线的格式字符串，可选，由颜色字符、风格字符和标记字符组成</p>
+<ul>
+<li><p>颜色字符对应英文首字母</p>
+</li>
+<li><p>风格字符</p>
+</li>
+</ul>
+<p><code>-</code>实线</p>
+<p><code>--</code>破折线</p>
+<p><code>-.</code>点划线</p>
+<p><code>:</code>虚线</p>
+<ul>
+<li>格式字符串</li>
+</ul>
+<p><code>.</code>点标记</p>
+<p><code>,</code>像素标记</p>
+<p><code>o</code>实心圈标记</p>
+<p><code>v</code>倒三角标记</p>
+<p><code>^</code>上三角标记</p>
+<p><code>&gt;</code>右三角标记</p>
+<p><code>&lt;</code>左三角标记</p>
+<p><code>1</code>下花三角标记</p>
+<p><code>2</code>上花三角标记</p>
+<p><code>3</code>左花三角标记</p>
+<p><code>4</code>右花三角标记</p>
+<p><code>s</code>实心方形标记</p>
+<p><code>p</code>实心五角标记</p>
+<p><code>*</code>星形标记</p>
+<p><code>h</code>竖六边形标记</p>
+<p><code>H</code>横六边形标记</p>
+<p><code>+</code>十字标记</p>
+<p><code>x</code>x标记</p>
+<p><code>D</code>菱形标记</p>
+<p><code>d</code>瘦菱形标记</p>
+<p><code>|</code>垂直线标记</p>
+</li>
+</ul>
+<ul>
+<li><p>**kwargs：第二组或更多（x,y,format_string）</p>
+<ul>
+<li>color：控制颜色，color=‘green’</li>
+<li>linestyle：线条风格，linestyle=‘dashed’</li>
+<li>marker：标记风格，marker=’o‘</li>
+<li>markerfacecolor：标记颜色，markerfacecolor=’blue‘</li>
+<li>markersize：标记尺寸，markersize=20</li>
+<li>……</li>
+</ul>
+</li>
+</ul>
+<p>当绘制多条曲线时，各条曲线的x不能省略</p>
+<h3 id="pyplot中文显示方法"><a href="#pyplot中文显示方法" class="headerlink" title="pyplot中文显示方法"></a>pyplot中文显示方法</h3><ul>
+<li>方法一：需要<strong>rcParams</strong>修改字体实现</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>属性(单引号需加上)</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>‘font.family’</td>
+<td>用于显示字体的名字</td>
+</tr>
+<tr>
+<td>’font.style‘</td>
+<td>字体风格，正常’normal‘或 斜体’italic‘</td>
+</tr>
+<tr>
+<td>’font.size‘</td>
+<td>字体大小，整数字号或者’large‘、’x-small‘</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>方法二：在有中文输出的地方，增加一个属性：fontproperties</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">plt.xlabel(<span class="string">&quot;横轴(值)&quot;</span>,fontproperties=<span class="string">&#x27;SimHei&#x27;</span>,fontsize=<span class="number">20</span>)</span><br><span class="line">plt.ylabel(<span class="string">&quot;grade&quot;</span>,,fontproperties=<span class="string">&#x27;SimHei&#x27;</span>,fontsize=<span class="number">20</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="pyplot的文本显示方法"><a href="#pyplot的文本显示方法" class="headerlink" title="pyplot的文本显示方法"></a>pyplot的文本显示方法</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>plt.xlabel()</td>
+<td>对x轴添加文本标签</td>
+</tr>
+<tr>
+<td>plt.ylabel()</td>
+<td>对y轴添加文本标签</td>
+</tr>
+<tr>
+<td>plt.title()</td>
+<td>对图形整体增加文本标签</td>
+</tr>
+<tr>
+<td>plt.text()</td>
+<td>在任意位置增加文本</td>
+</tr>
+<tr>
+<td>plt.annotate()</td>
+<td>在图形中增加带箭头注释</td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>LaTeX语法 </p>
+<p>$正弦波实例 y = cos(2pix)$</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">plt.annotate()</span><br></pre></td></tr></table></figure>
+<p><img src="/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/Users\JC\AppData\Roaming\Typora\typora-user-images\image-20220504183915496.png" alt="image-20220504183915496"></p>
+<p>plt.subplot2grid(GridSpec,CurSpec,colspan=1,rowspan=1)</p>
+<p>理念：设定网格，选中网格，确定选中行列区域数量，编号从0开始</p>
+<h2 id="GridSpec类"><a href="#GridSpec类" class="headerlink" title="GridSpec类"></a>GridSpec类</h2><p>实行多种格子</p>
+<h2 id="pyplot基础图表函数"><a href="#pyplot基础图表函数" class="headerlink" title="pyplot基础图表函数"></a>pyplot基础图表函数</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>plt.plot(x,y,fmt,…)</td>
+<td>绘制一个坐标图</td>
+</tr>
+<tr>
+<td>plt.boxplot(data,notch,position)</td>
+<td>绘制一个箱型图</td>
+</tr>
+<tr>
+<td>plt.bar(left,height,width,bottom)</td>
+<td>绘制一个条形图</td>
+</tr>
+<tr>
+<td>plt.barh(width,bottom,left,height)</td>
+<td>绘制一个横向条形图</td>
+</tr>
+<tr>
+<td>plt.polar(theta,r)</td>
+<td>绘制极坐标图</td>
+</tr>
+<tr>
+<td>plt.pie(data,explode)</td>
+<td>绘制饼图</td>
+</tr>
+<tr>
+<td>plt.psd(x.NFFT=256,pad_to,Fs)</td>
+<td>绘制功率谱密度图</td>
+</tr>
+<tr>
+<td>plt.specgram(x.NFFT=256,pad_to,Fs)</td>
+<td>绘制谱图</td>
+</tr>
+<tr>
+<td>plt.cohere(x,y,NFFT=256,Fs)</td>
+<td>绘制x-y相关性函数</td>
+</tr>
+<tr>
+<td>plt.step(s,y,where)</td>
+<td>绘制步阶图</td>
+</tr>
+<tr>
+<td>plt.hist(x,bins,normed)</td>
+<td>绘制直方图</td>
+</tr>
+<tr>
+<td>plt.scatter(x,y)</td>
+<td>绘制散点图，其中x和y长度相同</td>
+</tr>
+<tr>
+<td>plt.contour(X,Y,Z,N)</td>
+<td>绘制等值图</td>
+</tr>
+<tr>
+<td>plt.vlines()</td>
+<td>绘制垂直图</td>
+</tr>
+<tr>
+<td>plt.stem(x,y,linefmt,markerfmt)</td>
+<td>绘制柴火图</td>
+</tr>
+<tr>
+<td>plt.plot_date()</td>
+<td>绘制数据日期</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>startangle=90 起始角度</p>
+<p>bin:直方图的个数</p>
+<p>normed：纵坐标出现元素的个数</p>
 ]]></content>
       <categories>
-        <category>docker</category>
+        <category>Python</category>
       </categories>
       <tags>
-        <tag>docker</tag>
+        <tag>数据分析</tag>
+        <tag>Numpy</tag>
       </tags>
   </entry>
   <entry>
@@ -596,377 +946,6 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo&#39;s plugins</title>
-    <url>/2023/09/17/hexo-s-plugins/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>相关插件</p>
-</blockquote>
-<span id="more"></span>
-<p>配置支持mermaid<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-filter-mermaid-diagrams</span><br></pre></td></tr></table></figure></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Numpy笔记</title>
-    <url>/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/NumPy_logo_2020.png" alt></p>
-<blockquote>
-<p>MOOC课程，数据分析相关课程，Numpy笔记</p>
-</blockquote>
-<span id="more"></span>
-<h2 id="统计函数"><a href="#统计函数" class="headerlink" title="统计函数"></a>统计函数</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">函数</th>
-<th style="text-align:center">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">sum(a,axis-None)</td>
-<td style="text-align:center">根据给定轴axis计算数组a相关元素之和，axis整数或元组</td>
-</tr>
-<tr>
-<td style="text-align:center">mean(a,axis-None)</td>
-<td style="text-align:center">根据给定轴axis计算数组a相关元素的期望，axis整数或元组</td>
-</tr>
-<tr>
-<td style="text-align:center">average(a,axis=None)</td>
-<td style="text-align:center">根据给定轴axis计算数组a相关元素的加权平均值</td>
-</tr>
-<tr>
-<td style="text-align:center">std(a,axis=None)</td>
-<td style="text-align:center">根据给定轴axis计算数组a相关元素的标准差</td>
-</tr>
-<tr>
-<td style="text-align:center">var(a,axis=None)</td>
-<td style="text-align:center">根据给定轴axis计算数组a县官元素的方差</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="随机函数"><a href="#随机函数" class="headerlink" title="随机函数"></a>随机函数</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>函数</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>np.random.rand()</td>
-<td></td>
-</tr>
-<tr>
-<td>np.random.randn()</td>
-<td></td>
-</tr>
-<tr>
-<td>np.random.randint()</td>
-<td></td>
-</tr>
-<tr>
-<td>np.random.seed()</td>
-<td></td>
-</tr>
-<tr>
-<td>np.random.shuffle()</td>
-<td></td>
-</tr>
-<tr>
-<td>np.random.permutation()</td>
-<td></td>
-</tr>
-<tr>
-<td>np.random.choice()</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="random梯度函数"><a href="#random梯度函数" class="headerlink" title="random梯度函数"></a>random梯度函数</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>函数</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>np.gradient(f)</td>
-<td>计算数组f中元素的梯度，当f为多维时，返回每个维度梯度</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>梯度：连续值之间的变化率，即斜率</p>
-<p>XY坐标轴连续三个X坐标对应的Y轴值：a，b，c，其中，b的踢肚时：(c-a)/2</p>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>数据存取与函数</p>
-<ul>
-<li>CSV文件</li>
-<li>np.loadtxt()</li>
-<li>np.savetxt()</li>
-</ul>
-<p>多维数组存取</p>
-<ul>
-<li>a.tofile()</li>
-<li>np.fromfile()</li>
-<li>np.save()</li>
-<li>np.savez()</li>
-<li>np.load()</li>
-</ul>
-<h2 id="图像的数组表示"><a href="#图像的数组表示" class="headerlink" title="图像的数组表示"></a>图像的数组表示</h2><p>图像是一个三维数组，维度分别是高度、宽度和像素RGB值</p>
-<p>示例代码：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">im=np.array(Image.<span class="built_in">open</span>(<span class="string">&quot;D:/&quot;</span>))</span><br><span class="line"><span class="built_in">print</span>(im.shape,im.dtype)</span><br><span class="line"><span class="comment">#输出(699,1012,3)uint8</span></span><br></pre></td></tr></table></figure>
-<h2 id="图像的变换"><a href="#图像的变换" class="headerlink" title="图像的变换"></a>图像的变换</h2><p>读入图像后，获得像素RGB值，修改后保存为新的文件</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">im=np.array(Image.<span class="built_in">open</span>(<span class="string">&quot;D:/&quot;</span>))</span><br><span class="line"><span class="built_in">print</span>(im.shape,im.dtype)</span><br><span class="line"></span><br><span class="line">b=[<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>]-a <span class="comment">#这是一个三维数组RGB的补值</span></span><br><span class="line"></span><br><span class="line">im = Image.fromarray(b.astype(<span class="string">&#x27;uint8&#x27;</span>))</span><br><span class="line">im.save(<span class="string">&#x27;b.jpg&#x27;</span>)</span><br><span class="line"><span class="comment">#输出(699,1012,3)uint8</span></span><br></pre></td></tr></table></figure>
-<h2 id="图像手绘风格"><a href="#图像手绘风格" class="headerlink" title="图像手绘风格"></a>图像手绘风格</h2><p><code>梯度的重构</code></p>
-<blockquote>
-<p>利用像素之间的梯度值和虚拟深度值对图像进行重构，根据灰度变化来模拟人类视觉的明暗程度</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a= np.asarray(Image.<span class="built_in">open</span>(<span class="string">&#x27;ins.jpg&#x27;</span>).convert(<span class="string">&#x27;L&#x27;</span>)).astype(<span class="string">&#x27;float&#x27;</span>)</span><br><span class="line"></span><br><span class="line">depth = <span class="number">10.</span>         <span class="comment">#(0-100)预设深度值为10</span></span><br><span class="line">grad = np.gradient(a)      <span class="comment">#取图像灰度的梯度值，提取x和y方向的梯度值</span></span><br><span class="line">grad_x , grad_y = grad      <span class="comment"># 分别取横纵图相梯度值</span></span><br><span class="line">grad_x = grad_x*depth/<span class="number">100.</span><span class="comment">#根据深度调整x和y方向的梯度值</span></span><br><span class="line">grad_y = grad_y*depth/<span class="number">100.</span></span><br><span class="line">A = np.sqrt(grad_x**<span class="number">2</span> + grad_y**<span class="number">2</span> + <span class="number">1.</span>)</span><br><span class="line"></span><br><span class="line">uni_x = grad_x/A</span><br><span class="line">uni_y = grad_y/A</span><br><span class="line">uni_z = <span class="number">1.</span>/A</span><br><span class="line"></span><br><span class="line">vec_e1 = np.pi/<span class="number">2.2</span>                  <span class="comment">#光源的俯视角度，弧度值</span></span><br><span class="line">vec_az = np.pi/<span class="number">4.</span>                   <span class="comment"># 光源的方位角度，弧度值</span></span><br><span class="line">dx = np.cos(vec_e1)*np.cos(vec_az) <span class="comment"># 光源对x轴的影响 np.cos(vec_e1)为单位光线在地平面上的投影长度</span></span><br><span class="line">dy = np.cos(vec_e1)*np.sin(vec_az) <span class="comment"># 光源对y轴的影响</span></span><br><span class="line">dz = np.sin(vec_e1)             <span class="comment">#光源对z轴的影响</span></span><br><span class="line"></span><br><span class="line">b = <span class="number">255</span>*(dx*uni_x + dy*uni_y + dz*uni_z)<span class="comment"># 光源归一化</span></span><br><span class="line">b = b.clip(<span class="number">0</span>,<span class="number">255</span>) <span class="comment">#clip 截断，限制数组的上下界,减少像素溢出</span></span><br><span class="line"></span><br><span class="line">im = Image.fromarray(b.astype(<span class="string">&#x27;uint8&#x27;</span>))  <span class="comment">#重构图像</span></span><br><span class="line">im.show()</span><br><span class="line"><span class="comment"># im.save(&#x27;11.jpg&#x27;)</span></span><br></pre></td></tr></table></figure>
-<p>光源效果：</p>
-<p>根据灰度变化来模拟人类视觉的远近程度</p>
-<h1 id="matplotlib-pyplot"><a href="#matplotlib-pyplot" class="headerlink" title="matplotlib.pyplot"></a>matplotlib.pyplot</h1><h2 id="pyplot绘图区域"><a href="#pyplot绘图区域" class="headerlink" title="pyplot绘图区域"></a>pyplot绘图区域</h2><p>plt.subplot(nrows.ncols,lot_number)</p>
-<h2 id="plot"><a href="#plot" class="headerlink" title="plot"></a>plot</h2><p>plt.plot(x,y,format_string,**kwargs)</p>
-<ul>
-<li><p>x:X轴数据，列表或数组，可选</p>
-</li>
-<li><p>y:Y轴数据，列表或数组</p>
-</li>
-<li><p>format_string：控制曲线的格式字符串，可选，由颜色字符、风格字符和标记字符组成</p>
-<ul>
-<li><p>颜色字符对应英文首字母</p>
-</li>
-<li><p>风格字符</p>
-</li>
-</ul>
-<p><code>-</code>实线</p>
-<p><code>--</code>破折线</p>
-<p><code>-.</code>点划线</p>
-<p><code>:</code>虚线</p>
-<ul>
-<li>格式字符串</li>
-</ul>
-<p><code>.</code>点标记</p>
-<p><code>,</code>像素标记</p>
-<p><code>o</code>实心圈标记</p>
-<p><code>v</code>倒三角标记</p>
-<p><code>^</code>上三角标记</p>
-<p><code>&gt;</code>右三角标记</p>
-<p><code>&lt;</code>左三角标记</p>
-<p><code>1</code>下花三角标记</p>
-<p><code>2</code>上花三角标记</p>
-<p><code>3</code>左花三角标记</p>
-<p><code>4</code>右花三角标记</p>
-<p><code>s</code>实心方形标记</p>
-<p><code>p</code>实心五角标记</p>
-<p><code>*</code>星形标记</p>
-<p><code>h</code>竖六边形标记</p>
-<p><code>H</code>横六边形标记</p>
-<p><code>+</code>十字标记</p>
-<p><code>x</code>x标记</p>
-<p><code>D</code>菱形标记</p>
-<p><code>d</code>瘦菱形标记</p>
-<p><code>|</code>垂直线标记</p>
-</li>
-</ul>
-<ul>
-<li><p>**kwargs：第二组或更多（x,y,format_string）</p>
-<ul>
-<li>color：控制颜色，color=‘green’</li>
-<li>linestyle：线条风格，linestyle=‘dashed’</li>
-<li>marker：标记风格，marker=’o‘</li>
-<li>markerfacecolor：标记颜色，markerfacecolor=’blue‘</li>
-<li>markersize：标记尺寸，markersize=20</li>
-<li>……</li>
-</ul>
-</li>
-</ul>
-<p>当绘制多条曲线时，各条曲线的x不能省略</p>
-<h3 id="pyplot中文显示方法"><a href="#pyplot中文显示方法" class="headerlink" title="pyplot中文显示方法"></a>pyplot中文显示方法</h3><ul>
-<li>方法一：需要<strong>rcParams</strong>修改字体实现</li>
-</ul>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>属性(单引号需加上)</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>‘font.family’</td>
-<td>用于显示字体的名字</td>
-</tr>
-<tr>
-<td>’font.style‘</td>
-<td>字体风格，正常’normal‘或 斜体’italic‘</td>
-</tr>
-<tr>
-<td>’font.size‘</td>
-<td>字体大小，整数字号或者’large‘、’x-small‘</td>
-</tr>
-</tbody>
-</table>
-</div>
-<ul>
-<li>方法二：在有中文输出的地方，增加一个属性：fontproperties</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">plt.xlabel(<span class="string">&quot;横轴(值)&quot;</span>,fontproperties=<span class="string">&#x27;SimHei&#x27;</span>,fontsize=<span class="number">20</span>)</span><br><span class="line">plt.ylabel(<span class="string">&quot;grade&quot;</span>,,fontproperties=<span class="string">&#x27;SimHei&#x27;</span>,fontsize=<span class="number">20</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="pyplot的文本显示方法"><a href="#pyplot的文本显示方法" class="headerlink" title="pyplot的文本显示方法"></a>pyplot的文本显示方法</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>函数</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>plt.xlabel()</td>
-<td>对x轴添加文本标签</td>
-</tr>
-<tr>
-<td>plt.ylabel()</td>
-<td>对y轴添加文本标签</td>
-</tr>
-<tr>
-<td>plt.title()</td>
-<td>对图形整体增加文本标签</td>
-</tr>
-<tr>
-<td>plt.text()</td>
-<td>在任意位置增加文本</td>
-</tr>
-<tr>
-<td>plt.annotate()</td>
-<td>在图形中增加带箭头注释</td>
-</tr>
-</tbody>
-</table>
-</div>
-<blockquote>
-<p>LaTeX语法 </p>
-<p>$正弦波实例 y = cos(2pix)$</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">plt.annotate()</span><br></pre></td></tr></table></figure>
-<p><img src="/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/Users\JC\AppData\Roaming\Typora\typora-user-images\image-20220504183915496.png" alt="image-20220504183915496"></p>
-<p>plt.subplot2grid(GridSpec,CurSpec,colspan=1,rowspan=1)</p>
-<p>理念：设定网格，选中网格，确定选中行列区域数量，编号从0开始</p>
-<h2 id="GridSpec类"><a href="#GridSpec类" class="headerlink" title="GridSpec类"></a>GridSpec类</h2><p>实行多种格子</p>
-<h2 id="pyplot基础图表函数"><a href="#pyplot基础图表函数" class="headerlink" title="pyplot基础图表函数"></a>pyplot基础图表函数</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>函数</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>plt.plot(x,y,fmt,…)</td>
-<td>绘制一个坐标图</td>
-</tr>
-<tr>
-<td>plt.boxplot(data,notch,position)</td>
-<td>绘制一个箱型图</td>
-</tr>
-<tr>
-<td>plt.bar(left,height,width,bottom)</td>
-<td>绘制一个条形图</td>
-</tr>
-<tr>
-<td>plt.barh(width,bottom,left,height)</td>
-<td>绘制一个横向条形图</td>
-</tr>
-<tr>
-<td>plt.polar(theta,r)</td>
-<td>绘制极坐标图</td>
-</tr>
-<tr>
-<td>plt.pie(data,explode)</td>
-<td>绘制饼图</td>
-</tr>
-<tr>
-<td>plt.psd(x.NFFT=256,pad_to,Fs)</td>
-<td>绘制功率谱密度图</td>
-</tr>
-<tr>
-<td>plt.specgram(x.NFFT=256,pad_to,Fs)</td>
-<td>绘制谱图</td>
-</tr>
-<tr>
-<td>plt.cohere(x,y,NFFT=256,Fs)</td>
-<td>绘制x-y相关性函数</td>
-</tr>
-<tr>
-<td>plt.step(s,y,where)</td>
-<td>绘制步阶图</td>
-</tr>
-<tr>
-<td>plt.hist(x,bins,normed)</td>
-<td>绘制直方图</td>
-</tr>
-<tr>
-<td>plt.scatter(x,y)</td>
-<td>绘制散点图，其中x和y长度相同</td>
-</tr>
-<tr>
-<td>plt.contour(X,Y,Z,N)</td>
-<td>绘制等值图</td>
-</tr>
-<tr>
-<td>plt.vlines()</td>
-<td>绘制垂直图</td>
-</tr>
-<tr>
-<td>plt.stem(x,y,linefmt,markerfmt)</td>
-<td>绘制柴火图</td>
-</tr>
-<tr>
-<td>plt.plot_date()</td>
-<td>绘制数据日期</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>startangle=90 起始角度</p>
-<p>bin:直方图的个数</p>
-<p>normed：纵坐标出现元素的个数</p>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>数据分析</tag>
-        <tag>Numpy</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>win10配置问题速查手册</title>
-    <url>/2023/09/13/win10%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><span id="more"></span>
-<h2 id="⚙-配置类"><a href="#⚙-配置类" class="headerlink" title="⚙ 配置类"></a>⚙ 配置类</h2><h3 id="1-开启-Hyper-V-⚡"><a href="#1-开启-Hyper-V-⚡" class="headerlink" title="1. 开启 Hyper-V ⚡"></a>1. 开启 Hyper-V ⚡</h3><p>在这一部分，我们将学习如何开启 Hyper-V。这是一个包含了一些命令行操作的示例，可以通过一个批处理（bat）文件执行。这些操作将帮助你启用 Hyper-V。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">pushd</span> <span class="string">&quot;%~dp0&quot;</span></span><br><span class="line"><span class="built_in">dir</span> /b %SystemRoot%\servicing\Packages\*Hyper-V*.mum &gt;hyper-v.txt</span><br><span class="line"><span class="keyword">for</span> /f %%i <span class="keyword">in</span> (<span class="string">&#x27;findstr /i . hyper-v.txt 2^&gt;nul&#x27;</span>) <span class="keyword">do</span> dism /online /norestart /add-package:<span class="string">&quot;%SystemRoot%\servicing\Packages\%%i&quot;</span></span><br><span class="line">del hyper-v.txt</span><br><span class="line">Dism /online /enable-feature /featurename:Microsoft-Hyper-V-All /LimitAccess /ALL</span><br></pre></td></tr></table></figure>
-<h3 id="2-查看-Win10-系统启动项-👀"><a href="#2-查看-Win10-系统启动项-👀" class="headerlink" title="2. 查看 Win10 系统启动项 👀"></a>2. 查看 Win10 系统启动项 👀</h3><p>在这一部分，我们将了解如何查看 Win10 系统的启动项。这是通过任务管理器和一些操作来实现的，以确保你能够轻松地管理启动项。</p>
-<pre class="mermaid">graph LR;
-任务管理器 --> 启动 --查找程序--> 右键禁用;</pre>
-
-<h3 id="3-更改-Win10-电脑锁屏界面用户名-🚪👤"><a href="#3-更改-Win10-电脑锁屏界面用户名-🚪👤" class="headerlink" title="3. 更改 Win10 电脑锁屏界面用户名 🚪👤"></a>3. 更改 Win10 电脑锁屏界面用户名 🚪👤</h3><p>这一部分将向你展示如何更改 Win10 电脑锁屏界面上显示的用户名。这个过程可以通过开始菜单和计算机管理来完成。</p>
-<pre class="mermaid">graph LR
-开始菜单 --右键--> 计算机管理 --> 用户和组</pre>
-]]></content>
-      <categories>
-        <category>win10</category>
-      </categories>
-      <tags>
-        <tag>win10</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>nvidia-smi基础信息</title>
     <url>/2023/06/08/nvidia-smi%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/08/nvidia-smi%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF/nvidia.png" alt></p>
@@ -1038,15 +1017,6 @@
       </tags>
   </entry>
   <entry>
-    <title>关于最近一些事的思考</title>
-    <url>/2023/06/09/%E5%85%B3%E4%BA%8E%E6%9C%80%E8%BF%91%E4%B8%80%E4%BA%9B%E4%BA%8B%E7%9A%84%E6%80%9D%E8%80%83/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  可能是因为学了计算机的缘故，我对任何事情都开始变得更加注重细节和准确性。无论是什么事情，我都希望能够弄清楚每一个细节。就像要求甲方必须清楚描述要做什么、有哪些具体需求，以及不可做什么等等。只有在明确了相关事情之后，我才能够着手进行第一步。我也非常感激自己拥有这种能力，因为有时候如果不去认真对待事情，最终吃亏的往往会是自己。</p>
-]]></content>
-      <tags>
-        <tag>随想</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>关于iOS设备忘记密码的修复方法</title>
     <url>/2023/10/07/%E5%85%B3%E4%BA%8EiOS%E8%AE%BE%E5%A4%87%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81%E7%9A%84%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -1083,82 +1053,24 @@
       </tags>
   </entry>
   <entry>
-    <title>请求响应报头相关名词解释</title>
-    <url>/2023/06/12/%E8%AF%B7%E6%B1%82%E5%93%8D%E5%BA%94%E6%8A%A5%E5%A4%B4%E7%9B%B8%E5%85%B3%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>本文主要说明常用的请求响应相关名词解释,建议读者具备网络基础<br><span id="more"></span></p>
-<h2 id="常用的请求报头"><a href="#常用的请求报头" class="headerlink" title="常用的请求报头"></a>常用的请求报头</h2></blockquote>
-<h3 id="1-Host-主机和端口号"><a href="#1-Host-主机和端口号" class="headerlink" title="1. Host (主机和端口号)"></a>1. Host (主机和端口号)</h3><p>Host：对应网址URL中的Web名称和端口号，用于指定被请求资源的Internet主机和端口号，通常属于URL的一部分。</p>
-<h3 id="2-Connection-链接类型"><a href="#2-Connection-链接类型" class="headerlink" title="2. Connection (链接类型)"></a>2. Connection (链接类型)</h3><p>Connection：表示客户端与服务连接类型</p>
-<ol>
-<li>Client 发起一个包含 <code>Connection:keep-alive</code> 的请求，HTTP/1.1使用 <code>keep-alive</code> 为默认值。</li>
-<li>Server收到请求后：<ul>
-<li>如果 Server 支持 keep-alive，回复一个包含 Connection:keep-alive 的响应，不关闭连接；</li>
-<li>如果 Server 不支持 keep-alive，回复一个包含 Connection:close 的响应，关闭连接。</li>
-</ul>
-</li>
-<li>如果client收到包含 <code>Connection:keep-alive</code> 的响应，向同一个连接发送下一个请求，直到一方主动关闭连接。</li>
-</ol>
-<p><strong>keep-alive在很多情况下能够重用连接，减少资源消耗，缩短响应时间，比如当浏览器需要多个文件时(比如一个HTML文件和相关的图形文件)，不需要每次都去请求建立连接。</strong></p>
-<h3 id="3-Upgrade-Insecure-Requests-升级为HTTPS请求"><a href="#3-Upgrade-Insecure-Requests-升级为HTTPS请求" class="headerlink" title="3. Upgrade-Insecure-Requests (升级为HTTPS请求)"></a>3. Upgrade-Insecure-Requests (升级为HTTPS请求)</h3><p>Upgrade-Insecure-Requests：升级不安全的请求，意思是会在加载 http 资源时自动替换成 https 请求，让浏览器不再显示https页面中的http请求警报。</p>
-<p><strong><em>HTTPS 是以安全为目标的 HTTP 通道，所以在 HTTPS 承载的页面上不允许出现 HTTP 请求，一旦出现就是提示或报错。\</em></strong></p>
-<h3 id="4-User-Agent-浏览器名称"><a href="#4-User-Agent-浏览器名称" class="headerlink" title="4. User-Agent (浏览器名称)"></a>4. User-Agent (浏览器名称)</h3><p>User-Agent：是客户浏览器的名称，以后会详细讲。</p>
-<h3 id="5-Accept-传输文件类型"><a href="#5-Accept-传输文件类型" class="headerlink" title="5. Accept (传输文件类型)"></a>5. Accept (传输文件类型)</h3><p>Accept：指浏览器或其他客户端可以接受的MIME（Multipurpose Internet Mail Extensions（多用途互联网邮件扩展））文件类型，服务器可以根据它判断并返回适当的文件格式。</p>
-<h5 id="举例："><a href="#举例：" class="headerlink" title="举例："></a>举例：</h5><p><code>Accept: */*</code>：表示什么都可以接收。</p>
-<p><code>Accept：image/gif</code>：表明客户端希望接受GIF图像格式的资源；</p>
-<p><code>Accept：text/html</code>：表明客户端希望接受html文本。</p>
-<p><code>Accept: text/html, application/xhtml+xml;q=0.9, image/*;q=0.8</code>：表示浏览器支持的 MIME 类型分别是 html文本、xhtml和xml文档、所有的图像格式资源。</p>
-<p><strong><em>q是权重系数，范围 0 =&lt; q &lt;= 1，q 值越大，请求越倾向于获得其“;”之前的类型表示的内容。若没有指定q值，则默认为1，按从左到右排序顺序；若被赋值为0，则用于表示浏览器不接受此内容类型。\</em></strong></p>
-<p><strong><em>Text：用于标准化地表示的文本信息，文本消息可以是多种字符集和或者多种格式的；Application：用于传输应用程序数据或者二进制数据。<a href="http://blog.sina.com.cn/s/blog_866e403f010179f1.html">详细请点击</a>\</em></strong></p>
-<h3 id="6-Referer-页面跳转处"><a href="#6-Referer-页面跳转处" class="headerlink" title="6. Referer (页面跳转处)"></a>6. Referer (页面跳转处)</h3><p>Referer：表明产生请求的网页来自于哪个URL，用户是从该 Referer页面访问到当前请求的页面。这个属性可以用来跟踪Web请求来自哪个页面，是从什么网站来的等。</p>
-<p>有时候遇到下载某网站图片，需要对应的referer，否则无法下载图片，那是因为人家做了防盗链，原理就是根据referer去判断是否是本网站的地址，如果不是，则拒绝，如果是，就可以下载；</p>
-<h3 id="7-Accept-Encoding（文件编解码格式）"><a href="#7-Accept-Encoding（文件编解码格式）" class="headerlink" title="7. Accept-Encoding（文件编解码格式）"></a>7. Accept-Encoding（文件编解码格式）</h3><p>Accept-Encoding：指出浏览器可以接受的编码方式。编码方式不同于文件格式，它是为了压缩文件并加速文件传递速度。浏览器在接收到Web响应之后先解码，然后再检查文件格式，许多情形下这可以减少大量的下载时间。</p>
-<h5 id="举例：Accept-Encoding-gzip-q-1-0-identity-q-0-5-q-0"><a href="#举例：Accept-Encoding-gzip-q-1-0-identity-q-0-5-q-0" class="headerlink" title="举例：Accept-Encoding:gzip;q=1.0, identity; q=0.5, *;q=0"></a>举例：Accept-Encoding:gzip;q=1.0, identity; q=0.5, *;q=0</h5><p>如果有多个Encoding同时匹配, 按照q值顺序排列，本例中按顺序支持 gzip, identity压缩编码，支持gzip的浏览器会返回经过gzip编码的HTML页面。 <strong>如果请求消息中没有设置这个域服务器假定客户端对各种内容编码都可以接受。</strong></p>
-<h3 id="8-Accept-Language（语言种类）"><a href="#8-Accept-Language（语言种类）" class="headerlink" title="8. Accept-Language（语言种类）"></a>8. Accept-Language（语言种类）</h3><p>Accept-Langeuage：指出浏览器可以接受的语言种类，如en或en-us指英语，zh或者zh-cn指中文，当服务器能够提供一种以上的语言版本时要用到。</p>
-<h3 id="9-Accept-Charset（字符编码）"><a href="#9-Accept-Charset（字符编码）" class="headerlink" title="9. Accept-Charset（字符编码）"></a>9. Accept-Charset（字符编码）</h3><p>Accept-Charset：指出浏览器可以接受的字符编码。</p>
-<h5 id="举例：Accept-Charset-iso-8859-1-gb2312-utf-8"><a href="#举例：Accept-Charset-iso-8859-1-gb2312-utf-8" class="headerlink" title="举例：Accept-Charset:iso-8859-1,gb2312,utf-8"></a>举例：Accept-Charset:iso-8859-1,gb2312,utf-8</h5><ul>
-<li>ISO8859-1：通常叫做Latin-1。Latin-1包括了书写所有西方欧洲语言不可缺少的附加字符，英文浏览器的默认值是ISO-8859-1.</li>
-<li>gb2312：标准简体中文字符集;</li>
-<li>utf-8：UNICODE 的一种变长字符编码，可以解决多种语言文本显示问题，从而实现应用国际化和本地化。</li>
-</ul>
-<p><strong>如果在请求消息中没有设置这个域，缺省是任何字符集都可以接受。</strong></p>
-<h3 id="10-Cookie-（Cookie）"><a href="#10-Cookie-（Cookie）" class="headerlink" title="10. Cookie （Cookie）"></a>10. Cookie （Cookie）</h3><p>Cookie：浏览器用这个属性向服务器发送Cookie。Cookie是在浏览器中寄存的小型数据体，它可以记载和服务器相关的用户信息，也可以用来实现会话功能，以后会详细讲。</p>
-<h3 id="11-Content-Type-POST数据类型"><a href="#11-Content-Type-POST数据类型" class="headerlink" title="11. Content-Type (POST数据类型)"></a>11. Content-Type (POST数据类型)</h3><p>Content-Type：POST请求里用来表示的内容类型。</p>
-<h5 id="举例：Content-Type-Text-XML-charset-gb2312："><a href="#举例：Content-Type-Text-XML-charset-gb2312：" class="headerlink" title="举例：Content-Type = Text/XML; charset=gb2312："></a>举例：Content-Type = Text/XML; charset=gb2312：</h5><p>指明该请求的消息体中包含的是纯文本的XML类型的数据，字符编码采用“gb2312”。</p>
-<h2 id="常用的响应报头-了解"><a href="#常用的响应报头-了解" class="headerlink" title="常用的响应报头(了解)"></a>常用的响应报头(了解)</h2><p>理论上所有的响应头信息都应该是回应请求头的。但是服务端为了效率，安全，还有其他方面的考虑，会添加相对应的响应头信息，从上图可以看到：</p>
-<h3 id="1-Cache-Control：must-revalidate-no-cache-private。"><a href="#1-Cache-Control：must-revalidate-no-cache-private。" class="headerlink" title="1. Cache-Control：must-revalidate, no-cache, private。"></a>1. Cache-Control：must-revalidate, no-cache, private。</h3><p>这个值告诉客户端，服务端不希望客户端缓存资源，在下次请求资源时，必须要从新请求服务器，不能从缓存副本中获取资源。</p>
-<ul>
-<li>Cache-Control是响应头中很重要的信息，当客户端请求头中包含Cache-Control:max-age=0请求，明确表示不会缓存服务器资源时,Cache-Control作为作为回应信息，通常会返回no-cache，意思就是说，”那就不缓存呗”。</li>
-<li>当客户端在请求头中没有包含Cache-Control时，服务端往往会定,不同的资源不同的缓存策略，比如说oschina在缓存图片资源的策略就是Cache-Control：max-age=86400,这个意思是，从当前时间开始，在86400秒的时间内，客户端可以直接从缓存副本中读取资源，而不需要向服务器请求。</li>
-</ul>
-<h3 id="2-Connection：keep-alive"><a href="#2-Connection：keep-alive" class="headerlink" title="2. Connection：keep-alive"></a>2. Connection：keep-alive</h3><p>这个字段作为回应客户端的Connection：keep-alive，告诉客户端服务器的tcp连接也是一个长连接，客户端可以继续使用这个tcp连接发送http请求。</p>
-<h3 id="3-Content-Encoding-gzip"><a href="#3-Content-Encoding-gzip" class="headerlink" title="3. Content-Encoding:gzip"></a>3. Content-Encoding:gzip</h3><p>告诉客户端，服务端发送的资源是采用gzip编码的，客户端看到这个信息后，应该采用gzip对资源进行解码。</p>
-<h3 id="4-Content-Type：text-html-charset-UTF-8"><a href="#4-Content-Type：text-html-charset-UTF-8" class="headerlink" title="4. Content-Type：text/html;charset=UTF-8"></a>4. Content-Type：text/html;charset=UTF-8</h3><p>告诉客户端，资源文件的类型，还有字符编码，客户端通过utf-8对资源进行解码，然后对资源进行html解析。通常我们会看到有些网站是乱码的，往往就是服务器端没有返回正确的编码。</p>
-<h3 id="5-Date：Sun-21-Sep-2016-06-18-21-GMT"><a href="#5-Date：Sun-21-Sep-2016-06-18-21-GMT" class="headerlink" title="5. Date：Sun, 21 Sep 2016 06:18:21 GMT"></a>5. Date：Sun, 21 Sep 2016 06:18:21 GMT</h3><p>这个是服务端发送资源时的服务器时间，GMT是格林尼治所在地的标准时间。http协议中发送的时间都是GMT的，这主要是解决在互联网上，不同时区在相互请求资源的时候，时间混乱问题。</p>
-<h3 id="6-Expires-Sun-1-Jan-2000-01-00-00-GMT"><a href="#6-Expires-Sun-1-Jan-2000-01-00-00-GMT" class="headerlink" title="6. Expires:Sun, 1 Jan 2000 01:00:00 GMT"></a>6. Expires:Sun, 1 Jan 2000 01:00:00 GMT</h3><p>这个响应头也是跟缓存有关的，告诉客户端在这个时间前，可以直接访问缓存副本，很显然这个值会存在问题，因为客户端和服务器的时间不一定会都是相同的，如果时间不同就会导致问题。所以这个响应头是没有Cache-Control：max-age=*这个响应头准确的，因为max-age=date中的date是个相对时间，不仅更好理解，也更准确。</p>
-<h3 id="7-Pragma-no-cache"><a href="#7-Pragma-no-cache" class="headerlink" title="7. Pragma:no-cache"></a>7. Pragma:no-cache</h3><p>这个含义与Cache-Control等同。</p>
-<h3 id="8-Server：Tengine-1-4-6"><a href="#8-Server：Tengine-1-4-6" class="headerlink" title="8.Server：Tengine/1.4.6"></a>8.Server：Tengine/1.4.6</h3><p>这个是服务器和相对应的版本，只是告诉客户端服务器的信息。</p>
-<h3 id="9-Transfer-Encoding：chunked"><a href="#9-Transfer-Encoding：chunked" class="headerlink" title="9. Transfer-Encoding：chunked"></a>9. Transfer-Encoding：chunked</h3><p>这个响应头告诉客户端，服务器发送的资源的方式是分块发送的。一般分块发送的资源都是服务器动态生成的，在发送时还不知道发送资源的大小，所以采用分块发送，每一块都是独立的，独立的块都能标示自己的长度，最后一块是0长度的，当客户端读到这个0长度的块时，就可以确定资源已经传输完了。</p>
-<h3 id="10-Vary-Accept-Encoding"><a href="#10-Vary-Accept-Encoding" class="headerlink" title="10. Vary: Accept-Encoding"></a>10. Vary: Accept-Encoding</h3><p>告诉缓存服务器，缓存压缩文件和非压缩文件两个版本，现在这个字段用处并不大，因为现在的浏览器都是支持压缩的。</p>
-<h2 id="Cookie-和-Session："><a href="#Cookie-和-Session：" class="headerlink" title="Cookie 和 Session："></a>Cookie 和 Session：</h2><p>服务器和客户端的交互仅限于请求/响应过程，结束之后便断开，在下一次请求时，服务器会认为新的客户端。</p>
-<p>为了维护他们之间的链接，让服务器知道这是前一个用户发送的请求，必须在一个地方保存客户端的信息。</p>
-<p><strong>Cookie</strong>：通过在 客户端 记录的信息确定用户的身份。</p>
-<p><strong>Session</strong>：通过在 服务器端 记录的信息确定用户的身份。</p>
+    <title>win10配置问题速查手册</title>
+    <url>/2023/09/13/win10%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><span id="more"></span>
+<h2 id="⚙-配置类"><a href="#⚙-配置类" class="headerlink" title="⚙ 配置类"></a>⚙ 配置类</h2><h3 id="1-开启-Hyper-V-⚡"><a href="#1-开启-Hyper-V-⚡" class="headerlink" title="1. 开启 Hyper-V ⚡"></a>1. 开启 Hyper-V ⚡</h3><p>在这一部分，我们将学习如何开启 Hyper-V。这是一个包含了一些命令行操作的示例，可以通过一个批处理（bat）文件执行。这些操作将帮助你启用 Hyper-V。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">pushd</span> <span class="string">&quot;%~dp0&quot;</span></span><br><span class="line"><span class="built_in">dir</span> /b %SystemRoot%\servicing\Packages\*Hyper-V*.mum &gt;hyper-v.txt</span><br><span class="line"><span class="keyword">for</span> /f %%i <span class="keyword">in</span> (<span class="string">&#x27;findstr /i . hyper-v.txt 2^&gt;nul&#x27;</span>) <span class="keyword">do</span> dism /online /norestart /add-package:<span class="string">&quot;%SystemRoot%\servicing\Packages\%%i&quot;</span></span><br><span class="line">del hyper-v.txt</span><br><span class="line">Dism /online /enable-feature /featurename:Microsoft-Hyper-V-All /LimitAccess /ALL</span><br></pre></td></tr></table></figure>
+<h3 id="2-查看-Win10-系统启动项-👀"><a href="#2-查看-Win10-系统启动项-👀" class="headerlink" title="2. 查看 Win10 系统启动项 👀"></a>2. 查看 Win10 系统启动项 👀</h3><p>在这一部分，我们将了解如何查看 Win10 系统的启动项。这是通过任务管理器和一些操作来实现的，以确保你能够轻松地管理启动项。</p>
+<pre class="mermaid">graph LR;
+任务管理器 --> 启动 --查找程序--> 右键禁用;</pre>
+
+<h3 id="3-更改-Win10-电脑锁屏界面用户名-🚪👤"><a href="#3-更改-Win10-电脑锁屏界面用户名-🚪👤" class="headerlink" title="3. 更改 Win10 电脑锁屏界面用户名 🚪👤"></a>3. 更改 Win10 电脑锁屏界面用户名 🚪👤</h3><p>这一部分将向你展示如何更改 Win10 电脑锁屏界面上显示的用户名。这个过程可以通过开始菜单和计算机管理来完成。</p>
+<pre class="mermaid">graph LR
+开始菜单 --右键--> 计算机管理 --> 用户和组</pre>
 ]]></content>
       <categories>
-        <category>计算机网络</category>
+        <category>win10</category>
       </categories>
       <tags>
-        <tag>计算机网络</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我的第一篇博客</title>
-    <url>/2023/06/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>你好，我是一名大三计算机科学与技术在校生，在此博客进行相关技术知识的分享</p>
-]]></content>
-      <tags>
-        <tag>第一篇博客</tag>
+        <tag>win10</tag>
       </tags>
   </entry>
   <entry>
@@ -1180,6 +1092,36 @@
       <categories>
         <category>文案</category>
       </categories>
+      <tags>
+        <tag>随想</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>随想日记0919</title>
+    <url>/2023/09/19/%E9%9A%8F%E6%83%B3%E6%97%A5%E8%AE%B00919/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>我并不想去做那些无益且浪费时间的琐事。人生如此短暂，我们应该珍惜每一刻去追求那些真正有价值、有意义的事情。对于“马原”这门课程所要求的分组讨论和撰写那些毫无意义的哲学论文，我认为这并不能帮助我更好地学习哲学。事实上，我可以将这项作业交给AI去完成。从今天开始，我将不再参与任何无益且浪费时间的活动。:(</p>
+]]></content>
+      <categories>
+        <category>随想</category>
+      </categories>
+      <tags>
+        <tag>随想</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我的第一篇博客</title>
+    <url>/2023/06/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>你好，我是一名大三计算机科学与技术在校生，在此博客进行相关技术知识的分享</p>
+]]></content>
+      <tags>
+        <tag>第一篇博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于最近一些事的思考</title>
+    <url>/2023/06/09/%E5%85%B3%E4%BA%8E%E6%9C%80%E8%BF%91%E4%B8%80%E4%BA%9B%E4%BA%8B%E7%9A%84%E6%80%9D%E8%80%83/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  可能是因为学了计算机的缘故，我对任何事情都开始变得更加注重细节和准确性。无论是什么事情，我都希望能够弄清楚每一个细节。就像要求甲方必须清楚描述要做什么、有哪些具体需求，以及不可做什么等等。只有在明确了相关事情之后，我才能够着手进行第一步。我也非常感激自己拥有这种能力，因为有时候如果不去认真对待事情，最终吃亏的往往会是自己。</p>
+]]></content>
       <tags>
         <tag>随想</tag>
       </tags>
@@ -1280,74 +1222,73 @@
       </categories>
   </entry>
   <entry>
-    <title>饿补计算机科学基础（一）--计算机基础</title>
-    <url>/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>计算机基础，常识<br><span id="more"></span></p>
-<h2 id="1-计算思维概念"><a href="#1-计算思维概念" class="headerlink" title="1.计算思维概念"></a>1.计算思维概念</h2><p>特点：抽象、自动化</p>
-<p>计算思维： </p>
-<ul>
-<li>递归</li>
-<li>抽象和分解</li>
-<li>启发式推理</li>
-<li>冗余、容错、纠错</li>
+    <title>请求响应报头相关名词解释</title>
+    <url>/2023/06/12/%E8%AF%B7%E6%B1%82%E5%93%8D%E5%BA%94%E6%8A%A5%E5%A4%B4%E7%9B%B8%E5%85%B3%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>本文主要说明常用的请求响应相关名词解释,建议读者具备网络基础<br><span id="more"></span></p>
+<h2 id="常用的请求报头"><a href="#常用的请求报头" class="headerlink" title="常用的请求报头"></a>常用的请求报头</h2></blockquote>
+<h3 id="1-Host-主机和端口号"><a href="#1-Host-主机和端口号" class="headerlink" title="1. Host (主机和端口号)"></a>1. Host (主机和端口号)</h3><p>Host：对应网址URL中的Web名称和端口号，用于指定被请求资源的Internet主机和端口号，通常属于URL的一部分。</p>
+<h3 id="2-Connection-链接类型"><a href="#2-Connection-链接类型" class="headerlink" title="2. Connection (链接类型)"></a>2. Connection (链接类型)</h3><p>Connection：表示客户端与服务连接类型</p>
+<ol>
+<li>Client 发起一个包含 <code>Connection:keep-alive</code> 的请求，HTTP/1.1使用 <code>keep-alive</code> 为默认值。</li>
+<li>Server收到请求后：<ul>
+<li>如果 Server 支持 keep-alive，回复一个包含 Connection:keep-alive 的响应，不关闭连接；</li>
+<li>如果 Server 不支持 keep-alive，回复一个包含 Connection:close 的响应，关闭连接。</li>
 </ul>
-<p>抽象：完全超越物理的时空观，并完全用符号来表示</p>
-<p>自动化：表示形式应该有效地被信息处理代理执行</p>
-<h2 id="1-1符号化信息表达"><a href="#1-1符号化信息表达" class="headerlink" title="1.1符号化信息表达"></a>1.1符号化信息表达</h2><p>数值型和非数值型对象</p>
-<p>数值和非数值—符号化—&gt; 符号化编码 —语义化—&gt; 数值和非数值</p>
-<h2 id="1-2数值数据表示"><a href="#1-2数值数据表示" class="headerlink" title="1.2数值数据表示"></a>1.2数值数据表示</h2><p>数值型数据的表示</p>
-<p>进制转换：位权转换</p>
-<p>原码：负数原码的符号位为1</p>
-<p>反码：负数的反码为将原码除符号位外按位取反</p>
-<p>补码：负数的补码为将反码加1</p>
-<h2 id="1-3字符型数据的表示"><a href="#1-3字符型数据的表示" class="headerlink" title="1.3字符型数据的表示"></a>1.3字符型数据的表示</h2><h4 id="英文字符的表示"><a href="#英文字符的表示" class="headerlink" title="英文字符的表示"></a>英文字符的表示</h4><p>ASCII码-美国信息交换标准代码</p>
-<p>可表示128个不同字符：10数字、26个英文字母小写、26个英文字母大写、其他特殊符号</p>
-<p>a：97、A：65</p>
-<p>内存中用一个字节来存放一个ASCII码，最高位为校验位</p>
-<h4 id="汉字字符的表示"><a href="#汉字字符的表示" class="headerlink" title="汉字字符的表示"></a>汉字字符的表示</h4><p>GB2312-80国标码：</p>
-<p>机内码：汉字被计算机系统内部处理和存储而使用的代码</p>
-<p>GB18030-2005《信息技术中文编码字符集》：</p>
-<p>采用多字节编码</p>
-<h4 id="国际字符的表示"><a href="#国际字符的表示" class="headerlink" title="国际字符的表示"></a>国际字符的表示</h4><p>Unicode字符集编码：解决需要满足多语言、跨平台</p>
-<h4 id="字符的输入、输出"><a href="#字符的输入、输出" class="headerlink" title="字符的输入、输出"></a>字符的输入、输出</h4><p>输入码：在键盘上利用数字、符号、字母输入相应的字符</p>
-<p>汉字输入码“在键盘上利用数字、符号、拼音字母输入汉字的代码</p>
-<p>形码类（五笔）、音码类（拼音输入法）</p>
-<p>字符的输出：字形码，记录字符形状</p>
-<p>点阵规模用0和1编码无亮点和有亮点形成字形信息，便于显示。</p>
-<p>点阵的方式：16 <em> 16 / 32 </em> 32 / 48 * 48</p>
-<h2 id="1-4多媒体信息的表示"><a href="#1-4多媒体信息的表示" class="headerlink" title="1.4多媒体信息的表示"></a>1.4多媒体信息的表示</h2><p>模拟量：在时间或者数值上都是连续的物理量</p>
-<p>数字量：在时间上或数量上都是离散的物理量（例如：计步器）</p>
-<p>图形：==矢量==图形文件形式存储，圆，直线、曲线等图形元素</p>
-<p>图像：==模拟==信号，通过数字照相机、摄像机捕捉的自然界真实场景画面产生的影像，数字化后以==点阵==（位图）的形式存储</p>
-<h4 id="图像数字化方法"><a href="#图像数字化方法" class="headerlink" title="图像数字化方法"></a>图像数字化方法</h4><ol>
-<li><p>将连续色调的模拟图像经过采样、量化后转成数字影像（编码）</p>
 </li>
-<li><p>采样：将二位空间上连续的图像转换为离散点的过程，将图像按照行列分割成m * n个网格，每个网格对应一个像素</p>
-<p>图像分辨率</p>
-</li>
-<li><p>量化：图像离散化后，用有限个数的整数值来表示图像色彩浓淡连续变化值的过程</p>
-</li>
+<li>如果client收到包含 <code>Connection:keep-alive</code> 的响应，向同一个连接发送下一个请求，直到一方主动关闭连接。</li>
 </ol>
-<p>量化级数：量化时所确定的离散取值个数</p>
-<p>量化位数：表示量化的色彩值（或亮度）所需要的二进制位数，一般可以用8位，16位，32位</p>
-<p>注意：2^24^ ≈ 16Mb</p>
-<h3 id="1-4-2声音的数字化"><a href="#1-4-2声音的数字化" class="headerlink" title="1.4.2声音的数字化"></a>1.4.2声音的数字化</h3><p>声音数字化过程：采样、量化、编码</p>
-<p>采样频率：每秒钟采样点的次数（Hz）</p>
-<p>声道数</p>
-<p>记录每秒存储声音容量公式为</p>
-<p>采样频率 X 量化位数（bit） ➗ 8 X 声道数 = 每秒数据量</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>随想日记0919</title>
-    <url>/2023/09/19/%E9%9A%8F%E6%83%B3%E6%97%A5%E8%AE%B00919/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>我并不想去做那些无益且浪费时间的琐事。人生如此短暂，我们应该珍惜每一刻去追求那些真正有价值、有意义的事情。对于“马原”这门课程所要求的分组讨论和撰写那些毫无意义的哲学论文，我认为这并不能帮助我更好地学习哲学。事实上，我可以将这项作业交给AI去完成。从今天开始，我将不再参与任何无益且浪费时间的活动。:(</p>
+<p><strong>keep-alive在很多情况下能够重用连接，减少资源消耗，缩短响应时间，比如当浏览器需要多个文件时(比如一个HTML文件和相关的图形文件)，不需要每次都去请求建立连接。</strong></p>
+<h3 id="3-Upgrade-Insecure-Requests-升级为HTTPS请求"><a href="#3-Upgrade-Insecure-Requests-升级为HTTPS请求" class="headerlink" title="3. Upgrade-Insecure-Requests (升级为HTTPS请求)"></a>3. Upgrade-Insecure-Requests (升级为HTTPS请求)</h3><p>Upgrade-Insecure-Requests：升级不安全的请求，意思是会在加载 http 资源时自动替换成 https 请求，让浏览器不再显示https页面中的http请求警报。</p>
+<p><strong><em>HTTPS 是以安全为目标的 HTTP 通道，所以在 HTTPS 承载的页面上不允许出现 HTTP 请求，一旦出现就是提示或报错。\</em></strong></p>
+<h3 id="4-User-Agent-浏览器名称"><a href="#4-User-Agent-浏览器名称" class="headerlink" title="4. User-Agent (浏览器名称)"></a>4. User-Agent (浏览器名称)</h3><p>User-Agent：是客户浏览器的名称，以后会详细讲。</p>
+<h3 id="5-Accept-传输文件类型"><a href="#5-Accept-传输文件类型" class="headerlink" title="5. Accept (传输文件类型)"></a>5. Accept (传输文件类型)</h3><p>Accept：指浏览器或其他客户端可以接受的MIME（Multipurpose Internet Mail Extensions（多用途互联网邮件扩展））文件类型，服务器可以根据它判断并返回适当的文件格式。</p>
+<h5 id="举例："><a href="#举例：" class="headerlink" title="举例："></a>举例：</h5><p><code>Accept: */*</code>：表示什么都可以接收。</p>
+<p><code>Accept：image/gif</code>：表明客户端希望接受GIF图像格式的资源；</p>
+<p><code>Accept：text/html</code>：表明客户端希望接受html文本。</p>
+<p><code>Accept: text/html, application/xhtml+xml;q=0.9, image/*;q=0.8</code>：表示浏览器支持的 MIME 类型分别是 html文本、xhtml和xml文档、所有的图像格式资源。</p>
+<p><strong><em>q是权重系数，范围 0 =&lt; q &lt;= 1，q 值越大，请求越倾向于获得其“;”之前的类型表示的内容。若没有指定q值，则默认为1，按从左到右排序顺序；若被赋值为0，则用于表示浏览器不接受此内容类型。\</em></strong></p>
+<p><strong><em>Text：用于标准化地表示的文本信息，文本消息可以是多种字符集和或者多种格式的；Application：用于传输应用程序数据或者二进制数据。<a href="http://blog.sina.com.cn/s/blog_866e403f010179f1.html">详细请点击</a>\</em></strong></p>
+<h3 id="6-Referer-页面跳转处"><a href="#6-Referer-页面跳转处" class="headerlink" title="6. Referer (页面跳转处)"></a>6. Referer (页面跳转处)</h3><p>Referer：表明产生请求的网页来自于哪个URL，用户是从该 Referer页面访问到当前请求的页面。这个属性可以用来跟踪Web请求来自哪个页面，是从什么网站来的等。</p>
+<p>有时候遇到下载某网站图片，需要对应的referer，否则无法下载图片，那是因为人家做了防盗链，原理就是根据referer去判断是否是本网站的地址，如果不是，则拒绝，如果是，就可以下载；</p>
+<h3 id="7-Accept-Encoding（文件编解码格式）"><a href="#7-Accept-Encoding（文件编解码格式）" class="headerlink" title="7. Accept-Encoding（文件编解码格式）"></a>7. Accept-Encoding（文件编解码格式）</h3><p>Accept-Encoding：指出浏览器可以接受的编码方式。编码方式不同于文件格式，它是为了压缩文件并加速文件传递速度。浏览器在接收到Web响应之后先解码，然后再检查文件格式，许多情形下这可以减少大量的下载时间。</p>
+<h5 id="举例：Accept-Encoding-gzip-q-1-0-identity-q-0-5-q-0"><a href="#举例：Accept-Encoding-gzip-q-1-0-identity-q-0-5-q-0" class="headerlink" title="举例：Accept-Encoding:gzip;q=1.0, identity; q=0.5, *;q=0"></a>举例：Accept-Encoding:gzip;q=1.0, identity; q=0.5, *;q=0</h5><p>如果有多个Encoding同时匹配, 按照q值顺序排列，本例中按顺序支持 gzip, identity压缩编码，支持gzip的浏览器会返回经过gzip编码的HTML页面。 <strong>如果请求消息中没有设置这个域服务器假定客户端对各种内容编码都可以接受。</strong></p>
+<h3 id="8-Accept-Language（语言种类）"><a href="#8-Accept-Language（语言种类）" class="headerlink" title="8. Accept-Language（语言种类）"></a>8. Accept-Language（语言种类）</h3><p>Accept-Langeuage：指出浏览器可以接受的语言种类，如en或en-us指英语，zh或者zh-cn指中文，当服务器能够提供一种以上的语言版本时要用到。</p>
+<h3 id="9-Accept-Charset（字符编码）"><a href="#9-Accept-Charset（字符编码）" class="headerlink" title="9. Accept-Charset（字符编码）"></a>9. Accept-Charset（字符编码）</h3><p>Accept-Charset：指出浏览器可以接受的字符编码。</p>
+<h5 id="举例：Accept-Charset-iso-8859-1-gb2312-utf-8"><a href="#举例：Accept-Charset-iso-8859-1-gb2312-utf-8" class="headerlink" title="举例：Accept-Charset:iso-8859-1,gb2312,utf-8"></a>举例：Accept-Charset:iso-8859-1,gb2312,utf-8</h5><ul>
+<li>ISO8859-1：通常叫做Latin-1。Latin-1包括了书写所有西方欧洲语言不可缺少的附加字符，英文浏览器的默认值是ISO-8859-1.</li>
+<li>gb2312：标准简体中文字符集;</li>
+<li>utf-8：UNICODE 的一种变长字符编码，可以解决多种语言文本显示问题，从而实现应用国际化和本地化。</li>
+</ul>
+<p><strong>如果在请求消息中没有设置这个域，缺省是任何字符集都可以接受。</strong></p>
+<h3 id="10-Cookie-（Cookie）"><a href="#10-Cookie-（Cookie）" class="headerlink" title="10. Cookie （Cookie）"></a>10. Cookie （Cookie）</h3><p>Cookie：浏览器用这个属性向服务器发送Cookie。Cookie是在浏览器中寄存的小型数据体，它可以记载和服务器相关的用户信息，也可以用来实现会话功能，以后会详细讲。</p>
+<h3 id="11-Content-Type-POST数据类型"><a href="#11-Content-Type-POST数据类型" class="headerlink" title="11. Content-Type (POST数据类型)"></a>11. Content-Type (POST数据类型)</h3><p>Content-Type：POST请求里用来表示的内容类型。</p>
+<h5 id="举例：Content-Type-Text-XML-charset-gb2312："><a href="#举例：Content-Type-Text-XML-charset-gb2312：" class="headerlink" title="举例：Content-Type = Text/XML; charset=gb2312："></a>举例：Content-Type = Text/XML; charset=gb2312：</h5><p>指明该请求的消息体中包含的是纯文本的XML类型的数据，字符编码采用“gb2312”。</p>
+<h2 id="常用的响应报头-了解"><a href="#常用的响应报头-了解" class="headerlink" title="常用的响应报头(了解)"></a>常用的响应报头(了解)</h2><p>理论上所有的响应头信息都应该是回应请求头的。但是服务端为了效率，安全，还有其他方面的考虑，会添加相对应的响应头信息，从上图可以看到：</p>
+<h3 id="1-Cache-Control：must-revalidate-no-cache-private。"><a href="#1-Cache-Control：must-revalidate-no-cache-private。" class="headerlink" title="1. Cache-Control：must-revalidate, no-cache, private。"></a>1. Cache-Control：must-revalidate, no-cache, private。</h3><p>这个值告诉客户端，服务端不希望客户端缓存资源，在下次请求资源时，必须要从新请求服务器，不能从缓存副本中获取资源。</p>
+<ul>
+<li>Cache-Control是响应头中很重要的信息，当客户端请求头中包含Cache-Control:max-age=0请求，明确表示不会缓存服务器资源时,Cache-Control作为作为回应信息，通常会返回no-cache，意思就是说，”那就不缓存呗”。</li>
+<li>当客户端在请求头中没有包含Cache-Control时，服务端往往会定,不同的资源不同的缓存策略，比如说oschina在缓存图片资源的策略就是Cache-Control：max-age=86400,这个意思是，从当前时间开始，在86400秒的时间内，客户端可以直接从缓存副本中读取资源，而不需要向服务器请求。</li>
+</ul>
+<h3 id="2-Connection：keep-alive"><a href="#2-Connection：keep-alive" class="headerlink" title="2. Connection：keep-alive"></a>2. Connection：keep-alive</h3><p>这个字段作为回应客户端的Connection：keep-alive，告诉客户端服务器的tcp连接也是一个长连接，客户端可以继续使用这个tcp连接发送http请求。</p>
+<h3 id="3-Content-Encoding-gzip"><a href="#3-Content-Encoding-gzip" class="headerlink" title="3. Content-Encoding:gzip"></a>3. Content-Encoding:gzip</h3><p>告诉客户端，服务端发送的资源是采用gzip编码的，客户端看到这个信息后，应该采用gzip对资源进行解码。</p>
+<h3 id="4-Content-Type：text-html-charset-UTF-8"><a href="#4-Content-Type：text-html-charset-UTF-8" class="headerlink" title="4. Content-Type：text/html;charset=UTF-8"></a>4. Content-Type：text/html;charset=UTF-8</h3><p>告诉客户端，资源文件的类型，还有字符编码，客户端通过utf-8对资源进行解码，然后对资源进行html解析。通常我们会看到有些网站是乱码的，往往就是服务器端没有返回正确的编码。</p>
+<h3 id="5-Date：Sun-21-Sep-2016-06-18-21-GMT"><a href="#5-Date：Sun-21-Sep-2016-06-18-21-GMT" class="headerlink" title="5. Date：Sun, 21 Sep 2016 06:18:21 GMT"></a>5. Date：Sun, 21 Sep 2016 06:18:21 GMT</h3><p>这个是服务端发送资源时的服务器时间，GMT是格林尼治所在地的标准时间。http协议中发送的时间都是GMT的，这主要是解决在互联网上，不同时区在相互请求资源的时候，时间混乱问题。</p>
+<h3 id="6-Expires-Sun-1-Jan-2000-01-00-00-GMT"><a href="#6-Expires-Sun-1-Jan-2000-01-00-00-GMT" class="headerlink" title="6. Expires:Sun, 1 Jan 2000 01:00:00 GMT"></a>6. Expires:Sun, 1 Jan 2000 01:00:00 GMT</h3><p>这个响应头也是跟缓存有关的，告诉客户端在这个时间前，可以直接访问缓存副本，很显然这个值会存在问题，因为客户端和服务器的时间不一定会都是相同的，如果时间不同就会导致问题。所以这个响应头是没有Cache-Control：max-age=*这个响应头准确的，因为max-age=date中的date是个相对时间，不仅更好理解，也更准确。</p>
+<h3 id="7-Pragma-no-cache"><a href="#7-Pragma-no-cache" class="headerlink" title="7. Pragma:no-cache"></a>7. Pragma:no-cache</h3><p>这个含义与Cache-Control等同。</p>
+<h3 id="8-Server：Tengine-1-4-6"><a href="#8-Server：Tengine-1-4-6" class="headerlink" title="8.Server：Tengine/1.4.6"></a>8.Server：Tengine/1.4.6</h3><p>这个是服务器和相对应的版本，只是告诉客户端服务器的信息。</p>
+<h3 id="9-Transfer-Encoding：chunked"><a href="#9-Transfer-Encoding：chunked" class="headerlink" title="9. Transfer-Encoding：chunked"></a>9. Transfer-Encoding：chunked</h3><p>这个响应头告诉客户端，服务器发送的资源的方式是分块发送的。一般分块发送的资源都是服务器动态生成的，在发送时还不知道发送资源的大小，所以采用分块发送，每一块都是独立的，独立的块都能标示自己的长度，最后一块是0长度的，当客户端读到这个0长度的块时，就可以确定资源已经传输完了。</p>
+<h3 id="10-Vary-Accept-Encoding"><a href="#10-Vary-Accept-Encoding" class="headerlink" title="10. Vary: Accept-Encoding"></a>10. Vary: Accept-Encoding</h3><p>告诉缓存服务器，缓存压缩文件和非压缩文件两个版本，现在这个字段用处并不大，因为现在的浏览器都是支持压缩的。</p>
+<h2 id="Cookie-和-Session："><a href="#Cookie-和-Session：" class="headerlink" title="Cookie 和 Session："></a>Cookie 和 Session：</h2><p>服务器和客户端的交互仅限于请求/响应过程，结束之后便断开，在下一次请求时，服务器会认为新的客户端。</p>
+<p>为了维护他们之间的链接，让服务器知道这是前一个用户发送的请求，必须在一个地方保存客户端的信息。</p>
+<p><strong>Cookie</strong>：通过在 客户端 记录的信息确定用户的身份。</p>
+<p><strong>Session</strong>：通过在 服务器端 记录的信息确定用户的身份。</p>
 ]]></content>
       <categories>
-        <category>随想</category>
+        <category>计算机网络</category>
       </categories>
       <tags>
-        <tag>随想</tag>
+        <tag>计算机网络</tag>
       </tags>
   </entry>
   <entry>
@@ -1608,6 +1549,65 @@
 <p>线性查找算法：又称顺序查找，是一种最简单的查找方法，它的基本思想是从第一个记录开始，逐个比较记录的关键字，直到给定的k值相等，则查找成功；若比较与文件中n个记录的关键字都不等，则查找失败。</p>
 <p>线性查找需要从一端开始不断地按照顺序检查数据，一一比较</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">linearsearch</span>(<span class="params">A, Key</span>):</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(A)):</span><br><span class="line">        <span class="keyword">if</span> A[i] == Key:</span><br><span class="line">            <span class="keyword">return</span> i</span><br><span class="line">        i = i + <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(linearsearch([<span class="number">12</span>, <span class="number">3</span>, <span class="number">45</span>, <span class="number">2</span>], <span class="number">45</span>))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+  <entry>
+    <title>饿补计算机科学基础（一）--计算机基础</title>
+    <url>/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>计算机基础，常识<br><span id="more"></span></p>
+<h2 id="1-计算思维概念"><a href="#1-计算思维概念" class="headerlink" title="1.计算思维概念"></a>1.计算思维概念</h2><p>特点：抽象、自动化</p>
+<p>计算思维： </p>
+<ul>
+<li>递归</li>
+<li>抽象和分解</li>
+<li>启发式推理</li>
+<li>冗余、容错、纠错</li>
+</ul>
+<p>抽象：完全超越物理的时空观，并完全用符号来表示</p>
+<p>自动化：表示形式应该有效地被信息处理代理执行</p>
+<h2 id="1-1符号化信息表达"><a href="#1-1符号化信息表达" class="headerlink" title="1.1符号化信息表达"></a>1.1符号化信息表达</h2><p>数值型和非数值型对象</p>
+<p>数值和非数值—符号化—&gt; 符号化编码 —语义化—&gt; 数值和非数值</p>
+<h2 id="1-2数值数据表示"><a href="#1-2数值数据表示" class="headerlink" title="1.2数值数据表示"></a>1.2数值数据表示</h2><p>数值型数据的表示</p>
+<p>进制转换：位权转换</p>
+<p>原码：负数原码的符号位为1</p>
+<p>反码：负数的反码为将原码除符号位外按位取反</p>
+<p>补码：负数的补码为将反码加1</p>
+<h2 id="1-3字符型数据的表示"><a href="#1-3字符型数据的表示" class="headerlink" title="1.3字符型数据的表示"></a>1.3字符型数据的表示</h2><h4 id="英文字符的表示"><a href="#英文字符的表示" class="headerlink" title="英文字符的表示"></a>英文字符的表示</h4><p>ASCII码-美国信息交换标准代码</p>
+<p>可表示128个不同字符：10数字、26个英文字母小写、26个英文字母大写、其他特殊符号</p>
+<p>a：97、A：65</p>
+<p>内存中用一个字节来存放一个ASCII码，最高位为校验位</p>
+<h4 id="汉字字符的表示"><a href="#汉字字符的表示" class="headerlink" title="汉字字符的表示"></a>汉字字符的表示</h4><p>GB2312-80国标码：</p>
+<p>机内码：汉字被计算机系统内部处理和存储而使用的代码</p>
+<p>GB18030-2005《信息技术中文编码字符集》：</p>
+<p>采用多字节编码</p>
+<h4 id="国际字符的表示"><a href="#国际字符的表示" class="headerlink" title="国际字符的表示"></a>国际字符的表示</h4><p>Unicode字符集编码：解决需要满足多语言、跨平台</p>
+<h4 id="字符的输入、输出"><a href="#字符的输入、输出" class="headerlink" title="字符的输入、输出"></a>字符的输入、输出</h4><p>输入码：在键盘上利用数字、符号、字母输入相应的字符</p>
+<p>汉字输入码“在键盘上利用数字、符号、拼音字母输入汉字的代码</p>
+<p>形码类（五笔）、音码类（拼音输入法）</p>
+<p>字符的输出：字形码，记录字符形状</p>
+<p>点阵规模用0和1编码无亮点和有亮点形成字形信息，便于显示。</p>
+<p>点阵的方式：16 <em> 16 / 32 </em> 32 / 48 * 48</p>
+<h2 id="1-4多媒体信息的表示"><a href="#1-4多媒体信息的表示" class="headerlink" title="1.4多媒体信息的表示"></a>1.4多媒体信息的表示</h2><p>模拟量：在时间或者数值上都是连续的物理量</p>
+<p>数字量：在时间上或数量上都是离散的物理量（例如：计步器）</p>
+<p>图形：==矢量==图形文件形式存储，圆，直线、曲线等图形元素</p>
+<p>图像：==模拟==信号，通过数字照相机、摄像机捕捉的自然界真实场景画面产生的影像，数字化后以==点阵==（位图）的形式存储</p>
+<h4 id="图像数字化方法"><a href="#图像数字化方法" class="headerlink" title="图像数字化方法"></a>图像数字化方法</h4><ol>
+<li><p>将连续色调的模拟图像经过采样、量化后转成数字影像（编码）</p>
+</li>
+<li><p>采样：将二位空间上连续的图像转换为离散点的过程，将图像按照行列分割成m * n个网格，每个网格对应一个像素</p>
+<p>图像分辨率</p>
+</li>
+<li><p>量化：图像离散化后，用有限个数的整数值来表示图像色彩浓淡连续变化值的过程</p>
+</li>
+</ol>
+<p>量化级数：量化时所确定的离散取值个数</p>
+<p>量化位数：表示量化的色彩值（或亮度）所需要的二进制位数，一般可以用8位，16位，32位</p>
+<p>注意：2^24^ ≈ 16Mb</p>
+<h3 id="1-4-2声音的数字化"><a href="#1-4-2声音的数字化" class="headerlink" title="1.4.2声音的数字化"></a>1.4.2声音的数字化</h3><p>声音数字化过程：采样、量化、编码</p>
+<p>采样频率：每秒钟采样点的次数（Hz）</p>
+<p>声道数</p>
+<p>记录每秒存储声音容量公式为</p>
+<p>采样频率 X 量化位数（bit） ➗ 8 X 声道数 = 每秒数据量</p>
 ]]></content>
   </entry>
 </search>
