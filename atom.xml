@@ -6,7 +6,7 @@
   <link href="http://3kxr.me/atom.xml" rel="self"/>
   
   <link href="http://3kxr.me/"/>
-  <updated>2023-09-25T04:56:26.616Z</updated>
+  <updated>2023-10-07T09:03:52.939Z</updated>
   <id>http://3kxr.me/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于iOS设备忘记密码的修复方法</title>
+    <link href="http://3kxr.me/2023/10/07/%E5%85%B3%E4%BA%8EiOS%E8%AE%BE%E5%A4%87%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81%E7%9A%84%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%B3%95/"/>
+    <id>http://3kxr.me/2023/10/07/%E5%85%B3%E4%BA%8EiOS%E8%AE%BE%E5%A4%87%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81%E7%9A%84%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%B3%95/</id>
+    <published>2023-10-07T08:59:59.000Z</published>
+    <updated>2023-10-07T09:03:52.939Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;最近像脑子抽风一样随手把一台iOS设备改了密码🙄，后续就是搞机记录&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="搞机" scheme="http://3kxr.me/categories/%E6%90%9E%E6%9C%BA/"/>
+    
+    
+    <category term="搞机" scheme="http://3kxr.me/tags/%E6%90%9E%E6%9C%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>进制转换</title>
@@ -400,28 +420,6 @@
     
     
     <category term="Shell" scheme="http://3kxr.me/tags/Shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Pandas笔记</title>
-    <link href="http://3kxr.me/2023/06/07/Pandas%E7%AC%94%E8%AE%B0/"/>
-    <id>http://3kxr.me/2023/06/07/Pandas%E7%AC%94%E8%AE%B0/</id>
-    <published>2023-06-07T03:56:19.000Z</published>
-    <updated>2023-06-29T02:12:12.536Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;中国大学MOOC,python数据分析相关课程笔记—pandas部分&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="Python" scheme="http://3kxr.me/categories/Python/"/>
-    
-    
-    <category term="数据分析" scheme="http://3kxr.me/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
-    
-    <category term="Pandas" scheme="http://3kxr.me/tags/Pandas/"/>
     
   </entry>
   
