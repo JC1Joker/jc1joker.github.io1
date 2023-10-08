@@ -936,6 +936,16 @@
       </tags>
   </entry>
   <entry>
+    <title>hexo&#39;s plugins</title>
+    <url>/2023/09/17/hexo-s-plugins/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>相关插件</p>
+</blockquote>
+<span id="more"></span>
+<p>配置支持mermaid<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-filter-mermaid-diagrams</span><br></pre></td></tr></table></figure></p>
+]]></content>
+  </entry>
+  <entry>
     <title>nvidia-smi基础信息</title>
     <url>/2023/06/08/nvidia-smi%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/08/nvidia-smi%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF/nvidia.png" alt></p>
@@ -966,28 +976,6 @@
       </categories>
       <tags>
         <tag>win10</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo&#39;s plugins</title>
-    <url>/2023/09/17/hexo-s-plugins/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>相关插件</p>
-</blockquote>
-<span id="more"></span>
-<p>配置支持mermaid<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-filter-mermaid-diagrams</span><br></pre></td></tr></table></figure></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>关于hexo博客出现err: Error: Spawn failed的解决方案</title>
-    <url>/2023/09/15/%E5%85%B3%E4%BA%8Ehexo%E5%8D%9A%E5%AE%A2%E5%87%BA%E7%8E%B0err-Error-Spawn-failed%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="关于hexo博客出现err-Error-Spawn-failed的解决方案"><a href="#关于hexo博客出现err-Error-Spawn-failed的解决方案" class="headerlink" title="关于hexo博客出现err: Error: Spawn failed的解决方案"></a>关于hexo博客出现err: Error: Spawn failed的解决方案</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">##进入站点根目录</span></span><br><span class="line"><span class="built_in">cd</span> /usr/local/src/hexo/hanyubolg/</span><br><span class="line"></span><br><span class="line"><span class="comment">##删除git提交内容文件夹</span></span><br><span class="line"><span class="built_in">rm</span> -rf .deploy_git/</span><br><span class="line"></span><br><span class="line"><span class="comment">##执行</span></span><br><span class="line">git config --global core.autocrlf <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">##最后</span></span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>bug汇总</category>
-      </categories>
-      <tags>
-        <tag>bug</tag>
       </tags>
   </entry>
   <entry>
@@ -1038,12 +1026,33 @@
       </tags>
   </entry>
   <entry>
+    <title>关于hexo博客出现err: Error: Spawn failed的解决方案</title>
+    <url>/2023/09/15/%E5%85%B3%E4%BA%8Ehexo%E5%8D%9A%E5%AE%A2%E5%87%BA%E7%8E%B0err-Error-Spawn-failed%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="关于hexo博客出现err-Error-Spawn-failed的解决方案"><a href="#关于hexo博客出现err-Error-Spawn-failed的解决方案" class="headerlink" title="关于hexo博客出现err: Error: Spawn failed的解决方案"></a>关于hexo博客出现err: Error: Spawn failed的解决方案</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">##进入站点根目录</span></span><br><span class="line"><span class="built_in">cd</span> /usr/local/src/hexo/hanyubolg/</span><br><span class="line"></span><br><span class="line"><span class="comment">##删除git提交内容文件夹</span></span><br><span class="line"><span class="built_in">rm</span> -rf .deploy_git/</span><br><span class="line"></span><br><span class="line"><span class="comment">##执行</span></span><br><span class="line">git config --global core.autocrlf <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">##最后</span></span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>bug汇总</category>
+      </categories>
+      <tags>
+        <tag>bug</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>我的第一篇博客</title>
     <url>/2023/06/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>你好，我是一名大三计算机科学与技术在校生，在此博客进行相关技术知识的分享</p>
 ]]></content>
       <tags>
         <tag>第一篇博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于最近一些事的思考</title>
+    <url>/2023/06/09/%E5%85%B3%E4%BA%8E%E6%9C%80%E8%BF%91%E4%B8%80%E4%BA%9B%E4%BA%8B%E7%9A%84%E6%80%9D%E8%80%83/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  可能是因为学了计算机的缘故，我对任何事情都开始变得更加注重细节和准确性。无论是什么事情，我都希望能够弄清楚每一个细节。就像要求甲方必须清楚描述要做什么、有哪些具体需求，以及不可做什么等等。只有在明确了相关事情之后，我才能够着手进行第一步。我也非常感激自己拥有这种能力，因为有时候如果不去认真对待事情，最终吃亏的往往会是自己。</p>
+]]></content>
+      <tags>
+        <tag>随想</tag>
       </tags>
   </entry>
   <entry>
@@ -1083,10 +1092,24 @@
       </tags>
   </entry>
   <entry>
-    <title>关于最近一些事的思考</title>
-    <url>/2023/06/09/%E5%85%B3%E4%BA%8E%E6%9C%80%E8%BF%91%E4%B8%80%E4%BA%9B%E4%BA%8B%E7%9A%84%E6%80%9D%E8%80%83/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  可能是因为学了计算机的缘故，我对任何事情都开始变得更加注重细节和准确性。无论是什么事情，我都希望能够弄清楚每一个细节。就像要求甲方必须清楚描述要做什么、有哪些具体需求，以及不可做什么等等。只有在明确了相关事情之后，我才能够着手进行第一步。我也非常感激自己拥有这种能力，因为有时候如果不去认真对待事情，最终吃亏的往往会是自己。</p>
+    <title>文案收集(更新中)</title>
+    <url>/2023/06/25/%E6%96%87%E6%A1%88%E6%94%B6%E9%9B%86/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>收集的一些优质文案<br><span id="more"></span></p>
+</blockquote>
+<h3 id="城市类"><a href="#城市类" class="headerlink" title="城市类"></a>城市类</h3><ul>
+<li><p>亮起霓虹的城市夜灯，有了喧哗，变得更加妖媚</p>
+</li>
+<li><p>夏天的阳光就是最好的滤镜</p>
+</li>
+</ul>
+<h3 id="艺术类"><a href="#艺术类" class="headerlink" title="艺术类"></a>艺术类</h3><ul>
+<li>中国艺术最大的特色，从是个到绘画到戏剧，都讲究乐而不谣，哀而不怨，雍容有度，讲究典雅，自然，反对装腔作势和过火的恶趣，反对无目的地炫耀技巧。而这些也是世界一切高级艺术共同的准则。</li>
+</ul>
 ]]></content>
+      <categories>
+        <category>文案</category>
+      </categories>
       <tags>
         <tag>随想</tag>
       </tags>
@@ -1162,23 +1185,12 @@
       </tags>
   </entry>
   <entry>
-    <title>文案收集(更新中)</title>
-    <url>/2023/06/25/%E6%96%87%E6%A1%88%E6%94%B6%E9%9B%86/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>收集的一些优质文案<br><span id="more"></span></p>
-</blockquote>
-<h3 id="城市类"><a href="#城市类" class="headerlink" title="城市类"></a>城市类</h3><ul>
-<li><p>亮起霓虹的城市夜灯，有了喧哗，变得更加妖媚</p>
-</li>
-<li><p>夏天的阳光就是最好的滤镜</p>
-</li>
-</ul>
-<h3 id="艺术类"><a href="#艺术类" class="headerlink" title="艺术类"></a>艺术类</h3><ul>
-<li>中国艺术最大的特色，从是个到绘画到戏剧，都讲究乐而不谣，哀而不怨，雍容有度，讲究典雅，自然，反对装腔作势和过火的恶趣，反对无目的地炫耀技巧。而这些也是世界一切高级艺术共同的准则。</li>
-</ul>
+    <title>随想日记0919</title>
+    <url>/2023/09/19/%E9%9A%8F%E6%83%B3%E6%97%A5%E8%AE%B00919/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>我并不想去做那些无益且浪费时间的琐事。人生如此短暂，我们应该珍惜每一刻去追求那些真正有价值、有意义的事情。对于“马原”这门课程所要求的分组讨论和撰写那些毫无意义的哲学论文，我认为这并不能帮助我更好地学习哲学。事实上，我可以将这项作业交给AI去完成。从今天开始，我将不再参与任何无益且浪费时间的活动。:(</p>
 ]]></content>
       <categories>
-        <category>文案</category>
+        <category>随想</category>
       </categories>
       <tags>
         <tag>随想</tag>
@@ -1278,18 +1290,6 @@
       <categories>
         <category>基础</category>
       </categories>
-  </entry>
-  <entry>
-    <title>随想日记0919</title>
-    <url>/2023/09/19/%E9%9A%8F%E6%83%B3%E6%97%A5%E8%AE%B00919/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>我并不想去做那些无益且浪费时间的琐事。人生如此短暂，我们应该珍惜每一刻去追求那些真正有价值、有意义的事情。对于“马原”这门课程所要求的分组讨论和撰写那些毫无意义的哲学论文，我认为这并不能帮助我更好地学习哲学。事实上，我可以将这项作业交给AI去完成。从今天开始，我将不再参与任何无益且浪费时间的活动。:(</p>
-]]></content>
-      <categories>
-        <category>随想</category>
-      </categories>
-      <tags>
-        <tag>随想</tag>
-      </tags>
   </entry>
   <entry>
     <title>饿补计算机科学基础（一）--计算机基础</title>
