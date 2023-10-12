@@ -17,96 +17,6 @@
       </tags>
   </entry>
   <entry>
-    <title>MySQL基础板块</title>
-    <url>/2023/09/21/MySQL%E5%9F%BA%E7%A1%80%E6%9D%BF%E5%9D%97/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>SQL基础说明，为巩固基础知识，现创建基础知识板块，其中包含workbench的使用技巧</p>
-</blockquote>
-<span id="more"></span>
-<p>安装部分略过（皮一下）</p>
-<ul>
-<li><p>数据定义语言DDL</p>
-<ul>
-<li><p>create</p>
-</li>
-<li><p>alter</p>
-</li>
-<li><p>drop</p>
-</li>
-</ul>
-</li>
-<li><p>数据操作语言DML</p>
-<ul>
-<li><p>insert</p>
-</li>
-<li><p>delete</p>
-</li>
-<li><p>update</p>
-</li>
-<li><p>select</p>
-</li>
-</ul>
-</li>
-<li><p>数据控制语言DCL</p>
-<ul>
-<li><p>grant</p>
-</li>
-<li><p>remove</p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="🔍关于数据操作语言SELECT-的查询语句格式"><a href="#🔍关于数据操作语言SELECT-的查询语句格式" class="headerlink" title="🔍关于数据操作语言SELECT 的查询语句格式"></a>🔍关于数据操作语言SELECT 的查询语句格式</h2><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> [<span class="keyword">distinct</span><span class="operator">/</span><span class="keyword">all</span>] <span class="keyword">from</span> table_name</span><br></pre></td></tr></table></figure>
-<h4 id="1-无条件查询"><a href="#1-无条件查询" class="headerlink" title="1.无条件查询"></a>1.无条件查询</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name;</span><br></pre></td></tr></table></figure>
-<h4 id="2-DISTINCT去除重复数据"><a href="#2-DISTINCT去除重复数据" class="headerlink" title="2.DISTINCT去除重复数据"></a>2.DISTINCT去除重复数据</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">distinct</span> <span class="operator">*</span> <span class="keyword">from</span> table_name;</span><br></pre></td></tr></table></figure>
-<p>给列起别名</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> book <span class="keyword">as</span> <span class="string">&#x27;书&#x27;</span> <span class="keyword">from</span> bookstore;</span><br></pre></td></tr></table></figure>
-<h3 id="提取前N条SQL语句"><a href="#提取前N条SQL语句" class="headerlink" title="提取前N条SQL语句"></a>提取前N条SQL语句</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">order</span> <span class="keyword">by</span> columnName </span><br></pre></td></tr></table></figure>
-<h2 id="⚙MySQL-workbench使用技巧"><a href="#⚙MySQL-workbench使用技巧" class="headerlink" title="⚙MySQL workbench使用技巧"></a>⚙MySQL workbench使用技巧</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>快捷键</th>
-<th>用途</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Ctrl + Shift + Enter</td>
-<td>执行选中的SQL(如无选中则执行所有)</td>
-</tr>
-<tr>
-<td>Ctrl + Enter</td>
-<td>执行当前这句SQL (注意MySQL Workbench的编辑器会要求每一句SQL必须以;结尾, 否则会高亮提示错误)</td>
-</tr>
-<tr>
-<td>Ctrl + /</td>
-<td>注释掉选中SQL语句</td>
-</tr>
-<tr>
-<td>Ctrl + B</td>
-<td>格式化SQL语句</td>
-</tr>
-<tr>
-<td>Ctrl + T</td>
-<td>新开SQL编辑器</td>
-</tr>
-<tr>
-<td>Ctrl + Alt + X</td>
-<td>查看执行解释 (explain current statement)</td>
-</tr>
-</tbody>
-</table>
-</div>
-]]></content>
-      <categories>
-        <category>基础知识</category>
-      </categories>
-      <tags>
-        <tag>基础知识</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Linux中开启ssh的配置😎🐱‍💻</title>
     <url>/2023/08/01/Linux%E4%B8%AD%E5%BC%80%E5%90%AFssh%E7%9A%84%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -493,6 +403,96 @@
       <tags>
         <tag>数据分析</tag>
         <tag>Numpy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MySQL基础板块</title>
+    <url>/2023/09/21/MySQL%E5%9F%BA%E7%A1%80%E6%9D%BF%E5%9D%97/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>SQL基础说明，为巩固基础知识，现创建基础知识板块，其中包含workbench的使用技巧</p>
+</blockquote>
+<span id="more"></span>
+<p>安装部分略过（皮一下）</p>
+<ul>
+<li><p>数据定义语言DDL</p>
+<ul>
+<li><p>create</p>
+</li>
+<li><p>alter</p>
+</li>
+<li><p>drop</p>
+</li>
+</ul>
+</li>
+<li><p>数据操作语言DML</p>
+<ul>
+<li><p>insert</p>
+</li>
+<li><p>delete</p>
+</li>
+<li><p>update</p>
+</li>
+<li><p>select</p>
+</li>
+</ul>
+</li>
+<li><p>数据控制语言DCL</p>
+<ul>
+<li><p>grant</p>
+</li>
+<li><p>remove</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="🔍关于数据操作语言SELECT-的查询语句格式"><a href="#🔍关于数据操作语言SELECT-的查询语句格式" class="headerlink" title="🔍关于数据操作语言SELECT 的查询语句格式"></a>🔍关于数据操作语言SELECT 的查询语句格式</h2><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> [<span class="keyword">distinct</span><span class="operator">/</span><span class="keyword">all</span>] <span class="keyword">from</span> table_name</span><br></pre></td></tr></table></figure>
+<h4 id="1-无条件查询"><a href="#1-无条件查询" class="headerlink" title="1.无条件查询"></a>1.无条件查询</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name;</span><br></pre></td></tr></table></figure>
+<h4 id="2-DISTINCT去除重复数据"><a href="#2-DISTINCT去除重复数据" class="headerlink" title="2.DISTINCT去除重复数据"></a>2.DISTINCT去除重复数据</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">distinct</span> <span class="operator">*</span> <span class="keyword">from</span> table_name;</span><br></pre></td></tr></table></figure>
+<p>给列起别名</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> book <span class="keyword">as</span> <span class="string">&#x27;书&#x27;</span> <span class="keyword">from</span> bookstore;</span><br></pre></td></tr></table></figure>
+<h3 id="提取前N条SQL语句"><a href="#提取前N条SQL语句" class="headerlink" title="提取前N条SQL语句"></a>提取前N条SQL语句</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">order</span> <span class="keyword">by</span> columnName </span><br></pre></td></tr></table></figure>
+<h2 id="⚙MySQL-workbench使用技巧"><a href="#⚙MySQL-workbench使用技巧" class="headerlink" title="⚙MySQL workbench使用技巧"></a>⚙MySQL workbench使用技巧</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ctrl + Shift + Enter</td>
+<td>执行选中的SQL(如无选中则执行所有)</td>
+</tr>
+<tr>
+<td>Ctrl + Enter</td>
+<td>执行当前这句SQL (注意MySQL Workbench的编辑器会要求每一句SQL必须以;结尾, 否则会高亮提示错误)</td>
+</tr>
+<tr>
+<td>Ctrl + /</td>
+<td>注释掉选中SQL语句</td>
+</tr>
+<tr>
+<td>Ctrl + B</td>
+<td>格式化SQL语句</td>
+</tr>
+<tr>
+<td>Ctrl + T</td>
+<td>新开SQL编辑器</td>
+</tr>
+<tr>
+<td>Ctrl + Alt + X</td>
+<td>查看执行解释 (explain current statement)</td>
+</tr>
+</tbody>
+</table>
+</div>
+]]></content>
+      <categories>
+        <category>基础知识</category>
+      </categories>
+      <tags>
+        <tag>基础知识</tag>
       </tags>
   </entry>
   <entry>
@@ -936,16 +936,6 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo&#39;s plugins</title>
-    <url>/2023/09/17/hexo-s-plugins/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>相关插件</p>
-</blockquote>
-<span id="more"></span>
-<p>配置支持mermaid<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-filter-mermaid-diagrams</span><br></pre></td></tr></table></figure></p>
-]]></content>
-  </entry>
-  <entry>
     <title>nvidia-smi基础信息</title>
     <url>/2023/06/08/nvidia-smi%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/08/nvidia-smi%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF/nvidia.png" alt></p>
@@ -956,6 +946,16 @@
       <tags>
         <tag>Shell</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>hexo&#39;s plugins</title>
+    <url>/2023/09/17/hexo-s-plugins/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>相关插件</p>
+</blockquote>
+<span id="more"></span>
+<p>配置支持mermaid<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-filter-mermaid-diagrams</span><br></pre></td></tr></table></figure></p>
+]]></content>
   </entry>
   <entry>
     <title>win10配置问题速查手册</title>
@@ -1071,6 +1071,18 @@
       </tags>
   </entry>
   <entry>
+    <title>关于hexo博客出现err: Error: Spawn failed的解决方案</title>
+    <url>/2023/09/15/%E5%85%B3%E4%BA%8Ehexo%E5%8D%9A%E5%AE%A2%E5%87%BA%E7%8E%B0err-Error-Spawn-failed%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="关于hexo博客出现err-Error-Spawn-failed的解决方案"><a href="#关于hexo博客出现err-Error-Spawn-failed的解决方案" class="headerlink" title="关于hexo博客出现err: Error: Spawn failed的解决方案"></a>关于hexo博客出现err: Error: Spawn failed的解决方案</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">##进入站点根目录</span></span><br><span class="line"><span class="built_in">cd</span> /usr/local/src/hexo/hanyubolg/</span><br><span class="line"></span><br><span class="line"><span class="comment">##删除git提交内容文件夹</span></span><br><span class="line"><span class="built_in">rm</span> -rf .deploy_git/</span><br><span class="line"></span><br><span class="line"><span class="comment">##执行</span></span><br><span class="line">git config --global core.autocrlf <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">##最后</span></span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>bug汇总</category>
+      </categories>
+      <tags>
+        <tag>bug</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>关于iOS设备忘记密码的修复方法</title>
     <url>/2023/10/07/%E5%85%B3%E4%BA%8EiOS%E8%AE%BE%E5%A4%87%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81%E7%9A%84%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -1107,24 +1119,21 @@
       </tags>
   </entry>
   <entry>
-    <title>关于hexo博客出现err: Error: Spawn failed的解决方案</title>
-    <url>/2023/09/15/%E5%85%B3%E4%BA%8Ehexo%E5%8D%9A%E5%AE%A2%E5%87%BA%E7%8E%B0err-Error-Spawn-failed%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="关于hexo博客出现err-Error-Spawn-failed的解决方案"><a href="#关于hexo博客出现err-Error-Spawn-failed的解决方案" class="headerlink" title="关于hexo博客出现err: Error: Spawn failed的解决方案"></a>关于hexo博客出现err: Error: Spawn failed的解决方案</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">##进入站点根目录</span></span><br><span class="line"><span class="built_in">cd</span> /usr/local/src/hexo/hanyubolg/</span><br><span class="line"></span><br><span class="line"><span class="comment">##删除git提交内容文件夹</span></span><br><span class="line"><span class="built_in">rm</span> -rf .deploy_git/</span><br><span class="line"></span><br><span class="line"><span class="comment">##执行</span></span><br><span class="line">git config --global core.autocrlf <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">##最后</span></span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>bug汇总</category>
-      </categories>
-      <tags>
-        <tag>bug</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>关于最近一些事的思考</title>
     <url>/2023/06/09/%E5%85%B3%E4%BA%8E%E6%9C%80%E8%BF%91%E4%B8%80%E4%BA%9B%E4%BA%8B%E7%9A%84%E6%80%9D%E8%80%83/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  可能是因为学了计算机的缘故，我对任何事情都开始变得更加注重细节和准确性。无论是什么事情，我都希望能够弄清楚每一个细节。就像要求甲方必须清楚描述要做什么、有哪些具体需求，以及不可做什么等等。只有在明确了相关事情之后，我才能够着手进行第一步。我也非常感激自己拥有这种能力，因为有时候如果不去认真对待事情，最终吃亏的往往会是自己。</p>
 ]]></content>
       <tags>
         <tag>随想</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我的第一篇博客</title>
+    <url>/2023/06/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>你好，我是一名大三计算机科学与技术在校生，在此博客进行相关技术知识的分享</p>
+]]></content>
+      <tags>
+        <tag>第一篇博客</tag>
       </tags>
   </entry>
   <entry>
@@ -1218,15 +1227,6 @@
       </categories>
       <tags>
         <tag>计算机网络</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我的第一篇博客</title>
-    <url>/2023/06/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>你好，我是一名大三计算机科学与技术在校生，在此博客进行相关技术知识的分享</p>
-]]></content>
-      <tags>
-        <tag>第一篇博客</tag>
       </tags>
   </entry>
   <entry>
