@@ -806,6 +806,70 @@
       </tags>
   </entry>
   <entry>
+    <title>WSL | 搞机记录</title>
+    <url>/2023/11/26/WSL-%E6%90%9E%E6%9C%BA%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>关于wsl以及docker的搞机记录</p>
+</blockquote>
+<span id="more"></span>
+<h3 id="注销分发版本"><a href="#注销分发版本" class="headerlink" title="注销分发版本"></a>注销分发版本</h3><p>wsl—unregister Ubuntu </p>
+<h3 id="🐋wsl’s-docker"><a href="#🐋wsl’s-docker" class="headerlink" title="🐋wsl’s docker"></a>🐋wsl’s docker</h3><p>🎈镜像加速</p>
+<p>由于我们在国内的，因此拉取docker hub上的镜像可能也很慢。因此，一般还需要配置镜像加速，可以参考这篇文章：<a href="https://www.cnblogs.com/myitnews/p/11509546.html">https://www.cnblogs.com/myitnews/p/11509546.html</a></p>
+<p>因为wsl2已经完整使用了linux内核了，此种方式和先前在linux虚拟机安装docker类似，步骤如下：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">$ curl -fsSL https://get.docker.com -o get-docker.sh</span><br><span class="line">$ sudo sh get-docker.sh</span><br><span class="line">$ sudo service docker start</span><br></pre></td></tr></table></figure>
+<p>执行脚本安装过程中，脚本提示“<strong>建议使用Docker Desktop for windows</strong>”，20s内按Ctrl+C会退出安装，所以需要等待20s，另外此种方式需要访问外网。期间需要等待20s，此种方式需要访问外网</p>
+<p>检查docker安装正常</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># 检查dockerd进程启动</span><br><span class="line">service docker status</span><br><span class="line">ps aux|grep docker</span><br><span class="line"># 检查拉取镜像等正常</span><br><span class="line">docker pull busybox</span><br><span class="line">docker images</span><br></pre></td></tr></table></figure>
+<p><strong>注意</strong>：不同于完全linux虚拟机方式，WLS2下通过<code>apt install docker-ce</code>命令安装的docker无法启动，因为WSL2方式的ubuntu里面没有systemd。上述官方get-docker.sh安装的docker，dockerd进程是用ubuntu传统的init方式而非systemd启动的。</p>
+<h4 id="卸载docker"><a href="#卸载docker" class="headerlink" title="卸载docker"></a>卸载docker</h4><p>卸载Docker<br>卸载Docker引擎、CLI 和 Containerd 软件包：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get purge docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure>
+<p>主机上的映像、容器、卷或自定义配置文件不会自动删除，必须手动删除任何已编辑的配置文件。如果要删除所有映像、容器和卷：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">rm</span> -rf /var/lib/docker</span><br><span class="line">sudo <span class="built_in">rm</span> -rf /var/lib/containerd</span><br></pre></td></tr></table></figure>
+<h3 id="将wsl进行转移至其他盘"><a href="#将wsl进行转移至其他盘" class="headerlink" title="将wsl进行转移至其他盘"></a>将wsl进行转移至其他盘</h3><p>Docker-WSL 集成在默认 WSL 分发版上启用，该分发版是<a href="https://learn.microsoft.com/en-us/windows/wsl/install">Ubuntu的open_in_new</a>.若要更改默认的 WSL 发行版，请运行：</p>
+<p> wsl —set-default &lt; distro name&gt; 更改默认发行版</p>
+<p>查看wsl的名称</p>
+<p>wsl -l -v</p>
+<blockquote>
+<p>wsl —export Ubuntu-18.04 d:\wsl-ubuntu18.04.tar</p>
+</blockquote>
+<p>注销当前分发版本</p>
+<blockquote>
+<p>wsl —unregister Debian</p>
+</blockquote>
+<p>重新导入并安装WSL在指定目录 </p>
+<p>我这里指定的目录就是d:\wsl-ubuntu18.04</p>
+<blockquote>
+<p>wsl —import Debian d:\wsl-ubuntu18.04 d:\wsl-ubuntu18.04.tar —version 2</p>
+</blockquote>
+<p>设置默认登陆用户为安装时用户名</p>
+<blockquote>
+<p>Debian config —default-user 你安装时候的用户名是啥就写啥</p>
+</blockquote>
+<h3 id="link-wsl"><a href="#link-wsl" class="headerlink" title="link-wsl"></a>link-wsl</h3><p>使用vscode连接wsl</p>
+<p>由于是使用wsl1安装的Linux，vscode建议我更新wsl2以提升性能</p>
+<p>使用<code>wsl -l</code>可以查看已安装的wsl,<code>wsl -l -v</code>可以看出当前已安装的wsl使用的内核版本</p>
+<p><code>wsl --set-version wsl的名字 2</code>即可</p>
+<p>wsl —list —verbose（用于检查下载的系统的名字是wsl1还是2）</p>
+<h2 id="Terminal-0101"><a href="#Terminal-0101" class="headerlink" title="Terminal(0101)"></a>Terminal(0101)</h2><center>嗯，使用独特的terminal感觉很棒，比起原生的terminal好得不能再好了</center>
+
+<h4 id="🔧目前安装的工具"><a href="#🔧目前安装的工具" class="headerlink" title="🔧目前安装的工具"></a>🔧目前安装的工具</h4><blockquote>
+<p>统一使用apt-get install</p>
+</blockquote>
+<ul>
+<li>net-tools</li>
+<li>curl</li>
+</ul>
+<h3 id="！注意事项"><a href="#！注意事项" class="headerlink" title="！注意事项"></a>！注意事项</h3><p>Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux</p>
+<p>会将系统中的wsl功能关闭，并删除相关配置文件，请谨慎使用</p>
+]]></content>
+      <categories>
+        <category>搞机</category>
+      </categories>
+      <tags>
+        <tag>折腾</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>conda的使用技巧</title>
     <url>/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/anaconda.png" alt></p>
@@ -901,70 +965,6 @@
       </categories>
       <tags>
         <tag>Shell</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>WSL | 搞机记录</title>
-    <url>/2023/11/26/WSL-%E6%90%9E%E6%9C%BA%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>关于wsl以及docker的搞机记录</p>
-</blockquote>
-<span id="more"></span>
-<h3 id="注销分发版本"><a href="#注销分发版本" class="headerlink" title="注销分发版本"></a>注销分发版本</h3><p>wsl—unregister Ubuntu </p>
-<h3 id="🐋wsl’s-docker"><a href="#🐋wsl’s-docker" class="headerlink" title="🐋wsl’s docker"></a>🐋wsl’s docker</h3><p>🎈镜像加速</p>
-<p>由于我们在国内的，因此拉取docker hub上的镜像可能也很慢。因此，一般还需要配置镜像加速，可以参考这篇文章：<a href="https://www.cnblogs.com/myitnews/p/11509546.html">https://www.cnblogs.com/myitnews/p/11509546.html</a></p>
-<p>因为wsl2已经完整使用了linux内核了，此种方式和先前在linux虚拟机安装docker类似，步骤如下：</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">$ curl -fsSL https://get.docker.com -o get-docker.sh</span><br><span class="line">$ sudo sh get-docker.sh</span><br><span class="line">$ sudo service docker start</span><br></pre></td></tr></table></figure>
-<p>执行脚本安装过程中，脚本提示“<strong>建议使用Docker Desktop for windows</strong>”，20s内按Ctrl+C会退出安装，所以需要等待20s，另外此种方式需要访问外网。期间需要等待20s，此种方式需要访问外网</p>
-<p>检查docker安装正常</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># 检查dockerd进程启动</span><br><span class="line">service docker status</span><br><span class="line">ps aux|grep docker</span><br><span class="line"># 检查拉取镜像等正常</span><br><span class="line">docker pull busybox</span><br><span class="line">docker images</span><br></pre></td></tr></table></figure>
-<p><strong>注意</strong>：不同于完全linux虚拟机方式，WLS2下通过<code>apt install docker-ce</code>命令安装的docker无法启动，因为WSL2方式的ubuntu里面没有systemd。上述官方get-docker.sh安装的docker，dockerd进程是用ubuntu传统的init方式而非systemd启动的。</p>
-<h4 id="卸载docker"><a href="#卸载docker" class="headerlink" title="卸载docker"></a>卸载docker</h4><p>卸载Docker<br>卸载Docker引擎、CLI 和 Containerd 软件包：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get purge docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure>
-<p>主机上的映像、容器、卷或自定义配置文件不会自动删除，必须手动删除任何已编辑的配置文件。如果要删除所有映像、容器和卷：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">rm</span> -rf /var/lib/docker</span><br><span class="line">sudo <span class="built_in">rm</span> -rf /var/lib/containerd</span><br></pre></td></tr></table></figure>
-<h3 id="将wsl进行转移至其他盘"><a href="#将wsl进行转移至其他盘" class="headerlink" title="将wsl进行转移至其他盘"></a>将wsl进行转移至其他盘</h3><p>Docker-WSL 集成在默认 WSL 分发版上启用，该分发版是<a href="https://learn.microsoft.com/en-us/windows/wsl/install">Ubuntu的open_in_new</a>.若要更改默认的 WSL 发行版，请运行：</p>
-<p> wsl —set-default &lt; distro name&gt; 更改默认发行版</p>
-<p>查看wsl的名称</p>
-<p>wsl -l -v</p>
-<blockquote>
-<p>wsl —export Ubuntu-18.04 d:\wsl-ubuntu18.04.tar</p>
-</blockquote>
-<p>注销当前分发版本</p>
-<blockquote>
-<p>wsl —unregister Debian</p>
-</blockquote>
-<p>重新导入并安装WSL在指定目录 </p>
-<p>我这里指定的目录就是d:\wsl-ubuntu18.04</p>
-<blockquote>
-<p>wsl —import Debian d:\wsl-ubuntu18.04 d:\wsl-ubuntu18.04.tar —version 2</p>
-</blockquote>
-<p>设置默认登陆用户为安装时用户名</p>
-<blockquote>
-<p>Debian config —default-user 你安装时候的用户名是啥就写啥</p>
-</blockquote>
-<h3 id="link-wsl"><a href="#link-wsl" class="headerlink" title="link-wsl"></a>link-wsl</h3><p>使用vscode连接wsl</p>
-<p>由于是使用wsl1安装的Linux，vscode建议我更新wsl2以提升性能</p>
-<p>使用<code>wsl -l</code>可以查看已安装的wsl,<code>wsl -l -v</code>可以看出当前已安装的wsl使用的内核版本</p>
-<p><code>wsl --set-version wsl的名字 2</code>即可</p>
-<p>wsl —list —verbose（用于检查下载的系统的名字是wsl1还是2）</p>
-<h2 id="Terminal-0101"><a href="#Terminal-0101" class="headerlink" title="Terminal(0101)"></a>Terminal(0101)</h2><center>嗯，使用独特的terminal感觉很棒，比起原生的terminal好得不能再好了</center>
-
-<h4 id="🔧目前安装的工具"><a href="#🔧目前安装的工具" class="headerlink" title="🔧目前安装的工具"></a>🔧目前安装的工具</h4><blockquote>
-<p>统一使用apt-get install</p>
-</blockquote>
-<ul>
-<li>net-tools</li>
-<li>curl</li>
-</ul>
-<h3 id="！注意事项"><a href="#！注意事项" class="headerlink" title="！注意事项"></a>！注意事项</h3><p>Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux</p>
-<p>会将系统中的wsl功能关闭，并删除相关配置文件，请谨慎使用</p>
-]]></content>
-      <categories>
-        <category>搞机</category>
-      </categories>
-      <tags>
-        <tag>折腾</tag>
       </tags>
   </entry>
   <entry>
@@ -1136,6 +1136,15 @@
       </tags>
   </entry>
   <entry>
+    <title>关于最近一些事的思考</title>
+    <url>/2023/06/09/%E5%85%B3%E4%BA%8E%E6%9C%80%E8%BF%91%E4%B8%80%E4%BA%9B%E4%BA%8B%E7%9A%84%E6%80%9D%E8%80%83/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  可能是因为学了计算机的缘故，我对任何事情都开始变得更加注重细节和准确性。无论是什么事情，我都希望能够弄清楚每一个细节。就像要求甲方必须清楚描述要做什么、有哪些具体需求，以及不可做什么等等。只有在明确了相关事情之后，我才能够着手进行第一步。我也非常感激自己拥有这种能力，因为有时候如果不去认真对待事情，最终吃亏的往往会是自己。</p>
+]]></content>
+      <tags>
+        <tag>随想</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>关于hexo博客出现err: Error: Spawn failed的解决方案</title>
     <url>/2023/09/15/%E5%85%B3%E4%BA%8Ehexo%E5%8D%9A%E5%AE%A2%E5%87%BA%E7%8E%B0err-Error-Spawn-failed%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="关于hexo博客出现err-Error-Spawn-failed的解决方案"><a href="#关于hexo博客出现err-Error-Spawn-failed的解决方案" class="headerlink" title="关于hexo博客出现err: Error: Spawn failed的解决方案"></a>关于hexo博客出现err: Error: Spawn failed的解决方案</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">##进入站点根目录</span></span><br><span class="line"><span class="built_in">cd</span> /usr/local/src/hexo/hanyubolg/</span><br><span class="line"></span><br><span class="line"><span class="comment">##删除git提交内容文件夹</span></span><br><span class="line"><span class="built_in">rm</span> -rf .deploy_git/</span><br><span class="line"></span><br><span class="line"><span class="comment">##执行</span></span><br><span class="line">git config --global core.autocrlf <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">##最后</span></span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -1193,10 +1202,24 @@
       </tags>
   </entry>
   <entry>
-    <title>关于最近一些事的思考</title>
-    <url>/2023/06/09/%E5%85%B3%E4%BA%8E%E6%9C%80%E8%BF%91%E4%B8%80%E4%BA%9B%E4%BA%8B%E7%9A%84%E6%80%9D%E8%80%83/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  可能是因为学了计算机的缘故，我对任何事情都开始变得更加注重细节和准确性。无论是什么事情，我都希望能够弄清楚每一个细节。就像要求甲方必须清楚描述要做什么、有哪些具体需求，以及不可做什么等等。只有在明确了相关事情之后，我才能够着手进行第一步。我也非常感激自己拥有这种能力，因为有时候如果不去认真对待事情，最终吃亏的往往会是自己。</p>
+    <title>文案收集(更新中)</title>
+    <url>/2023/06/25/%E6%96%87%E6%A1%88%E6%94%B6%E9%9B%86/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>收集的一些优质文案<br><span id="more"></span></p>
+</blockquote>
+<h3 id="城市类"><a href="#城市类" class="headerlink" title="城市类"></a>城市类</h3><ul>
+<li><p>亮起霓虹的城市夜灯，有了喧哗，变得更加妖媚</p>
+</li>
+<li><p>夏天的阳光就是最好的滤镜</p>
+</li>
+</ul>
+<h3 id="艺术类"><a href="#艺术类" class="headerlink" title="艺术类"></a>艺术类</h3><ul>
+<li>中国艺术最大的特色，从是个到绘画到戏剧，都讲究乐而不谣，哀而不怨，雍容有度，讲究典雅，自然，反对装腔作势和过火的恶趣，反对无目的地炫耀技巧。而这些也是世界一切高级艺术共同的准则。</li>
+</ul>
 ]]></content>
+      <categories>
+        <category>文案</category>
+      </categories>
       <tags>
         <tag>随想</tag>
       </tags>
@@ -1269,41 +1292,6 @@
       </categories>
       <tags>
         <tag>计算机网络</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>文案收集(更新中)</title>
-    <url>/2023/06/25/%E6%96%87%E6%A1%88%E6%94%B6%E9%9B%86/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>收集的一些优质文案<br><span id="more"></span></p>
-</blockquote>
-<h3 id="城市类"><a href="#城市类" class="headerlink" title="城市类"></a>城市类</h3><ul>
-<li><p>亮起霓虹的城市夜灯，有了喧哗，变得更加妖媚</p>
-</li>
-<li><p>夏天的阳光就是最好的滤镜</p>
-</li>
-</ul>
-<h3 id="艺术类"><a href="#艺术类" class="headerlink" title="艺术类"></a>艺术类</h3><ul>
-<li>中国艺术最大的特色，从是个到绘画到戏剧，都讲究乐而不谣，哀而不怨，雍容有度，讲究典雅，自然，反对装腔作势和过火的恶趣，反对无目的地炫耀技巧。而这些也是世界一切高级艺术共同的准则。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>文案</category>
-      </categories>
-      <tags>
-        <tag>随想</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>随想日记0919</title>
-    <url>/2023/09/19/%E9%9A%8F%E6%83%B3%E6%97%A5%E8%AE%B00919/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>我并不想去做那些无益且浪费时间的琐事。人生如此短暂，我们应该珍惜每一刻去追求那些真正有价值、有意义的事情。对于“马原”这门课程所要求的分组讨论和撰写那些毫无意义的哲学论文，我认为这并不能帮助我更好地学习哲学。事实上，我可以将这项作业交给AI去完成。从今天开始，我将不再参与任何无益且浪费时间的活动。:(</p>
-]]></content>
-      <categories>
-        <category>随想</category>
-      </categories>
-      <tags>
-        <tag>随想</tag>
       </tags>
   </entry>
   <entry>
@@ -1459,6 +1447,18 @@
 <p>记录每秒存储声音容量公式为</p>
 <p>采样频率 X 量化位数（bit） ➗ 8 X 声道数 = 每秒数据量</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>随想日记0919</title>
+    <url>/2023/09/19/%E9%9A%8F%E6%83%B3%E6%97%A5%E8%AE%B00919/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>我并不想去做那些无益且浪费时间的琐事。人生如此短暂，我们应该珍惜每一刻去追求那些真正有价值、有意义的事情。对于“马原”这门课程所要求的分组讨论和撰写那些毫无意义的哲学论文，我认为这并不能帮助我更好地学习哲学。事实上，我可以将这项作业交给AI去完成。从今天开始，我将不再参与任何无益且浪费时间的活动。:(</p>
+]]></content>
+      <categories>
+        <category>随想</category>
+      </categories>
+      <tags>
+        <tag>随想</tag>
+      </tags>
   </entry>
   <entry>
     <title>饿补计算机科学基础（三）--数据结构</title>
