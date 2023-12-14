@@ -806,67 +806,36 @@
       </tags>
   </entry>
   <entry>
-    <title>WSL | 搞机记录</title>
-    <url>/2023/11/26/WSL-%E6%90%9E%E6%9C%BA%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>关于wsl以及docker的搞机记录</p>
-</blockquote>
-<span id="more"></span>
-<h3 id="注销分发版本"><a href="#注销分发版本" class="headerlink" title="注销分发版本"></a>注销分发版本</h3><p>wsl—unregister Ubuntu </p>
-<h3 id="🐋wsl’s-docker"><a href="#🐋wsl’s-docker" class="headerlink" title="🐋wsl’s docker"></a>🐋wsl’s docker</h3><p>🎈镜像加速</p>
-<p>由于我们在国内的，因此拉取docker hub上的镜像可能也很慢。因此，一般还需要配置镜像加速，可以参考这篇文章：<a href="https://www.cnblogs.com/myitnews/p/11509546.html">https://www.cnblogs.com/myitnews/p/11509546.html</a></p>
-<p>因为wsl2已经完整使用了linux内核了，此种方式和先前在linux虚拟机安装docker类似，步骤如下：</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">$ curl -fsSL https://get.docker.com -o get-docker.sh</span><br><span class="line">$ sudo sh get-docker.sh</span><br><span class="line">$ sudo service docker start</span><br></pre></td></tr></table></figure>
-<p>执行脚本安装过程中，脚本提示“<strong>建议使用Docker Desktop for windows</strong>”，20s内按Ctrl+C会退出安装，所以需要等待20s，另外此种方式需要访问外网。期间需要等待20s，此种方式需要访问外网</p>
-<p>检查docker安装正常</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># 检查dockerd进程启动</span><br><span class="line">service docker status</span><br><span class="line">ps aux|grep docker</span><br><span class="line"># 检查拉取镜像等正常</span><br><span class="line">docker pull busybox</span><br><span class="line">docker images</span><br></pre></td></tr></table></figure>
-<p><strong>注意</strong>：不同于完全linux虚拟机方式，WLS2下通过<code>apt install docker-ce</code>命令安装的docker无法启动，因为WSL2方式的ubuntu里面没有systemd。上述官方get-docker.sh安装的docker，dockerd进程是用ubuntu传统的init方式而非systemd启动的。</p>
-<h4 id="卸载docker"><a href="#卸载docker" class="headerlink" title="卸载docker"></a>卸载docker</h4><p>卸载Docker<br>卸载Docker引擎、CLI 和 Containerd 软件包：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get purge docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure>
-<p>主机上的映像、容器、卷或自定义配置文件不会自动删除，必须手动删除任何已编辑的配置文件。如果要删除所有映像、容器和卷：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">rm</span> -rf /var/lib/docker</span><br><span class="line">sudo <span class="built_in">rm</span> -rf /var/lib/containerd</span><br></pre></td></tr></table></figure>
-<h3 id="将wsl进行转移至其他盘"><a href="#将wsl进行转移至其他盘" class="headerlink" title="将wsl进行转移至其他盘"></a>将wsl进行转移至其他盘</h3><p>Docker-WSL 集成在默认 WSL 分发版上启用，该分发版是<a href="https://learn.microsoft.com/en-us/windows/wsl/install">Ubuntu的open_in_new</a>.若要更改默认的 WSL 发行版，请运行：</p>
-<p> wsl —set-default &lt; distro name&gt; 更改默认发行版</p>
-<p>查看wsl的名称</p>
-<p>wsl -l -v</p>
+    <title>docker基础命令</title>
+    <url>/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/Docker.png" alt></p>
 <blockquote>
-<p>wsl —export Ubuntu-18.04 d:\wsl-ubuntu18.04.tar</p>
+<p>docker的基础命令<br><span id="more"></span></p>
 </blockquote>
-<p>注销当前分发版本</p>
-<blockquote>
-<p>wsl —unregister Debian</p>
-</blockquote>
-<p>重新导入并安装WSL在指定目录 </p>
-<p>我这里指定的目录就是d:\wsl-ubuntu18.04</p>
-<blockquote>
-<p>wsl —import Debian d:\wsl-ubuntu18.04 d:\wsl-ubuntu18.04.tar —version 2</p>
-</blockquote>
-<p>设置默认登陆用户为安装时用户名</p>
-<blockquote>
-<p>Debian config —default-user 你安装时候的用户名是啥就写啥</p>
-</blockquote>
-<h3 id="link-wsl"><a href="#link-wsl" class="headerlink" title="link-wsl"></a>link-wsl</h3><p>使用vscode连接wsl</p>
-<p>由于是使用wsl1安装的Linux，vscode建议我更新wsl2以提升性能</p>
-<p>使用<code>wsl -l</code>可以查看已安装的wsl,<code>wsl -l -v</code>可以看出当前已安装的wsl使用的内核版本</p>
-<p><code>wsl --set-version wsl的名字 2</code>即可</p>
-<p>wsl —list —verbose（用于检查下载的系统的名字是wsl1还是2）</p>
-<h2 id="Terminal-0101"><a href="#Terminal-0101" class="headerlink" title="Terminal(0101)"></a>Terminal(0101)</h2><center>嗯，使用独特的terminal感觉很棒，比起原生的terminal好得不能再好了</center>
-
-<h4 id="🔧目前安装的工具"><a href="#🔧目前安装的工具" class="headerlink" title="🔧目前安装的工具"></a>🔧目前安装的工具</h4><blockquote>
-<p>统一使用apt-get install</p>
-</blockquote>
-<ul>
-<li>net-tools</li>
-<li>curl</li>
-</ul>
-<h3 id="！注意事项"><a href="#！注意事项" class="headerlink" title="！注意事项"></a>！注意事项</h3><p>Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux</p>
-<p>会将系统中的wsl功能关闭，并删除相关配置文件，请谨慎使用</p>
+<p>docker pull 安装镜像</p>
+<p>docker run 运行镜像</p>
+<p>docker container run</p>
+<p>说明：</p>
+<p>创建好image后，新建容器时使用；</p>
+<p>每次运行，都会创建一个新的容器；</p>
+<p>新建的容器可以通过 docker container ls -a 或者 docker ps -a 查看（加 -a 表示查看所有创建好的容器）；</p>
+<p>每次创建会返回一个【长的容器ID】；</p>
+<p>通常情况下，运行一次即可；</p>
+<p>docker containers list -a 查看当前运行的所有镜像</p>
+<p>docker exec -it 【docker的名称】 bash  进入docker运行的bash环境中</p>
+<p>docker container start 【containerID】运行已经创建的容器</p>
+<p>docker ps -a 查看所有容器</p>
+<p>docker stop 【containerID】</p>
+<p>docker rm 【containerID】（先停止容器后才能删除）</p>
+<p>docker export 制作基础镜像，使用 <strong>docker export</strong> 命令根据容器 <strong>ID</strong> 将镜像导出成一个文件</p>
+<p>docker import - new_hangger_server &lt; hangger_server.tar 将这个镜像文件导入进来。</p>
+<p>docker load 载入镜像</p>
 ]]></content>
       <categories>
-        <category>搞机</category>
+        <category>docker</category>
       </categories>
       <tags>
-        <tag>折腾</tag>
+        <tag>docker</tag>
       </tags>
   </entry>
   <entry>
@@ -968,36 +937,67 @@
       </tags>
   </entry>
   <entry>
-    <title>docker基础命令</title>
-    <url>/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/Docker.png" alt></p>
-<blockquote>
-<p>docker的基础命令<br><span id="more"></span></p>
+    <title>WSL | 搞机记录</title>
+    <url>/2023/11/26/WSL-%E6%90%9E%E6%9C%BA%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>关于wsl以及docker的搞机记录</p>
 </blockquote>
-<p>docker pull 安装镜像</p>
-<p>docker run 运行镜像</p>
-<p>docker container run</p>
-<p>说明：</p>
-<p>创建好image后，新建容器时使用；</p>
-<p>每次运行，都会创建一个新的容器；</p>
-<p>新建的容器可以通过 docker container ls -a 或者 docker ps -a 查看（加 -a 表示查看所有创建好的容器）；</p>
-<p>每次创建会返回一个【长的容器ID】；</p>
-<p>通常情况下，运行一次即可；</p>
-<p>docker containers list -a 查看当前运行的所有镜像</p>
-<p>docker exec -it 【docker的名称】 bash  进入docker运行的bash环境中</p>
-<p>docker container start 【containerID】运行已经创建的容器</p>
-<p>docker ps -a 查看所有容器</p>
-<p>docker stop 【containerID】</p>
-<p>docker rm 【containerID】（先停止容器后才能删除）</p>
-<p>docker export 制作基础镜像，使用 <strong>docker export</strong> 命令根据容器 <strong>ID</strong> 将镜像导出成一个文件</p>
-<p>docker import - new_hangger_server &lt; hangger_server.tar 将这个镜像文件导入进来。</p>
-<p>docker load 载入镜像</p>
+<span id="more"></span>
+<h3 id="注销分发版本"><a href="#注销分发版本" class="headerlink" title="注销分发版本"></a>注销分发版本</h3><p>wsl—unregister Ubuntu </p>
+<h3 id="🐋wsl’s-docker"><a href="#🐋wsl’s-docker" class="headerlink" title="🐋wsl’s docker"></a>🐋wsl’s docker</h3><p>🎈镜像加速</p>
+<p>由于我们在国内的，因此拉取docker hub上的镜像可能也很慢。因此，一般还需要配置镜像加速，可以参考这篇文章：<a href="https://www.cnblogs.com/myitnews/p/11509546.html">https://www.cnblogs.com/myitnews/p/11509546.html</a></p>
+<p>因为wsl2已经完整使用了linux内核了，此种方式和先前在linux虚拟机安装docker类似，步骤如下：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">$ curl -fsSL https://get.docker.com -o get-docker.sh</span><br><span class="line">$ sudo sh get-docker.sh</span><br><span class="line">$ sudo service docker start</span><br></pre></td></tr></table></figure>
+<p>执行脚本安装过程中，脚本提示“<strong>建议使用Docker Desktop for windows</strong>”，20s内按Ctrl+C会退出安装，所以需要等待20s，另外此种方式需要访问外网。期间需要等待20s，此种方式需要访问外网</p>
+<p>检查docker安装正常</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># 检查dockerd进程启动</span><br><span class="line">service docker status</span><br><span class="line">ps aux|grep docker</span><br><span class="line"># 检查拉取镜像等正常</span><br><span class="line">docker pull busybox</span><br><span class="line">docker images</span><br></pre></td></tr></table></figure>
+<p><strong>注意</strong>：不同于完全linux虚拟机方式，WLS2下通过<code>apt install docker-ce</code>命令安装的docker无法启动，因为WSL2方式的ubuntu里面没有systemd。上述官方get-docker.sh安装的docker，dockerd进程是用ubuntu传统的init方式而非systemd启动的。</p>
+<h4 id="卸载docker"><a href="#卸载docker" class="headerlink" title="卸载docker"></a>卸载docker</h4><p>卸载Docker<br>卸载Docker引擎、CLI 和 Containerd 软件包：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get purge docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure>
+<p>主机上的映像、容器、卷或自定义配置文件不会自动删除，必须手动删除任何已编辑的配置文件。如果要删除所有映像、容器和卷：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">rm</span> -rf /var/lib/docker</span><br><span class="line">sudo <span class="built_in">rm</span> -rf /var/lib/containerd</span><br></pre></td></tr></table></figure>
+<h3 id="将wsl进行转移至其他盘"><a href="#将wsl进行转移至其他盘" class="headerlink" title="将wsl进行转移至其他盘"></a>将wsl进行转移至其他盘</h3><p>Docker-WSL 集成在默认 WSL 分发版上启用，该分发版是<a href="https://learn.microsoft.com/en-us/windows/wsl/install">Ubuntu的open_in_new</a>.若要更改默认的 WSL 发行版，请运行：</p>
+<p> wsl —set-default &lt; distro name&gt; 更改默认发行版</p>
+<p>查看wsl的名称</p>
+<p>wsl -l -v</p>
+<blockquote>
+<p>wsl —export Ubuntu-18.04 d:\wsl-ubuntu18.04.tar</p>
+</blockquote>
+<p>注销当前分发版本</p>
+<blockquote>
+<p>wsl —unregister Debian</p>
+</blockquote>
+<p>重新导入并安装WSL在指定目录 </p>
+<p>我这里指定的目录就是d:\wsl-ubuntu18.04</p>
+<blockquote>
+<p>wsl —import Debian d:\wsl-ubuntu18.04 d:\wsl-ubuntu18.04.tar —version 2</p>
+</blockquote>
+<p>设置默认登陆用户为安装时用户名</p>
+<blockquote>
+<p>Debian config —default-user 你安装时候的用户名是啥就写啥</p>
+</blockquote>
+<h3 id="link-wsl"><a href="#link-wsl" class="headerlink" title="link-wsl"></a>link-wsl</h3><p>使用vscode连接wsl</p>
+<p>由于是使用wsl1安装的Linux，vscode建议我更新wsl2以提升性能</p>
+<p>使用<code>wsl -l</code>可以查看已安装的wsl,<code>wsl -l -v</code>可以看出当前已安装的wsl使用的内核版本</p>
+<p><code>wsl --set-version wsl的名字 2</code>即可</p>
+<p>wsl —list —verbose（用于检查下载的系统的名字是wsl1还是2）</p>
+<h2 id="Terminal-0101"><a href="#Terminal-0101" class="headerlink" title="Terminal(0101)"></a>Terminal(0101)</h2><center>嗯，使用独特的terminal感觉很棒，比起原生的terminal好得不能再好了</center>
+
+<h4 id="🔧目前安装的工具"><a href="#🔧目前安装的工具" class="headerlink" title="🔧目前安装的工具"></a>🔧目前安装的工具</h4><blockquote>
+<p>统一使用apt-get install</p>
+</blockquote>
+<ul>
+<li>net-tools</li>
+<li>curl</li>
+</ul>
+<h3 id="！注意事项"><a href="#！注意事项" class="headerlink" title="！注意事项"></a>！注意事项</h3><p>Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux</p>
+<p>会将系统中的wsl功能关闭，并删除相关配置文件，请谨慎使用</p>
 ]]></content>
       <categories>
-        <category>docker</category>
+        <category>搞机</category>
       </categories>
       <tags>
-        <tag>docker</tag>
+        <tag>折腾</tag>
       </tags>
   </entry>
   <entry>
@@ -1044,51 +1044,6 @@
       </tags>
   </entry>
   <entry>
-    <title>一些有意思的事情分享</title>
-    <url>/2023/10/12/%E4%B8%80%E4%BA%9B%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E4%BA%8B%E6%83%85%E5%88%86%E4%BA%AB/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>看来学校的课程也不是很无聊，这里介绍一款游戏🎮</p>
-<span id="more"></span>
-<p><a href="https://flukeout.github.io/">游戏地址🪐</a></p>
-<p>对于CSS的学习也是很有帮助</p>
-<p>👓这里列出全部32题的答案：</p>
-<ol>
-        <li>plate</li>
-        <li>bento</li>
-        <li>plate#fancy</li>
-        <li>plate apple</li>
-        <li>#fancy pickle</li>
-        <li>.small </li>
-        <li>orange.small </li>
-        <li>bento orange.small </li>
-        <li>bento ,plate</li>
-        <li>*</li><!-- 这题真6 -->
-        <li>#fancy plate * ,plate *</li>
-        <li>plate + apple , plate + apple</li>
-        <li>pickle ~ pickle</li>
-        <li>plate > apple</li>
-        <li>orange:first-child</li>
-        <li>plate apple:only-child,plate pickle:only-child</li>
-        <li>apple,pickle:last-child</li>
-        <li>plate:nth-child(3)</li>
-        <li>bento:nth-child(2)</li>
-        <li>apple:first-of-type</li>
-        <li>plate:nth-of-type(even)</li>
-        <li>plate:nth-of-type(2n+3)</li>
-        <li>plate apple:only-of-type</li>
-        <li>orange:last-of-type,apple:last-of-type</li>
-        <li>bento:empty</li>
-        <li>apple:not(.small)</li>
-        <li>apple[for],plate[for],bento[for]</li>
-        <li>plate[for]</li>
-        <li>bento[for="Vitaly"]</li>
-        <li>plate[for="Sam"],bento[for="Sarah"]</li>
-        <li>bento[for="Hayato"],plate[for="Minato"]</li>
-        <li>bento[for="Robbie"],bento[for="Bobby"]</li>
-    </ol>
-
-]]></content>
-  </entry>
-  <entry>
     <title>使用Django搭建网站</title>
     <url>/2023/09/17/%E4%BD%BF%E7%94%A8Django%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -1133,15 +1088,6 @@
       </categories>
       <tags>
         <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于最近一些事的思考</title>
-    <url>/2023/06/09/%E5%85%B3%E4%BA%8E%E6%9C%80%E8%BF%91%E4%B8%80%E4%BA%9B%E4%BA%8B%E7%9A%84%E6%80%9D%E8%80%83/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  可能是因为学了计算机的缘故，我对任何事情都开始变得更加注重细节和准确性。无论是什么事情，我都希望能够弄清楚每一个细节。就像要求甲方必须清楚描述要做什么、有哪些具体需求，以及不可做什么等等。只有在明确了相关事情之后，我才能够着手进行第一步。我也非常感激自己拥有这种能力，因为有时候如果不去认真对待事情，最终吃亏的往往会是自己。</p>
-]]></content>
-      <tags>
-        <tag>随想</tag>
       </tags>
   </entry>
   <entry>
@@ -1202,6 +1148,15 @@
       </tags>
   </entry>
   <entry>
+    <title>关于最近一些事的思考</title>
+    <url>/2023/06/09/%E5%85%B3%E4%BA%8E%E6%9C%80%E8%BF%91%E4%B8%80%E4%BA%9B%E4%BA%8B%E7%9A%84%E6%80%9D%E8%80%83/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  可能是因为学了计算机的缘故，我对任何事情都开始变得更加注重细节和准确性。无论是什么事情，我都希望能够弄清楚每一个细节。就像要求甲方必须清楚描述要做什么、有哪些具体需求，以及不可做什么等等。只有在明确了相关事情之后，我才能够着手进行第一步。我也非常感激自己拥有这种能力，因为有时候如果不去认真对待事情，最终吃亏的往往会是自己。</p>
+]]></content>
+      <tags>
+        <tag>随想</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>文案收集(更新中)</title>
     <url>/2023/06/25/%E6%96%87%E6%A1%88%E6%94%B6%E9%9B%86/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -1223,6 +1178,51 @@
       <tags>
         <tag>随想</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>一些有意思的事情分享</title>
+    <url>/2023/10/12/%E4%B8%80%E4%BA%9B%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E4%BA%8B%E6%83%85%E5%88%86%E4%BA%AB/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>看来学校的课程也不是很无聊，这里介绍一款游戏🎮</p>
+<span id="more"></span>
+<p><a href="https://flukeout.github.io/">游戏地址🪐</a></p>
+<p>对于CSS的学习也是很有帮助</p>
+<p>👓这里列出全部32题的答案：</p>
+<ol>
+        <li>plate</li>
+        <li>bento</li>
+        <li>plate#fancy</li>
+        <li>plate apple</li>
+        <li>#fancy pickle</li>
+        <li>.small </li>
+        <li>orange.small </li>
+        <li>bento orange.small </li>
+        <li>bento ,plate</li>
+        <li>*</li><!-- 这题真6 -->
+        <li>#fancy plate * ,plate *</li>
+        <li>plate + apple , plate + apple</li>
+        <li>pickle ~ pickle</li>
+        <li>plate > apple</li>
+        <li>orange:first-child</li>
+        <li>plate apple:only-child,plate pickle:only-child</li>
+        <li>apple,pickle:last-child</li>
+        <li>plate:nth-child(3)</li>
+        <li>bento:nth-child(2)</li>
+        <li>apple:first-of-type</li>
+        <li>plate:nth-of-type(even)</li>
+        <li>plate:nth-of-type(2n+3)</li>
+        <li>plate apple:only-of-type</li>
+        <li>orange:last-of-type,apple:last-of-type</li>
+        <li>bento:empty</li>
+        <li>apple:not(.small)</li>
+        <li>apple[for],plate[for],bento[for]</li>
+        <li>plate[for]</li>
+        <li>bento[for="Vitaly"]</li>
+        <li>plate[for="Sam"],bento[for="Sarah"]</li>
+        <li>bento[for="Hayato"],plate[for="Minato"]</li>
+        <li>bento[for="Robbie"],bento[for="Bobby"]</li>
+    </ol>
+
+]]></content>
   </entry>
   <entry>
     <title>请求响应报头相关名词解释</title>
@@ -1293,6 +1293,65 @@
       <tags>
         <tag>计算机网络</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>饿补计算机科学基础（一）--计算机基础</title>
+    <url>/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>计算机基础，常识<br><span id="more"></span></p>
+<h2 id="1-计算思维概念"><a href="#1-计算思维概念" class="headerlink" title="1.计算思维概念"></a>1.计算思维概念</h2><p>特点：抽象、自动化</p>
+<p>计算思维： </p>
+<ul>
+<li>递归</li>
+<li>抽象和分解</li>
+<li>启发式推理</li>
+<li>冗余、容错、纠错</li>
+</ul>
+<p>抽象：完全超越物理的时空观，并完全用符号来表示</p>
+<p>自动化：表示形式应该有效地被信息处理代理执行</p>
+<h2 id="1-1符号化信息表达"><a href="#1-1符号化信息表达" class="headerlink" title="1.1符号化信息表达"></a>1.1符号化信息表达</h2><p>数值型和非数值型对象</p>
+<p>数值和非数值—符号化—&gt; 符号化编码 —语义化—&gt; 数值和非数值</p>
+<h2 id="1-2数值数据表示"><a href="#1-2数值数据表示" class="headerlink" title="1.2数值数据表示"></a>1.2数值数据表示</h2><p>数值型数据的表示</p>
+<p>进制转换：位权转换</p>
+<p>原码：负数原码的符号位为1</p>
+<p>反码：负数的反码为将原码除符号位外按位取反</p>
+<p>补码：负数的补码为将反码加1</p>
+<h2 id="1-3字符型数据的表示"><a href="#1-3字符型数据的表示" class="headerlink" title="1.3字符型数据的表示"></a>1.3字符型数据的表示</h2><h4 id="英文字符的表示"><a href="#英文字符的表示" class="headerlink" title="英文字符的表示"></a>英文字符的表示</h4><p>ASCII码-美国信息交换标准代码</p>
+<p>可表示128个不同字符：10数字、26个英文字母小写、26个英文字母大写、其他特殊符号</p>
+<p>a：97、A：65</p>
+<p>内存中用一个字节来存放一个ASCII码，最高位为校验位</p>
+<h4 id="汉字字符的表示"><a href="#汉字字符的表示" class="headerlink" title="汉字字符的表示"></a>汉字字符的表示</h4><p>GB2312-80国标码：</p>
+<p>机内码：汉字被计算机系统内部处理和存储而使用的代码</p>
+<p>GB18030-2005《信息技术中文编码字符集》：</p>
+<p>采用多字节编码</p>
+<h4 id="国际字符的表示"><a href="#国际字符的表示" class="headerlink" title="国际字符的表示"></a>国际字符的表示</h4><p>Unicode字符集编码：解决需要满足多语言、跨平台</p>
+<h4 id="字符的输入、输出"><a href="#字符的输入、输出" class="headerlink" title="字符的输入、输出"></a>字符的输入、输出</h4><p>输入码：在键盘上利用数字、符号、字母输入相应的字符</p>
+<p>汉字输入码“在键盘上利用数字、符号、拼音字母输入汉字的代码</p>
+<p>形码类（五笔）、音码类（拼音输入法）</p>
+<p>字符的输出：字形码，记录字符形状</p>
+<p>点阵规模用0和1编码无亮点和有亮点形成字形信息，便于显示。</p>
+<p>点阵的方式：16 <em> 16 / 32 </em> 32 / 48 * 48</p>
+<h2 id="1-4多媒体信息的表示"><a href="#1-4多媒体信息的表示" class="headerlink" title="1.4多媒体信息的表示"></a>1.4多媒体信息的表示</h2><p>模拟量：在时间或者数值上都是连续的物理量</p>
+<p>数字量：在时间上或数量上都是离散的物理量（例如：计步器）</p>
+<p>图形：==矢量==图形文件形式存储，圆，直线、曲线等图形元素</p>
+<p>图像：==模拟==信号，通过数字照相机、摄像机捕捉的自然界真实场景画面产生的影像，数字化后以==点阵==（位图）的形式存储</p>
+<h4 id="图像数字化方法"><a href="#图像数字化方法" class="headerlink" title="图像数字化方法"></a>图像数字化方法</h4><ol>
+<li><p>将连续色调的模拟图像经过采样、量化后转成数字影像（编码）</p>
+</li>
+<li><p>采样：将二位空间上连续的图像转换为离散点的过程，将图像按照行列分割成m * n个网格，每个网格对应一个像素</p>
+<p>图像分辨率</p>
+</li>
+<li><p>量化：图像离散化后，用有限个数的整数值来表示图像色彩浓淡连续变化值的过程</p>
+</li>
+</ol>
+<p>量化级数：量化时所确定的离散取值个数</p>
+<p>量化位数：表示量化的色彩值（或亮度）所需要的二进制位数，一般可以用8位，16位，32位</p>
+<p>注意：2^24^ ≈ 16Mb</p>
+<h3 id="1-4-2声音的数字化"><a href="#1-4-2声音的数字化" class="headerlink" title="1.4.2声音的数字化"></a>1.4.2声音的数字化</h3><p>声音数字化过程：采样、量化、编码</p>
+<p>采样频率：每秒钟采样点的次数（Hz）</p>
+<p>声道数</p>
+<p>记录每秒存储声音容量公式为</p>
+<p>采样频率 X 量化位数（bit） ➗ 8 X 声道数 = 每秒数据量</p>
+]]></content>
   </entry>
   <entry>
     <title>进制转换</title>
@@ -1390,65 +1449,6 @@
       </categories>
   </entry>
   <entry>
-    <title>饿补计算机科学基础（一）--计算机基础</title>
-    <url>/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>计算机基础，常识<br><span id="more"></span></p>
-<h2 id="1-计算思维概念"><a href="#1-计算思维概念" class="headerlink" title="1.计算思维概念"></a>1.计算思维概念</h2><p>特点：抽象、自动化</p>
-<p>计算思维： </p>
-<ul>
-<li>递归</li>
-<li>抽象和分解</li>
-<li>启发式推理</li>
-<li>冗余、容错、纠错</li>
-</ul>
-<p>抽象：完全超越物理的时空观，并完全用符号来表示</p>
-<p>自动化：表示形式应该有效地被信息处理代理执行</p>
-<h2 id="1-1符号化信息表达"><a href="#1-1符号化信息表达" class="headerlink" title="1.1符号化信息表达"></a>1.1符号化信息表达</h2><p>数值型和非数值型对象</p>
-<p>数值和非数值—符号化—&gt; 符号化编码 —语义化—&gt; 数值和非数值</p>
-<h2 id="1-2数值数据表示"><a href="#1-2数值数据表示" class="headerlink" title="1.2数值数据表示"></a>1.2数值数据表示</h2><p>数值型数据的表示</p>
-<p>进制转换：位权转换</p>
-<p>原码：负数原码的符号位为1</p>
-<p>反码：负数的反码为将原码除符号位外按位取反</p>
-<p>补码：负数的补码为将反码加1</p>
-<h2 id="1-3字符型数据的表示"><a href="#1-3字符型数据的表示" class="headerlink" title="1.3字符型数据的表示"></a>1.3字符型数据的表示</h2><h4 id="英文字符的表示"><a href="#英文字符的表示" class="headerlink" title="英文字符的表示"></a>英文字符的表示</h4><p>ASCII码-美国信息交换标准代码</p>
-<p>可表示128个不同字符：10数字、26个英文字母小写、26个英文字母大写、其他特殊符号</p>
-<p>a：97、A：65</p>
-<p>内存中用一个字节来存放一个ASCII码，最高位为校验位</p>
-<h4 id="汉字字符的表示"><a href="#汉字字符的表示" class="headerlink" title="汉字字符的表示"></a>汉字字符的表示</h4><p>GB2312-80国标码：</p>
-<p>机内码：汉字被计算机系统内部处理和存储而使用的代码</p>
-<p>GB18030-2005《信息技术中文编码字符集》：</p>
-<p>采用多字节编码</p>
-<h4 id="国际字符的表示"><a href="#国际字符的表示" class="headerlink" title="国际字符的表示"></a>国际字符的表示</h4><p>Unicode字符集编码：解决需要满足多语言、跨平台</p>
-<h4 id="字符的输入、输出"><a href="#字符的输入、输出" class="headerlink" title="字符的输入、输出"></a>字符的输入、输出</h4><p>输入码：在键盘上利用数字、符号、字母输入相应的字符</p>
-<p>汉字输入码“在键盘上利用数字、符号、拼音字母输入汉字的代码</p>
-<p>形码类（五笔）、音码类（拼音输入法）</p>
-<p>字符的输出：字形码，记录字符形状</p>
-<p>点阵规模用0和1编码无亮点和有亮点形成字形信息，便于显示。</p>
-<p>点阵的方式：16 <em> 16 / 32 </em> 32 / 48 * 48</p>
-<h2 id="1-4多媒体信息的表示"><a href="#1-4多媒体信息的表示" class="headerlink" title="1.4多媒体信息的表示"></a>1.4多媒体信息的表示</h2><p>模拟量：在时间或者数值上都是连续的物理量</p>
-<p>数字量：在时间上或数量上都是离散的物理量（例如：计步器）</p>
-<p>图形：==矢量==图形文件形式存储，圆，直线、曲线等图形元素</p>
-<p>图像：==模拟==信号，通过数字照相机、摄像机捕捉的自然界真实场景画面产生的影像，数字化后以==点阵==（位图）的形式存储</p>
-<h4 id="图像数字化方法"><a href="#图像数字化方法" class="headerlink" title="图像数字化方法"></a>图像数字化方法</h4><ol>
-<li><p>将连续色调的模拟图像经过采样、量化后转成数字影像（编码）</p>
-</li>
-<li><p>采样：将二位空间上连续的图像转换为离散点的过程，将图像按照行列分割成m * n个网格，每个网格对应一个像素</p>
-<p>图像分辨率</p>
-</li>
-<li><p>量化：图像离散化后，用有限个数的整数值来表示图像色彩浓淡连续变化值的过程</p>
-</li>
-</ol>
-<p>量化级数：量化时所确定的离散取值个数</p>
-<p>量化位数：表示量化的色彩值（或亮度）所需要的二进制位数，一般可以用8位，16位，32位</p>
-<p>注意：2^24^ ≈ 16Mb</p>
-<h3 id="1-4-2声音的数字化"><a href="#1-4-2声音的数字化" class="headerlink" title="1.4.2声音的数字化"></a>1.4.2声音的数字化</h3><p>声音数字化过程：采样、量化、编码</p>
-<p>采样频率：每秒钟采样点的次数（Hz）</p>
-<p>声道数</p>
-<p>记录每秒存储声音容量公式为</p>
-<p>采样频率 X 量化位数（bit） ➗ 8 X 声道数 = 每秒数据量</p>
-]]></content>
-  </entry>
-  <entry>
     <title>随想日记0919</title>
     <url>/2023/09/19/%E9%9A%8F%E6%83%B3%E6%97%A5%E8%AE%B00919/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>我并不想去做那些无益且浪费时间的琐事。人生如此短暂，我们应该珍惜每一刻去追求那些真正有价值、有意义的事情。对于“马原”这门课程所要求的分组讨论和撰写那些毫无意义的哲学论文，我认为这并不能帮助我更好地学习哲学。事实上，我可以将这项作业交给AI去完成。从今天开始，我将不再参与任何无益且浪费时间的活动。:(</p>
@@ -1459,6 +1459,123 @@
       <tags>
         <tag>随想</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>饿补计算机科学基础（二）--算法</title>
+    <url>/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89-%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>基于python编写的算法</p>
+<span id="more"></span>
+<h2 id="2-典型算法设计"><a href="#2-典型算法设计" class="headerlink" title="2.典型算法设计"></a>2.典型算法设计</h2><h3 id="1-递归"><a href="#1-递归" class="headerlink" title="(1).递归"></a>(1).递归</h3><p>递归方法（recursion algorithm）是指一种通过解决同类的规模较小的子问题而获得问题求解的方法</p>
+<ul>
+<li><p>问题的定义是递归定义的</p>
+</li>
+<li><p>问题的解法按递归算法实现的</p>
+</li>
+<li>数据的结构形式是按递归定义的（二叉树，广义表）</li>
+</ul>
+<p>假如一个函数或者子程序是由自身所定义或调用的，成为递归</p>
+<ul>
+<li><p>递归函数的要素：</p>
+<ul>
+<li><p>一个可以反复执行的递归过程</p>
+</li>
+<li><p>跳出递归过程的出口（不再进行递归的条件）</p>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 阶乘的递归函数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fact</span>(<span class="params">n</span>):</span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">1</span>:<span class="comment">#递归出口</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> n * fact(n-<span class="number">1</span>)<span class="comment">#递归调用</span></span><br><span class="line">    </span><br><span class="line"><span class="built_in">print</span>（fact(<span class="number">3</span>)）</span><br></pre></td></tr></table></figure>
+<h4 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h4><p>二分查找算法（Binary search）递归实现：二分查找要求线性表必须采用顺序存储结构，而且表中元素按关键字有序排列</p>
+<p>反复执行的递归过程：缩小范围继续查找</p>
+<p>跳出提柜的出口：找到了，或者范围长度变成0</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">binarysearch_rec</span>(<span class="params">A, key, low, high</span>):  <span class="comment"># 二分查找算法的递归实现</span></span><br><span class="line">    <span class="keyword">if</span> low &gt; high:</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line">    mid = (low + high) // <span class="number">2</span>  <span class="comment"># 计算中间位置的索引，使用 (low + high) // 2</span></span><br><span class="line">    <span class="keyword">if</span> key == A[mid]:</span><br><span class="line">        <span class="keyword">return</span> mid</span><br><span class="line">    <span class="keyword">elif</span> key &lt; A[mid]:</span><br><span class="line">        <span class="keyword">return</span> binarysearch_rec(A, key, low, mid - <span class="number">1</span>)  <span class="comment"># 左边递归查找</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> binarysearch_rec(A, key, mid + <span class="number">1</span>, high)  <span class="comment"># 右边递归查找</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(binarysearch_rec([<span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">7</span>], <span class="number">4</span>, <span class="number">0</span>, <span class="number">3</span>))  <span class="comment"># 调用函数</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">binary_search</span>(<span class="params">A,Key</span>):</span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    j=<span class="built_in">len</span>(A)-<span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> i &lt;=j:</span><br><span class="line">        mid = (i+j)//<span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> A[mid]==Key:</span><br><span class="line">            <span class="keyword">return</span> mid</span><br><span class="line">        <span class="keyword">elif</span> A[mid]&lt;Key:</span><br><span class="line">            i=mid+<span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            j=mid-<span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(binary_search([<span class="number">3</span>,<span class="number">7</span>,<span class="number">45</span>,<span class="number">89</span>,<span class="number">90</span>],<span class="number">45</span>))</span><br></pre></td></tr></table></figure>
+<h3 id="2-迭代"><a href="#2-迭代" class="headerlink" title="(2).迭代"></a>(2).迭代</h3><p>重复反馈过程的活动，目的通常为了逼近随需目标或结果</p>
+<p>适合重复性操作</p>
+<ul>
+<li>迭代起点：直接或间接地不断由旧值递推出新值的变量</li>
+<li>迭代关系式：变量的前一个值推出其下一个值得公式或关系</li>
+<li>结束条件：什么情况下不在迭代</li>
+</ul>
+<p>例如：斐波那契数列</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">fib_rec</span>(<span class="params">n</span>):</span><br><span class="line">    a, b = <span class="number">1</span>, <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> n &gt; <span class="number">2</span>:</span><br><span class="line">        a, b = b, a + b</span><br><span class="line">        n = n - <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> a</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(fib_rec(<span class="number">2</span>))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="3-排序"><a href="#3-排序" class="headerlink" title="(3).排序"></a>(3).排序</h3><p>将一组“无序”的记录序列调整为“有序”的记录序列的操作</p>
+<ul>
+<li><p>内部排序：整个排序过程不需要访问外存便能完成</p>
+</li>
+<li><p>外部排序：参加排序的记录数量很大，整个序列排序过程不可能在内存中完成</p>
+</li>
+</ul>
+<h4 id="冒泡算法"><a href="#冒泡算法" class="headerlink" title="冒泡算法"></a>冒泡算法</h4><p>Bubble sort：简单排序，从序列一段开始比较相邻两个数字的大小，再根据结果交换两个数字的位置</p>
+<ul>
+<li>比较次数：</li>
+</ul>
+<p>​        第一轮比较n-1次，第二轮比较n-2次，第n-1轮比较1次，总得比较次数为（n-1） + ……+1≈n^2^/2</p>
+<ul>
+<li>交换次数：</li>
+</ul>
+<p>​        和输入数据排列有关，最小交换0次，最多交换次数和比较次数一样，时间复杂度为O(n^2^)</p>
+<ul>
+<li>效率：</li>
+</ul>
+<p>​        当在一轮排序过程中，未发生两个数字交换的时候，就可以不再进行后续几轮的排序。因此，冒泡排序在数据基本有序的情况下效率可以很高</p>
+<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><p>循环结构:for i in range(N-1)</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">selection_sort</span>(<span class="params">A</span>): <span class="comment"># 选择排序</span></span><br><span class="line">    N = <span class="built_in">len</span>(A)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(N - <span class="number">1</span>): <span class="comment"># i控制排序的趟数</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(i + <span class="number">1</span>, N): <span class="comment"># j表示比较范围内元素下标</span></span><br><span class="line">            <span class="keyword">if</span> A[j] &lt; A[i]: <span class="comment"># 递增的条件</span></span><br><span class="line">                A[j], A[i] = A[i], A[j] <span class="comment"># 交换A[j],A[i]的值</span></span><br><span class="line">    <span class="keyword">return</span> A</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(selection_sort([<span class="number">12</span>, <span class="number">34</span>, <span class="number">28</span>, <span class="number">23</span>, <span class="number">6</span>]))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>思考：能否修改算法减少交换次数，实现每轮排序最多交换一次，如何实现？</p>
+<p>Selection Sort：简单排序，从待排序的数据中找到<strong>最小值</strong>（升序），或者最大值（降序），将其与序列<strong>最左边的数字进行交换</strong></p>
+<p>如果最小值本身在合适的位置上，本次就不在进行交换，开始第二轮交换</p>
+<ul>
+<li>比较次数：</li>
+</ul>
+<p>​        第一轮比较n-1次，第二轮比较n-2次，第n-1轮比较1次，总得比较次数为（n-1） + ……+1≈n^2^/2</p>
+<ul>
+<li>交换次数：</li>
+</ul>
+<p>​        每轮中交换的次数最多是1次。输入数据排列是按照待排序顺序排序，则不需要进行任何交换，时间复杂度为O(n^2^)</p>
+<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><p>Insert Sort：简单排序，从序列左端开始，将待排序的数据逐个插入到已排好序的数据中，是的插入后仍然有序</p>
+<p>待插入的数据和左边第一个已排好的相比</p>
+<h1 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h1><p>for i in range(N):<br>    while j &gt;0</p>
+<h1 id="列表操作"><a href="#列表操作" class="headerlink" title="列表操作"></a>列表操作</h1><p>A.insert(i,x)#表示在列表中第i个位置插入元素x<br>A.pop(i)#表示从列表中弹出小标为i的元素，并且把它的值返回</p>
+ <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">insert_sort</span>(<span class="params">A</span>): <span class="comment"># 插入排序</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(A)): <span class="comment"># 负责设置排序的趟数</span></span><br><span class="line">        j = i - <span class="number">1</span></span><br><span class="line">        temp = i</span><br><span class="line">        <span class="keyword">while</span> j &gt;= <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">if</span> A[temp] &lt; A[j]: <span class="comment"># 递增排序条件</span></span><br><span class="line">                A.insert(j, A.pop(temp))</span><br><span class="line">                temp = j</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            j = j - <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> A</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(insert_sort([<span class="number">12</span>, <span class="number">56</span>, <span class="number">22</span>, <span class="number">33</span>, <span class="number">1</span>, <span class="number">28</span>, <span class="number">21</span>, <span class="number">55</span>, <span class="number">6</span>]))</span><br></pre></td></tr></table></figure>
+<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p>QuickSort：是对冒泡排序的一种改进</p>
+<p>首先随机选择一个基准值，然后将除了基准值以外的数分为“比基准值小的数”和“比基准值大的数”两个类别，再把基准值放到两个类别数中央。接着对两类别的数重复之前的操作</p>
+<p>随机选择左边的数为基准数，进行排序</p>
+<p>对序列中未比较其他数字都做重复的操作</p>
+<p>数据用列表表示，python中列表部分方法如下</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>append</td>
+<td>在列表末尾添加一项</td>
+<td>ls.append(x)</td>
+</tr>
+<tr>
+<td>remove</td>
+<td>把列表中出现的第一个元素x删除</td>
+<td>ls.remove(x)</td>
+</tr>
+<tr>
+<td>ls+lt</td>
+<td>链接两个列表</td>
+<td>ls+lt</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">quicksort</span>(<span class="params">A</span>):</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(A) &gt;= <span class="number">2</span>:  <span class="comment"># 递归出口</span></span><br><span class="line">        mid = A[<span class="number">0</span>]  <span class="comment"># 选择基准值，也可以选择中间值</span></span><br><span class="line">        A.remove(mid)</span><br><span class="line">        left, right = [], []</span><br><span class="line">        <span class="keyword">for</span> num <span class="keyword">in</span> A:</span><br><span class="line">            <span class="keyword">if</span> num &gt;= mid:</span><br><span class="line">                right.append(num)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                left.append(num)</span><br><span class="line">        <span class="keyword">return</span> quicksort(left) + [mid] + quicksort(right)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> A</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(quicksort([<span class="number">12</span>, <span class="number">3</span>, <span class="number">56</span>, <span class="number">10</span>, <span class="number">6</span>]))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="查找和线性查找算法"><a href="#查找和线性查找算法" class="headerlink" title="查找和线性查找算法"></a>查找和线性查找算法</h3><p>查找：用关键字表示一个数据元素，查找时根据给定的某个值，在表中确定一个关键字的值等于给定值的记录或数据元素</p>
+<p>线性查找算法：又称顺序查找，是一种最简单的查找方法，它的基本思想是从第一个记录开始，逐个比较记录的关键字，直到给定的k值相等，则查找成功；若比较与文件中n个记录的关键字都不等，则查找失败。</p>
+<p>线性查找需要从一端开始不断地按照顺序检查数据，一一比较</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">linearsearch</span>(<span class="params">A, Key</span>):</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(A)):</span><br><span class="line">        <span class="keyword">if</span> A[i] == Key:</span><br><span class="line">            <span class="keyword">return</span> i</span><br><span class="line">        i = i + <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(linearsearch([<span class="number">12</span>, <span class="number">3</span>, <span class="number">45</span>, <span class="number">2</span>], <span class="number">45</span>))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
   </entry>
   <entry>
     <title>饿补计算机科学基础（三）--数据结构</title>
@@ -1601,123 +1718,6 @@
 <p>顶点（vertex）：表示某个事物或对象</p>
 <p>边（edge）：表示顶点或事物之间的逻辑关系</p>
 <p>边的权重（weight）：边上对应的值。可以对应距离、时间值、开销等。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>饿补计算机科学基础（二）--算法</title>
-    <url>/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89-%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>基于python编写的算法</p>
-<span id="more"></span>
-<h2 id="2-典型算法设计"><a href="#2-典型算法设计" class="headerlink" title="2.典型算法设计"></a>2.典型算法设计</h2><h3 id="1-递归"><a href="#1-递归" class="headerlink" title="(1).递归"></a>(1).递归</h3><p>递归方法（recursion algorithm）是指一种通过解决同类的规模较小的子问题而获得问题求解的方法</p>
-<ul>
-<li><p>问题的定义是递归定义的</p>
-</li>
-<li><p>问题的解法按递归算法实现的</p>
-</li>
-<li>数据的结构形式是按递归定义的（二叉树，广义表）</li>
-</ul>
-<p>假如一个函数或者子程序是由自身所定义或调用的，成为递归</p>
-<ul>
-<li><p>递归函数的要素：</p>
-<ul>
-<li><p>一个可以反复执行的递归过程</p>
-</li>
-<li><p>跳出递归过程的出口（不再进行递归的条件）</p>
-</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 阶乘的递归函数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fact</span>(<span class="params">n</span>):</span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">1</span>:<span class="comment">#递归出口</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> n * fact(n-<span class="number">1</span>)<span class="comment">#递归调用</span></span><br><span class="line">    </span><br><span class="line"><span class="built_in">print</span>（fact(<span class="number">3</span>)）</span><br></pre></td></tr></table></figure>
-<h4 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h4><p>二分查找算法（Binary search）递归实现：二分查找要求线性表必须采用顺序存储结构，而且表中元素按关键字有序排列</p>
-<p>反复执行的递归过程：缩小范围继续查找</p>
-<p>跳出提柜的出口：找到了，或者范围长度变成0</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">binarysearch_rec</span>(<span class="params">A, key, low, high</span>):  <span class="comment"># 二分查找算法的递归实现</span></span><br><span class="line">    <span class="keyword">if</span> low &gt; high:</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line">    mid = (low + high) // <span class="number">2</span>  <span class="comment"># 计算中间位置的索引，使用 (low + high) // 2</span></span><br><span class="line">    <span class="keyword">if</span> key == A[mid]:</span><br><span class="line">        <span class="keyword">return</span> mid</span><br><span class="line">    <span class="keyword">elif</span> key &lt; A[mid]:</span><br><span class="line">        <span class="keyword">return</span> binarysearch_rec(A, key, low, mid - <span class="number">1</span>)  <span class="comment"># 左边递归查找</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> binarysearch_rec(A, key, mid + <span class="number">1</span>, high)  <span class="comment"># 右边递归查找</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(binarysearch_rec([<span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">7</span>], <span class="number">4</span>, <span class="number">0</span>, <span class="number">3</span>))  <span class="comment"># 调用函数</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">binary_search</span>(<span class="params">A,Key</span>):</span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    j=<span class="built_in">len</span>(A)-<span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> i &lt;=j:</span><br><span class="line">        mid = (i+j)//<span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> A[mid]==Key:</span><br><span class="line">            <span class="keyword">return</span> mid</span><br><span class="line">        <span class="keyword">elif</span> A[mid]&lt;Key:</span><br><span class="line">            i=mid+<span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            j=mid-<span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(binary_search([<span class="number">3</span>,<span class="number">7</span>,<span class="number">45</span>,<span class="number">89</span>,<span class="number">90</span>],<span class="number">45</span>))</span><br></pre></td></tr></table></figure>
-<h3 id="2-迭代"><a href="#2-迭代" class="headerlink" title="(2).迭代"></a>(2).迭代</h3><p>重复反馈过程的活动，目的通常为了逼近随需目标或结果</p>
-<p>适合重复性操作</p>
-<ul>
-<li>迭代起点：直接或间接地不断由旧值递推出新值的变量</li>
-<li>迭代关系式：变量的前一个值推出其下一个值得公式或关系</li>
-<li>结束条件：什么情况下不在迭代</li>
-</ul>
-<p>例如：斐波那契数列</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">fib_rec</span>(<span class="params">n</span>):</span><br><span class="line">    a, b = <span class="number">1</span>, <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> n &gt; <span class="number">2</span>:</span><br><span class="line">        a, b = b, a + b</span><br><span class="line">        n = n - <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> a</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(fib_rec(<span class="number">2</span>))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="3-排序"><a href="#3-排序" class="headerlink" title="(3).排序"></a>(3).排序</h3><p>将一组“无序”的记录序列调整为“有序”的记录序列的操作</p>
-<ul>
-<li><p>内部排序：整个排序过程不需要访问外存便能完成</p>
-</li>
-<li><p>外部排序：参加排序的记录数量很大，整个序列排序过程不可能在内存中完成</p>
-</li>
-</ul>
-<h4 id="冒泡算法"><a href="#冒泡算法" class="headerlink" title="冒泡算法"></a>冒泡算法</h4><p>Bubble sort：简单排序，从序列一段开始比较相邻两个数字的大小，再根据结果交换两个数字的位置</p>
-<ul>
-<li>比较次数：</li>
-</ul>
-<p>​        第一轮比较n-1次，第二轮比较n-2次，第n-1轮比较1次，总得比较次数为（n-1） + ……+1≈n^2^/2</p>
-<ul>
-<li>交换次数：</li>
-</ul>
-<p>​        和输入数据排列有关，最小交换0次，最多交换次数和比较次数一样，时间复杂度为O(n^2^)</p>
-<ul>
-<li>效率：</li>
-</ul>
-<p>​        当在一轮排序过程中，未发生两个数字交换的时候，就可以不再进行后续几轮的排序。因此，冒泡排序在数据基本有序的情况下效率可以很高</p>
-<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><p>循环结构:for i in range(N-1)</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">selection_sort</span>(<span class="params">A</span>): <span class="comment"># 选择排序</span></span><br><span class="line">    N = <span class="built_in">len</span>(A)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(N - <span class="number">1</span>): <span class="comment"># i控制排序的趟数</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(i + <span class="number">1</span>, N): <span class="comment"># j表示比较范围内元素下标</span></span><br><span class="line">            <span class="keyword">if</span> A[j] &lt; A[i]: <span class="comment"># 递增的条件</span></span><br><span class="line">                A[j], A[i] = A[i], A[j] <span class="comment"># 交换A[j],A[i]的值</span></span><br><span class="line">    <span class="keyword">return</span> A</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(selection_sort([<span class="number">12</span>, <span class="number">34</span>, <span class="number">28</span>, <span class="number">23</span>, <span class="number">6</span>]))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>思考：能否修改算法减少交换次数，实现每轮排序最多交换一次，如何实现？</p>
-<p>Selection Sort：简单排序，从待排序的数据中找到<strong>最小值</strong>（升序），或者最大值（降序），将其与序列<strong>最左边的数字进行交换</strong></p>
-<p>如果最小值本身在合适的位置上，本次就不在进行交换，开始第二轮交换</p>
-<ul>
-<li>比较次数：</li>
-</ul>
-<p>​        第一轮比较n-1次，第二轮比较n-2次，第n-1轮比较1次，总得比较次数为（n-1） + ……+1≈n^2^/2</p>
-<ul>
-<li>交换次数：</li>
-</ul>
-<p>​        每轮中交换的次数最多是1次。输入数据排列是按照待排序顺序排序，则不需要进行任何交换，时间复杂度为O(n^2^)</p>
-<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><p>Insert Sort：简单排序，从序列左端开始，将待排序的数据逐个插入到已排好序的数据中，是的插入后仍然有序</p>
-<p>待插入的数据和左边第一个已排好的相比</p>
-<h1 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h1><p>for i in range(N):<br>    while j &gt;0</p>
-<h1 id="列表操作"><a href="#列表操作" class="headerlink" title="列表操作"></a>列表操作</h1><p>A.insert(i,x)#表示在列表中第i个位置插入元素x<br>A.pop(i)#表示从列表中弹出小标为i的元素，并且把它的值返回</p>
- <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">insert_sort</span>(<span class="params">A</span>): <span class="comment"># 插入排序</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(A)): <span class="comment"># 负责设置排序的趟数</span></span><br><span class="line">        j = i - <span class="number">1</span></span><br><span class="line">        temp = i</span><br><span class="line">        <span class="keyword">while</span> j &gt;= <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">if</span> A[temp] &lt; A[j]: <span class="comment"># 递增排序条件</span></span><br><span class="line">                A.insert(j, A.pop(temp))</span><br><span class="line">                temp = j</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            j = j - <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> A</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(insert_sort([<span class="number">12</span>, <span class="number">56</span>, <span class="number">22</span>, <span class="number">33</span>, <span class="number">1</span>, <span class="number">28</span>, <span class="number">21</span>, <span class="number">55</span>, <span class="number">6</span>]))</span><br></pre></td></tr></table></figure>
-<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p>QuickSort：是对冒泡排序的一种改进</p>
-<p>首先随机选择一个基准值，然后将除了基准值以外的数分为“比基准值小的数”和“比基准值大的数”两个类别，再把基准值放到两个类别数中央。接着对两类别的数重复之前的操作</p>
-<p>随机选择左边的数为基准数，进行排序</p>
-<p>对序列中未比较其他数字都做重复的操作</p>
-<p>数据用列表表示，python中列表部分方法如下</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>说明</th>
-<th>例子</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>append</td>
-<td>在列表末尾添加一项</td>
-<td>ls.append(x)</td>
-</tr>
-<tr>
-<td>remove</td>
-<td>把列表中出现的第一个元素x删除</td>
-<td>ls.remove(x)</td>
-</tr>
-<tr>
-<td>ls+lt</td>
-<td>链接两个列表</td>
-<td>ls+lt</td>
-</tr>
-</tbody>
-</table>
-</div>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">quicksort</span>(<span class="params">A</span>):</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(A) &gt;= <span class="number">2</span>:  <span class="comment"># 递归出口</span></span><br><span class="line">        mid = A[<span class="number">0</span>]  <span class="comment"># 选择基准值，也可以选择中间值</span></span><br><span class="line">        A.remove(mid)</span><br><span class="line">        left, right = [], []</span><br><span class="line">        <span class="keyword">for</span> num <span class="keyword">in</span> A:</span><br><span class="line">            <span class="keyword">if</span> num &gt;= mid:</span><br><span class="line">                right.append(num)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                left.append(num)</span><br><span class="line">        <span class="keyword">return</span> quicksort(left) + [mid] + quicksort(right)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> A</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(quicksort([<span class="number">12</span>, <span class="number">3</span>, <span class="number">56</span>, <span class="number">10</span>, <span class="number">6</span>]))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="查找和线性查找算法"><a href="#查找和线性查找算法" class="headerlink" title="查找和线性查找算法"></a>查找和线性查找算法</h3><p>查找：用关键字表示一个数据元素，查找时根据给定的某个值，在表中确定一个关键字的值等于给定值的记录或数据元素</p>
-<p>线性查找算法：又称顺序查找，是一种最简单的查找方法，它的基本思想是从第一个记录开始，逐个比较记录的关键字，直到给定的k值相等，则查找成功；若比较与文件中n个记录的关键字都不等，则查找失败。</p>
-<p>线性查找需要从一端开始不断地按照顺序检查数据，一一比较</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">linearsearch</span>(<span class="params">A, Key</span>):</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(A)):</span><br><span class="line">        <span class="keyword">if</span> A[i] == Key:</span><br><span class="line">            <span class="keyword">return</span> i</span><br><span class="line">        i = i + <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(linearsearch([<span class="number">12</span>, <span class="number">3</span>, <span class="number">45</span>, <span class="number">2</span>], <span class="number">45</span>))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 ]]></content>
   </entry>
 </search>
