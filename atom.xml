@@ -2,12 +2,12 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>3Kxr&#39;s Blog</title>
   
-  <subtitle>这里是3Kxr的小站</subtitle>
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <subtitle>这里是3Kxr的小站,记载一些随笔</subtitle>
+  <link href="http://3kxr.me/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
-  <updated>2023-10-12T07:30:45.454Z</updated>
-  <id>http://example.com/</id>
+  <link href="http://3kxr.me/"/>
+  <updated>2023-12-14T10:21:59.855Z</updated>
+  <id>http://3kxr.me/</id>
   
   <author>
     <name>3Kxr</name>
@@ -17,11 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>WSL | 搞机记录</title>
+    <link href="http://3kxr.me/2023/11/26/WSL-%E6%90%9E%E6%9C%BA%E8%AE%B0%E5%BD%95/"/>
+    <id>http://3kxr.me/2023/11/26/WSL-%E6%90%9E%E6%9C%BA%E8%AE%B0%E5%BD%95/</id>
+    <published>2023-11-26T10:03:08.000Z</published>
+    <updated>2023-12-14T10:21:59.855Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;关于wsl以及docker的搞机记录&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="搞机" scheme="http://3kxr.me/categories/%E6%90%9E%E6%9C%BA/"/>
+    
+    
+    <category term="折腾" scheme="http://3kxr.me/tags/%E6%8A%98%E8%85%BE/"/>
+    
+  </entry>
+  
+  <entry>
     <title>一些有意思的事情分享</title>
-    <link href="http://example.com/2023/10/12/%E4%B8%80%E4%BA%9B%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E4%BA%8B%E6%83%85%E5%88%86%E4%BA%AB/"/>
-    <id>http://example.com/2023/10/12/%E4%B8%80%E4%BA%9B%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E4%BA%8B%E6%83%85%E5%88%86%E4%BA%AB/</id>
+    <link href="http://3kxr.me/2023/10/12/%E4%B8%80%E4%BA%9B%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E4%BA%8B%E6%83%85%E5%88%86%E4%BA%AB/"/>
+    <id>http://3kxr.me/2023/10/12/%E4%B8%80%E4%BA%9B%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E4%BA%8B%E6%83%85%E5%88%86%E4%BA%AB/</id>
     <published>2023-10-12T06:42:57.000Z</published>
-    <updated>2023-10-12T07:30:45.454Z</updated>
+    <updated>2023-11-13T10:01:22.240Z</updated>
     
     
     <summary type="html">&lt;p&gt;看来学校的课程也不是很无聊，这里介绍一款游戏🎮&lt;/p&gt;</summary>
@@ -33,8 +54,8 @@
   
   <entry>
     <title>关于iOS设备忘记密码的修复方法</title>
-    <link href="http://example.com/2023/10/07/%E5%85%B3%E4%BA%8EiOS%E8%AE%BE%E5%A4%87%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81%E7%9A%84%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%B3%95/"/>
-    <id>http://example.com/2023/10/07/%E5%85%B3%E4%BA%8EiOS%E8%AE%BE%E5%A4%87%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81%E7%9A%84%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%B3%95/</id>
+    <link href="http://3kxr.me/2023/10/07/%E5%85%B3%E4%BA%8EiOS%E8%AE%BE%E5%A4%87%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81%E7%9A%84%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%B3%95/"/>
+    <id>http://3kxr.me/2023/10/07/%E5%85%B3%E4%BA%8EiOS%E8%AE%BE%E5%A4%87%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81%E7%9A%84%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%B3%95/</id>
     <published>2023-10-07T08:59:59.000Z</published>
     <updated>2023-10-08T00:08:21.144Z</updated>
     
@@ -44,17 +65,17 @@
     
     
     
-    <category term="搞机" scheme="http://example.com/categories/%E6%90%9E%E6%9C%BA/"/>
+    <category term="搞机" scheme="http://3kxr.me/categories/%E6%90%9E%E6%9C%BA/"/>
     
     
-    <category term="搞机" scheme="http://example.com/tags/%E6%90%9E%E6%9C%BA/"/>
+    <category term="搞机" scheme="http://3kxr.me/tags/%E6%90%9E%E6%9C%BA/"/>
     
   </entry>
   
   <entry>
     <title>进制转换</title>
-    <link href="http://example.com/2023/09/21/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/"/>
-    <id>http://example.com/2023/09/21/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/</id>
+    <link href="http://3kxr.me/2023/09/21/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/"/>
+    <id>http://3kxr.me/2023/09/21/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/</id>
     <published>2023-09-21T06:34:20.000Z</published>
     <updated>2023-09-25T04:56:26.616Z</updated>
     
@@ -65,15 +86,15 @@
     
     
     
-    <category term="基础" scheme="http://example.com/categories/%E5%9F%BA%E7%A1%80/"/>
+    <category term="基础" scheme="http://3kxr.me/categories/%E5%9F%BA%E7%A1%80/"/>
     
     
   </entry>
   
   <entry>
     <title>MySQL基础板块</title>
-    <link href="http://example.com/2023/09/21/MySQL%E5%9F%BA%E7%A1%80%E6%9D%BF%E5%9D%97/"/>
-    <id>http://example.com/2023/09/21/MySQL%E5%9F%BA%E7%A1%80%E6%9D%BF%E5%9D%97/</id>
+    <link href="http://3kxr.me/2023/09/21/MySQL%E5%9F%BA%E7%A1%80%E6%9D%BF%E5%9D%97/"/>
+    <id>http://3kxr.me/2023/09/21/MySQL%E5%9F%BA%E7%A1%80%E6%9D%BF%E5%9D%97/</id>
     <published>2023-09-21T06:17:31.000Z</published>
     <updated>2023-09-21T09:24:43.921Z</updated>
     
@@ -84,19 +105,19 @@
     
     
     
-    <category term="基础知识" scheme="http://example.com/categories/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    <category term="基础知识" scheme="http://3kxr.me/categories/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
     
     
-    <category term="基础知识" scheme="http://example.com/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    <category term="基础知识" scheme="http://3kxr.me/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
     
   </entry>
   
   <entry>
     <title>Fitness Zone</title>
-    <link href="http://example.com/2023/09/20/Fitness-Zone/"/>
-    <id>http://example.com/2023/09/20/Fitness-Zone/</id>
+    <link href="http://3kxr.me/2023/09/20/Fitness-Zone/"/>
+    <id>http://3kxr.me/2023/09/20/Fitness-Zone/</id>
     <published>2023-09-20T08:51:35.000Z</published>
-    <updated>2023-09-20T08:59:43.783Z</updated>
+    <updated>2023-11-30T07:28:10.589Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -104,19 +125,19 @@
     
     
     
-    <category term="健身" scheme="http://example.com/categories/%E5%81%A5%E8%BA%AB/"/>
+    <category term="健身" scheme="http://3kxr.me/categories/%E5%81%A5%E8%BA%AB/"/>
     
-    <category term="随笔" scheme="http://example.com/categories/%E5%81%A5%E8%BA%AB/%E9%9A%8F%E7%AC%94/"/>
+    <category term="随笔" scheme="http://3kxr.me/categories/%E5%81%A5%E8%BA%AB/%E9%9A%8F%E7%AC%94/"/>
     
     
-    <category term="健身" scheme="http://example.com/tags/%E5%81%A5%E8%BA%AB/"/>
+    <category term="健身" scheme="http://3kxr.me/tags/%E5%81%A5%E8%BA%AB/"/>
     
   </entry>
   
   <entry>
     <title>随想日记0919</title>
-    <link href="http://example.com/2023/09/19/%E9%9A%8F%E6%83%B3%E6%97%A5%E8%AE%B00919/"/>
-    <id>http://example.com/2023/09/19/%E9%9A%8F%E6%83%B3%E6%97%A5%E8%AE%B00919/</id>
+    <link href="http://3kxr.me/2023/09/19/%E9%9A%8F%E6%83%B3%E6%97%A5%E8%AE%B00919/"/>
+    <id>http://3kxr.me/2023/09/19/%E9%9A%8F%E6%83%B3%E6%97%A5%E8%AE%B00919/</id>
     <published>2023-09-19T06:07:52.000Z</published>
     <updated>2023-09-21T05:00:19.930Z</updated>
     
@@ -131,17 +152,17 @@
     
     
     
-    <category term="随想" scheme="http://example.com/categories/%E9%9A%8F%E6%83%B3/"/>
+    <category term="随想" scheme="http://3kxr.me/categories/%E9%9A%8F%E6%83%B3/"/>
     
     
-    <category term="随想" scheme="http://example.com/tags/%E9%9A%8F%E6%83%B3/"/>
+    <category term="随想" scheme="http://3kxr.me/tags/%E9%9A%8F%E6%83%B3/"/>
     
   </entry>
   
   <entry>
     <title>hexo&#39;s plugins</title>
-    <link href="http://example.com/2023/09/17/hexo-s-plugins/"/>
-    <id>http://example.com/2023/09/17/hexo-s-plugins/</id>
+    <link href="http://3kxr.me/2023/09/17/hexo-s-plugins/"/>
+    <id>http://3kxr.me/2023/09/17/hexo-s-plugins/</id>
     <published>2023-09-17T05:19:23.000Z</published>
     <updated>2023-09-17T05:27:43.135Z</updated>
     
@@ -157,8 +178,8 @@
   
   <entry>
     <title>使用Django搭建网站</title>
-    <link href="http://example.com/2023/09/17/%E4%BD%BF%E7%94%A8Django%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/"/>
-    <id>http://example.com/2023/09/17/%E4%BD%BF%E7%94%A8Django%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/</id>
+    <link href="http://3kxr.me/2023/09/17/%E4%BD%BF%E7%94%A8Django%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/"/>
+    <id>http://3kxr.me/2023/09/17/%E4%BD%BF%E7%94%A8Django%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/</id>
     <published>2023-09-17T05:12:22.000Z</published>
     <updated>2023-09-17T05:21:02.982Z</updated>
     
@@ -168,17 +189,17 @@
     
     
     
-    <category term="web" scheme="http://example.com/categories/web/"/>
+    <category term="web" scheme="http://3kxr.me/categories/web/"/>
     
     
-    <category term="python" scheme="http://example.com/tags/python/"/>
+    <category term="python" scheme="http://3kxr.me/tags/python/"/>
     
   </entry>
   
   <entry>
     <title>关于hexo博客出现err: Error: Spawn failed的解决方案</title>
-    <link href="http://example.com/2023/09/15/%E5%85%B3%E4%BA%8Ehexo%E5%8D%9A%E5%AE%A2%E5%87%BA%E7%8E%B0err-Error-Spawn-failed%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-    <id>http://example.com/2023/09/15/%E5%85%B3%E4%BA%8Ehexo%E5%8D%9A%E5%AE%A2%E5%87%BA%E7%8E%B0err-Error-Spawn-failed%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</id>
+    <link href="http://3kxr.me/2023/09/15/%E5%85%B3%E4%BA%8Ehexo%E5%8D%9A%E5%AE%A2%E5%87%BA%E7%8E%B0err-Error-Spawn-failed%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>http://3kxr.me/2023/09/15/%E5%85%B3%E4%BA%8Ehexo%E5%8D%9A%E5%AE%A2%E5%87%BA%E7%8E%B0err-Error-Spawn-failed%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</id>
     <published>2023-09-15T04:07:57.000Z</published>
     <updated>2023-09-15T04:09:04.676Z</updated>
     
@@ -193,17 +214,17 @@
     
     
     
-    <category term="bug汇总" scheme="http://example.com/categories/bug%E6%B1%87%E6%80%BB/"/>
+    <category term="bug汇总" scheme="http://3kxr.me/categories/bug%E6%B1%87%E6%80%BB/"/>
     
     
-    <category term="bug" scheme="http://example.com/tags/bug/"/>
+    <category term="bug" scheme="http://3kxr.me/tags/bug/"/>
     
   </entry>
   
   <entry>
     <title>win10配置问题速查手册</title>
-    <link href="http://example.com/2023/09/13/win10%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/"/>
-    <id>http://example.com/2023/09/13/win10%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/</id>
+    <link href="http://3kxr.me/2023/09/13/win10%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/"/>
+    <id>http://3kxr.me/2023/09/13/win10%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/</id>
     <published>2023-09-13T05:53:13.000Z</published>
     <updated>2023-09-17T04:51:26.804Z</updated>
     
@@ -218,17 +239,17 @@
     
     
     
-    <category term="win10" scheme="http://example.com/categories/win10/"/>
+    <category term="win10" scheme="http://3kxr.me/categories/win10/"/>
     
     
-    <category term="win10" scheme="http://example.com/tags/win10/"/>
+    <category term="win10" scheme="http://3kxr.me/tags/win10/"/>
     
   </entry>
   
   <entry>
     <title>Linux中开启ssh的配置😎🐱‍💻</title>
-    <link href="http://example.com/2023/08/01/Linux%E4%B8%AD%E5%BC%80%E5%90%AFssh%E7%9A%84%E9%85%8D%E7%BD%AE/"/>
-    <id>http://example.com/2023/08/01/Linux%E4%B8%AD%E5%BC%80%E5%90%AFssh%E7%9A%84%E9%85%8D%E7%BD%AE/</id>
+    <link href="http://3kxr.me/2023/08/01/Linux%E4%B8%AD%E5%BC%80%E5%90%AFssh%E7%9A%84%E9%85%8D%E7%BD%AE/"/>
+    <id>http://3kxr.me/2023/08/01/Linux%E4%B8%AD%E5%BC%80%E5%90%AFssh%E7%9A%84%E9%85%8D%E7%BD%AE/</id>
     <published>2023-08-01T13:21:35.000Z</published>
     <updated>2023-08-01T13:31:49.170Z</updated>
     
@@ -240,14 +261,14 @@
     
     
     
-    <category term="Linux" scheme="http://example.com/tags/Linux/"/>
+    <category term="Linux" scheme="http://3kxr.me/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>饿补计算机科学基础（三）--数据结构</title>
-    <link href="http://example.com/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%89%EF%BC%89-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    <id>http://example.com/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%89%EF%BC%89-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</id>
+    <link href="http://3kxr.me/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%89%EF%BC%89-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    <id>http://3kxr.me/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%89%EF%BC%89-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</id>
     <published>2023-07-27T08:58:36.000Z</published>
     <updated>2023-07-27T08:59:43.291Z</updated>
     
@@ -261,8 +282,8 @@
   
   <entry>
     <title>饿补计算机科学基础（二）--算法</title>
-    <link href="http://example.com/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89-%E7%AE%97%E6%B3%95/"/>
-    <id>http://example.com/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89-%E7%AE%97%E6%B3%95/</id>
+    <link href="http://3kxr.me/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89-%E7%AE%97%E6%B3%95/"/>
+    <id>http://3kxr.me/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89-%E7%AE%97%E6%B3%95/</id>
     <published>2023-07-27T08:57:27.000Z</published>
     <updated>2023-07-27T08:58:13.002Z</updated>
     
@@ -276,8 +297,8 @@
   
   <entry>
     <title>饿补计算机科学基础（一）--计算机基础</title>
-    <link href="http://example.com/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
-    <id>http://example.com/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</id>
+    <link href="http://3kxr.me/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    <id>http://3kxr.me/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</id>
     <published>2023-07-27T08:55:43.000Z</published>
     <updated>2023-07-27T08:56:55.656Z</updated>
     
@@ -291,8 +312,8 @@
   
   <entry>
     <title>docker基础命令</title>
-    <link href="http://example.com/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/"/>
-    <id>http://example.com/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</id>
+    <link href="http://3kxr.me/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/"/>
+    <id>http://3kxr.me/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</id>
     <published>2023-07-12T10:43:53.000Z</published>
     <updated>2023-07-12T10:50:22.562Z</updated>
     
@@ -303,17 +324,17 @@
     
     
     
-    <category term="docker" scheme="http://example.com/categories/docker/"/>
+    <category term="docker" scheme="http://3kxr.me/categories/docker/"/>
     
     
-    <category term="docker" scheme="http://example.com/tags/docker/"/>
+    <category term="docker" scheme="http://3kxr.me/tags/docker/"/>
     
   </entry>
   
   <entry>
     <title>Numpy笔记</title>
-    <link href="http://example.com/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/"/>
-    <id>http://example.com/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/</id>
+    <link href="http://3kxr.me/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/"/>
+    <id>http://3kxr.me/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/</id>
     <published>2023-06-29T02:09:04.000Z</published>
     <updated>2023-07-10T10:39:24.444Z</updated>
     
@@ -325,21 +346,21 @@
     
     
     
-    <category term="Python" scheme="http://example.com/categories/Python/"/>
+    <category term="Python" scheme="http://3kxr.me/categories/Python/"/>
     
     
-    <category term="数据分析" scheme="http://example.com/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    <category term="数据分析" scheme="http://3kxr.me/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
     
-    <category term="Numpy" scheme="http://example.com/tags/Numpy/"/>
+    <category term="Numpy" scheme="http://3kxr.me/tags/Numpy/"/>
     
   </entry>
   
   <entry>
     <title>文案收集(更新中)</title>
-    <link href="http://example.com/2023/06/25/%E6%96%87%E6%A1%88%E6%94%B6%E9%9B%86/"/>
-    <id>http://example.com/2023/06/25/%E6%96%87%E6%A1%88%E6%94%B6%E9%9B%86/</id>
+    <link href="http://3kxr.me/2023/06/25/%E6%96%87%E6%A1%88%E6%94%B6%E9%9B%86/"/>
+    <id>http://3kxr.me/2023/06/25/%E6%96%87%E6%A1%88%E6%94%B6%E9%9B%86/</id>
     <published>2023-06-25T04:01:24.000Z</published>
-    <updated>2023-07-08T16:14:55.765Z</updated>
+    <updated>2023-11-13T08:48:54.315Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -347,19 +368,19 @@
     
     
     
-    <category term="文案" scheme="http://example.com/categories/%E6%96%87%E6%A1%88/"/>
+    <category term="文案" scheme="http://3kxr.me/categories/%E6%96%87%E6%A1%88/"/>
     
     
-    <category term="随想" scheme="http://example.com/tags/%E9%9A%8F%E6%83%B3/"/>
+    <category term="随想" scheme="http://3kxr.me/tags/%E9%9A%8F%E6%83%B3/"/>
     
   </entry>
   
   <entry>
     <title>conda的使用技巧</title>
-    <link href="http://example.com/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
-    <id>http://example.com/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</id>
+    <link href="http://3kxr.me/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
+    <id>http://3kxr.me/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</id>
     <published>2023-06-20T02:10:39.000Z</published>
-    <updated>2023-09-09T08:34:11.215Z</updated>
+    <updated>2023-11-16T07:07:49.211Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/anaconda.png&quot; alt&gt;&lt;/p&gt;
@@ -369,17 +390,17 @@
     
     
     
-    <category term="Python" scheme="http://example.com/categories/Python/"/>
+    <category term="Python" scheme="http://3kxr.me/categories/Python/"/>
     
     
-    <category term="Shell" scheme="http://example.com/tags/Shell/"/>
+    <category term="Shell" scheme="http://3kxr.me/tags/Shell/"/>
     
   </entry>
   
   <entry>
     <title>请求响应报头相关名词解释</title>
-    <link href="http://example.com/2023/06/12/%E8%AF%B7%E6%B1%82%E5%93%8D%E5%BA%94%E6%8A%A5%E5%A4%B4%E7%9B%B8%E5%85%B3%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/"/>
-    <id>http://example.com/2023/06/12/%E8%AF%B7%E6%B1%82%E5%93%8D%E5%BA%94%E6%8A%A5%E5%A4%B4%E7%9B%B8%E5%85%B3%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/</id>
+    <link href="http://3kxr.me/2023/06/12/%E8%AF%B7%E6%B1%82%E5%93%8D%E5%BA%94%E6%8A%A5%E5%A4%B4%E7%9B%B8%E5%85%B3%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/"/>
+    <id>http://3kxr.me/2023/06/12/%E8%AF%B7%E6%B1%82%E5%93%8D%E5%BA%94%E6%8A%A5%E5%A4%B4%E7%9B%B8%E5%85%B3%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/</id>
     <published>2023-06-12T05:50:27.000Z</published>
     <updated>2023-07-10T10:38:33.953Z</updated>
     
@@ -389,33 +410,10 @@
     
     
     
-    <category term="计算机网络" scheme="http://example.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    <category term="计算机网络" scheme="http://3kxr.me/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
     
-    <category term="计算机网络" scheme="http://example.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于最近一些事的思考</title>
-    <link href="http://example.com/2023/06/09/%E5%85%B3%E4%BA%8E%E6%9C%80%E8%BF%91%E4%B8%80%E4%BA%9B%E4%BA%8B%E7%9A%84%E6%80%9D%E8%80%83/"/>
-    <id>http://example.com/2023/06/09/%E5%85%B3%E4%BA%8E%E6%9C%80%E8%BF%91%E4%B8%80%E4%BA%9B%E4%BA%8B%E7%9A%84%E6%80%9D%E8%80%83/</id>
-    <published>2023-06-09T06:58:13.000Z</published>
-    <updated>2023-06-20T02:16:36.279Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    
-    <category term="随想" scheme="http://example.com/tags/%E9%9A%8F%E6%83%B3/"/>
+    <category term="计算机网络" scheme="http://3kxr.me/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
