@@ -6,7 +6,7 @@
   <link href="http://3kxr.me/atom.xml" rel="self"/>
   
   <link href="http://3kxr.me/"/>
-  <updated>2023-12-14T10:21:59.855Z</updated>
+  <updated>2024-02-13T09:07:37.530Z</updated>
   <id>http://3kxr.me/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>3Kxr在这里祝大家龙年快乐！</title>
+    <link href="http://3kxr.me/2024/02/13/3Kxr%E5%9C%A8%E8%BF%99%E9%87%8C%E7%A5%9D%E5%A4%A7%E5%AE%B6%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90/"/>
+    <id>http://3kxr.me/2024/02/13/3Kxr%E5%9C%A8%E8%BF%99%E9%87%8C%E7%A5%9D%E5%A4%A7%E5%AE%B6%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90/</id>
+    <published>2024-02-13T09:03:51.000Z</published>
+    <updated>2024-02-13T09:07:37.530Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>WSL | 搞机记录</title>
@@ -394,26 +415,6 @@
     
     
     <category term="Shell" scheme="http://3kxr.me/tags/Shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>请求响应报头相关名词解释</title>
-    <link href="http://3kxr.me/2023/06/12/%E8%AF%B7%E6%B1%82%E5%93%8D%E5%BA%94%E6%8A%A5%E5%A4%B4%E7%9B%B8%E5%85%B3%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/"/>
-    <id>http://3kxr.me/2023/06/12/%E8%AF%B7%E6%B1%82%E5%93%8D%E5%BA%94%E6%8A%A5%E5%A4%B4%E7%9B%B8%E5%85%B3%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/</id>
-    <published>2023-06-12T05:50:27.000Z</published>
-    <updated>2023-07-10T10:38:33.953Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;本文主要说明常用的请求响应相关名词解释,建议读者具备网络基础&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="计算机网络" scheme="http://3kxr.me/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
-    
-    
-    <category term="计算机网络" scheme="http://3kxr.me/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
