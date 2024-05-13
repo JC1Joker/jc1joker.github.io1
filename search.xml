@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>3Kxr在这里祝大家龙年快乐！</title>
+    <url>/2024/02/13/3Kxr%E5%9C%A8%E8%BF%99%E9%87%8C%E7%A5%9D%E5%A4%A7%E5%AE%B6%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>🐉行龘龘 好事成双</p>
+</blockquote>
+]]></content>
+  </entry>
+  <entry>
     <title>Fitness Zone</title>
     <url>/2023/09/20/Fitness-Zone/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -16,14 +24,6 @@
       <tags>
         <tag>健身</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>3Kxr在这里祝大家龙年快乐！</title>
-    <url>/2024/02/13/3Kxr%E5%9C%A8%E8%BF%99%E9%87%8C%E7%A5%9D%E5%A4%A7%E5%AE%B6%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>🐉行龘龘 好事成双</p>
-</blockquote>
-]]></content>
   </entry>
   <entry>
     <title>Linux中开启ssh的配置😎🐱‍💻</title>
@@ -72,405 +72,6 @@
 ]]></content>
       <tags>
         <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MySQL基础板块</title>
-    <url>/2023/09/21/MySQL%E5%9F%BA%E7%A1%80%E6%9D%BF%E5%9D%97/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>SQL基础说明，为巩固基础知识，现创建基础知识板块，其中包含workbench的使用技巧</p>
-</blockquote>
-<span id="more"></span>
-<p>安装部分略过（皮一下）</p>
-<ul>
-<li><p>数据定义语言DDL</p>
-<ul>
-<li><p>create</p>
-</li>
-<li><p>alter</p>
-</li>
-<li><p>drop</p>
-</li>
-</ul>
-</li>
-<li><p>数据操作语言DML</p>
-<ul>
-<li><p>insert</p>
-</li>
-<li><p>delete</p>
-</li>
-<li><p>update</p>
-</li>
-<li><p>select</p>
-</li>
-</ul>
-</li>
-<li><p>数据控制语言DCL</p>
-<ul>
-<li><p>grant</p>
-</li>
-<li><p>remove</p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="🔍关于数据操作语言SELECT-的查询语句格式"><a href="#🔍关于数据操作语言SELECT-的查询语句格式" class="headerlink" title="🔍关于数据操作语言SELECT 的查询语句格式"></a>🔍关于数据操作语言SELECT 的查询语句格式</h2><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> [<span class="keyword">distinct</span><span class="operator">/</span><span class="keyword">all</span>] <span class="keyword">from</span> table_name</span><br></pre></td></tr></table></figure>
-<h4 id="1-无条件查询"><a href="#1-无条件查询" class="headerlink" title="1.无条件查询"></a>1.无条件查询</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name;</span><br></pre></td></tr></table></figure>
-<h4 id="2-DISTINCT去除重复数据"><a href="#2-DISTINCT去除重复数据" class="headerlink" title="2.DISTINCT去除重复数据"></a>2.DISTINCT去除重复数据</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">distinct</span> <span class="operator">*</span> <span class="keyword">from</span> table_name;</span><br></pre></td></tr></table></figure>
-<p>给列起别名</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> book <span class="keyword">as</span> <span class="string">&#x27;书&#x27;</span> <span class="keyword">from</span> bookstore;</span><br></pre></td></tr></table></figure>
-<h3 id="提取前N条SQL语句"><a href="#提取前N条SQL语句" class="headerlink" title="提取前N条SQL语句"></a>提取前N条SQL语句</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">order</span> <span class="keyword">by</span> columnName </span><br></pre></td></tr></table></figure>
-<h2 id="⚙MySQL-workbench使用技巧"><a href="#⚙MySQL-workbench使用技巧" class="headerlink" title="⚙MySQL workbench使用技巧"></a>⚙MySQL workbench使用技巧</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>快捷键</th>
-<th>用途</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Ctrl + Shift + Enter</td>
-<td>执行选中的SQL(如无选中则执行所有)</td>
-</tr>
-<tr>
-<td>Ctrl + Enter</td>
-<td>执行当前这句SQL (注意MySQL Workbench的编辑器会要求每一句SQL必须以;结尾, 否则会高亮提示错误)</td>
-</tr>
-<tr>
-<td>Ctrl + /</td>
-<td>注释掉选中SQL语句</td>
-</tr>
-<tr>
-<td>Ctrl + B</td>
-<td>格式化SQL语句</td>
-</tr>
-<tr>
-<td>Ctrl + T</td>
-<td>新开SQL编辑器</td>
-</tr>
-<tr>
-<td>Ctrl + Alt + X</td>
-<td>查看执行解释 (explain current statement)</td>
-</tr>
-</tbody>
-</table>
-</div>
-]]></content>
-      <categories>
-        <category>基础知识</category>
-      </categories>
-      <tags>
-        <tag>基础知识</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Pandas笔记</title>
-    <url>/2023/06/07/Pandas%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>中国大学MOOC,python数据分析相关课程笔记—pandas部分<br><span id="more"></span></p>
-<h2 id="pandas库"><a href="#pandas库" class="headerlink" title="pandas库"></a>pandas库</h2><p>pd.Series()# pd.series是pandas中用于表示一维数据的数据结构</p>
-</blockquote>
-<p>d.cumsum()计算前n项累加和</p>
-<blockquote id="fn_1">
-<sup>1</sup>. axis = 0 代表对横轴操作，也就是第0轴；axis = 1 代表对纵轴操作，也就是第1轴；<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
-</blockquote>
-<h2 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h2><p>两个数据类型：Series，DataFrame</p>
-<p>基于商促数据类型的各类操作</p>
-<p>基本操作、运算操作、特征类操作、关联类操作</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">Numpy</th>
-<th style="text-align:center">Pandas</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">基础数据类型</td>
-<td style="text-align:center">扩展数据类型</td>
-</tr>
-<tr>
-<td style="text-align:center">关注数据的结构表达(数据之间的维度表达)</td>
-<td style="text-align:center">关注数据的应用表达</td>
-</tr>
-<tr>
-<td style="text-align:center">基于<strong>维度</strong>的运算</td>
-<td style="text-align:center">基于<strong>索引</strong>的运算</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="series类型"><a href="#series类型" class="headerlink" title="series类型"></a>series类型</h2><p>由一组数据及与之相关的数据索引组成</p>
-<p>index_0  data_a</p>
-<p>index_1 data_b</p>
-<ul>
-<li>python 列表，index与列表元素个数一致</li>
-<li>标量值，index表达Series类型的尺寸</li>
-<li>python字典，键值对中的“键”是索引，index从字典中进行选择操作</li>
-<li>ndarray，索引和数据都可以通过ndarray类型创建</li>
-<li>其他函数，range()函数等</li>
-</ul>
-<h3 id="从ndarray类型创建"><a href="#从ndarray类型创建" class="headerlink" title="从ndarray类型创建"></a>从ndarray类型创建</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">n = pd.Serise(np.arange(<span class="number">5</span>))</span><br><span class="line"></span><br><span class="line">输出：</span><br><span class="line"><span class="number">0</span>  <span class="number">0</span></span><br><span class="line"><span class="number">1</span>  <span class="number">1</span> </span><br><span class="line"><span class="number">2</span>  <span class="number">2</span> </span><br><span class="line"><span class="number">3</span>  <span class="number">3</span> </span><br><span class="line"><span class="number">4</span>  <span class="number">4</span> </span><br></pre></td></tr></table></figure>
-<h2 id="Series类型对齐操作"><a href="#Series类型对齐操作" class="headerlink" title="Series类型对齐操作"></a>Series类型对齐操作</h2><p>Series+Series</p>
-<p>Series类型在运算中会自动对齐不同索引的数据</p>
-<h2 id="name属性-name"><a href="#name属性-name" class="headerlink" title="name属性(.name)"></a>name属性(.name)</h2><p>Series对象和索引都可以有一个名字，存储在属性.name中</p>
-<p>Series是一维带“标签”数组</p>
-<p>Series基本操作类似ndarray和字典，根据索引对齐</p>
-<p>DataFrame类型</p>
-<p>二维ndarray对象</p>
-<p>由一维ndarray、列表、字典、元组或series构成的字典</p>
-<h2 id="如何改变Series和DataFrame对象"><a href="#如何改变Series和DataFrame对象" class="headerlink" title="如何改变Series和DataFrame对象"></a>如何改变Series和DataFrame对象</h2><p>增加或重排：重新索引</p>
-<h3 id="重新索引"><a href="#重新索引" class="headerlink" title="重新索引"></a>重新索引</h3><p>.reindex()</p>
-<p>.reindex(希望排列之后的index关系)能够改变或者重排Series和DataFrame索引</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>index,columns</td>
-<td>新的行列自定义索引</td>
-</tr>
-<tr>
-<td>fill_value</td>
-<td>重新索引中，用于填充缺失位置的值</td>
-</tr>
-<tr>
-<td>method</td>
-<td>填充方法，ffill当前值向前填充，bfill向后填充</td>
-</tr>
-<tr>
-<td>limit</td>
-<td>最大填充量</td>
-</tr>
-<tr>
-<td>copy</td>
-<td>默认True，生成新的对象，False时，新旧相等不复刻</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="索引类型"><a href="#索引类型" class="headerlink" title="索引类型"></a>索引类型</h2><p>Series和DataFrame的索引时index类型</p>
-<p>index对象是不可修改类型</p>
-<p>常用方法</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>.append(idx)</td>
-<td>连接另一个index对象，产生新的index对象</td>
-</tr>
-<tr>
-<td>.diff(idx)</td>
-<td>计算差集，产生新的index对象</td>
-</tr>
-<tr>
-<td>.intersection(idx)</td>
-<td>计算交集</td>
-</tr>
-<tr>
-<td>.union(idx)</td>
-<td>计算并集</td>
-</tr>
-<tr>
-<td>.delete(loc)</td>
-<td>删除loc位置处的元素</td>
-</tr>
-<tr>
-<td>.insert(loc.e)</td>
-<td>在loc位置增加一个元素</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="删除指定索引对象"><a href="#删除指定索引对象" class="headerlink" title="删除指定索引对象"></a>删除指定索引对象</h2><p>.drop()能够删除Series和DataFrame指定行或列索引</p>
-<h2 id="pandas数据运算"><a href="#pandas数据运算" class="headerlink" title="pandas数据运算"></a>pandas数据运算</h2><p>算数运算法则</p>
-<p>算术运算根据行列索引，补齐后运算，运算默认产生浮点数</p>
-<p>补齐时缺项填充NaN（空值）</p>
-<p>二维和一维、一维和零维间的广播运算</p>
-<p>采用+-*/符号进行的二元运算产生新的对象</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>.add(d,**argws)</td>
-<td>类型间加法运算，可选参数</td>
-</tr>
-<tr>
-<td>.sub(d,**argws)</td>
-<td>类型间减法运算，可选参数</td>
-</tr>
-<tr>
-<td>.mul(d,**argws)</td>
-<td>类型间乘法运算，可选参数</td>
-</tr>
-<tr>
-<td>.div(d,**argws)</td>
-<td>类型见除法运算，可选参数</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="比较运算法则"><a href="#比较运算法则" class="headerlink" title="比较运算法则"></a>比较运算法则</h2><p>比较运算只能比较相同索引的元素，不进行补齐。</p>
-<p>二维和一维、一维和零维间的广播运算</p>
-<p>采用&gt;&lt;&gt;=&lt;= == !=等符号进行的二元运算产生布尔对象</p>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>Series = 索引+一维数据</p>
-<p>DataFrame = 行列索引 + 二维数据</p>
-<p>理解数据类型与索引的关系，操作索引即操作数据</p>
-<p>像对待单一数据一样对待Series和DataFrame对象</p>
-<h2 id="数据排序"><a href="#数据排序" class="headerlink" title="数据排序"></a>数据排序</h2><p>.sort_index()方法在指定轴上根据索引进行排序，默认升序</p>
-<p>.sort_index(axis=0,ascending=True)</p>
-<p>ascending=False降序</p>
-<p>.sort_values()方法在指定轴上根据数值进行排序，默认升序</p>
-<p>Serious.sort_values(axis=0,ascending=True)</p>
-<p>DataFrame.sort_values(<strong>by</strong>,axis=0,ascending=True)</p>
-<p>by:axis轴上的某个索引或索引列表</p>
-<p>NaN统一放到排序末尾</p>
-<h2 id="基本的统计分析函数"><a href="#基本的统计分析函数" class="headerlink" title="基本的统计分析函数"></a>基本的统计分析函数</h2><p>适用Series和DataFrame类型</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>.sum()</td>
-<td>计算数据的总和</td>
-</tr>
-<tr>
-<td>.count()</td>
-<td>非NaN值的数量</td>
-</tr>
-<tr>
-<td>.mean() .median()</td>
-<td>计算数据的算术平均值、算数中位数</td>
-</tr>
-<tr>
-<td>.var() .std()</td>
-<td>计算数据的方差、标准差</td>
-</tr>
-<tr>
-<td>.min() .max()</td>
-<td>计算数据的最小值、最大值</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>统计汇总</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>.describe</th>
-<th>针对0轴(各列)的统计汇总<sup><a href="#fn_1" id="reffn_1">1</a></sup></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>累计统计分析函数</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>.cumsum()</td>
-<td>依次给出前1、2、……、n个数的和</td>
-</tr>
-<tr>
-<td>.cumprod()</td>
-<td>依次给出前1、2、……、n个数的积</td>
-</tr>
-<tr>
-<td>.cummax()</td>
-<td>依次给出前1、2、……、n个数的最大值</td>
-</tr>
-<tr>
-<td>.cummin()</td>
-<td>依次给出前1、2、……、n个数的最小值</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>滚动计算（窗口计算）</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>说明（跨行运算）</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>.rolling(w).sum()</td>
-<td>依次计算相邻w个元素的和</td>
-</tr>
-<tr>
-<td>.rolling(w).mean()</td>
-<td>依次计算相邻w个元素的算数平均值</td>
-</tr>
-<tr>
-<td>.rolling(w).var()</td>
-<td>依次计算相邻w个元素的方差</td>
-</tr>
-<tr>
-<td>.rowing(w).std()</td>
-<td>依次计算相邻w个元素的标准差</td>
-</tr>
-<tr>
-<td>.rowing(w).main().max()</td>
-<td>以此计算相邻w个元素的最小值和最大值</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="相关分析"><a href="#相关分析" class="headerlink" title="相关分析"></a>相关分析</h2><p>两个事物，表示x和y，如何判断它们之间的存在相关性</p>
-<p><strong>相关性</strong></p>
-<ul>
-<li>x增大，y增大，两个变量正相关</li>
-<li>x增大，y减小，两个变量负相关</li>
-<li>x增大，y无视，两个变量不相关</li>
-</ul>
-<p><strong>协方差</strong></p>
-<p>两个事物，表示x和y，如何判断它们之间的存在相关性</p>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>数据分析</tag>
-        <tag>Pandas</tag>
       </tags>
   </entry>
   <entry>
@@ -814,36 +415,466 @@
       </tags>
   </entry>
   <entry>
-    <title>docker基础命令</title>
-    <url>/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/Docker.png" alt></p>
-<blockquote>
-<p>docker的基础命令<br><span id="more"></span></p>
+    <title>MySQL基础板块</title>
+    <url>/2023/09/21/MySQL%E5%9F%BA%E7%A1%80%E6%9D%BF%E5%9D%97/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>SQL基础说明，为巩固基础知识，现创建基础知识板块，其中包含workbench的使用技巧</p>
 </blockquote>
-<p>docker pull 安装镜像</p>
-<p>docker run 运行镜像</p>
-<p>docker container run</p>
-<p>说明：</p>
-<p>创建好image后，新建容器时使用；</p>
-<p>每次运行，都会创建一个新的容器；</p>
-<p>新建的容器可以通过 docker container ls -a 或者 docker ps -a 查看（加 -a 表示查看所有创建好的容器）；</p>
-<p>每次创建会返回一个【长的容器ID】；</p>
-<p>通常情况下，运行一次即可；</p>
-<p>docker containers list -a 查看当前运行的所有镜像</p>
-<p>docker exec -it 【docker的名称】 bash  进入docker运行的bash环境中</p>
-<p>docker container start 【containerID】运行已经创建的容器</p>
-<p>docker ps -a 查看所有容器</p>
-<p>docker stop 【containerID】</p>
-<p>docker rm 【containerID】（先停止容器后才能删除）</p>
-<p>docker export 制作基础镜像，使用 <strong>docker export</strong> 命令根据容器 <strong>ID</strong> 将镜像导出成一个文件</p>
-<p>docker import - new_hangger_server &lt; hangger_server.tar 将这个镜像文件导入进来。</p>
-<p>docker load 载入镜像</p>
+<span id="more"></span>
+<p>安装部分略过（皮一下）</p>
+<ul>
+<li><p>数据定义语言DDL</p>
+<ul>
+<li><p>create</p>
+</li>
+<li><p>alter</p>
+</li>
+<li><p>drop</p>
+</li>
+</ul>
+</li>
+<li><p>数据操作语言DML</p>
+<ul>
+<li><p>insert</p>
+</li>
+<li><p>delete</p>
+</li>
+<li><p>update</p>
+</li>
+<li><p>select</p>
+</li>
+</ul>
+</li>
+<li><p>数据控制语言DCL</p>
+<ul>
+<li><p>grant</p>
+</li>
+<li><p>remove</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="🔍关于数据操作语言SELECT-的查询语句格式"><a href="#🔍关于数据操作语言SELECT-的查询语句格式" class="headerlink" title="🔍关于数据操作语言SELECT 的查询语句格式"></a>🔍关于数据操作语言SELECT 的查询语句格式</h2><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> [<span class="keyword">distinct</span><span class="operator">/</span><span class="keyword">all</span>] <span class="keyword">from</span> table_name</span><br></pre></td></tr></table></figure>
+<h4 id="1-无条件查询"><a href="#1-无条件查询" class="headerlink" title="1.无条件查询"></a>1.无条件查询</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name;</span><br></pre></td></tr></table></figure>
+<h4 id="2-DISTINCT去除重复数据"><a href="#2-DISTINCT去除重复数据" class="headerlink" title="2.DISTINCT去除重复数据"></a>2.DISTINCT去除重复数据</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">distinct</span> <span class="operator">*</span> <span class="keyword">from</span> table_name;</span><br></pre></td></tr></table></figure>
+<p>给列起别名</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> book <span class="keyword">as</span> <span class="string">&#x27;书&#x27;</span> <span class="keyword">from</span> bookstore;</span><br></pre></td></tr></table></figure>
+<h3 id="提取前N条SQL语句"><a href="#提取前N条SQL语句" class="headerlink" title="提取前N条SQL语句"></a>提取前N条SQL语句</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table_name <span class="keyword">order</span> <span class="keyword">by</span> columnName </span><br></pre></td></tr></table></figure>
+<h2 id="⚙MySQL-workbench使用技巧"><a href="#⚙MySQL-workbench使用技巧" class="headerlink" title="⚙MySQL workbench使用技巧"></a>⚙MySQL workbench使用技巧</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ctrl + Shift + Enter</td>
+<td>执行选中的SQL(如无选中则执行所有)</td>
+</tr>
+<tr>
+<td>Ctrl + Enter</td>
+<td>执行当前这句SQL (注意MySQL Workbench的编辑器会要求每一句SQL必须以;结尾, 否则会高亮提示错误)</td>
+</tr>
+<tr>
+<td>Ctrl + /</td>
+<td>注释掉选中SQL语句</td>
+</tr>
+<tr>
+<td>Ctrl + B</td>
+<td>格式化SQL语句</td>
+</tr>
+<tr>
+<td>Ctrl + T</td>
+<td>新开SQL编辑器</td>
+</tr>
+<tr>
+<td>Ctrl + Alt + X</td>
+<td>查看执行解释 (explain current statement)</td>
+</tr>
+</tbody>
+</table>
+</div>
 ]]></content>
       <categories>
-        <category>docker</category>
+        <category>基础知识</category>
       </categories>
       <tags>
-        <tag>docker</tag>
+        <tag>基础知识</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>WSL | 搞机记录</title>
+    <url>/2023/11/26/WSL-%E6%90%9E%E6%9C%BA%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>关于wsl以及docker的搞机记录</p>
+</blockquote>
+<span id="more"></span>
+<h3 id="注销分发版本"><a href="#注销分发版本" class="headerlink" title="注销分发版本"></a>注销分发版本</h3><p>wsl—unregister Ubuntu </p>
+<h3 id="🐋wsl’s-docker"><a href="#🐋wsl’s-docker" class="headerlink" title="🐋wsl’s docker"></a>🐋wsl’s docker</h3><p>🎈镜像加速</p>
+<p>由于我们在国内的，因此拉取docker hub上的镜像可能也很慢。因此，一般还需要配置镜像加速，可以参考这篇文章：<a href="https://www.cnblogs.com/myitnews/p/11509546.html">https://www.cnblogs.com/myitnews/p/11509546.html</a></p>
+<p>因为wsl2已经完整使用了linux内核了，此种方式和先前在linux虚拟机安装docker类似，步骤如下：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">$ curl -fsSL https://get.docker.com -o get-docker.sh</span><br><span class="line">$ sudo sh get-docker.sh</span><br><span class="line">$ sudo service docker start</span><br></pre></td></tr></table></figure>
+<p>执行脚本安装过程中，脚本提示“<strong>建议使用Docker Desktop for windows</strong>”，20s内按Ctrl+C会退出安装，所以需要等待20s，另外此种方式需要访问外网。期间需要等待20s，此种方式需要访问外网</p>
+<p>检查docker安装正常</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># 检查dockerd进程启动</span><br><span class="line">service docker status</span><br><span class="line">ps aux|grep docker</span><br><span class="line"># 检查拉取镜像等正常</span><br><span class="line">docker pull busybox</span><br><span class="line">docker images</span><br></pre></td></tr></table></figure>
+<p><strong>注意</strong>：不同于完全linux虚拟机方式，WLS2下通过<code>apt install docker-ce</code>命令安装的docker无法启动，因为WSL2方式的ubuntu里面没有systemd。上述官方get-docker.sh安装的docker，dockerd进程是用ubuntu传统的init方式而非systemd启动的。</p>
+<h4 id="卸载docker"><a href="#卸载docker" class="headerlink" title="卸载docker"></a>卸载docker</h4><p>卸载Docker<br>卸载Docker引擎、CLI 和 Containerd 软件包：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get purge docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure>
+<p>主机上的映像、容器、卷或自定义配置文件不会自动删除，必须手动删除任何已编辑的配置文件。如果要删除所有映像、容器和卷：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">rm</span> -rf /var/lib/docker</span><br><span class="line">sudo <span class="built_in">rm</span> -rf /var/lib/containerd</span><br></pre></td></tr></table></figure>
+<h3 id="将wsl进行转移至其他盘"><a href="#将wsl进行转移至其他盘" class="headerlink" title="将wsl进行转移至其他盘"></a>将wsl进行转移至其他盘</h3><p>Docker-WSL 集成在默认 WSL 分发版上启用，该分发版是<a href="https://learn.microsoft.com/en-us/windows/wsl/install">Ubuntu的open_in_new</a>.若要更改默认的 WSL 发行版，请运行：</p>
+<p> wsl —set-default &lt; distro name&gt; 更改默认发行版</p>
+<p>查看wsl的名称</p>
+<p>wsl -l -v</p>
+<blockquote>
+<p>wsl —export Ubuntu-18.04 d:\wsl-ubuntu18.04.tar</p>
+</blockquote>
+<p>注销当前分发版本</p>
+<blockquote>
+<p>wsl —unregister Debian</p>
+</blockquote>
+<p>重新导入并安装WSL在指定目录 </p>
+<p>我这里指定的目录就是d:\wsl-ubuntu18.04</p>
+<blockquote>
+<p>wsl —import Debian d:\wsl-ubuntu18.04 d:\wsl-ubuntu18.04.tar —version 2</p>
+</blockquote>
+<p>设置默认登陆用户为安装时用户名</p>
+<blockquote>
+<p>Debian config —default-user 你安装时候的用户名是啥就写啥</p>
+</blockquote>
+<h3 id="link-wsl"><a href="#link-wsl" class="headerlink" title="link-wsl"></a>link-wsl</h3><p>使用vscode连接wsl</p>
+<p>由于是使用wsl1安装的Linux，vscode建议我更新wsl2以提升性能</p>
+<p>使用<code>wsl -l</code>可以查看已安装的wsl,<code>wsl -l -v</code>可以看出当前已安装的wsl使用的内核版本</p>
+<p><code>wsl --set-version wsl的名字 2</code>即可</p>
+<p>wsl —list —verbose（用于检查下载的系统的名字是wsl1还是2）</p>
+<h2 id="Terminal-0101"><a href="#Terminal-0101" class="headerlink" title="Terminal(0101)"></a>Terminal(0101)</h2><center>嗯，使用独特的terminal感觉很棒，比起原生的terminal好得不能再好了</center>
+
+<h4 id="🔧目前安装的工具"><a href="#🔧目前安装的工具" class="headerlink" title="🔧目前安装的工具"></a>🔧目前安装的工具</h4><blockquote>
+<p>统一使用apt-get install</p>
+</blockquote>
+<ul>
+<li>net-tools</li>
+<li>curl</li>
+</ul>
+<h3 id="！注意事项"><a href="#！注意事项" class="headerlink" title="！注意事项"></a>！注意事项</h3><p>Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux</p>
+<p>会将系统中的wsl功能关闭，并删除相关配置文件，请谨慎使用</p>
+]]></content>
+      <categories>
+        <category>搞机</category>
+      </categories>
+      <tags>
+        <tag>折腾</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Pandas笔记</title>
+    <url>/2023/06/07/Pandas%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>中国大学MOOC,python数据分析相关课程笔记—pandas部分<br><span id="more"></span></p>
+<h2 id="pandas库"><a href="#pandas库" class="headerlink" title="pandas库"></a>pandas库</h2><p>pd.Series()# pd.series是pandas中用于表示一维数据的数据结构</p>
+</blockquote>
+<p>d.cumsum()计算前n项累加和</p>
+<blockquote id="fn_1">
+<sup>1</sup>. axis = 0 代表对横轴操作，也就是第0轴；axis = 1 代表对纵轴操作，也就是第1轴；<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
+</blockquote>
+<h2 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h2><p>两个数据类型：Series，DataFrame</p>
+<p>基于商促数据类型的各类操作</p>
+<p>基本操作、运算操作、特征类操作、关联类操作</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Numpy</th>
+<th style="text-align:center">Pandas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">基础数据类型</td>
+<td style="text-align:center">扩展数据类型</td>
+</tr>
+<tr>
+<td style="text-align:center">关注数据的结构表达(数据之间的维度表达)</td>
+<td style="text-align:center">关注数据的应用表达</td>
+</tr>
+<tr>
+<td style="text-align:center">基于<strong>维度</strong>的运算</td>
+<td style="text-align:center">基于<strong>索引</strong>的运算</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="series类型"><a href="#series类型" class="headerlink" title="series类型"></a>series类型</h2><p>由一组数据及与之相关的数据索引组成</p>
+<p>index_0  data_a</p>
+<p>index_1 data_b</p>
+<ul>
+<li>python 列表，index与列表元素个数一致</li>
+<li>标量值，index表达Series类型的尺寸</li>
+<li>python字典，键值对中的“键”是索引，index从字典中进行选择操作</li>
+<li>ndarray，索引和数据都可以通过ndarray类型创建</li>
+<li>其他函数，range()函数等</li>
+</ul>
+<h3 id="从ndarray类型创建"><a href="#从ndarray类型创建" class="headerlink" title="从ndarray类型创建"></a>从ndarray类型创建</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">n = pd.Serise(np.arange(<span class="number">5</span>))</span><br><span class="line"></span><br><span class="line">输出：</span><br><span class="line"><span class="number">0</span>  <span class="number">0</span></span><br><span class="line"><span class="number">1</span>  <span class="number">1</span> </span><br><span class="line"><span class="number">2</span>  <span class="number">2</span> </span><br><span class="line"><span class="number">3</span>  <span class="number">3</span> </span><br><span class="line"><span class="number">4</span>  <span class="number">4</span> </span><br></pre></td></tr></table></figure>
+<h2 id="Series类型对齐操作"><a href="#Series类型对齐操作" class="headerlink" title="Series类型对齐操作"></a>Series类型对齐操作</h2><p>Series+Series</p>
+<p>Series类型在运算中会自动对齐不同索引的数据</p>
+<h2 id="name属性-name"><a href="#name属性-name" class="headerlink" title="name属性(.name)"></a>name属性(.name)</h2><p>Series对象和索引都可以有一个名字，存储在属性.name中</p>
+<p>Series是一维带“标签”数组</p>
+<p>Series基本操作类似ndarray和字典，根据索引对齐</p>
+<p>DataFrame类型</p>
+<p>二维ndarray对象</p>
+<p>由一维ndarray、列表、字典、元组或series构成的字典</p>
+<h2 id="如何改变Series和DataFrame对象"><a href="#如何改变Series和DataFrame对象" class="headerlink" title="如何改变Series和DataFrame对象"></a>如何改变Series和DataFrame对象</h2><p>增加或重排：重新索引</p>
+<h3 id="重新索引"><a href="#重新索引" class="headerlink" title="重新索引"></a>重新索引</h3><p>.reindex()</p>
+<p>.reindex(希望排列之后的index关系)能够改变或者重排Series和DataFrame索引</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>index,columns</td>
+<td>新的行列自定义索引</td>
+</tr>
+<tr>
+<td>fill_value</td>
+<td>重新索引中，用于填充缺失位置的值</td>
+</tr>
+<tr>
+<td>method</td>
+<td>填充方法，ffill当前值向前填充，bfill向后填充</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>最大填充量</td>
+</tr>
+<tr>
+<td>copy</td>
+<td>默认True，生成新的对象，False时，新旧相等不复刻</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="索引类型"><a href="#索引类型" class="headerlink" title="索引类型"></a>索引类型</h2><p>Series和DataFrame的索引时index类型</p>
+<p>index对象是不可修改类型</p>
+<p>常用方法</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.append(idx)</td>
+<td>连接另一个index对象，产生新的index对象</td>
+</tr>
+<tr>
+<td>.diff(idx)</td>
+<td>计算差集，产生新的index对象</td>
+</tr>
+<tr>
+<td>.intersection(idx)</td>
+<td>计算交集</td>
+</tr>
+<tr>
+<td>.union(idx)</td>
+<td>计算并集</td>
+</tr>
+<tr>
+<td>.delete(loc)</td>
+<td>删除loc位置处的元素</td>
+</tr>
+<tr>
+<td>.insert(loc.e)</td>
+<td>在loc位置增加一个元素</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="删除指定索引对象"><a href="#删除指定索引对象" class="headerlink" title="删除指定索引对象"></a>删除指定索引对象</h2><p>.drop()能够删除Series和DataFrame指定行或列索引</p>
+<h2 id="pandas数据运算"><a href="#pandas数据运算" class="headerlink" title="pandas数据运算"></a>pandas数据运算</h2><p>算数运算法则</p>
+<p>算术运算根据行列索引，补齐后运算，运算默认产生浮点数</p>
+<p>补齐时缺项填充NaN（空值）</p>
+<p>二维和一维、一维和零维间的广播运算</p>
+<p>采用+-*/符号进行的二元运算产生新的对象</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.add(d,**argws)</td>
+<td>类型间加法运算，可选参数</td>
+</tr>
+<tr>
+<td>.sub(d,**argws)</td>
+<td>类型间减法运算，可选参数</td>
+</tr>
+<tr>
+<td>.mul(d,**argws)</td>
+<td>类型间乘法运算，可选参数</td>
+</tr>
+<tr>
+<td>.div(d,**argws)</td>
+<td>类型见除法运算，可选参数</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="比较运算法则"><a href="#比较运算法则" class="headerlink" title="比较运算法则"></a>比较运算法则</h2><p>比较运算只能比较相同索引的元素，不进行补齐。</p>
+<p>二维和一维、一维和零维间的广播运算</p>
+<p>采用&gt;&lt;&gt;=&lt;= == !=等符号进行的二元运算产生布尔对象</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>Series = 索引+一维数据</p>
+<p>DataFrame = 行列索引 + 二维数据</p>
+<p>理解数据类型与索引的关系，操作索引即操作数据</p>
+<p>像对待单一数据一样对待Series和DataFrame对象</p>
+<h2 id="数据排序"><a href="#数据排序" class="headerlink" title="数据排序"></a>数据排序</h2><p>.sort_index()方法在指定轴上根据索引进行排序，默认升序</p>
+<p>.sort_index(axis=0,ascending=True)</p>
+<p>ascending=False降序</p>
+<p>.sort_values()方法在指定轴上根据数值进行排序，默认升序</p>
+<p>Serious.sort_values(axis=0,ascending=True)</p>
+<p>DataFrame.sort_values(<strong>by</strong>,axis=0,ascending=True)</p>
+<p>by:axis轴上的某个索引或索引列表</p>
+<p>NaN统一放到排序末尾</p>
+<h2 id="基本的统计分析函数"><a href="#基本的统计分析函数" class="headerlink" title="基本的统计分析函数"></a>基本的统计分析函数</h2><p>适用Series和DataFrame类型</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.sum()</td>
+<td>计算数据的总和</td>
+</tr>
+<tr>
+<td>.count()</td>
+<td>非NaN值的数量</td>
+</tr>
+<tr>
+<td>.mean() .median()</td>
+<td>计算数据的算术平均值、算数中位数</td>
+</tr>
+<tr>
+<td>.var() .std()</td>
+<td>计算数据的方差、标准差</td>
+</tr>
+<tr>
+<td>.min() .max()</td>
+<td>计算数据的最小值、最大值</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>统计汇总</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>.describe</th>
+<th>针对0轴(各列)的统计汇总<sup><a href="#fn_1" id="reffn_1">1</a></sup></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>累计统计分析函数</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.cumsum()</td>
+<td>依次给出前1、2、……、n个数的和</td>
+</tr>
+<tr>
+<td>.cumprod()</td>
+<td>依次给出前1、2、……、n个数的积</td>
+</tr>
+<tr>
+<td>.cummax()</td>
+<td>依次给出前1、2、……、n个数的最大值</td>
+</tr>
+<tr>
+<td>.cummin()</td>
+<td>依次给出前1、2、……、n个数的最小值</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>滚动计算（窗口计算）</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明（跨行运算）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.rolling(w).sum()</td>
+<td>依次计算相邻w个元素的和</td>
+</tr>
+<tr>
+<td>.rolling(w).mean()</td>
+<td>依次计算相邻w个元素的算数平均值</td>
+</tr>
+<tr>
+<td>.rolling(w).var()</td>
+<td>依次计算相邻w个元素的方差</td>
+</tr>
+<tr>
+<td>.rowing(w).std()</td>
+<td>依次计算相邻w个元素的标准差</td>
+</tr>
+<tr>
+<td>.rowing(w).main().max()</td>
+<td>以此计算相邻w个元素的最小值和最大值</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="相关分析"><a href="#相关分析" class="headerlink" title="相关分析"></a>相关分析</h2><p>两个事物，表示x和y，如何判断它们之间的存在相关性</p>
+<p><strong>相关性</strong></p>
+<ul>
+<li>x增大，y增大，两个变量正相关</li>
+<li>x增大，y减小，两个变量负相关</li>
+<li>x增大，y无视，两个变量不相关</li>
+</ul>
+<p><strong>协方差</strong></p>
+<p>两个事物，表示x和y，如何判断它们之间的存在相关性</p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>数据分析</tag>
+        <tag>Pandas</tag>
       </tags>
   </entry>
   <entry>
@@ -956,68 +987,47 @@
       </tags>
   </entry>
   <entry>
-    <title>WSL | 搞机记录</title>
-    <url>/2023/11/26/WSL-%E6%90%9E%E6%9C%BA%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>关于wsl以及docker的搞机记录</p>
-</blockquote>
-<span id="more"></span>
-<h3 id="注销分发版本"><a href="#注销分发版本" class="headerlink" title="注销分发版本"></a>注销分发版本</h3><p>wsl—unregister Ubuntu </p>
-<h3 id="🐋wsl’s-docker"><a href="#🐋wsl’s-docker" class="headerlink" title="🐋wsl’s docker"></a>🐋wsl’s docker</h3><p>🎈镜像加速</p>
-<p>由于我们在国内的，因此拉取docker hub上的镜像可能也很慢。因此，一般还需要配置镜像加速，可以参考这篇文章：<a href="https://www.cnblogs.com/myitnews/p/11509546.html">https://www.cnblogs.com/myitnews/p/11509546.html</a></p>
-<p>因为wsl2已经完整使用了linux内核了，此种方式和先前在linux虚拟机安装docker类似，步骤如下：</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">$ curl -fsSL https://get.docker.com -o get-docker.sh</span><br><span class="line">$ sudo sh get-docker.sh</span><br><span class="line">$ sudo service docker start</span><br></pre></td></tr></table></figure>
-<p>执行脚本安装过程中，脚本提示“<strong>建议使用Docker Desktop for windows</strong>”，20s内按Ctrl+C会退出安装，所以需要等待20s，另外此种方式需要访问外网。期间需要等待20s，此种方式需要访问外网</p>
-<p>检查docker安装正常</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># 检查dockerd进程启动</span><br><span class="line">service docker status</span><br><span class="line">ps aux|grep docker</span><br><span class="line"># 检查拉取镜像等正常</span><br><span class="line">docker pull busybox</span><br><span class="line">docker images</span><br></pre></td></tr></table></figure>
-<p><strong>注意</strong>：不同于完全linux虚拟机方式，WLS2下通过<code>apt install docker-ce</code>命令安装的docker无法启动，因为WSL2方式的ubuntu里面没有systemd。上述官方get-docker.sh安装的docker，dockerd进程是用ubuntu传统的init方式而非systemd启动的。</p>
-<h4 id="卸载docker"><a href="#卸载docker" class="headerlink" title="卸载docker"></a>卸载docker</h4><p>卸载Docker<br>卸载Docker引擎、CLI 和 Containerd 软件包：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get purge docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure>
-<p>主机上的映像、容器、卷或自定义配置文件不会自动删除，必须手动删除任何已编辑的配置文件。如果要删除所有映像、容器和卷：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">rm</span> -rf /var/lib/docker</span><br><span class="line">sudo <span class="built_in">rm</span> -rf /var/lib/containerd</span><br></pre></td></tr></table></figure>
-<h3 id="将wsl进行转移至其他盘"><a href="#将wsl进行转移至其他盘" class="headerlink" title="将wsl进行转移至其他盘"></a>将wsl进行转移至其他盘</h3><p>Docker-WSL 集成在默认 WSL 分发版上启用，该分发版是<a href="https://learn.microsoft.com/en-us/windows/wsl/install">Ubuntu的open_in_new</a>.若要更改默认的 WSL 发行版，请运行：</p>
-<p> wsl —set-default &lt; distro name&gt; 更改默认发行版</p>
-<p>查看wsl的名称</p>
-<p>wsl -l -v</p>
+    <title>docker基础命令</title>
+    <url>/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/Docker.png" alt></p>
 <blockquote>
-<p>wsl —export Ubuntu-18.04 d:\wsl-ubuntu18.04.tar</p>
+<p>docker的基础命令<br><span id="more"></span></p>
 </blockquote>
-<p>注销当前分发版本</p>
-<blockquote>
-<p>wsl —unregister Debian</p>
-</blockquote>
-<p>重新导入并安装WSL在指定目录 </p>
-<p>我这里指定的目录就是d:\wsl-ubuntu18.04</p>
-<blockquote>
-<p>wsl —import Debian d:\wsl-ubuntu18.04 d:\wsl-ubuntu18.04.tar —version 2</p>
-</blockquote>
-<p>设置默认登陆用户为安装时用户名</p>
-<blockquote>
-<p>Debian config —default-user 你安装时候的用户名是啥就写啥</p>
-</blockquote>
-<h3 id="link-wsl"><a href="#link-wsl" class="headerlink" title="link-wsl"></a>link-wsl</h3><p>使用vscode连接wsl</p>
-<p>由于是使用wsl1安装的Linux，vscode建议我更新wsl2以提升性能</p>
-<p>使用<code>wsl -l</code>可以查看已安装的wsl,<code>wsl -l -v</code>可以看出当前已安装的wsl使用的内核版本</p>
-<p><code>wsl --set-version wsl的名字 2</code>即可</p>
-<p>wsl —list —verbose（用于检查下载的系统的名字是wsl1还是2）</p>
-<h2 id="Terminal-0101"><a href="#Terminal-0101" class="headerlink" title="Terminal(0101)"></a>Terminal(0101)</h2><center>嗯，使用独特的terminal感觉很棒，比起原生的terminal好得不能再好了</center>
-
-<h4 id="🔧目前安装的工具"><a href="#🔧目前安装的工具" class="headerlink" title="🔧目前安装的工具"></a>🔧目前安装的工具</h4><blockquote>
-<p>统一使用apt-get install</p>
-</blockquote>
-<ul>
-<li>net-tools</li>
-<li>curl</li>
-</ul>
-<h3 id="！注意事项"><a href="#！注意事项" class="headerlink" title="！注意事项"></a>！注意事项</h3><p>Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux</p>
-<p>会将系统中的wsl功能关闭，并删除相关配置文件，请谨慎使用</p>
+<p>docker pull 安装镜像</p>
+<p>docker run 运行镜像</p>
+<p>docker container run</p>
+<p>说明：</p>
+<p>创建好image后，新建容器时使用；</p>
+<p>每次运行，都会创建一个新的容器；</p>
+<p>新建的容器可以通过 docker container ls -a 或者 docker ps -a 查看（加 -a 表示查看所有创建好的容器）；</p>
+<p>每次创建会返回一个【长的容器ID】；</p>
+<p>通常情况下，运行一次即可；</p>
+<p>docker containers list -a 查看当前运行的所有镜像</p>
+<p>docker exec -it 【docker的名称】 bash  进入docker运行的bash环境中</p>
+<p>docker container start 【containerID】运行已经创建的容器</p>
+<p>docker ps -a 查看所有容器</p>
+<p>docker stop 【containerID】</p>
+<p>docker rm 【containerID】（先停止容器后才能删除）</p>
+<p>docker export 制作基础镜像，使用 <strong>docker export</strong> 命令根据容器 <strong>ID</strong> 将镜像导出成一个文件</p>
+<p>docker import - new_hangger_server &lt; hangger_server.tar 将这个镜像文件导入进来。</p>
+<p>docker load 载入镜像</p>
 ]]></content>
       <categories>
-        <category>搞机</category>
+        <category>docker</category>
       </categories>
       <tags>
-        <tag>折腾</tag>
+        <tag>docker</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>hexo&#39;s plugins</title>
+    <url>/2023/09/17/hexo-s-plugins/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>相关插件</p>
+</blockquote>
+<span id="more"></span>
+<p>配置支持mermaid<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-filter-mermaid-diagrams</span><br></pre></td></tr></table></figure></p>
+]]></content>
   </entry>
   <entry>
     <title>nvidia-smi基础信息</title>
@@ -1032,14 +1042,25 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo&#39;s plugins</title>
-    <url>/2023/09/17/hexo-s-plugins/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>相关插件</p>
-</blockquote>
-<span id="more"></span>
-<p>配置支持mermaid<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-filter-mermaid-diagrams</span><br></pre></td></tr></table></figure></p>
+    <title>win10配置问题速查手册</title>
+    <url>/2023/09/13/win10%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><span id="more"></span>
+<h2 id="⚙-配置类"><a href="#⚙-配置类" class="headerlink" title="⚙ 配置类"></a>⚙ 配置类</h2><h3 id="1-开启-Hyper-V-⚡"><a href="#1-开启-Hyper-V-⚡" class="headerlink" title="1. 开启 Hyper-V ⚡"></a>1. 开启 Hyper-V ⚡</h3><p>在这一部分，我们将学习如何开启 Hyper-V。这是一个包含了一些命令行操作的示例，可以通过一个批处理（bat）文件执行。这些操作将帮助你启用 Hyper-V。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">pushd</span> <span class="string">&quot;%~dp0&quot;</span></span><br><span class="line"><span class="built_in">dir</span> /b %SystemRoot%\servicing\Packages\*Hyper-V*.mum &gt;hyper-v.txt</span><br><span class="line"><span class="keyword">for</span> /f %%i <span class="keyword">in</span> (<span class="string">&#x27;findstr /i . hyper-v.txt 2^&gt;nul&#x27;</span>) <span class="keyword">do</span> dism /online /norestart /add-package:<span class="string">&quot;%SystemRoot%\servicing\Packages\%%i&quot;</span></span><br><span class="line">del hyper-v.txt</span><br><span class="line">Dism /online /enable-feature /featurename:Microsoft-Hyper-V-All /LimitAccess /ALL</span><br></pre></td></tr></table></figure>
+<h3 id="2-查看-Win10-系统启动项-👀"><a href="#2-查看-Win10-系统启动项-👀" class="headerlink" title="2. 查看 Win10 系统启动项 👀"></a>2. 查看 Win10 系统启动项 👀</h3><p>在这一部分，我们将了解如何查看 Win10 系统的启动项。这是通过任务管理器和一些操作来实现的，以确保你能够轻松地管理启动项。</p>
+<pre class="mermaid">graph LR;
+任务管理器 --> 启动 --查找程序--> 右键禁用;</pre>
+
+<h3 id="3-更改-Win10-电脑锁屏界面用户名-🚪👤"><a href="#3-更改-Win10-电脑锁屏界面用户名-🚪👤" class="headerlink" title="3. 更改 Win10 电脑锁屏界面用户名 🚪👤"></a>3. 更改 Win10 电脑锁屏界面用户名 🚪👤</h3><p>这一部分将向你展示如何更改 Win10 电脑锁屏界面上显示的用户名。这个过程可以通过开始菜单和计算机管理来完成。</p>
+<pre class="mermaid">graph LR
+开始菜单 --右键--> 计算机管理 --> 用户和组</pre>
 ]]></content>
+      <categories>
+        <category>win10</category>
+      </categories>
+      <tags>
+        <tag>win10</tag>
+      </tags>
   </entry>
   <entry>
     <title>一些有意思的事情分享</title>
@@ -1191,27 +1212,6 @@
       </tags>
   </entry>
   <entry>
-    <title>win10配置问题速查手册</title>
-    <url>/2023/09/13/win10%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><span id="more"></span>
-<h2 id="⚙-配置类"><a href="#⚙-配置类" class="headerlink" title="⚙ 配置类"></a>⚙ 配置类</h2><h3 id="1-开启-Hyper-V-⚡"><a href="#1-开启-Hyper-V-⚡" class="headerlink" title="1. 开启 Hyper-V ⚡"></a>1. 开启 Hyper-V ⚡</h3><p>在这一部分，我们将学习如何开启 Hyper-V。这是一个包含了一些命令行操作的示例，可以通过一个批处理（bat）文件执行。这些操作将帮助你启用 Hyper-V。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">pushd</span> <span class="string">&quot;%~dp0&quot;</span></span><br><span class="line"><span class="built_in">dir</span> /b %SystemRoot%\servicing\Packages\*Hyper-V*.mum &gt;hyper-v.txt</span><br><span class="line"><span class="keyword">for</span> /f %%i <span class="keyword">in</span> (<span class="string">&#x27;findstr /i . hyper-v.txt 2^&gt;nul&#x27;</span>) <span class="keyword">do</span> dism /online /norestart /add-package:<span class="string">&quot;%SystemRoot%\servicing\Packages\%%i&quot;</span></span><br><span class="line">del hyper-v.txt</span><br><span class="line">Dism /online /enable-feature /featurename:Microsoft-Hyper-V-All /LimitAccess /ALL</span><br></pre></td></tr></table></figure>
-<h3 id="2-查看-Win10-系统启动项-👀"><a href="#2-查看-Win10-系统启动项-👀" class="headerlink" title="2. 查看 Win10 系统启动项 👀"></a>2. 查看 Win10 系统启动项 👀</h3><p>在这一部分，我们将了解如何查看 Win10 系统的启动项。这是通过任务管理器和一些操作来实现的，以确保你能够轻松地管理启动项。</p>
-<pre class="mermaid">graph LR;
-任务管理器 --> 启动 --查找程序--> 右键禁用;</pre>
-
-<h3 id="3-更改-Win10-电脑锁屏界面用户名-🚪👤"><a href="#3-更改-Win10-电脑锁屏界面用户名-🚪👤" class="headerlink" title="3. 更改 Win10 电脑锁屏界面用户名 🚪👤"></a>3. 更改 Win10 电脑锁屏界面用户名 🚪👤</h3><p>这一部分将向你展示如何更改 Win10 电脑锁屏界面上显示的用户名。这个过程可以通过开始菜单和计算机管理来完成。</p>
-<pre class="mermaid">graph LR
-开始菜单 --右键--> 计算机管理 --> 用户和组</pre>
-]]></content>
-      <categories>
-        <category>win10</category>
-      </categories>
-      <tags>
-        <tag>win10</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>文案收集(更新中)</title>
     <url>/2023/06/25/%E6%96%87%E6%A1%88%E6%94%B6%E9%9B%86/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -1232,6 +1232,38 @@
       </categories>
       <tags>
         <tag>随想</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我的第一篇博客</title>
+    <url>/2023/06/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>你好，我是一名大三计算机科学与技术在校生，在此博客进行相关技术知识的分享</p>
+]]></content>
+      <tags>
+        <tag>第一篇博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>谨记！慎用git reset --hard</title>
+    <url>/2024/05/13/%E8%B0%A8%E8%AE%B0%EF%BC%81%E6%85%8E%E7%94%A8git-reset-hard/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="谨记！慎用git-reset-—hard"><a href="#谨记！慎用git-reset-—hard" class="headerlink" title="谨记！慎用git reset —hard"></a>谨记！慎用git reset —hard</h1><p>​    &gt; 又到了折腾输错command而引发bug的归属文章了</p>
+<span id="more"></span>
+<p>​    先声明以下参数的含义</p>
+<blockquote>
+<p><strong>—hard</strong> 参数撤销工作区中所有未提交的修改内容，将暂存区与工作区都回到上一次版本，并删除之前的所有信息提交：</p>
+<p><strong>—soft</strong> 参数用于回退到某个版本：</p>
+<p><strong>—mixed</strong> 为默认，可以不用带该参数，用于重置暂存区的文件与上一次的提交(commit)保持一致，工作区文件内容保持不变。</p>
+</blockquote>
+<p>​    博主经历如下：博主在使用ruoyi框架开发小项目时，不慎永久删除了相关的配置文件，导致ruoyi后台不能启动，当我想起ruoyi有git，使用reset可以回滚到指定版本，我使用了reset —hard 【指定版本号】后，发现ruoyi恢复到最初的版本了，之后就是不断地百度，发现使用<strong>hard</strong>参数回滚，<strong>参数撤销工作区中所有未提交的修改内容，将暂存区与工作区都回到上一次版本，并删除之前的所有信息提交</strong></p>
+<p>​    到这里我发现我已经将完成至50%的项目了回滚至完成度为20%的版本了，当我在使用git log来查询相应的历史版本，发现之前的提交的版本号已经没了。</p>
+<p>​    所以，谨记：在使用git进行回滚时，注意慎用—hard参数，幸好这不是用于大项目中，只是我个人小的项目而已，要不然不知道犯下多大的事故，至少这一个“blood”的教训能给我一次实际的经验。</p>
+]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>折腾</tag>
+        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -1302,31 +1334,6 @@
       </categories>
       <tags>
         <tag>计算机网络</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>谨记！慎用git reset --hard</title>
-    <url>/2024/05/13/%E8%B0%A8%E8%AE%B0%EF%BC%81%E6%85%8E%E7%94%A8git-reset-hard/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="谨记！慎用git-reset-—hard"><a href="#谨记！慎用git-reset-—hard" class="headerlink" title="谨记！慎用git reset —hard"></a>谨记！慎用git reset —hard</h1><p>​    &gt; 又到了折腾输错command而引发bug的归属文章了</p>
-<span id="more"></span>
-<p>​    先声明以下参数的含义</p>
-<blockquote>
-<p><strong>—hard</strong> 参数撤销工作区中所有未提交的修改内容，将暂存区与工作区都回到上一次版本，并删除之前的所有信息提交：</p>
-<p><strong>—soft</strong> 参数用于回退到某个版本：</p>
-<p><strong>—mixed</strong> 为默认，可以不用带该参数，用于重置暂存区的文件与上一次的提交(commit)保持一致，工作区文件内容保持不变。</p>
-</blockquote>
-<p>​    博主经历如下：博主在使用ruoyi框架开发小项目时，不慎永久删除了相关的配置文件，导致ruoyi后台不能启动，当我想起ruoyi有git，使用reset可以回滚到指定版本，我使用了reset —hard 【指定版本号】后，发现ruoyi恢复到最初的版本了，之后就是不断地百度，发现使用<strong>hard</strong>参数回滚，<strong>参数撤销工作区中所有未提交的修改内容，将暂存区与工作区都回到上一次版本，并删除之前的所有信息提交</strong></p>
-<p>​    到这里我发现我已经将完成至50%的项目了回滚至完成度为20%的版本了，当我在使用git log来查询相应的历史版本，发现之前的提交的版本号已经没了。</p>
-<p>​    所以，谨记：在使用git进行回滚时，注意慎用—hard参数，幸好这不是用于大项目中，只是我个人小的项目而已，要不然不知道犯下多大的事故，至少这一个“blood”的教训能给我一次实际的经验。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>我的第一篇博客</title>
-    <url>/2023/06/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>你好，我是一名大三计算机科学与技术在校生，在此博客进行相关技术知识的分享</p>
-]]></content>
-      <tags>
-        <tag>第一篇博客</tag>
       </tags>
   </entry>
   <entry>

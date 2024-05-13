@@ -6,7 +6,7 @@
   <link href="http://3kxr.me/atom.xml" rel="self"/>
   
   <link href="http://3kxr.me/"/>
-  <updated>2024-05-13T07:21:06.734Z</updated>
+  <updated>2024-05-13T07:30:40.913Z</updated>
   <id>http://3kxr.me/</id>
   
   <author>
@@ -21,13 +21,19 @@
     <link href="http://3kxr.me/2024/05/13/%E8%B0%A8%E8%AE%B0%EF%BC%81%E6%85%8E%E7%94%A8git-reset-hard/"/>
     <id>http://3kxr.me/2024/05/13/%E8%B0%A8%E8%AE%B0%EF%BC%81%E6%85%8E%E7%94%A8git-reset-hard/</id>
     <published>2024-05-13T07:18:23.000Z</published>
-    <updated>2024-05-13T07:21:06.734Z</updated>
+    <updated>2024-05-13T07:30:40.913Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;谨记！慎用git-reset-—hard&quot;&gt;&lt;a href=&quot;#谨记！慎用git-reset-—hard&quot; class=&quot;headerlink&quot; title=&quot;谨记！慎用git reset —hard&quot;&gt;&lt;/a&gt;谨记！慎用git reset —hard&lt;/h1&gt;&lt;p&gt;​    &amp;gt; 又到了折腾输错command而引发bug的归属文章了&lt;/p&gt;</summary>
     
     
     
+    <category term="git" scheme="http://3kxr.me/categories/git/"/>
+    
+    
+    <category term="折腾" scheme="http://3kxr.me/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="git" scheme="http://3kxr.me/tags/git/"/>
     
   </entry>
   
