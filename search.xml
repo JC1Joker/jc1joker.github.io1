@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>3Kxr在这里祝大家龙年快乐！</title>
-    <url>/2024/02/13/3Kxr%E5%9C%A8%E8%BF%99%E9%87%8C%E7%A5%9D%E5%A4%A7%E5%AE%B6%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>🐉行龘龘 好事成双</p>
-</blockquote>
-]]></content>
-  </entry>
-  <entry>
     <title>Fitness Zone</title>
     <url>/2023/09/20/Fitness-Zone/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -24,6 +16,14 @@
       <tags>
         <tag>健身</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>3Kxr在这里祝大家龙年快乐！</title>
+    <url>/2024/02/13/3Kxr%E5%9C%A8%E8%BF%99%E9%87%8C%E7%A5%9D%E5%A4%A7%E5%AE%B6%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>🐉行龘龘 好事成双</p>
+</blockquote>
+]]></content>
   </entry>
   <entry>
     <title>Linux中开启ssh的配置😎🐱‍💻</title>
@@ -72,346 +72,6 @@
 ]]></content>
       <tags>
         <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Numpy笔记</title>
-    <url>/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/NumPy_logo_2020.png" alt></p>
-<blockquote>
-<p>MOOC课程，数据分析相关课程，Numpy笔记</p>
-</blockquote>
-<span id="more"></span>
-<h2 id="统计函数"><a href="#统计函数" class="headerlink" title="统计函数"></a>统计函数</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">函数</th>
-<th style="text-align:center">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">sum(a,axis-None)</td>
-<td style="text-align:center">根据给定轴axis计算数组a相关元素之和，axis整数或元组</td>
-</tr>
-<tr>
-<td style="text-align:center">mean(a,axis-None)</td>
-<td style="text-align:center">根据给定轴axis计算数组a相关元素的期望，axis整数或元组</td>
-</tr>
-<tr>
-<td style="text-align:center">average(a,axis=None)</td>
-<td style="text-align:center">根据给定轴axis计算数组a相关元素的加权平均值</td>
-</tr>
-<tr>
-<td style="text-align:center">std(a,axis=None)</td>
-<td style="text-align:center">根据给定轴axis计算数组a相关元素的标准差</td>
-</tr>
-<tr>
-<td style="text-align:center">var(a,axis=None)</td>
-<td style="text-align:center">根据给定轴axis计算数组a县官元素的方差</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="随机函数"><a href="#随机函数" class="headerlink" title="随机函数"></a>随机函数</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>函数</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>np.random.rand()</td>
-<td></td>
-</tr>
-<tr>
-<td>np.random.randn()</td>
-<td></td>
-</tr>
-<tr>
-<td>np.random.randint()</td>
-<td></td>
-</tr>
-<tr>
-<td>np.random.seed()</td>
-<td></td>
-</tr>
-<tr>
-<td>np.random.shuffle()</td>
-<td></td>
-</tr>
-<tr>
-<td>np.random.permutation()</td>
-<td></td>
-</tr>
-<tr>
-<td>np.random.choice()</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="random梯度函数"><a href="#random梯度函数" class="headerlink" title="random梯度函数"></a>random梯度函数</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>函数</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>np.gradient(f)</td>
-<td>计算数组f中元素的梯度，当f为多维时，返回每个维度梯度</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>梯度：连续值之间的变化率，即斜率</p>
-<p>XY坐标轴连续三个X坐标对应的Y轴值：a，b，c，其中，b的踢肚时：(c-a)/2</p>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>数据存取与函数</p>
-<ul>
-<li>CSV文件</li>
-<li>np.loadtxt()</li>
-<li>np.savetxt()</li>
-</ul>
-<p>多维数组存取</p>
-<ul>
-<li>a.tofile()</li>
-<li>np.fromfile()</li>
-<li>np.save()</li>
-<li>np.savez()</li>
-<li>np.load()</li>
-</ul>
-<h2 id="图像的数组表示"><a href="#图像的数组表示" class="headerlink" title="图像的数组表示"></a>图像的数组表示</h2><p>图像是一个三维数组，维度分别是高度、宽度和像素RGB值</p>
-<p>示例代码：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">im=np.array(Image.<span class="built_in">open</span>(<span class="string">&quot;D:/&quot;</span>))</span><br><span class="line"><span class="built_in">print</span>(im.shape,im.dtype)</span><br><span class="line"><span class="comment">#输出(699,1012,3)uint8</span></span><br></pre></td></tr></table></figure>
-<h2 id="图像的变换"><a href="#图像的变换" class="headerlink" title="图像的变换"></a>图像的变换</h2><p>读入图像后，获得像素RGB值，修改后保存为新的文件</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">im=np.array(Image.<span class="built_in">open</span>(<span class="string">&quot;D:/&quot;</span>))</span><br><span class="line"><span class="built_in">print</span>(im.shape,im.dtype)</span><br><span class="line"></span><br><span class="line">b=[<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>]-a <span class="comment">#这是一个三维数组RGB的补值</span></span><br><span class="line"></span><br><span class="line">im = Image.fromarray(b.astype(<span class="string">&#x27;uint8&#x27;</span>))</span><br><span class="line">im.save(<span class="string">&#x27;b.jpg&#x27;</span>)</span><br><span class="line"><span class="comment">#输出(699,1012,3)uint8</span></span><br></pre></td></tr></table></figure>
-<h2 id="图像手绘风格"><a href="#图像手绘风格" class="headerlink" title="图像手绘风格"></a>图像手绘风格</h2><p><code>梯度的重构</code></p>
-<blockquote>
-<p>利用像素之间的梯度值和虚拟深度值对图像进行重构，根据灰度变化来模拟人类视觉的明暗程度</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a= np.asarray(Image.<span class="built_in">open</span>(<span class="string">&#x27;ins.jpg&#x27;</span>).convert(<span class="string">&#x27;L&#x27;</span>)).astype(<span class="string">&#x27;float&#x27;</span>)</span><br><span class="line"></span><br><span class="line">depth = <span class="number">10.</span>         <span class="comment">#(0-100)预设深度值为10</span></span><br><span class="line">grad = np.gradient(a)      <span class="comment">#取图像灰度的梯度值，提取x和y方向的梯度值</span></span><br><span class="line">grad_x , grad_y = grad      <span class="comment"># 分别取横纵图相梯度值</span></span><br><span class="line">grad_x = grad_x*depth/<span class="number">100.</span><span class="comment">#根据深度调整x和y方向的梯度值</span></span><br><span class="line">grad_y = grad_y*depth/<span class="number">100.</span></span><br><span class="line">A = np.sqrt(grad_x**<span class="number">2</span> + grad_y**<span class="number">2</span> + <span class="number">1.</span>)</span><br><span class="line"></span><br><span class="line">uni_x = grad_x/A</span><br><span class="line">uni_y = grad_y/A</span><br><span class="line">uni_z = <span class="number">1.</span>/A</span><br><span class="line"></span><br><span class="line">vec_e1 = np.pi/<span class="number">2.2</span>                  <span class="comment">#光源的俯视角度，弧度值</span></span><br><span class="line">vec_az = np.pi/<span class="number">4.</span>                   <span class="comment"># 光源的方位角度，弧度值</span></span><br><span class="line">dx = np.cos(vec_e1)*np.cos(vec_az) <span class="comment"># 光源对x轴的影响 np.cos(vec_e1)为单位光线在地平面上的投影长度</span></span><br><span class="line">dy = np.cos(vec_e1)*np.sin(vec_az) <span class="comment"># 光源对y轴的影响</span></span><br><span class="line">dz = np.sin(vec_e1)             <span class="comment">#光源对z轴的影响</span></span><br><span class="line"></span><br><span class="line">b = <span class="number">255</span>*(dx*uni_x + dy*uni_y + dz*uni_z)<span class="comment"># 光源归一化</span></span><br><span class="line">b = b.clip(<span class="number">0</span>,<span class="number">255</span>) <span class="comment">#clip 截断，限制数组的上下界,减少像素溢出</span></span><br><span class="line"></span><br><span class="line">im = Image.fromarray(b.astype(<span class="string">&#x27;uint8&#x27;</span>))  <span class="comment">#重构图像</span></span><br><span class="line">im.show()</span><br><span class="line"><span class="comment"># im.save(&#x27;11.jpg&#x27;)</span></span><br></pre></td></tr></table></figure>
-<p>光源效果：</p>
-<p>根据灰度变化来模拟人类视觉的远近程度</p>
-<h1 id="matplotlib-pyplot"><a href="#matplotlib-pyplot" class="headerlink" title="matplotlib.pyplot"></a>matplotlib.pyplot</h1><h2 id="pyplot绘图区域"><a href="#pyplot绘图区域" class="headerlink" title="pyplot绘图区域"></a>pyplot绘图区域</h2><p>plt.subplot(nrows.ncols,lot_number)</p>
-<h2 id="plot"><a href="#plot" class="headerlink" title="plot"></a>plot</h2><p>plt.plot(x,y,format_string,**kwargs)</p>
-<ul>
-<li><p>x:X轴数据，列表或数组，可选</p>
-</li>
-<li><p>y:Y轴数据，列表或数组</p>
-</li>
-<li><p>format_string：控制曲线的格式字符串，可选，由颜色字符、风格字符和标记字符组成</p>
-<ul>
-<li><p>颜色字符对应英文首字母</p>
-</li>
-<li><p>风格字符</p>
-</li>
-</ul>
-<p><code>-</code>实线</p>
-<p><code>--</code>破折线</p>
-<p><code>-.</code>点划线</p>
-<p><code>:</code>虚线</p>
-<ul>
-<li>格式字符串</li>
-</ul>
-<p><code>.</code>点标记</p>
-<p><code>,</code>像素标记</p>
-<p><code>o</code>实心圈标记</p>
-<p><code>v</code>倒三角标记</p>
-<p><code>^</code>上三角标记</p>
-<p><code>&gt;</code>右三角标记</p>
-<p><code>&lt;</code>左三角标记</p>
-<p><code>1</code>下花三角标记</p>
-<p><code>2</code>上花三角标记</p>
-<p><code>3</code>左花三角标记</p>
-<p><code>4</code>右花三角标记</p>
-<p><code>s</code>实心方形标记</p>
-<p><code>p</code>实心五角标记</p>
-<p><code>*</code>星形标记</p>
-<p><code>h</code>竖六边形标记</p>
-<p><code>H</code>横六边形标记</p>
-<p><code>+</code>十字标记</p>
-<p><code>x</code>x标记</p>
-<p><code>D</code>菱形标记</p>
-<p><code>d</code>瘦菱形标记</p>
-<p><code>|</code>垂直线标记</p>
-</li>
-</ul>
-<ul>
-<li><p>**kwargs：第二组或更多（x,y,format_string）</p>
-<ul>
-<li>color：控制颜色，color=‘green’</li>
-<li>linestyle：线条风格，linestyle=‘dashed’</li>
-<li>marker：标记风格，marker=’o‘</li>
-<li>markerfacecolor：标记颜色，markerfacecolor=’blue‘</li>
-<li>markersize：标记尺寸，markersize=20</li>
-<li>……</li>
-</ul>
-</li>
-</ul>
-<p>当绘制多条曲线时，各条曲线的x不能省略</p>
-<h3 id="pyplot中文显示方法"><a href="#pyplot中文显示方法" class="headerlink" title="pyplot中文显示方法"></a>pyplot中文显示方法</h3><ul>
-<li>方法一：需要<strong>rcParams</strong>修改字体实现</li>
-</ul>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>属性(单引号需加上)</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>‘font.family’</td>
-<td>用于显示字体的名字</td>
-</tr>
-<tr>
-<td>’font.style‘</td>
-<td>字体风格，正常’normal‘或 斜体’italic‘</td>
-</tr>
-<tr>
-<td>’font.size‘</td>
-<td>字体大小，整数字号或者’large‘、’x-small‘</td>
-</tr>
-</tbody>
-</table>
-</div>
-<ul>
-<li>方法二：在有中文输出的地方，增加一个属性：fontproperties</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">plt.xlabel(<span class="string">&quot;横轴(值)&quot;</span>,fontproperties=<span class="string">&#x27;SimHei&#x27;</span>,fontsize=<span class="number">20</span>)</span><br><span class="line">plt.ylabel(<span class="string">&quot;grade&quot;</span>,,fontproperties=<span class="string">&#x27;SimHei&#x27;</span>,fontsize=<span class="number">20</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="pyplot的文本显示方法"><a href="#pyplot的文本显示方法" class="headerlink" title="pyplot的文本显示方法"></a>pyplot的文本显示方法</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>函数</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>plt.xlabel()</td>
-<td>对x轴添加文本标签</td>
-</tr>
-<tr>
-<td>plt.ylabel()</td>
-<td>对y轴添加文本标签</td>
-</tr>
-<tr>
-<td>plt.title()</td>
-<td>对图形整体增加文本标签</td>
-</tr>
-<tr>
-<td>plt.text()</td>
-<td>在任意位置增加文本</td>
-</tr>
-<tr>
-<td>plt.annotate()</td>
-<td>在图形中增加带箭头注释</td>
-</tr>
-</tbody>
-</table>
-</div>
-<blockquote>
-<p>LaTeX语法 </p>
-<p>$正弦波实例 y = cos(2pix)$</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">plt.annotate()</span><br></pre></td></tr></table></figure>
-<p><img src="/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/Users\JC\AppData\Roaming\Typora\typora-user-images\image-20220504183915496.png" alt="image-20220504183915496"></p>
-<p>plt.subplot2grid(GridSpec,CurSpec,colspan=1,rowspan=1)</p>
-<p>理念：设定网格，选中网格，确定选中行列区域数量，编号从0开始</p>
-<h2 id="GridSpec类"><a href="#GridSpec类" class="headerlink" title="GridSpec类"></a>GridSpec类</h2><p>实行多种格子</p>
-<h2 id="pyplot基础图表函数"><a href="#pyplot基础图表函数" class="headerlink" title="pyplot基础图表函数"></a>pyplot基础图表函数</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>函数</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>plt.plot(x,y,fmt,…)</td>
-<td>绘制一个坐标图</td>
-</tr>
-<tr>
-<td>plt.boxplot(data,notch,position)</td>
-<td>绘制一个箱型图</td>
-</tr>
-<tr>
-<td>plt.bar(left,height,width,bottom)</td>
-<td>绘制一个条形图</td>
-</tr>
-<tr>
-<td>plt.barh(width,bottom,left,height)</td>
-<td>绘制一个横向条形图</td>
-</tr>
-<tr>
-<td>plt.polar(theta,r)</td>
-<td>绘制极坐标图</td>
-</tr>
-<tr>
-<td>plt.pie(data,explode)</td>
-<td>绘制饼图</td>
-</tr>
-<tr>
-<td>plt.psd(x.NFFT=256,pad_to,Fs)</td>
-<td>绘制功率谱密度图</td>
-</tr>
-<tr>
-<td>plt.specgram(x.NFFT=256,pad_to,Fs)</td>
-<td>绘制谱图</td>
-</tr>
-<tr>
-<td>plt.cohere(x,y,NFFT=256,Fs)</td>
-<td>绘制x-y相关性函数</td>
-</tr>
-<tr>
-<td>plt.step(s,y,where)</td>
-<td>绘制步阶图</td>
-</tr>
-<tr>
-<td>plt.hist(x,bins,normed)</td>
-<td>绘制直方图</td>
-</tr>
-<tr>
-<td>plt.scatter(x,y)</td>
-<td>绘制散点图，其中x和y长度相同</td>
-</tr>
-<tr>
-<td>plt.contour(X,Y,Z,N)</td>
-<td>绘制等值图</td>
-</tr>
-<tr>
-<td>plt.vlines()</td>
-<td>绘制垂直图</td>
-</tr>
-<tr>
-<td>plt.stem(x,y,linefmt,markerfmt)</td>
-<td>绘制柴火图</td>
-</tr>
-<tr>
-<td>plt.plot_date()</td>
-<td>绘制数据日期</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>startangle=90 起始角度</p>
-<p>bin:直方图的个数</p>
-<p>normed：纵坐标出现元素的个数</p>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>数据分析</tag>
-        <tag>Numpy</tag>
       </tags>
   </entry>
   <entry>
@@ -814,6 +474,379 @@
       </tags>
   </entry>
   <entry>
+    <title>Numpy笔记</title>
+    <url>/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/NumPy_logo_2020.png" alt></p>
+<blockquote>
+<p>MOOC课程，数据分析相关课程，Numpy笔记</p>
+</blockquote>
+<span id="more"></span>
+<h2 id="统计函数"><a href="#统计函数" class="headerlink" title="统计函数"></a>统计函数</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">sum(a,axis-None)</td>
+<td style="text-align:center">根据给定轴axis计算数组a相关元素之和，axis整数或元组</td>
+</tr>
+<tr>
+<td style="text-align:center">mean(a,axis-None)</td>
+<td style="text-align:center">根据给定轴axis计算数组a相关元素的期望，axis整数或元组</td>
+</tr>
+<tr>
+<td style="text-align:center">average(a,axis=None)</td>
+<td style="text-align:center">根据给定轴axis计算数组a相关元素的加权平均值</td>
+</tr>
+<tr>
+<td style="text-align:center">std(a,axis=None)</td>
+<td style="text-align:center">根据给定轴axis计算数组a相关元素的标准差</td>
+</tr>
+<tr>
+<td style="text-align:center">var(a,axis=None)</td>
+<td style="text-align:center">根据给定轴axis计算数组a县官元素的方差</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="随机函数"><a href="#随机函数" class="headerlink" title="随机函数"></a>随机函数</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>np.random.rand()</td>
+<td></td>
+</tr>
+<tr>
+<td>np.random.randn()</td>
+<td></td>
+</tr>
+<tr>
+<td>np.random.randint()</td>
+<td></td>
+</tr>
+<tr>
+<td>np.random.seed()</td>
+<td></td>
+</tr>
+<tr>
+<td>np.random.shuffle()</td>
+<td></td>
+</tr>
+<tr>
+<td>np.random.permutation()</td>
+<td></td>
+</tr>
+<tr>
+<td>np.random.choice()</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="random梯度函数"><a href="#random梯度函数" class="headerlink" title="random梯度函数"></a>random梯度函数</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>np.gradient(f)</td>
+<td>计算数组f中元素的梯度，当f为多维时，返回每个维度梯度</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>梯度：连续值之间的变化率，即斜率</p>
+<p>XY坐标轴连续三个X坐标对应的Y轴值：a，b，c，其中，b的踢肚时：(c-a)/2</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>数据存取与函数</p>
+<ul>
+<li>CSV文件</li>
+<li>np.loadtxt()</li>
+<li>np.savetxt()</li>
+</ul>
+<p>多维数组存取</p>
+<ul>
+<li>a.tofile()</li>
+<li>np.fromfile()</li>
+<li>np.save()</li>
+<li>np.savez()</li>
+<li>np.load()</li>
+</ul>
+<h2 id="图像的数组表示"><a href="#图像的数组表示" class="headerlink" title="图像的数组表示"></a>图像的数组表示</h2><p>图像是一个三维数组，维度分别是高度、宽度和像素RGB值</p>
+<p>示例代码：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">im=np.array(Image.<span class="built_in">open</span>(<span class="string">&quot;D:/&quot;</span>))</span><br><span class="line"><span class="built_in">print</span>(im.shape,im.dtype)</span><br><span class="line"><span class="comment">#输出(699,1012,3)uint8</span></span><br></pre></td></tr></table></figure>
+<h2 id="图像的变换"><a href="#图像的变换" class="headerlink" title="图像的变换"></a>图像的变换</h2><p>读入图像后，获得像素RGB值，修改后保存为新的文件</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">im=np.array(Image.<span class="built_in">open</span>(<span class="string">&quot;D:/&quot;</span>))</span><br><span class="line"><span class="built_in">print</span>(im.shape,im.dtype)</span><br><span class="line"></span><br><span class="line">b=[<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>]-a <span class="comment">#这是一个三维数组RGB的补值</span></span><br><span class="line"></span><br><span class="line">im = Image.fromarray(b.astype(<span class="string">&#x27;uint8&#x27;</span>))</span><br><span class="line">im.save(<span class="string">&#x27;b.jpg&#x27;</span>)</span><br><span class="line"><span class="comment">#输出(699,1012,3)uint8</span></span><br></pre></td></tr></table></figure>
+<h2 id="图像手绘风格"><a href="#图像手绘风格" class="headerlink" title="图像手绘风格"></a>图像手绘风格</h2><p><code>梯度的重构</code></p>
+<blockquote>
+<p>利用像素之间的梯度值和虚拟深度值对图像进行重构，根据灰度变化来模拟人类视觉的明暗程度</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a= np.asarray(Image.<span class="built_in">open</span>(<span class="string">&#x27;ins.jpg&#x27;</span>).convert(<span class="string">&#x27;L&#x27;</span>)).astype(<span class="string">&#x27;float&#x27;</span>)</span><br><span class="line"></span><br><span class="line">depth = <span class="number">10.</span>         <span class="comment">#(0-100)预设深度值为10</span></span><br><span class="line">grad = np.gradient(a)      <span class="comment">#取图像灰度的梯度值，提取x和y方向的梯度值</span></span><br><span class="line">grad_x , grad_y = grad      <span class="comment"># 分别取横纵图相梯度值</span></span><br><span class="line">grad_x = grad_x*depth/<span class="number">100.</span><span class="comment">#根据深度调整x和y方向的梯度值</span></span><br><span class="line">grad_y = grad_y*depth/<span class="number">100.</span></span><br><span class="line">A = np.sqrt(grad_x**<span class="number">2</span> + grad_y**<span class="number">2</span> + <span class="number">1.</span>)</span><br><span class="line"></span><br><span class="line">uni_x = grad_x/A</span><br><span class="line">uni_y = grad_y/A</span><br><span class="line">uni_z = <span class="number">1.</span>/A</span><br><span class="line"></span><br><span class="line">vec_e1 = np.pi/<span class="number">2.2</span>                  <span class="comment">#光源的俯视角度，弧度值</span></span><br><span class="line">vec_az = np.pi/<span class="number">4.</span>                   <span class="comment"># 光源的方位角度，弧度值</span></span><br><span class="line">dx = np.cos(vec_e1)*np.cos(vec_az) <span class="comment"># 光源对x轴的影响 np.cos(vec_e1)为单位光线在地平面上的投影长度</span></span><br><span class="line">dy = np.cos(vec_e1)*np.sin(vec_az) <span class="comment"># 光源对y轴的影响</span></span><br><span class="line">dz = np.sin(vec_e1)             <span class="comment">#光源对z轴的影响</span></span><br><span class="line"></span><br><span class="line">b = <span class="number">255</span>*(dx*uni_x + dy*uni_y + dz*uni_z)<span class="comment"># 光源归一化</span></span><br><span class="line">b = b.clip(<span class="number">0</span>,<span class="number">255</span>) <span class="comment">#clip 截断，限制数组的上下界,减少像素溢出</span></span><br><span class="line"></span><br><span class="line">im = Image.fromarray(b.astype(<span class="string">&#x27;uint8&#x27;</span>))  <span class="comment">#重构图像</span></span><br><span class="line">im.show()</span><br><span class="line"><span class="comment"># im.save(&#x27;11.jpg&#x27;)</span></span><br></pre></td></tr></table></figure>
+<p>光源效果：</p>
+<p>根据灰度变化来模拟人类视觉的远近程度</p>
+<h1 id="matplotlib-pyplot"><a href="#matplotlib-pyplot" class="headerlink" title="matplotlib.pyplot"></a>matplotlib.pyplot</h1><h2 id="pyplot绘图区域"><a href="#pyplot绘图区域" class="headerlink" title="pyplot绘图区域"></a>pyplot绘图区域</h2><p>plt.subplot(nrows.ncols,lot_number)</p>
+<h2 id="plot"><a href="#plot" class="headerlink" title="plot"></a>plot</h2><p>plt.plot(x,y,format_string,**kwargs)</p>
+<ul>
+<li><p>x:X轴数据，列表或数组，可选</p>
+</li>
+<li><p>y:Y轴数据，列表或数组</p>
+</li>
+<li><p>format_string：控制曲线的格式字符串，可选，由颜色字符、风格字符和标记字符组成</p>
+<ul>
+<li><p>颜色字符对应英文首字母</p>
+</li>
+<li><p>风格字符</p>
+</li>
+</ul>
+<p><code>-</code>实线</p>
+<p><code>--</code>破折线</p>
+<p><code>-.</code>点划线</p>
+<p><code>:</code>虚线</p>
+<ul>
+<li>格式字符串</li>
+</ul>
+<p><code>.</code>点标记</p>
+<p><code>,</code>像素标记</p>
+<p><code>o</code>实心圈标记</p>
+<p><code>v</code>倒三角标记</p>
+<p><code>^</code>上三角标记</p>
+<p><code>&gt;</code>右三角标记</p>
+<p><code>&lt;</code>左三角标记</p>
+<p><code>1</code>下花三角标记</p>
+<p><code>2</code>上花三角标记</p>
+<p><code>3</code>左花三角标记</p>
+<p><code>4</code>右花三角标记</p>
+<p><code>s</code>实心方形标记</p>
+<p><code>p</code>实心五角标记</p>
+<p><code>*</code>星形标记</p>
+<p><code>h</code>竖六边形标记</p>
+<p><code>H</code>横六边形标记</p>
+<p><code>+</code>十字标记</p>
+<p><code>x</code>x标记</p>
+<p><code>D</code>菱形标记</p>
+<p><code>d</code>瘦菱形标记</p>
+<p><code>|</code>垂直线标记</p>
+</li>
+</ul>
+<ul>
+<li><p>**kwargs：第二组或更多（x,y,format_string）</p>
+<ul>
+<li>color：控制颜色，color=‘green’</li>
+<li>linestyle：线条风格，linestyle=‘dashed’</li>
+<li>marker：标记风格，marker=’o‘</li>
+<li>markerfacecolor：标记颜色，markerfacecolor=’blue‘</li>
+<li>markersize：标记尺寸，markersize=20</li>
+<li>……</li>
+</ul>
+</li>
+</ul>
+<p>当绘制多条曲线时，各条曲线的x不能省略</p>
+<h3 id="pyplot中文显示方法"><a href="#pyplot中文显示方法" class="headerlink" title="pyplot中文显示方法"></a>pyplot中文显示方法</h3><ul>
+<li>方法一：需要<strong>rcParams</strong>修改字体实现</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>属性(单引号需加上)</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>‘font.family’</td>
+<td>用于显示字体的名字</td>
+</tr>
+<tr>
+<td>’font.style‘</td>
+<td>字体风格，正常’normal‘或 斜体’italic‘</td>
+</tr>
+<tr>
+<td>’font.size‘</td>
+<td>字体大小，整数字号或者’large‘、’x-small‘</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>方法二：在有中文输出的地方，增加一个属性：fontproperties</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">plt.xlabel(<span class="string">&quot;横轴(值)&quot;</span>,fontproperties=<span class="string">&#x27;SimHei&#x27;</span>,fontsize=<span class="number">20</span>)</span><br><span class="line">plt.ylabel(<span class="string">&quot;grade&quot;</span>,,fontproperties=<span class="string">&#x27;SimHei&#x27;</span>,fontsize=<span class="number">20</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="pyplot的文本显示方法"><a href="#pyplot的文本显示方法" class="headerlink" title="pyplot的文本显示方法"></a>pyplot的文本显示方法</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>plt.xlabel()</td>
+<td>对x轴添加文本标签</td>
+</tr>
+<tr>
+<td>plt.ylabel()</td>
+<td>对y轴添加文本标签</td>
+</tr>
+<tr>
+<td>plt.title()</td>
+<td>对图形整体增加文本标签</td>
+</tr>
+<tr>
+<td>plt.text()</td>
+<td>在任意位置增加文本</td>
+</tr>
+<tr>
+<td>plt.annotate()</td>
+<td>在图形中增加带箭头注释</td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>LaTeX语法 </p>
+<p>$正弦波实例 y = cos(2pix)$</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">plt.annotate()</span><br></pre></td></tr></table></figure>
+<p><img src="/2023/06/29/Numpy%E7%AC%94%E8%AE%B0/Users\JC\AppData\Roaming\Typora\typora-user-images\image-20220504183915496.png" alt="image-20220504183915496"></p>
+<p>plt.subplot2grid(GridSpec,CurSpec,colspan=1,rowspan=1)</p>
+<p>理念：设定网格，选中网格，确定选中行列区域数量，编号从0开始</p>
+<h2 id="GridSpec类"><a href="#GridSpec类" class="headerlink" title="GridSpec类"></a>GridSpec类</h2><p>实行多种格子</p>
+<h2 id="pyplot基础图表函数"><a href="#pyplot基础图表函数" class="headerlink" title="pyplot基础图表函数"></a>pyplot基础图表函数</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>plt.plot(x,y,fmt,…)</td>
+<td>绘制一个坐标图</td>
+</tr>
+<tr>
+<td>plt.boxplot(data,notch,position)</td>
+<td>绘制一个箱型图</td>
+</tr>
+<tr>
+<td>plt.bar(left,height,width,bottom)</td>
+<td>绘制一个条形图</td>
+</tr>
+<tr>
+<td>plt.barh(width,bottom,left,height)</td>
+<td>绘制一个横向条形图</td>
+</tr>
+<tr>
+<td>plt.polar(theta,r)</td>
+<td>绘制极坐标图</td>
+</tr>
+<tr>
+<td>plt.pie(data,explode)</td>
+<td>绘制饼图</td>
+</tr>
+<tr>
+<td>plt.psd(x.NFFT=256,pad_to,Fs)</td>
+<td>绘制功率谱密度图</td>
+</tr>
+<tr>
+<td>plt.specgram(x.NFFT=256,pad_to,Fs)</td>
+<td>绘制谱图</td>
+</tr>
+<tr>
+<td>plt.cohere(x,y,NFFT=256,Fs)</td>
+<td>绘制x-y相关性函数</td>
+</tr>
+<tr>
+<td>plt.step(s,y,where)</td>
+<td>绘制步阶图</td>
+</tr>
+<tr>
+<td>plt.hist(x,bins,normed)</td>
+<td>绘制直方图</td>
+</tr>
+<tr>
+<td>plt.scatter(x,y)</td>
+<td>绘制散点图，其中x和y长度相同</td>
+</tr>
+<tr>
+<td>plt.contour(X,Y,Z,N)</td>
+<td>绘制等值图</td>
+</tr>
+<tr>
+<td>plt.vlines()</td>
+<td>绘制垂直图</td>
+</tr>
+<tr>
+<td>plt.stem(x,y,linefmt,markerfmt)</td>
+<td>绘制柴火图</td>
+</tr>
+<tr>
+<td>plt.plot_date()</td>
+<td>绘制数据日期</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>startangle=90 起始角度</p>
+<p>bin:直方图的个数</p>
+<p>normed：纵坐标出现元素的个数</p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>数据分析</tag>
+        <tag>Numpy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>docker基础命令</title>
+    <url>/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/Docker.png" alt></p>
+<blockquote>
+<p>docker的基础命令<br><span id="more"></span></p>
+</blockquote>
+<p>docker pull 安装镜像</p>
+<p>docker run 运行镜像</p>
+<p>docker container run</p>
+<p>说明：</p>
+<p>创建好image后，新建容器时使用；</p>
+<p>每次运行，都会创建一个新的容器；</p>
+<p>新建的容器可以通过 docker container ls -a 或者 docker ps -a 查看（加 -a 表示查看所有创建好的容器）；</p>
+<p>每次创建会返回一个【长的容器ID】；</p>
+<p>通常情况下，运行一次即可；</p>
+<p>docker containers list -a 查看当前运行的所有镜像</p>
+<p>docker exec -it 【docker的名称】 bash  进入docker运行的bash环境中</p>
+<p>docker container start 【containerID】运行已经创建的容器</p>
+<p>docker ps -a 查看所有容器</p>
+<p>docker stop 【containerID】</p>
+<p>docker rm 【containerID】（先停止容器后才能删除）</p>
+<p>docker export 制作基础镜像，使用 <strong>docker export</strong> 命令根据容器 <strong>ID</strong> 将镜像导出成一个文件</p>
+<p>docker import - new_hangger_server &lt; hangger_server.tar 将这个镜像文件导入进来。</p>
+<p>docker load 载入镜像</p>
+]]></content>
+      <categories>
+        <category>docker</category>
+      </categories>
+      <tags>
+        <tag>docker</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>conda的使用技巧</title>
     <url>/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/anaconda.png" alt></p>
@@ -987,49 +1020,6 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo&#39;s plugins</title>
-    <url>/2023/09/17/hexo-s-plugins/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>相关插件</p>
-</blockquote>
-<span id="more"></span>
-<p>配置支持mermaid<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-filter-mermaid-diagrams</span><br></pre></td></tr></table></figure></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>docker基础命令</title>
-    <url>/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/07/12/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/Docker.png" alt></p>
-<blockquote>
-<p>docker的基础命令<br><span id="more"></span></p>
-</blockquote>
-<p>docker pull 安装镜像</p>
-<p>docker run 运行镜像</p>
-<p>docker container run</p>
-<p>说明：</p>
-<p>创建好image后，新建容器时使用；</p>
-<p>每次运行，都会创建一个新的容器；</p>
-<p>新建的容器可以通过 docker container ls -a 或者 docker ps -a 查看（加 -a 表示查看所有创建好的容器）；</p>
-<p>每次创建会返回一个【长的容器ID】；</p>
-<p>通常情况下，运行一次即可；</p>
-<p>docker containers list -a 查看当前运行的所有镜像</p>
-<p>docker exec -it 【docker的名称】 bash  进入docker运行的bash环境中</p>
-<p>docker container start 【containerID】运行已经创建的容器</p>
-<p>docker ps -a 查看所有容器</p>
-<p>docker stop 【containerID】</p>
-<p>docker rm 【containerID】（先停止容器后才能删除）</p>
-<p>docker export 制作基础镜像，使用 <strong>docker export</strong> 命令根据容器 <strong>ID</strong> 将镜像导出成一个文件</p>
-<p>docker import - new_hangger_server &lt; hangger_server.tar 将这个镜像文件导入进来。</p>
-<p>docker load 载入镜像</p>
-]]></content>
-      <categories>
-        <category>docker</category>
-      </categories>
-      <tags>
-        <tag>docker</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>nvidia-smi基础信息</title>
     <url>/2023/06/08/nvidia-smi%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2023/06/08/nvidia-smi%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF/nvidia.png" alt></p>
@@ -1042,25 +1032,59 @@
       </tags>
   </entry>
   <entry>
-    <title>win10配置问题速查手册</title>
-    <url>/2023/09/13/win10%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><span id="more"></span>
-<h2 id="⚙-配置类"><a href="#⚙-配置类" class="headerlink" title="⚙ 配置类"></a>⚙ 配置类</h2><h3 id="1-开启-Hyper-V-⚡"><a href="#1-开启-Hyper-V-⚡" class="headerlink" title="1. 开启 Hyper-V ⚡"></a>1. 开启 Hyper-V ⚡</h3><p>在这一部分，我们将学习如何开启 Hyper-V。这是一个包含了一些命令行操作的示例，可以通过一个批处理（bat）文件执行。这些操作将帮助你启用 Hyper-V。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">pushd</span> <span class="string">&quot;%~dp0&quot;</span></span><br><span class="line"><span class="built_in">dir</span> /b %SystemRoot%\servicing\Packages\*Hyper-V*.mum &gt;hyper-v.txt</span><br><span class="line"><span class="keyword">for</span> /f %%i <span class="keyword">in</span> (<span class="string">&#x27;findstr /i . hyper-v.txt 2^&gt;nul&#x27;</span>) <span class="keyword">do</span> dism /online /norestart /add-package:<span class="string">&quot;%SystemRoot%\servicing\Packages\%%i&quot;</span></span><br><span class="line">del hyper-v.txt</span><br><span class="line">Dism /online /enable-feature /featurename:Microsoft-Hyper-V-All /LimitAccess /ALL</span><br></pre></td></tr></table></figure>
-<h3 id="2-查看-Win10-系统启动项-👀"><a href="#2-查看-Win10-系统启动项-👀" class="headerlink" title="2. 查看 Win10 系统启动项 👀"></a>2. 查看 Win10 系统启动项 👀</h3><p>在这一部分，我们将了解如何查看 Win10 系统的启动项。这是通过任务管理器和一些操作来实现的，以确保你能够轻松地管理启动项。</p>
-<pre class="mermaid">graph LR;
-任务管理器 --> 启动 --查找程序--> 右键禁用;</pre>
-
-<h3 id="3-更改-Win10-电脑锁屏界面用户名-🚪👤"><a href="#3-更改-Win10-电脑锁屏界面用户名-🚪👤" class="headerlink" title="3. 更改 Win10 电脑锁屏界面用户名 🚪👤"></a>3. 更改 Win10 电脑锁屏界面用户名 🚪👤</h3><p>这一部分将向你展示如何更改 Win10 电脑锁屏界面上显示的用户名。这个过程可以通过开始菜单和计算机管理来完成。</p>
-<pre class="mermaid">graph LR
-开始菜单 --右键--> 计算机管理 --> 用户和组</pre>
+    <title>hexo&#39;s plugins</title>
+    <url>/2023/09/17/hexo-s-plugins/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>相关插件</p>
+</blockquote>
+<span id="more"></span>
+<p>配置支持mermaid<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-filter-mermaid-diagrams</span><br></pre></td></tr></table></figure></p>
 ]]></content>
-      <categories>
-        <category>win10</category>
-      </categories>
-      <tags>
-        <tag>win10</tag>
-      </tags>
+  </entry>
+  <entry>
+    <title>一些有意思的事情分享</title>
+    <url>/2023/10/12/%E4%B8%80%E4%BA%9B%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E4%BA%8B%E6%83%85%E5%88%86%E4%BA%AB/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>看来学校的课程也不是很无聊，这里介绍一款游戏🎮</p>
+<span id="more"></span>
+<p><a href="https://flukeout.github.io/">游戏地址🪐</a></p>
+<p>对于CSS的学习也是很有帮助</p>
+<p>👓这里列出全部32题的答案：</p>
+<ol>
+        <li>plate</li>
+        <li>bento</li>
+        <li>plate#fancy</li>
+        <li>plate apple</li>
+        <li>#fancy pickle</li>
+        <li>.small </li>
+        <li>orange.small </li>
+        <li>bento orange.small </li>
+        <li>bento ,plate</li>
+        <li>*</li><!-- 这题真6 -->
+        <li>#fancy plate * ,plate *</li>
+        <li>plate + apple , plate + apple</li>
+        <li>pickle ~ pickle</li>
+        <li>plate > apple</li>
+        <li>orange:first-child</li>
+        <li>plate apple:only-child,plate pickle:only-child</li>
+        <li>apple,pickle:last-child</li>
+        <li>plate:nth-child(3)</li>
+        <li>bento:nth-child(2)</li>
+        <li>apple:first-of-type</li>
+        <li>plate:nth-of-type(even)</li>
+        <li>plate:nth-of-type(2n+3)</li>
+        <li>plate apple:only-of-type</li>
+        <li>orange:last-of-type,apple:last-of-type</li>
+        <li>bento:empty</li>
+        <li>apple:not(.small)</li>
+        <li>apple[for],plate[for],bento[for]</li>
+        <li>plate[for]</li>
+        <li>bento[for="Vitaly"]</li>
+        <li>plate[for="Sam"],bento[for="Sarah"]</li>
+        <li>bento[for="Hayato"],plate[for="Minato"]</li>
+        <li>bento[for="Robbie"],bento[for="Bobby"]</li>
+    </ol>
+
+]]></content>
   </entry>
   <entry>
     <title>使用Django搭建网站</title>
@@ -1108,51 +1132,6 @@
       <tags>
         <tag>python</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>一些有意思的事情分享</title>
-    <url>/2023/10/12/%E4%B8%80%E4%BA%9B%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E4%BA%8B%E6%83%85%E5%88%86%E4%BA%AB/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>看来学校的课程也不是很无聊，这里介绍一款游戏🎮</p>
-<span id="more"></span>
-<p><a href="https://flukeout.github.io/">游戏地址🪐</a></p>
-<p>对于CSS的学习也是很有帮助</p>
-<p>👓这里列出全部32题的答案：</p>
-<ol>
-        <li>plate</li>
-        <li>bento</li>
-        <li>plate#fancy</li>
-        <li>plate apple</li>
-        <li>#fancy pickle</li>
-        <li>.small </li>
-        <li>orange.small </li>
-        <li>bento orange.small </li>
-        <li>bento ,plate</li>
-        <li>*</li><!-- 这题真6 -->
-        <li>#fancy plate * ,plate *</li>
-        <li>plate + apple , plate + apple</li>
-        <li>pickle ~ pickle</li>
-        <li>plate > apple</li>
-        <li>orange:first-child</li>
-        <li>plate apple:only-child,plate pickle:only-child</li>
-        <li>apple,pickle:last-child</li>
-        <li>plate:nth-child(3)</li>
-        <li>bento:nth-child(2)</li>
-        <li>apple:first-of-type</li>
-        <li>plate:nth-of-type(even)</li>
-        <li>plate:nth-of-type(2n+3)</li>
-        <li>plate apple:only-of-type</li>
-        <li>orange:last-of-type,apple:last-of-type</li>
-        <li>bento:empty</li>
-        <li>apple:not(.small)</li>
-        <li>apple[for],plate[for],bento[for]</li>
-        <li>plate[for]</li>
-        <li>bento[for="Vitaly"]</li>
-        <li>plate[for="Sam"],bento[for="Sarah"]</li>
-        <li>bento[for="Hayato"],plate[for="Minato"]</li>
-        <li>bento[for="Robbie"],bento[for="Bobby"]</li>
-    </ol>
-
-]]></content>
   </entry>
   <entry>
     <title>关于hexo博客出现err: Error: Spawn failed的解决方案</title>
@@ -1212,12 +1191,24 @@
       </tags>
   </entry>
   <entry>
-    <title>我的第一篇博客</title>
-    <url>/2023/06/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>你好，我是一名大三计算机科学与技术在校生，在此博客进行相关技术知识的分享</p>
+    <title>win10配置问题速查手册</title>
+    <url>/2023/09/13/win10%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><span id="more"></span>
+<h2 id="⚙-配置类"><a href="#⚙-配置类" class="headerlink" title="⚙ 配置类"></a>⚙ 配置类</h2><h3 id="1-开启-Hyper-V-⚡"><a href="#1-开启-Hyper-V-⚡" class="headerlink" title="1. 开启 Hyper-V ⚡"></a>1. 开启 Hyper-V ⚡</h3><p>在这一部分，我们将学习如何开启 Hyper-V。这是一个包含了一些命令行操作的示例，可以通过一个批处理（bat）文件执行。这些操作将帮助你启用 Hyper-V。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">pushd</span> <span class="string">&quot;%~dp0&quot;</span></span><br><span class="line"><span class="built_in">dir</span> /b %SystemRoot%\servicing\Packages\*Hyper-V*.mum &gt;hyper-v.txt</span><br><span class="line"><span class="keyword">for</span> /f %%i <span class="keyword">in</span> (<span class="string">&#x27;findstr /i . hyper-v.txt 2^&gt;nul&#x27;</span>) <span class="keyword">do</span> dism /online /norestart /add-package:<span class="string">&quot;%SystemRoot%\servicing\Packages\%%i&quot;</span></span><br><span class="line">del hyper-v.txt</span><br><span class="line">Dism /online /enable-feature /featurename:Microsoft-Hyper-V-All /LimitAccess /ALL</span><br></pre></td></tr></table></figure>
+<h3 id="2-查看-Win10-系统启动项-👀"><a href="#2-查看-Win10-系统启动项-👀" class="headerlink" title="2. 查看 Win10 系统启动项 👀"></a>2. 查看 Win10 系统启动项 👀</h3><p>在这一部分，我们将了解如何查看 Win10 系统的启动项。这是通过任务管理器和一些操作来实现的，以确保你能够轻松地管理启动项。</p>
+<pre class="mermaid">graph LR;
+任务管理器 --> 启动 --查找程序--> 右键禁用;</pre>
+
+<h3 id="3-更改-Win10-电脑锁屏界面用户名-🚪👤"><a href="#3-更改-Win10-电脑锁屏界面用户名-🚪👤" class="headerlink" title="3. 更改 Win10 电脑锁屏界面用户名 🚪👤"></a>3. 更改 Win10 电脑锁屏界面用户名 🚪👤</h3><p>这一部分将向你展示如何更改 Win10 电脑锁屏界面上显示的用户名。这个过程可以通过开始菜单和计算机管理来完成。</p>
+<pre class="mermaid">graph LR
+开始菜单 --右键--> 计算机管理 --> 用户和组</pre>
 ]]></content>
+      <categories>
+        <category>win10</category>
+      </categories>
       <tags>
-        <tag>第一篇博客</tag>
+        <tag>win10</tag>
       </tags>
   </entry>
   <entry>
@@ -1311,6 +1302,31 @@
       </categories>
       <tags>
         <tag>计算机网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>谨记！慎用git reset --hard</title>
+    <url>/2024/05/13/%E8%B0%A8%E8%AE%B0%EF%BC%81%E6%85%8E%E7%94%A8git-reset-hard/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="谨记！慎用git-reset-—hard"><a href="#谨记！慎用git-reset-—hard" class="headerlink" title="谨记！慎用git reset —hard"></a>谨记！慎用git reset —hard</h1><p>​    &gt; 又到了折腾输错command而引发bug的归属文章了</p>
+<span id="more"></span>
+<p>​    先声明以下参数的含义</p>
+<blockquote>
+<p><strong>—hard</strong> 参数撤销工作区中所有未提交的修改内容，将暂存区与工作区都回到上一次版本，并删除之前的所有信息提交：</p>
+<p><strong>—soft</strong> 参数用于回退到某个版本：</p>
+<p><strong>—mixed</strong> 为默认，可以不用带该参数，用于重置暂存区的文件与上一次的提交(commit)保持一致，工作区文件内容保持不变。</p>
+</blockquote>
+<p>​    博主经历如下：博主在使用ruoyi框架开发小项目时，不慎永久删除了相关的配置文件，导致ruoyi后台不能启动，当我想起ruoyi有git，使用reset可以回滚到指定版本，我使用了reset —hard 【指定版本号】后，发现ruoyi恢复到最初的版本了，之后就是不断地百度，发现使用<strong>hard</strong>参数回滚，<strong>参数撤销工作区中所有未提交的修改内容，将暂存区与工作区都回到上一次版本，并删除之前的所有信息提交</strong></p>
+<p>​    到这里我发现我已经将完成至50%的项目了回滚至完成度为20%的版本了，当我在使用git log来查询相应的历史版本，发现之前的提交的版本号已经没了。</p>
+<p>​    所以，谨记：在使用git进行回滚时，注意慎用—hard参数，幸好这不是用于大项目中，只是我个人小的项目而已，要不然不知道犯下多大的事故，至少这一个“blood”的教训能给我一次实际的经验。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>我的第一篇博客</title>
+    <url>/2023/06/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>你好，我是一名大三计算机科学与技术在校生，在此博客进行相关技术知识的分享</p>
+]]></content>
+      <tags>
+        <tag>第一篇博客</tag>
       </tags>
   </entry>
   <entry>
@@ -1480,123 +1496,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>饿补计算机科学基础（二）--算法</title>
-    <url>/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89-%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>基于python编写的算法</p>
-<span id="more"></span>
-<h2 id="2-典型算法设计"><a href="#2-典型算法设计" class="headerlink" title="2.典型算法设计"></a>2.典型算法设计</h2><h3 id="1-递归"><a href="#1-递归" class="headerlink" title="(1).递归"></a>(1).递归</h3><p>递归方法（recursion algorithm）是指一种通过解决同类的规模较小的子问题而获得问题求解的方法</p>
-<ul>
-<li><p>问题的定义是递归定义的</p>
-</li>
-<li><p>问题的解法按递归算法实现的</p>
-</li>
-<li>数据的结构形式是按递归定义的（二叉树，广义表）</li>
-</ul>
-<p>假如一个函数或者子程序是由自身所定义或调用的，成为递归</p>
-<ul>
-<li><p>递归函数的要素：</p>
-<ul>
-<li><p>一个可以反复执行的递归过程</p>
-</li>
-<li><p>跳出递归过程的出口（不再进行递归的条件）</p>
-</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 阶乘的递归函数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fact</span>(<span class="params">n</span>):</span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">1</span>:<span class="comment">#递归出口</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> n * fact(n-<span class="number">1</span>)<span class="comment">#递归调用</span></span><br><span class="line">    </span><br><span class="line"><span class="built_in">print</span>（fact(<span class="number">3</span>)）</span><br></pre></td></tr></table></figure>
-<h4 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h4><p>二分查找算法（Binary search）递归实现：二分查找要求线性表必须采用顺序存储结构，而且表中元素按关键字有序排列</p>
-<p>反复执行的递归过程：缩小范围继续查找</p>
-<p>跳出提柜的出口：找到了，或者范围长度变成0</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">binarysearch_rec</span>(<span class="params">A, key, low, high</span>):  <span class="comment"># 二分查找算法的递归实现</span></span><br><span class="line">    <span class="keyword">if</span> low &gt; high:</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line">    mid = (low + high) // <span class="number">2</span>  <span class="comment"># 计算中间位置的索引，使用 (low + high) // 2</span></span><br><span class="line">    <span class="keyword">if</span> key == A[mid]:</span><br><span class="line">        <span class="keyword">return</span> mid</span><br><span class="line">    <span class="keyword">elif</span> key &lt; A[mid]:</span><br><span class="line">        <span class="keyword">return</span> binarysearch_rec(A, key, low, mid - <span class="number">1</span>)  <span class="comment"># 左边递归查找</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> binarysearch_rec(A, key, mid + <span class="number">1</span>, high)  <span class="comment"># 右边递归查找</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(binarysearch_rec([<span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">7</span>], <span class="number">4</span>, <span class="number">0</span>, <span class="number">3</span>))  <span class="comment"># 调用函数</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">binary_search</span>(<span class="params">A,Key</span>):</span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    j=<span class="built_in">len</span>(A)-<span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> i &lt;=j:</span><br><span class="line">        mid = (i+j)//<span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> A[mid]==Key:</span><br><span class="line">            <span class="keyword">return</span> mid</span><br><span class="line">        <span class="keyword">elif</span> A[mid]&lt;Key:</span><br><span class="line">            i=mid+<span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            j=mid-<span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(binary_search([<span class="number">3</span>,<span class="number">7</span>,<span class="number">45</span>,<span class="number">89</span>,<span class="number">90</span>],<span class="number">45</span>))</span><br></pre></td></tr></table></figure>
-<h3 id="2-迭代"><a href="#2-迭代" class="headerlink" title="(2).迭代"></a>(2).迭代</h3><p>重复反馈过程的活动，目的通常为了逼近随需目标或结果</p>
-<p>适合重复性操作</p>
-<ul>
-<li>迭代起点：直接或间接地不断由旧值递推出新值的变量</li>
-<li>迭代关系式：变量的前一个值推出其下一个值得公式或关系</li>
-<li>结束条件：什么情况下不在迭代</li>
-</ul>
-<p>例如：斐波那契数列</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">fib_rec</span>(<span class="params">n</span>):</span><br><span class="line">    a, b = <span class="number">1</span>, <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> n &gt; <span class="number">2</span>:</span><br><span class="line">        a, b = b, a + b</span><br><span class="line">        n = n - <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> a</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(fib_rec(<span class="number">2</span>))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="3-排序"><a href="#3-排序" class="headerlink" title="(3).排序"></a>(3).排序</h3><p>将一组“无序”的记录序列调整为“有序”的记录序列的操作</p>
-<ul>
-<li><p>内部排序：整个排序过程不需要访问外存便能完成</p>
-</li>
-<li><p>外部排序：参加排序的记录数量很大，整个序列排序过程不可能在内存中完成</p>
-</li>
-</ul>
-<h4 id="冒泡算法"><a href="#冒泡算法" class="headerlink" title="冒泡算法"></a>冒泡算法</h4><p>Bubble sort：简单排序，从序列一段开始比较相邻两个数字的大小，再根据结果交换两个数字的位置</p>
-<ul>
-<li>比较次数：</li>
-</ul>
-<p>​        第一轮比较n-1次，第二轮比较n-2次，第n-1轮比较1次，总得比较次数为（n-1） + ……+1≈n^2^/2</p>
-<ul>
-<li>交换次数：</li>
-</ul>
-<p>​        和输入数据排列有关，最小交换0次，最多交换次数和比较次数一样，时间复杂度为O(n^2^)</p>
-<ul>
-<li>效率：</li>
-</ul>
-<p>​        当在一轮排序过程中，未发生两个数字交换的时候，就可以不再进行后续几轮的排序。因此，冒泡排序在数据基本有序的情况下效率可以很高</p>
-<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><p>循环结构:for i in range(N-1)</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">selection_sort</span>(<span class="params">A</span>): <span class="comment"># 选择排序</span></span><br><span class="line">    N = <span class="built_in">len</span>(A)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(N - <span class="number">1</span>): <span class="comment"># i控制排序的趟数</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(i + <span class="number">1</span>, N): <span class="comment"># j表示比较范围内元素下标</span></span><br><span class="line">            <span class="keyword">if</span> A[j] &lt; A[i]: <span class="comment"># 递增的条件</span></span><br><span class="line">                A[j], A[i] = A[i], A[j] <span class="comment"># 交换A[j],A[i]的值</span></span><br><span class="line">    <span class="keyword">return</span> A</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(selection_sort([<span class="number">12</span>, <span class="number">34</span>, <span class="number">28</span>, <span class="number">23</span>, <span class="number">6</span>]))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>思考：能否修改算法减少交换次数，实现每轮排序最多交换一次，如何实现？</p>
-<p>Selection Sort：简单排序，从待排序的数据中找到<strong>最小值</strong>（升序），或者最大值（降序），将其与序列<strong>最左边的数字进行交换</strong></p>
-<p>如果最小值本身在合适的位置上，本次就不在进行交换，开始第二轮交换</p>
-<ul>
-<li>比较次数：</li>
-</ul>
-<p>​        第一轮比较n-1次，第二轮比较n-2次，第n-1轮比较1次，总得比较次数为（n-1） + ……+1≈n^2^/2</p>
-<ul>
-<li>交换次数：</li>
-</ul>
-<p>​        每轮中交换的次数最多是1次。输入数据排列是按照待排序顺序排序，则不需要进行任何交换，时间复杂度为O(n^2^)</p>
-<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><p>Insert Sort：简单排序，从序列左端开始，将待排序的数据逐个插入到已排好序的数据中，是的插入后仍然有序</p>
-<p>待插入的数据和左边第一个已排好的相比</p>
-<h1 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h1><p>for i in range(N):<br>    while j &gt;0</p>
-<h1 id="列表操作"><a href="#列表操作" class="headerlink" title="列表操作"></a>列表操作</h1><p>A.insert(i,x)#表示在列表中第i个位置插入元素x<br>A.pop(i)#表示从列表中弹出小标为i的元素，并且把它的值返回</p>
- <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">insert_sort</span>(<span class="params">A</span>): <span class="comment"># 插入排序</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(A)): <span class="comment"># 负责设置排序的趟数</span></span><br><span class="line">        j = i - <span class="number">1</span></span><br><span class="line">        temp = i</span><br><span class="line">        <span class="keyword">while</span> j &gt;= <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">if</span> A[temp] &lt; A[j]: <span class="comment"># 递增排序条件</span></span><br><span class="line">                A.insert(j, A.pop(temp))</span><br><span class="line">                temp = j</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            j = j - <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> A</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(insert_sort([<span class="number">12</span>, <span class="number">56</span>, <span class="number">22</span>, <span class="number">33</span>, <span class="number">1</span>, <span class="number">28</span>, <span class="number">21</span>, <span class="number">55</span>, <span class="number">6</span>]))</span><br></pre></td></tr></table></figure>
-<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p>QuickSort：是对冒泡排序的一种改进</p>
-<p>首先随机选择一个基准值，然后将除了基准值以外的数分为“比基准值小的数”和“比基准值大的数”两个类别，再把基准值放到两个类别数中央。接着对两类别的数重复之前的操作</p>
-<p>随机选择左边的数为基准数，进行排序</p>
-<p>对序列中未比较其他数字都做重复的操作</p>
-<p>数据用列表表示，python中列表部分方法如下</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>说明</th>
-<th>例子</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>append</td>
-<td>在列表末尾添加一项</td>
-<td>ls.append(x)</td>
-</tr>
-<tr>
-<td>remove</td>
-<td>把列表中出现的第一个元素x删除</td>
-<td>ls.remove(x)</td>
-</tr>
-<tr>
-<td>ls+lt</td>
-<td>链接两个列表</td>
-<td>ls+lt</td>
-</tr>
-</tbody>
-</table>
-</div>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">quicksort</span>(<span class="params">A</span>):</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(A) &gt;= <span class="number">2</span>:  <span class="comment"># 递归出口</span></span><br><span class="line">        mid = A[<span class="number">0</span>]  <span class="comment"># 选择基准值，也可以选择中间值</span></span><br><span class="line">        A.remove(mid)</span><br><span class="line">        left, right = [], []</span><br><span class="line">        <span class="keyword">for</span> num <span class="keyword">in</span> A:</span><br><span class="line">            <span class="keyword">if</span> num &gt;= mid:</span><br><span class="line">                right.append(num)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                left.append(num)</span><br><span class="line">        <span class="keyword">return</span> quicksort(left) + [mid] + quicksort(right)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> A</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(quicksort([<span class="number">12</span>, <span class="number">3</span>, <span class="number">56</span>, <span class="number">10</span>, <span class="number">6</span>]))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="查找和线性查找算法"><a href="#查找和线性查找算法" class="headerlink" title="查找和线性查找算法"></a>查找和线性查找算法</h3><p>查找：用关键字表示一个数据元素，查找时根据给定的某个值，在表中确定一个关键字的值等于给定值的记录或数据元素</p>
-<p>线性查找算法：又称顺序查找，是一种最简单的查找方法，它的基本思想是从第一个记录开始，逐个比较记录的关键字，直到给定的k值相等，则查找成功；若比较与文件中n个记录的关键字都不等，则查找失败。</p>
-<p>线性查找需要从一端开始不断地按照顺序检查数据，一一比较</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">linearsearch</span>(<span class="params">A, Key</span>):</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(A)):</span><br><span class="line">        <span class="keyword">if</span> A[i] == Key:</span><br><span class="line">            <span class="keyword">return</span> i</span><br><span class="line">        i = i + <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(linearsearch([<span class="number">12</span>, <span class="number">3</span>, <span class="number">45</span>, <span class="number">2</span>], <span class="number">45</span>))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
-  </entry>
-  <entry>
     <title>饿补计算机科学基础（三）--数据结构</title>
     <url>/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%89%EF%BC%89-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>数据结构，过于简单的部分已省略<br><span id="more"></span></p>
@@ -1737,6 +1636,123 @@
 <p>顶点（vertex）：表示某个事物或对象</p>
 <p>边（edge）：表示顶点或事物之间的逻辑关系</p>
 <p>边的权重（weight）：边上对应的值。可以对应距离、时间值、开销等。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>饿补计算机科学基础（二）--算法</title>
+    <url>/2023/07/27/%E9%A5%BF%E8%A1%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89-%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>基于python编写的算法</p>
+<span id="more"></span>
+<h2 id="2-典型算法设计"><a href="#2-典型算法设计" class="headerlink" title="2.典型算法设计"></a>2.典型算法设计</h2><h3 id="1-递归"><a href="#1-递归" class="headerlink" title="(1).递归"></a>(1).递归</h3><p>递归方法（recursion algorithm）是指一种通过解决同类的规模较小的子问题而获得问题求解的方法</p>
+<ul>
+<li><p>问题的定义是递归定义的</p>
+</li>
+<li><p>问题的解法按递归算法实现的</p>
+</li>
+<li>数据的结构形式是按递归定义的（二叉树，广义表）</li>
+</ul>
+<p>假如一个函数或者子程序是由自身所定义或调用的，成为递归</p>
+<ul>
+<li><p>递归函数的要素：</p>
+<ul>
+<li><p>一个可以反复执行的递归过程</p>
+</li>
+<li><p>跳出递归过程的出口（不再进行递归的条件）</p>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 阶乘的递归函数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fact</span>(<span class="params">n</span>):</span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">1</span>:<span class="comment">#递归出口</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> n * fact(n-<span class="number">1</span>)<span class="comment">#递归调用</span></span><br><span class="line">    </span><br><span class="line"><span class="built_in">print</span>（fact(<span class="number">3</span>)）</span><br></pre></td></tr></table></figure>
+<h4 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h4><p>二分查找算法（Binary search）递归实现：二分查找要求线性表必须采用顺序存储结构，而且表中元素按关键字有序排列</p>
+<p>反复执行的递归过程：缩小范围继续查找</p>
+<p>跳出提柜的出口：找到了，或者范围长度变成0</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">binarysearch_rec</span>(<span class="params">A, key, low, high</span>):  <span class="comment"># 二分查找算法的递归实现</span></span><br><span class="line">    <span class="keyword">if</span> low &gt; high:</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line">    mid = (low + high) // <span class="number">2</span>  <span class="comment"># 计算中间位置的索引，使用 (low + high) // 2</span></span><br><span class="line">    <span class="keyword">if</span> key == A[mid]:</span><br><span class="line">        <span class="keyword">return</span> mid</span><br><span class="line">    <span class="keyword">elif</span> key &lt; A[mid]:</span><br><span class="line">        <span class="keyword">return</span> binarysearch_rec(A, key, low, mid - <span class="number">1</span>)  <span class="comment"># 左边递归查找</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> binarysearch_rec(A, key, mid + <span class="number">1</span>, high)  <span class="comment"># 右边递归查找</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(binarysearch_rec([<span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">7</span>], <span class="number">4</span>, <span class="number">0</span>, <span class="number">3</span>))  <span class="comment"># 调用函数</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">binary_search</span>(<span class="params">A,Key</span>):</span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    j=<span class="built_in">len</span>(A)-<span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> i &lt;=j:</span><br><span class="line">        mid = (i+j)//<span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> A[mid]==Key:</span><br><span class="line">            <span class="keyword">return</span> mid</span><br><span class="line">        <span class="keyword">elif</span> A[mid]&lt;Key:</span><br><span class="line">            i=mid+<span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            j=mid-<span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(binary_search([<span class="number">3</span>,<span class="number">7</span>,<span class="number">45</span>,<span class="number">89</span>,<span class="number">90</span>],<span class="number">45</span>))</span><br></pre></td></tr></table></figure>
+<h3 id="2-迭代"><a href="#2-迭代" class="headerlink" title="(2).迭代"></a>(2).迭代</h3><p>重复反馈过程的活动，目的通常为了逼近随需目标或结果</p>
+<p>适合重复性操作</p>
+<ul>
+<li>迭代起点：直接或间接地不断由旧值递推出新值的变量</li>
+<li>迭代关系式：变量的前一个值推出其下一个值得公式或关系</li>
+<li>结束条件：什么情况下不在迭代</li>
+</ul>
+<p>例如：斐波那契数列</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">fib_rec</span>(<span class="params">n</span>):</span><br><span class="line">    a, b = <span class="number">1</span>, <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> n &gt; <span class="number">2</span>:</span><br><span class="line">        a, b = b, a + b</span><br><span class="line">        n = n - <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> a</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(fib_rec(<span class="number">2</span>))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="3-排序"><a href="#3-排序" class="headerlink" title="(3).排序"></a>(3).排序</h3><p>将一组“无序”的记录序列调整为“有序”的记录序列的操作</p>
+<ul>
+<li><p>内部排序：整个排序过程不需要访问外存便能完成</p>
+</li>
+<li><p>外部排序：参加排序的记录数量很大，整个序列排序过程不可能在内存中完成</p>
+</li>
+</ul>
+<h4 id="冒泡算法"><a href="#冒泡算法" class="headerlink" title="冒泡算法"></a>冒泡算法</h4><p>Bubble sort：简单排序，从序列一段开始比较相邻两个数字的大小，再根据结果交换两个数字的位置</p>
+<ul>
+<li>比较次数：</li>
+</ul>
+<p>​        第一轮比较n-1次，第二轮比较n-2次，第n-1轮比较1次，总得比较次数为（n-1） + ……+1≈n^2^/2</p>
+<ul>
+<li>交换次数：</li>
+</ul>
+<p>​        和输入数据排列有关，最小交换0次，最多交换次数和比较次数一样，时间复杂度为O(n^2^)</p>
+<ul>
+<li>效率：</li>
+</ul>
+<p>​        当在一轮排序过程中，未发生两个数字交换的时候，就可以不再进行后续几轮的排序。因此，冒泡排序在数据基本有序的情况下效率可以很高</p>
+<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><p>循环结构:for i in range(N-1)</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">selection_sort</span>(<span class="params">A</span>): <span class="comment"># 选择排序</span></span><br><span class="line">    N = <span class="built_in">len</span>(A)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(N - <span class="number">1</span>): <span class="comment"># i控制排序的趟数</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(i + <span class="number">1</span>, N): <span class="comment"># j表示比较范围内元素下标</span></span><br><span class="line">            <span class="keyword">if</span> A[j] &lt; A[i]: <span class="comment"># 递增的条件</span></span><br><span class="line">                A[j], A[i] = A[i], A[j] <span class="comment"># 交换A[j],A[i]的值</span></span><br><span class="line">    <span class="keyword">return</span> A</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(selection_sort([<span class="number">12</span>, <span class="number">34</span>, <span class="number">28</span>, <span class="number">23</span>, <span class="number">6</span>]))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>思考：能否修改算法减少交换次数，实现每轮排序最多交换一次，如何实现？</p>
+<p>Selection Sort：简单排序，从待排序的数据中找到<strong>最小值</strong>（升序），或者最大值（降序），将其与序列<strong>最左边的数字进行交换</strong></p>
+<p>如果最小值本身在合适的位置上，本次就不在进行交换，开始第二轮交换</p>
+<ul>
+<li>比较次数：</li>
+</ul>
+<p>​        第一轮比较n-1次，第二轮比较n-2次，第n-1轮比较1次，总得比较次数为（n-1） + ……+1≈n^2^/2</p>
+<ul>
+<li>交换次数：</li>
+</ul>
+<p>​        每轮中交换的次数最多是1次。输入数据排列是按照待排序顺序排序，则不需要进行任何交换，时间复杂度为O(n^2^)</p>
+<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><p>Insert Sort：简单排序，从序列左端开始，将待排序的数据逐个插入到已排好序的数据中，是的插入后仍然有序</p>
+<p>待插入的数据和左边第一个已排好的相比</p>
+<h1 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h1><p>for i in range(N):<br>    while j &gt;0</p>
+<h1 id="列表操作"><a href="#列表操作" class="headerlink" title="列表操作"></a>列表操作</h1><p>A.insert(i,x)#表示在列表中第i个位置插入元素x<br>A.pop(i)#表示从列表中弹出小标为i的元素，并且把它的值返回</p>
+ <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">insert_sort</span>(<span class="params">A</span>): <span class="comment"># 插入排序</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(A)): <span class="comment"># 负责设置排序的趟数</span></span><br><span class="line">        j = i - <span class="number">1</span></span><br><span class="line">        temp = i</span><br><span class="line">        <span class="keyword">while</span> j &gt;= <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">if</span> A[temp] &lt; A[j]: <span class="comment"># 递增排序条件</span></span><br><span class="line">                A.insert(j, A.pop(temp))</span><br><span class="line">                temp = j</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            j = j - <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> A</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(insert_sort([<span class="number">12</span>, <span class="number">56</span>, <span class="number">22</span>, <span class="number">33</span>, <span class="number">1</span>, <span class="number">28</span>, <span class="number">21</span>, <span class="number">55</span>, <span class="number">6</span>]))</span><br></pre></td></tr></table></figure>
+<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p>QuickSort：是对冒泡排序的一种改进</p>
+<p>首先随机选择一个基准值，然后将除了基准值以外的数分为“比基准值小的数”和“比基准值大的数”两个类别，再把基准值放到两个类别数中央。接着对两类别的数重复之前的操作</p>
+<p>随机选择左边的数为基准数，进行排序</p>
+<p>对序列中未比较其他数字都做重复的操作</p>
+<p>数据用列表表示，python中列表部分方法如下</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>append</td>
+<td>在列表末尾添加一项</td>
+<td>ls.append(x)</td>
+</tr>
+<tr>
+<td>remove</td>
+<td>把列表中出现的第一个元素x删除</td>
+<td>ls.remove(x)</td>
+</tr>
+<tr>
+<td>ls+lt</td>
+<td>链接两个列表</td>
+<td>ls+lt</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">quicksort</span>(<span class="params">A</span>):</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(A) &gt;= <span class="number">2</span>:  <span class="comment"># 递归出口</span></span><br><span class="line">        mid = A[<span class="number">0</span>]  <span class="comment"># 选择基准值，也可以选择中间值</span></span><br><span class="line">        A.remove(mid)</span><br><span class="line">        left, right = [], []</span><br><span class="line">        <span class="keyword">for</span> num <span class="keyword">in</span> A:</span><br><span class="line">            <span class="keyword">if</span> num &gt;= mid:</span><br><span class="line">                right.append(num)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                left.append(num)</span><br><span class="line">        <span class="keyword">return</span> quicksort(left) + [mid] + quicksort(right)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> A</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(quicksort([<span class="number">12</span>, <span class="number">3</span>, <span class="number">56</span>, <span class="number">10</span>, <span class="number">6</span>]))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="查找和线性查找算法"><a href="#查找和线性查找算法" class="headerlink" title="查找和线性查找算法"></a>查找和线性查找算法</h3><p>查找：用关键字表示一个数据元素，查找时根据给定的某个值，在表中确定一个关键字的值等于给定值的记录或数据元素</p>
+<p>线性查找算法：又称顺序查找，是一种最简单的查找方法，它的基本思想是从第一个记录开始，逐个比较记录的关键字，直到给定的k值相等，则查找成功；若比较与文件中n个记录的关键字都不等，则查找失败。</p>
+<p>线性查找需要从一端开始不断地按照顺序检查数据，一一比较</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">linearsearch</span>(<span class="params">A, Key</span>):</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(A)):</span><br><span class="line">        <span class="keyword">if</span> A[i] == Key:</span><br><span class="line">            <span class="keyword">return</span> i</span><br><span class="line">        i = i + <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(linearsearch([<span class="number">12</span>, <span class="number">3</span>, <span class="number">45</span>, <span class="number">2</span>], <span class="number">45</span>))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 ]]></content>
   </entry>
 </search>

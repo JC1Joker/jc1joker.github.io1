@@ -6,7 +6,7 @@
   <link href="http://3kxr.me/atom.xml" rel="self"/>
   
   <link href="http://3kxr.me/"/>
-  <updated>2024-02-13T09:07:37.530Z</updated>
+  <updated>2024-05-13T07:21:06.734Z</updated>
   <id>http://3kxr.me/</id>
   
   <author>
@@ -15,6 +15,21 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>谨记！慎用git reset --hard</title>
+    <link href="http://3kxr.me/2024/05/13/%E8%B0%A8%E8%AE%B0%EF%BC%81%E6%85%8E%E7%94%A8git-reset-hard/"/>
+    <id>http://3kxr.me/2024/05/13/%E8%B0%A8%E8%AE%B0%EF%BC%81%E6%85%8E%E7%94%A8git-reset-hard/</id>
+    <published>2024-05-13T07:18:23.000Z</published>
+    <updated>2024-05-13T07:21:06.734Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;谨记！慎用git-reset-—hard&quot;&gt;&lt;a href=&quot;#谨记！慎用git-reset-—hard&quot; class=&quot;headerlink&quot; title=&quot;谨记！慎用git reset —hard&quot;&gt;&lt;/a&gt;谨记！慎用git reset —hard&lt;/h1&gt;&lt;p&gt;​    &amp;gt; 又到了折腾输错command而引发bug的归属文章了&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>3Kxr在这里祝大家龙年快乐！</title>
@@ -393,32 +408,6 @@
     
     
     <category term="随想" scheme="http://3kxr.me/tags/%E9%9A%8F%E6%83%B3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>conda的使用技巧</title>
-    <link href="http://3kxr.me/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
-    <id>http://3kxr.me/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</id>
-    <published>2023-06-20T02:10:39.000Z</published>
-    <updated>2024-03-03T07:32:15.444Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/2023/06/20/conda%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/anaconda.png&quot; alt&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;anaconda的换源，创建环境&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="Python" scheme="http://3kxr.me/categories/Python/"/>
-    
-    <category term="数据科学" scheme="http://3kxr.me/categories/Python/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/"/>
-    
-    
-    <category term="Anaconda" scheme="http://3kxr.me/tags/Anaconda/"/>
-    
-    <category term="Shell" scheme="http://3kxr.me/tags/Shell/"/>
     
   </entry>
   
